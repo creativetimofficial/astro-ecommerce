@@ -11,6 +11,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.5.0"
+    "@astrojs/react": "^1.2.1",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^1.5.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0"
   }
 }
