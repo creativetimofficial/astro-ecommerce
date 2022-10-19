@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import InfoCards from '../components/infoCards';
+import '../../assets/scss/corporate-ui-dashboard.scss';
+import Navbar from '../components/navbar';
+import Transactions from '../components/transactions';
+
+
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+    <div class="pt-0 pb-7 bg-cover"
+      style={{
+        backgroundImage: 'url("/header-blue-purple.jpg")',
+      }}
+    >
+      <Navbar />
+    </div>
+    <div class="container-fluid py-4 px-5">
+      <InfoCards />
+      <Transactions />
+
+    </div>
+		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: 0 auto;
+		/* padding: 1.5rem; */
+		max-width: 100%;
+    
+	}
+  .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
