@@ -1,13 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import InfoCards from '../components/infoCards';
 import '../../assets/scss/corporate-ui-dashboard.scss';
 import Navbar from '../components/navbar';
 import Transactions from '../components/transactions';
+import CardProduct from '../components/products/cardProduct';
+
+const data = {
+  products: [
+    {
+      img_src: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      img_alt: "watch-image",
+      color: "Black",
+      colors: ['red', 'blue', 'green'],
+      title: "Apple Watch",
+      price: "$399.99"
+    },
+    {
+      img_src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      img_alt: "pen-image",
+      color: "Black",
+      colors: ['black', 'green'],
+      title: "Apple Pen",
+      price: "$199.99"
+    },
+    {
+      img_src: "https://images.unsplash.com/photo-1494173853739-c21f58b16055?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      img_alt: "mac-image",
+      color: "Yellow",
+      colors: ['black', 'yellow', 'red'],
+      title: "iMac",
+      price: "$1399.99"
+    },
+    {
+      img_src: "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      img_alt: "mac-mec",
+      color: "Blue",
+      colors: ['blue', 'purple', 'white'],
+      title: "iPhone",
+      price: "$1599.99"
+    }
+  ]
+};
 
 
 ---
+
 
 <Layout title="Welcome to Astro.">
 	<main>
@@ -18,8 +56,41 @@ import Transactions from '../components/transactions';
     >
       <Navbar />
     </div>
-    <div class="container-fluid py-4 px-5">
+    <div class="container py-4 px-5">
       <InfoCards />
+
+      <div class="row">
+        {data.products.map(product => 
+          <div class="col-md-3">
+            <CardProduct 
+              img_src = {product.img_src}
+              img_alt = {product.img_alt}
+              color = {product.color}
+              colors = {product.colors}
+              title = {product.title}
+              price = {product.price}
+              position = "center"
+            />
+          </div>
+        )}        
+      </div>
+
+      <div class="row">
+        {data.products.map(product => 
+          <div class="col-md-3">
+            <CardProduct 
+              img_src = {product.img_src}
+              img_alt = {product.img_alt}
+              color = {product.color}
+              colors = {product.colors}
+              title = {product.title}
+              price = {product.price}
+              position = "left"
+            />
+          </div>
+        )}        
+      </div>
+
       <Transactions />
 
     </div>
