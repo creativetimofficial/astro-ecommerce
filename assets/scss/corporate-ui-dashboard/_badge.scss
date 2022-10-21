@@ -7,6 +7,12 @@
   text-transform: inherit;
 }
 
+@each $prop, $value in $colors {
+  .badge.bg-#{$prop} {
+    background: $value !important;
+  }
+}
+
 // @import 'badges/badge';
 // @import 'badges/badge-circle';
 // @import 'badges/badge-dot';
