@@ -136,7 +136,7 @@ const Transactions = () => {
             <table className="table align-items-center justify-content-center mb-0">
               <thead className="bg-gray-100">
                 <tr>
-                  <th></th>
+
                   <th className="text-secondary text-xs font-weight-semibold opacity-7">
                     Product
                   </th>
@@ -155,11 +155,6 @@ const Transactions = () => {
               <tbody>
 
                   <tr>
-                    <td>
-                    <div className="form-check my-auto">
-                        <input className="form-check-input" type="checkbox" id="customCheck1" checked="" />
-                    </div>
-                    </td>
                     <td>
                       <div className="d-flex">
                         <img className="w-5 ms-3" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/adidas-hoodie.jpg" alt="hoodie" />
@@ -185,11 +180,6 @@ const Transactions = () => {
                
                   </tr>
                   <tr>
-                    <td>
-                    <div className="form-check my-auto">
-                        <input className="form-check-input" type="checkbox" id="customCheck1" checked="" />
-                    </div>
-                    </td>
                     <td>
                       <div className="d-flex">
                       <img className="w-5 ms-3" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/macbook-pro.jpg" alt="mac" />
