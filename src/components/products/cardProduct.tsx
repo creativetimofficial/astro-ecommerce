@@ -40,9 +40,9 @@ export default function CardProduct({
           </div>
           <div className={classList}>
             <p className="text-sm mb-1 text-body">{color}</p>
-            <h4 className="mb-0 font-weight-bold">
+            <h5 className="mb-0 font-weight-bold">
               {title}
-            </h4>
+            </h5>
             <p className="mb-0 text-sm text-body mt-1">
               {price}
             </p>
