@@ -6,6 +6,8 @@ import Navbar from '../components/navbar';
 import Transactions from '../components/transactions';
 import CardProduct from '../components/products/cardProduct';
 import CardCategory from '../components/products/cardCategory';
+import CardCategoryFull from '../components/products/cardCategoryFull';
+import ProductOverview from '../components/products/productOverview';
 
 const data = {
   products: [
@@ -59,6 +61,24 @@ const data = {
       img_src: "https://images.unsplash.com/photo-1556217256-f4e659e15103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       title: "Sale",
     },
+  ],
+  categoriesFull: [
+    {
+      img_src: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      title: "Cars",
+    },
+    {
+      img_src: "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      title: "New Arivals",
+    },
+    {
+      img_src: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      title: "Accessories",
+    },
+    {
+      img_src: "https://images.unsplash.com/photo-1556217256-f4e659e15103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      title: "Sale",
+    }
   ]
 };
 
@@ -120,6 +140,38 @@ const data = {
           </div>
         )}
       </div>
+
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <CardCategoryFull
+            classList = 'h-100'
+            img_src = {data.categoriesFull[0].img_src}
+            title = {data.categoriesFull[0].title}
+          />
+        </div>
+        <div class="col-md-6">
+          <div>
+            <CardCategoryFull
+              classList = ''
+              img_src = {data.categoriesFull[1].img_src}
+              title = {data.categoriesFull[1].title}
+            />
+          </div>
+          <div class="mt-4">
+            <CardCategoryFull
+              classList = ''
+              img_src = {data.categoriesFull[2].img_src}
+              title = {data.categoriesFull[2].title}
+            />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="my-5">
+        <ProductOverview />
+      </div>
+
       <Transactions />
 
       
