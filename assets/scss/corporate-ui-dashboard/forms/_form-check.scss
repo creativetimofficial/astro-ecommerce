@@ -80,3 +80,39 @@
   -moz-appearance: none;
   appearance: none;
 }
+
+
+// Ecommerce Astro
+
+.card-product {
+  .form-check:not(.form-switch) .form-check-input {
+    &[type="radio"] {
+      transition: border 0s;
+      width: 70px;
+      height: 70px;
+
+      &:after {
+        transition: opacity $form-check-transition-time ease-in-out;
+        width: 66px;
+        height: 66px;
+        background-color: $white;
+        opacity: 0;
+        border-radius: 4px;
+        top: 2px;
+        left: 2px;
+      }
+  
+      &:checked:after {
+        opacity: 1;
+      }
+    }
+  }
+  .form-check {
+    position: relative;
+
+    span {
+      top: 103%;
+      left: 35%;
+    }
+  }
+}
