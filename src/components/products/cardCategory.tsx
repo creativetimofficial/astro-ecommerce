@@ -3,21 +3,32 @@ import React from 'react';
 interface Props {
   img_src: string;
   title: string;
+  classList: string;
+  cta: string;
 }
+
 
 export default function CardProduct({
   img_src,
   title,
-
+  classList,
+  cta,
 }: Props) {
+
+  const classBody = ((cta != null) ? "align-items-end d-flex" : "text-center w-100 pt-8" );
 
   return (
     <>
       <a href="#">
-        <div className="card card-background">
+        <div className={`card card-background align-items-start ${classList}`}>
           <div className="full-background" style={{backgroundImage: `url(${img_src})`, backgroundSize: 'cover'}}></div>
-          <div className="card-body pt-12 text-center">
-            <h4 className="text-white">{title}</h4>
+          <div className={`card-body ${classBody}`}>
+            <div className="d-block mt-8">
+              <h4 className="text-white">{title}</h4>
+              {(cta != null) && 
+                <a href="#" className="text-white mb-0">Shop now</a>  
+              }
+            </div>
           </div>
         </div>
       </a>
