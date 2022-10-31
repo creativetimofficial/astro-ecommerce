@@ -1,15 +1,25 @@
-import React from 'react';
+import CartItem from './productCartItem';
 
 interface Props {
-  img_src: string;
+  thumb_src: string;
+  thumb_alt: string;
   title: string;
   colors: string[];
+  color: string;
+  size: string;
+  price: number;
+  stock: string;
 }
 
 export default function ShoppingCart({
-  img_src,
+  thumb_src,
+  thumb_alt,
   title,
-  colors
+  color,
+  size,
+  price,
+  stock
+
 }: Props) {
 
   return (
@@ -18,30 +28,15 @@ export default function ShoppingCart({
         <h2 className="mb-4">Shopping Cart</h2>
         <div className="row">
           <div className="col-12 col-md-7">
-            <div className="d-flex">
-              <img className="w-30 rounded-3" src="https://images.unsplash.com/photo-1637054235732-6d995b36f03e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="" />
-              <div className="w-50 pt-2 ps-4">
-                <h6 className="text-lg mb-1">The Silence</h6>
-                <div className="d-flex">
-                  <p className="pe-3 mb-0">White</p>
-                  <p className="border-start ps-3 mb-0">Small</p>
-                </div>
-                <h6 className="mb-1">$32.00</h6>
-
-                <div className="d-flex align-items-center mt-6">
-                  <i className="fas fa-check text-lg text-success"></i>
-                  <p className="mb-0 ms-2 text-sm">In Stock</p>
-                </div>
-              </div>
-              <div className="w-10">
-                <input type="text" className="form-control" placeholder="1" aria-label="amount" />
-              </div>
-              <div className="w-10 text-end">
-                <a href="#">
-                  <i className="fas fa-times ms-3"></i>
-                </a>
-              </div>
-            </div>
+            <CartItem
+              thumb_src={thumb_src}
+              thumb_alt={thumb_alt}
+              title={title}
+              color={color}
+              size={size}
+              price={price}
+              stock={stock}
+            />
             <hr className="horizontal dark mt-4" />
             <div className="d-flex mt-4">
               <img className="w-30 rounded-3" src="https://images.unsplash.com/photo-1581191853005-15f8b24f6302?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="" />
