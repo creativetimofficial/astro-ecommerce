@@ -8,7 +8,8 @@ export default function ProductAccordion({
 
   const accordion = [];
   let i = 0;
-  for (const [title, content] of data) {
+
+  Object.keys((data)).map((title,i) => {
     if (i != 0) {
       accordion.push(
         <div className="accordion-item mb-3">
@@ -21,7 +22,7 @@ export default function ProductAccordion({
           </h5>
           <div id={"collapse" + i} className="accordion-collapse" aria-labelledby={"heading" + i} data-bs-parent="#accordionEcommerce">
             <div className="accordion-body text-body text-sm opacity-8">
-              {content}
+              {title}
             </div>
           </div>
         </div>
@@ -38,14 +39,13 @@ export default function ProductAccordion({
           </h5>
           <div id={"collapse" + i} className="accordion-collapse collapse show" aria-labelledby={"heading" + i} data-bs-parent="#accordionEcommerce">
             <div className="accordion-body text-body text-sm opacity-8">
-              {content}
+              {title}
             </div>
           </div>
         </div>
       )
     }
-    i++;
-  }
+  })
 
   return (
     <>
