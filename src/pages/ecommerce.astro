@@ -41,6 +41,7 @@ const data = {
       ],
       rating: 4,
       reviews: 117,
+      size: "Small",
       sizes: {
         'XXS': 3,
         'XS': 3,
@@ -48,8 +49,10 @@ const data = {
         'M': 1,
         'L': 1213,
         'XL': 6,
-        '2XL': 2
+        '2XL': 2,
+        '3XL': 0
       },
+      stock: "In Stock"
 
     },
     {
@@ -244,7 +247,15 @@ const data = {
 
 
       <div class="my-10">
-        <ShoppingCart />
+        <ShoppingCart 
+          thumb_src = {data.products[1].thumb_src}
+          title={data.products[1].title}
+          color={data.products[0].color}
+          size={data.products[0].size}
+          price={data.products[0].price}
+          stock={data.products[0].stock}
+
+        />
       </div>
 
       <Transactions />
