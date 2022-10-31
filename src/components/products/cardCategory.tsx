@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-  img_src: string;
+  thumb_src: string;
   title: string;
   classList: string;
   cta: string;
@@ -9,7 +9,7 @@ interface Props {
 
 
 export default function CardProduct({
-  img_src,
+  thumb_src,
   title,
   classList,
   cta,
@@ -21,7 +21,7 @@ export default function CardProduct({
     <>
       <a href="#">
         <div className={`card card-background align-items-start ${classList}`}>
-          <div className="full-background" style={{backgroundImage: `url(${img_src})`, backgroundSize: 'cover'}}></div>
+          <div className="full-background" style={{backgroundImage: `url(${thumb_src})`, backgroundSize: 'cover'}}></div>
           <div className={`card-body ${classBody}`}>
             <div className="d-block mt-8">
               <h4 className="text-white">{title}</h4>
