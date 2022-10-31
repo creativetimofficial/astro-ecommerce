@@ -6,79 +6,119 @@ import Navbar from '../components/navbar';
 import Transactions from '../components/transactions';
 import CardProduct from '../components/products/cardProduct';
 import CardCategory from '../components/products/cardCategory';
-import CardCategoryFull from '../components/products/cardCategoryFull';
 import ProductOverview from '../components/products/productOverview';
+import ProductOverviews from '../components/products/productOverviews';
+import ShoppingCart from '../components/cart/shoppingCart';
+
 
 const data = {
   products: [
     {
-      img_src: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      img_alt: "watch-image",
-      color: "Black",
-      colors: ['red', 'blue', 'green'],
+      thumb_src: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      thumb_alt: "watch-image",
+      images: [
+        'https://images.unsplash.com/photo-1611930021592-a8cfd5319ceb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
+        'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1513116476489-7635e79feb27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
+      ],
+      color: "8 colors",
+      colors: [
+        'red', 
+        'blue', 
+        'green'
+      ],
       title: "Apple Watch",
-      price: "$399.99"
+      price: "$399.99",
+      description: "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
+      full_description: "The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: `Black`. Need to add an extra pop of color to your outfit? Our white tee has you covered.",
+      details: "The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming `Charcoal Gray` limited release.",
+      highlights: [
+        "Hand cut and sewn locally",
+        "Dyed with our proprietary colors",
+        "Pre-washed & pre-shrunk",
+        "Ultra-soft 100% cotton",
+      ],
+      rating: 4,
+      reviews: 117,
+      sizes: {
+        'XXS': 3,
+        'XS': 3,
+        'S': 0,
+        'M': 1,
+        'L': 1213,
+        'XL': 6,
+        '2XL': 2
+      },
+
     },
     {
-      img_src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      img_alt: "pen-image",
+      thumb_src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      thumb_alt: "pen-image",
+      images: [
+        'https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1508296695146-257a814070b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+        'https://images.unsplash.com/photo-1522125123931-9304d91a42ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80'
+      ],
       color: "Black",
       colors: ['black', 'green'],
-      title: "Apple Pen",
-      price: "$199.99"
+      title: "Basic Starter Pack",
+      price: "$199.99",
+      rating: 5,
+      reviews: 117,
+      description: "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
+      full_description: "The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming `Charcoal Gray` limited release.",
+      features: [
+        "Multiple strap configuration",
+        "Water Resistant",
+        "Stainless strap loops",
+        "Ultra-soft 100% cotton",
+      ],
+      care: "It really matters and then like it really doesn`t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn`t matter. Because it's about motivating the doers. Because I`m here to follow my dreams and inspire other people to follow their dreams, too.",
+      shipping: "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it? If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. ", 
+      returns: "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything.",
+      data: {
+        'Features': "blabla",
+        'Care': "It really matters and then like it really doesn`t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn`t matter. Because it's about motivating the doers. Because I`m here to follow my dreams and inspire other people to follow their dreams, too.",
+        'Shipping': "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
+        'Returns': "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything."
+      }
     },
     {
-      img_src: "https://images.unsplash.com/photo-1494173853739-c21f58b16055?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      img_alt: "mac-image",
+      thumb_src: "https://images.unsplash.com/photo-1494173853739-c21f58b16055?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      thumb_alt: "mac-image",
       color: "Yellow",
-      colors: ['black', 'yellow', 'red'],
+      colors: [],
       title: "iMac",
       price: "$1399.99"
     },
     {
-      img_src: "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      img_alt: "mac-mec",
+      thumb_src: "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      thumb_alt: "mac-mec",
       color: "Blue",
-      colors: ['blue', 'purple', 'white'],
       title: "iPhone",
+      description: "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
       price: "$1599.99"
     }
   ],
   categories: [
     {
-      img_src: "https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Electronics",
+      thumb_src: "https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      title: "Electronics"
     },
     {
-      img_src: "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "New Arivals",
+      thumb_src: "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      title: "New Arivals"
     },
     {
-      img_src: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Accessories",
+      thumb_src: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      title: "Accessories"
     },
     {
-      img_src: "https://images.unsplash.com/photo-1556217256-f4e659e15103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Sale",
+      thumb_src: "https://images.unsplash.com/photo-1556217256-f4e659e15103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      title: "Sale"
     },
-  ],
-  categoriesFull: [
-    {
-      img_src: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-      title: "Cars",
-    },
-    {
-      img_src: "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "New Arivals",
-    },
-    {
-      img_src: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Accessories",
-    },
-    {
-      img_src: "https://images.unsplash.com/photo-1556217256-f4e659e15103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      title: "Sale",
-    }
   ]
 };
 
@@ -102,11 +142,12 @@ const data = {
         {data.products.map(product => 
           <div class="col-md-3">
             <CardProduct 
-              img_src = {product.img_src}
-              img_alt = {product.img_alt}
+              thumb_src = {product.thumb_src}
+              thumb_alt = {product.thumb_alt}
               color = {product.color}
               colors = {product.colors}
               title = {product.title}
+              description = {product.description}
               price = {product.price}
               position = "center"
             />
@@ -118,11 +159,12 @@ const data = {
         {data.products.map(product => 
           <div class="col-md-3">
             <CardProduct 
-              img_src = {product.img_src}
-              img_alt = {product.img_alt}
+              thumb_src = {product.thumb_src}
+              thumb_alt = {product.thumb_alt}
               color = {product.color}
               colors = {product.colors}
               title = {product.title}
+              description = {product.description}
               price = {product.price}
               position = "left"
             />
@@ -134,7 +176,7 @@ const data = {
         {data.categories.map(category => 
           <div class="col-md-3">
             <CardCategory
-              img_src = {category.img_src}
+              thumb_src = {category.thumb_src}
               title = {category.title}
             />
           </div>
@@ -143,33 +185,66 @@ const data = {
 
       <div class="row mb-5">
         <div class="col-md-6">
-          <CardCategoryFull
-            classList = 'h-100'
-            img_src = {data.categoriesFull[0].img_src}
-            title = {data.categoriesFull[0].title}
+          <CardCategory
+            classList = "h-100"
+            cta = ""
+            thumb_src = {data.categories[0].thumb_src}
+            title = {data.categories[0].title}
           />
         </div>
         <div class="col-md-6">
-          <div>
-            <CardCategoryFull
-              classList = ''
-              img_src = {data.categoriesFull[1].img_src}
-              title = {data.categoriesFull[1].title}
+          <div class="mb-4">
+            <CardCategory
+              classList = ""
+              cta = ""
+              thumb_src = {data.categories[1].thumb_src}
+              title = {data.categories[1].title}
             />
           </div>
-          <div class="mt-4">
-            <CardCategoryFull
-              classList = ''
-              img_src = {data.categoriesFull[2].img_src}
-              title = {data.categoriesFull[2].title}
+          <div class="">
+            <CardCategory
+              classList = ""
+              cta = ""
+              thumb_src = {data.categories[2].thumb_src}
+              title = {data.categories[2].title}
             />
           </div>
         </div>
       </div>
 
 
+      <div class="my-10">
+        <ProductOverview  
+          colors={data.products[0].colors}
+          images={data.products[0].images}
+          title={data.products[0].title}
+          title={data.products[0].title}
+          full_description={data.products[0].full_description}
+          price={data.products[0].price}
+          highlights={data.products[0].highlights}
+          details={data.products[0].details}
+          rating={data.products[0].rating}
+          reviews={data.products[0].reviews}
+          sizes={data.products[0].sizes}
+        />
+      </div>
+
       <div class="my-5">
-        <ProductOverview />
+        <ProductOverviews 
+          colors={data.products[1].colors} 
+          images={data.products[1].images}
+          title={data.products[1].title}
+          full_description={data.products[1].full_description}
+          price={data.products[1].price}
+          rating={data.products[1].rating}
+          reviews={data.products[1].reviews}
+          data={data.products[1].data}
+        />
+      </div>
+
+
+      <div class="my-10">
+        <ShoppingCart />
       </div>
 
       <Transactions />
