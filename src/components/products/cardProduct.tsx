@@ -2,8 +2,8 @@ import React from 'react';
 import ProductBadge from './productBadge';
 
 interface Props {
-  img_src: string;
-  img_alt: string;
+  thumb_src: string;
+  thumb_alt: string;
   title: string;
   description: string;
   price: string;
@@ -13,8 +13,8 @@ interface Props {
 }
 
 export default function CardProduct({
-  img_src,
-  img_alt,
+  thumb_src,
+  thumb_alt,
   title,
   description,
   price,
@@ -30,7 +30,7 @@ export default function CardProduct({
       <div className="card card-product border border-white mb-5 shadow-xs">
         <a href="#">
           <div className="height-300">
-            <img className="w-100 h-100 rounded-top" src={img_src} alt={img_alt} />
+            <img className="w-100 h-100 rounded-top" src={thumb_src} alt={thumb_alt} />
           </div>
           <div className={classList}>
             {(color) && 
