@@ -109,10 +109,24 @@
   }
   .form-check {
     position: relative;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    span {
-      top: 103%;
-      left: 35%;
+    .form-check-input {
+      margin-left: 0;
+      margin-top: 0 !important;
+      cursor: pointer;
+
+      &[disabled] {
+        cursor: not-allowed;
+        pointer-events: all;
+      }
+
+      &:hover {
+        background-color: $light;
+      }
     }
   }
 }
