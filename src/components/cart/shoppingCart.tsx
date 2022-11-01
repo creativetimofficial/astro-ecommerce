@@ -1,4 +1,5 @@
 import CartItem from './productCartItem';
+import OrderSummary from './orderSummary';
 
 interface Props {
   thumb_src: string;
@@ -9,6 +10,9 @@ interface Props {
   size: string;
   price: number;
   stock: string;
+  subtotal: number;
+  shipping: number;
+  tax: number;
 }
 
 export default function ShoppingCart({
@@ -18,7 +22,10 @@ export default function ShoppingCart({
   color,
   size,
   price,
-  stock
+  stock,
+  subtotal,
+  shipping,
+  tax
 
 }: Props) {
 
@@ -90,34 +97,13 @@ export default function ShoppingCart({
           </div>
           <div className="col-12 col-md-5">
             <div className="card shadow-xs border bg-gray-100">
-              <div className="card-body p-5">
+              <div className="card-body p-lg-5">
                 <h5 className="mb-4">Order Summary</h5>
-                <ul className="list-unstyled">
-                  <li className="border-bottom mt-3">
-                    <div className="d-flex justify-content-between">
-                      <p>Subtotal</p>
-                      <p className="fw-bold">$129.00</p>
-                    </div>
-                  </li>
-                  <li className="border-bottom mt-3">
-                    <div className="d-flex justify-content-between">
-                      <p>Shipping estimate <span data-bs-toggle="tooltip" data-bs-placement="top" title="More information related to shipping" data-container="body" data-animation="true"><i className="fas fa-question-circle text-sm"></i></span></p>
-                      <p className="fw-bold">$5.00</p>
-                    </div>
-                  </li>
-                  <li className="border-bottom mt-3">
-                    <div className="d-flex justify-content-between">
-                      <p>Tax estimate <span data-bs-toggle="tooltip" data-bs-placement="top" title="This may vary depending on the country you are in" data-container="body" data-animation="true"><i className="fas fa-question-circle text-sm"></i></span></p>
-                      <p className="fw-bold">$8.00</p>
-                    </div>
-                  </li>
-                  <li className="mt-4">
-                    <div className="d-flex justify-content-between">
-                      <h5>Order Total</h5>
-                      <p className="fw-bold text-dark text-lg">$142.00</p>
-                    </div>
-                  </li>
-                </ul>
+                <OrderSummary 
+                  subtotal={subtotal}
+                  shipping={shipping}
+                  tax={tax}
+                />
                 <button className="btn btn-primary btn-lg w-100 mb-0">Checkout</button>
               </div>
             </div>
