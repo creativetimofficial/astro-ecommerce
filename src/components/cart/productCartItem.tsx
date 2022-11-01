@@ -37,7 +37,7 @@ export default function CartItem({
           </div>
         </div>
         <div className="w-10">
-          <input type="text" className="form-control" placeholder="1" aria-label="amount" />
+          <input type="number" min={0} className="form-control" placeholder="1" aria-label="amount" />
         </div>
         <div className="w-10 text-end">
           <a href="#">
