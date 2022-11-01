@@ -9,6 +9,7 @@ import CardCategory from '../components/products/cardCategory';
 import ProductOverview from '../components/products/productOverview';
 import ProductOverviews from '../components/products/productOverviews';
 import ShoppingCart from '../components/cart/shoppingCart';
+import ShoppingCart2 from '../components/cart/shoppingCart2';
 
 
 const data = {
@@ -52,8 +53,10 @@ const data = {
         '2XL': 2,
         '3XL': 0
       },
-      stock: "In Stock"
-
+      stock: "In Stock",
+      subtotal: 129,
+      shipping: 5,
+      tax: 8
     },
     {
       thumb_src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
@@ -78,15 +81,15 @@ const data = {
         "Stainless strap loops",
         "Ultra-soft 100% cotton",
       ],
-      care: "It really matters and then like it really doesn`t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn`t matter. Because it's about motivating the doers. Because I`m here to follow my dreams and inspire other people to follow their dreams, too.",
-      shipping: "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it? If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. ", 
-      returns: "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything.",
       data: {
-        'Features': "blabla",
+        'Features': "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you.",
         'Care': "It really matters and then like it really doesn`t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn`t matter. Because it's about motivating the doers. Because I`m here to follow my dreams and inspire other people to follow their dreams, too.",
         'Shipping': "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
         'Returns': "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything."
-      }
+      },
+      subtotal: 99,
+      shipping: 5,
+      tax: 7
     },
     {
       thumb_src: "https://images.unsplash.com/photo-1494173853739-c21f58b16055?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
@@ -248,13 +251,29 @@ const data = {
 
       <div class="my-10">
         <ShoppingCart 
-          thumb_src = {data.products[1].thumb_src}
-          title={data.products[1].title}
+          thumb_src = {data.products[0].thumb_src}
+          title={data.products[0].title}
           color={data.products[0].color}
           size={data.products[0].size}
           price={data.products[0].price}
           stock={data.products[0].stock}
+          subtotal={data.products[0].subtotal}
+          shipping={data.products[0].shipping}
+          tax={data.products[0].tax}
+        />
+      </div>
 
+      <div class="my-10">
+        <ShoppingCart2
+          thumb_src = {data.products[1].thumb_src}
+          title={data.products[1].title}
+          color={data.products[1].color}
+          size={data.products[1].size}
+          price={data.products[1].price}
+          stock={data.products[1].stock}
+          subtotal={data.products[1].subtotal}
+          shipping={data.products[1].shipping}
+          tax={data.products[1].tax}
         />
       </div>
 
