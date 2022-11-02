@@ -29,12 +29,20 @@ export default function CartItem({
             <p className="pe-3 mb-0">{color}</p>
             <p className="border-start ps-3 mb-0">{size}</p>
           </div>
-          <h6 className="mb-1">{price}</h6>
-
+          <h6 className="mb-1">${price.toFixed(2)}</h6>
           <div className="d-flex align-items-center mt-6">
-            <i className="fas fa-check text-lg text-success"></i>
-            <p className="mb-0 ms-2 text-sm">{stock}</p>
-          </div>
+           {(title.length != 0) ? 
+            <>
+              <i className="fas fa-minus-circle text-lg"></i>
+              <p className="mb-0 ms-2 text-sm">Out of Stock</p>
+            </>
+            :
+            <>
+              <i className="fas fa-check text-lg text-success"></i>
+              <p className="mb-0 ms-2 text-sm">In Stock</p>
+            </>
+           }
+            </div>
         </div>
         <div className="w-10">
           <input type="number" min={0} className="form-control" placeholder="1" aria-label="amount" />
