@@ -6,7 +6,7 @@ import ProductImages from './productImages';
 
 interface Props {
   title: string;
-  price: string;
+  price: number;
   images: string[];
   colors: string[];
   rating: number;
