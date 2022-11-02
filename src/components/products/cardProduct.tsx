@@ -6,7 +6,7 @@ interface Props {
   thumb_alt: string;
   title: string;
   description: string;
-  price: string;
+  price: number;
   color: string;
   colors: string[];
   position: string;
