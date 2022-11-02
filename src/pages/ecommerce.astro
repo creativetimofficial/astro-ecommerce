@@ -15,6 +15,7 @@ import ShoppingCart2 from '../components/cart/shoppingCart2';
 const data = {
   products: [
     {
+      id: "01",
       thumb_src: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       thumb_alt: "watch-image",
       images: [
@@ -30,7 +31,7 @@ const data = {
         'green'
       ],
       title: "Apple Watch",
-      price: "$399.99",
+      price: 399,
       description: "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
       full_description: "The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: `Black`. Need to add an extra pop of color to your outfit? Our white tee has you covered.",
       details: "The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming `Charcoal Gray` limited release.",
@@ -52,13 +53,10 @@ const data = {
         'XL': 6,
         '2XL': 2,
         '3XL': 0
-      },
-      stock: "In Stock",
-      subtotal: 129,
-      shipping: 5,
-      tax: 8
+      }
     },
     {
+      id: "02",
       thumb_src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       thumb_alt: "pen-image",
       images: [
@@ -70,7 +68,7 @@ const data = {
       color: "Black",
       colors: ['black', 'green'],
       title: "Basic Starter Pack",
-      price: "$199.99",
+      price: 199,
       rating: 5,
       reviews: 117,
       description: "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
@@ -81,31 +79,40 @@ const data = {
         "Stainless strap loops",
         "Ultra-soft 100% cotton",
       ],
+      sizes: {
+        'XXS': 1,
+        'XS': 3,
+        'S': 0,
+        'M': 1,
+        'L': 0,
+        'XL': 6,
+        '2XL': 2,
+        '3XL': 0
+      },
       data: {
         'Features': "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you.",
         'Care': "It really matters and then like it really doesn`t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn`t matter. Because it's about motivating the doers. Because I`m here to follow my dreams and inspire other people to follow their dreams, too.",
         'Shipping': "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
         'Returns': "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything."
-      },
-      subtotal: 99,
-      shipping: 5,
-      tax: 7
+      }
     },
     {
+      id: "03",
       thumb_src: "https://images.unsplash.com/photo-1494173853739-c21f58b16055?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       thumb_alt: "mac-image",
       color: "Yellow",
-      colors: [],
+      colors: ['SpaceGray'],
       title: "iMac",
-      price: "$1399.99"
+      price: 1399
     },
     {
+      id: "04",
       thumb_src: "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       thumb_alt: "mac-mec",
       color: "Blue",
       title: "iPhone",
       description: "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
-      price: "$1599.99"
+      price: 1599.99
     }
   ],
   categories: [
@@ -125,14 +132,24 @@ const data = {
       thumb_src: "https://images.unsplash.com/photo-1556217256-f4e659e15103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       title: "Sale"
     },
+  ],
+  shoppingCart: [
+    "01", 
+    "02", 
+    "03"
   ]
+  
 };
 
+let cartItems = [];
+data.shoppingCart.map(id => 
+  data.products.filter(x => x.id == id).map(x => cartItems.push(x))
+)
 
 ---
 
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to CorporateAstro.">
 	<main>
     <div class="pt-0 pb-7 bg-cover"
       style={{
@@ -250,30 +267,14 @@ const data = {
 
 
       <div class="my-10">
-        <ShoppingCart 
-          thumb_src = {data.products[0].thumb_src}
-          title={data.products[0].title}
-          color={data.products[0].color}
-          size={data.products[0].size}
-          price={data.products[0].price}
-          stock={data.products[0].stock}
-          subtotal={data.products[0].subtotal}
-          shipping={data.products[0].shipping}
-          tax={data.products[0].tax}
-        />
+          <ShoppingCart
+            products = {cartItems}
+          />
       </div>
 
       <div class="my-10">
         <ShoppingCart2
-          thumb_src = {data.products[1].thumb_src}
-          title={data.products[1].title}
-          color={data.products[1].color}
-          size={data.products[1].size}
-          price={data.products[1].price}
-          stock={data.products[1].stock}
-          subtotal={data.products[1].subtotal}
-          shipping={data.products[1].shipping}
-          tax={data.products[1].tax}
+            products = {cartItems}
         />
       </div>
 
@@ -289,7 +290,6 @@ const data = {
 <style>
 	main {
 		margin: 0 auto;
-		/* padding: 1.5rem; */
 		max-width: 100%;
     
 	}
