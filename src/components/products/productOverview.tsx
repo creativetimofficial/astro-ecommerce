@@ -8,7 +8,7 @@ interface Props {
   colors: string[];
   images: string[];
   full_description: string;
-  price: string;
+  price: number;
   highlights: string[];
   details: string;
   rating: number;
