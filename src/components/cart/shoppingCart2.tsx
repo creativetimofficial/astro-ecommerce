@@ -48,7 +48,7 @@ export default function ShoppingCart({
               </>
             )}
           </div>
-          <div className="col-12 col-md-8 ms-auto mt-4">
+          <div className="col-12 col-md-7 ms-auto mt-4">
             <div className="card shadow-xs border bg-gray-100">
               <div className="card-body p-lg-5">
                 <OrderSummary 
