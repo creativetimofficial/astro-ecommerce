@@ -7,9 +7,11 @@ import Transactions from '../components/transactions';
 import CardProduct from '../components/products/cardProduct';
 import CardCategory from '../components/products/cardCategory';
 import ProductOverview from '../components/products/productOverview';
-import ProductOverviews from '../components/products/productOverviews';
+import ProductOverview2 from '../components/products/productOverview2';
 import ShoppingCart from '../components/cart/shoppingCart';
 import ShoppingCart2 from '../components/cart/shoppingCart2';
+import ProductQuickview from '../components/products/productQuickview';
+import ProductQuickview2 from '../components/products/productQuickview2';
 
 
 const data = {
@@ -30,7 +32,7 @@ const data = {
         'blue', 
         'green'
       ],
-      title: "Apple Watch",
+      title: "Basic Starter Pack",
       price: 399,
       description: "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
       full_description: "The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: `Black`. Need to add an extra pop of color to your outfit? Our white tee has you covered.",
@@ -67,7 +69,7 @@ const data = {
       ],
       color: "Black",
       colors: ['black', 'green'],
-      title: "Basic Starter Pack",
+      title: "Apple Watch",
       price: 199,
       rating: 5,
       reviews: 117,
@@ -137,6 +139,11 @@ const data = {
     "01", 
     "02", 
     "03"
+  ],
+  shoppingCart2: [ 
+    "02", 
+    "03",
+    "04"
   ]
   
 };
@@ -144,6 +151,10 @@ const data = {
 let cartItems = [];
 data.shoppingCart.map(id => 
   data.products.filter(x => x.id == id).map(x => cartItems.push(x))
+)
+let cartItems2 = [];
+data.shoppingCart2.map(id => 
+  data.products.filter(x => x.id == id).map(x => cartItems2.push(x))
 )
 
 ---
@@ -241,7 +252,6 @@ data.shoppingCart.map(id =>
           colors={data.products[0].colors}
           images={data.products[0].images}
           title={data.products[0].title}
-          title={data.products[0].title}
           full_description={data.products[0].full_description}
           price={data.products[0].price}
           highlights={data.products[0].highlights}
@@ -253,7 +263,7 @@ data.shoppingCart.map(id =>
       </div>
 
       <div class="my-5">
-        <ProductOverviews 
+        <ProductOverview2 
           colors={data.products[1].colors} 
           images={data.products[1].images}
           title={data.products[1].title}
@@ -274,7 +284,27 @@ data.shoppingCart.map(id =>
 
       <div class="my-10">
         <ShoppingCart2
-            products = {cartItems}
+            products = {cartItems2}
+        />
+      </div>
+
+      <div class="my-10">
+        <ProductQuickview 
+          colors={data.products[0].colors}
+          thumb_src={data.products[0].thumb_src}
+          title={data.products[0].title}
+          price={data.products[0].price}
+          rating={data.products[0].rating}
+          reviews={data.products[0].reviews}
+          sizes={data.products[0].sizes}
+        />
+        <ProductQuickview2 
+          colors={data.products[1].colors}
+          thumb_src={data.products[1].thumb_src}
+          title={data.products[1].title}
+          price={data.products[1].price}
+          rating={data.products[1].rating}
+          reviews={data.products[1].reviews}
         />
       </div>
 
