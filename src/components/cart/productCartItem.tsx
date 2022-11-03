@@ -22,7 +22,7 @@ export default function CartItem({
   return (
     <>
       <div className="d-flex">
-        <img className="w-30 rounded-3" src={thumb_src} alt={thumb_alt} />
+        <img className="w-30 rounded-3 shadow-xs border" src={thumb_src} alt={thumb_alt} />
         <div className="w-50 pt-2 ps-4">
           <h6 className="text-lg mb-1">{title}</h6>
           <div className="d-flex">
@@ -42,7 +42,7 @@ export default function CartItem({
               <p className="mb-0 ms-2 text-sm">In Stock</p>
             </>
            }
-            </div>
+          </div>
         </div>
         <div className="w-10">
           <input type="number" min={0} className="form-control" placeholder="1" aria-label="amount" />
