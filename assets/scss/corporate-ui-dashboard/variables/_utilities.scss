@@ -70,6 +70,8 @@ $width-85:                    85% !default;
 $width-90:                    90% !default;
 $width-95:                    95% !default;
 $width-100:                   100% !default;
+$width-rem:                   1rem !default;
+$width-2rem:                  2rem !default;
 
 // extra max width values variables - CT
 $max-width-100:                     100px !default;
@@ -178,6 +180,8 @@ $width: (
   "90": $width-90,
   "95": $width-95,
   "100": $width-100,
+  "rem": $width-rem,
+  "2rem": $width-2rem,
   "auto": auto
 ) !default;
 
