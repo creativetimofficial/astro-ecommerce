@@ -12,9 +12,9 @@ export default function ProductAccordion({
   Object.entries(data).map(([title,value],i) => {    
     if (i != 0) {
       accordion.push(
-        <div className="accordion-item mb-3">
+        <div className="accordion-item">
           <h5 className="accordion-header" id={"heading" + i}>
-            <button className="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse" + i} aria-expanded="false" aria-controls={"collapse" + i}>
+            <button className="accordion-button border-bottom font-weight-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse" + i} aria-expanded="false" aria-controls={"collapse" + i}>
               {title}
               <i className="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
               <i className="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
@@ -29,9 +29,9 @@ export default function ProductAccordion({
       )
     } else {
       accordion.push(
-        <div className="accordion-item mb-3">
+        <div className="accordion-item">
           <h5 className="accordion-header" id={"heading" + i}>
-            <button className="accordion-button border-bottom font-weight-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse" + i} aria-expanded="true" aria-controls={"collapse" + i}>
+            <button className="accordion-button border-bottom font-weight-bold collapsed py-4" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse" + i} aria-expanded="true" aria-controls={"collapse" + i}>
               {title}
               <i className="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
               <i className="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
