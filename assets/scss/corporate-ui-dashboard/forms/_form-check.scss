@@ -129,4 +129,30 @@
       }
     }
   }
+
+}
+
+.product-quickview {
+  .form-check:not(.form-switch) .form-check-input {
+    &[type="radio"] {
+      transition: border 0s;
+      width: 240px;
+      height: 120px;
+
+      &:after {
+        transition: opacity $form-check-transition-time ease-in-out;
+        width: 66px;
+        height: 66px;
+        background-color: $white;
+        opacity: 0;
+        border-radius: 4px;
+        top: 2px;
+        left: 2px;
+      }
+  
+      &:checked:after {
+        opacity: 1;
+      }
+    }
+  }
 }
