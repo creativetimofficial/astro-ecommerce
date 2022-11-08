@@ -6,7 +6,10 @@ import ProductSizes from './productSizes'
 interface Props {
   title: string;
   colors: string[];
-  images: string[];
+  images: ({
+    src: string;
+    alt: string;
+  })[];
   full_description: string;
   price: number;
   highlights: string[];
@@ -65,7 +68,7 @@ export default function ProductOverview({
           <form action="" method="post">
             {(price.length != 0) && 
             <div className="d-flex">
-              <h3 className="font-weight-normal">{price}</h3>
+              <h3 className="font-weight-normal">${price.toFixed(2)}</h3>
               <input className="opacity-0" defaultValue={price} />
             </div>
             }
