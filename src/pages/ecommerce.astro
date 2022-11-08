@@ -12,6 +12,9 @@ import ShoppingCart from '../components/cart/shoppingCart';
 import ShoppingCart2 from '../components/cart/shoppingCart2';
 import ProductQuickview from '../components/products/productQuickview';
 import ProductQuickview2 from '../components/products/productQuickview2';
+import ProductFeature from '../components/products/productFeature';
+import ProductFeature2 from '../components/products/productFeature2';
+import CategoryFilters from '../components/products/categoryFilters';
 
 
 const data = {
@@ -21,10 +24,22 @@ const data = {
       thumb_src: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       thumb_alt: "watch-image",
       images: [
-        'https://images.unsplash.com/photo-1611930021592-a8cfd5319ceb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
-        'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1513116476489-7635e79feb27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
+        {
+          src: "https://images.unsplash.com/photo-1611930021592-a8cfd5319ceb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+          alt: "first_image"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+          alt: "second_image"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1513116476489-7635e79feb27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+          alt: "third_image"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+          alt: "fourth_image"
+        },
       ],
       color: "8 colors",
       colors: [
@@ -43,6 +58,12 @@ const data = {
         "Pre-washed & pre-shrunk",
         "Ultra-soft 100% cotton",
       ],
+      features: [
+        "Multiple strap configuration",
+        "Water Resistant",
+        "Stainless strap loops",
+        "Ultra-soft 100% cotton",
+      ],
       rating: 4,
       reviews: 117,
       size: "Small",
@@ -55,6 +76,20 @@ const data = {
         'XL': 6,
         '2XL': 2,
         '3XL': 0
+      },
+      data: {
+        'Features': "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you.",
+        'Care': "It really matters and then like it really doesn`t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn`t matter. Because it's about motivating the doers. Because I`m here to follow my dreams and inspire other people to follow their dreams, too.",
+        'Shipping': "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
+        'Returns': "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything."
+      },
+      featuresDetails: {
+        'Origin': "Designed by Good Goods, Inc.",
+        'Material': "Solid walnut base with rare earth magnets and powder coated steel card cover",
+        'Dimensions': '6.25 x 3.55" x 1.15"',
+        'Finish': "Hand sanded and finished with natural oil",
+        'Includes': "Wood card tray and 3 refill packs",
+        'Considerations': "Made from natural materials. Grain and color vary with each item.",
       }
     },
     {
@@ -62,10 +97,22 @@ const data = {
       thumb_src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       thumb_alt: "pen-image",
       images: [
-        'https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1508296695146-257a814070b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1522125123931-9304d91a42ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80'
+        {
+          src: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+          alt: "first_image"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+          alt: "second_image"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1508296695146-257a814070b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+          alt: "third_image"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1522125123931-9304d91a42ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+          alt: "fourth_image"
+        },
       ],
       color: "Black",
       colors: ['black', 'green'],
@@ -96,12 +143,38 @@ const data = {
         'Care': "It really matters and then like it really doesn`t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn`t matter. Because it's about motivating the doers. Because I`m here to follow my dreams and inspire other people to follow their dreams, too.",
         'Shipping': "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
         'Returns': "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything."
+      },
+      featuresDetails: {
+        'Origin': "Designed by Good Goods, Inc.",
+        'Material': "Solid walnut base with rare earth magnets and powder coated steel card cover",
+        'Dimensions': '6.25 x 3.55" x 1.15"',
+        'Finish': "Hand sanded and finished with natural oil",
+        'Includes': "Wood card tray and 3 refill packs",
+        'Considerations': "Made from natural materials. Grain and color vary with each item.",
       }
     },
     {
       id: "03",
       thumb_src: "https://images.unsplash.com/photo-1494173853739-c21f58b16055?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       thumb_alt: "mac-image",
+      images: [
+        {
+          src: "https://images.unsplash.com/photo-1567790350645-dbc1486a89c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
+          alt: "first_image"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1593088177922-aa1c5055c7b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
+          alt: "second_image"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1635594202056-9ea3b497e5c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
+          alt: "third_image"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1593085260707-5377ba37f868?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
+          alt: "fourth_image"
+        },
+      ],
       color: "Yellow",
       colors: ['SpaceGray'],
       title: "iMac",
@@ -277,14 +350,20 @@ data.shoppingCart2.map(id =>
 
 
       <div class="my-10">
-          <ShoppingCart
-            products = {cartItems}
-          />
+        <ShoppingCart
+          products = {cartItems}
+        />
       </div>
 
       <div class="my-10">
         <ShoppingCart2
-            products = {cartItems2}
+          products = {cartItems2}
+        />
+      </div>
+
+      <div class="my-10">
+        <CategoryFilters 
+          title={data.products[0].title}
         />
       </div>
 
@@ -308,26 +387,24 @@ data.shoppingCart2.map(id =>
         />
       </div>
 
-      <Transactions />
+      <div class="my-10">
+        <ProductFeature
+          title={data.products[0].title}
+          images={data.products[2].images}
+          full_description={data.products[0].full_description}
+          featuresDetails={data.products[0].featuresDetails}
+        />
+      </div>
 
+      <div class="my-10">
+        <ProductFeature2
+          title={data.products[0].title}
+          full_description={data.products[0].full_description}
+        />
+      </div>
+
+      <Transactions />
       
     </div>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: 0 auto;
-		max-width: 100%;
-    
-	}
-  .text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-</style>
