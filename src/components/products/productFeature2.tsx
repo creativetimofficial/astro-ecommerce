@@ -6,11 +6,13 @@ import ProductSizes from './productSizes'
 interface Props {
   title: string;
   full_description: string;
+  data: Map<string,string>;
 }
 
 export default function ProductOverview({
   title,
   full_description,
+  data,
 }: Props) {
 
   return (
