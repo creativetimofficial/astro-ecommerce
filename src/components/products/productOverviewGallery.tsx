@@ -18,7 +18,7 @@ interface Props {
   data: Map<string,string>
 }
 
-export default function ProductOverviews({
+export default function productOverviewGallery({
   title,
   price,
   images,
