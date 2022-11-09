@@ -7,7 +7,10 @@ import ProductImages from './productImages';
 interface Props {
   title: string;
   price: number;
-  images: string[];
+  images: ({
+    src: string;
+    alt: string;
+  })[];
   colors: string[];
   rating: number;
   reviews: number;
