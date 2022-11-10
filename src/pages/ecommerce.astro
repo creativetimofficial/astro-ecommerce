@@ -6,8 +6,8 @@ import Navbar from '../components/navbar';
 import Transactions from '../components/transactions';
 import CardProduct from '../components/products/cardProduct';
 import CardCategory from '../components/products/cardCategory';
-import ProductOverview from '../components/products/productOverview';
-import ProductOverview2 from '../components/products/productOverview2';
+import ProductOverviewGrid from '../components/products/productOverviewGrid';
+import ProductOverviewGallery from '../components/products/productOverviewGallery';
 import ShoppingCart from '../components/cart/shoppingCart';
 import ShoppingCart2 from '../components/cart/shoppingCart2';
 import ProductQuickview from '../components/products/productQuickview';
@@ -15,7 +15,12 @@ import ProductQuickview2 from '../components/products/productQuickview2';
 import ProductFeature from '../components/products/productFeature';
 import ProductFeature2 from '../components/products/productFeature2';
 import CategoryFilters from '../components/products/categoryFilters';
-
+import StoreNavigation from '../components/store/storeNavigation';
+import StoreDoubleColumn from '../components/store/storeDoubleColumn';
+import TestimonialsFade from '../components/promo/testimonialsFade';
+import PromoSectionLarge from '../components/promo/promoSectionLarge';
+import CheckoutOrderSummary from '../components/checkout/checkoutOrderSummary';
+import CheckoutMultiStep from '../components/checkout/checkoutMultiStep';
 
 const data = {
   products: [
@@ -327,7 +332,7 @@ data.shoppingCart2.map(id =>
 
 
       <div class="my-10">
-        <ProductOverview  
+        <ProductOverviewGrid  
           colors={data.products[0].colors}
           images={data.products[0].images}
           title={data.products[0].title}
@@ -342,7 +347,7 @@ data.shoppingCart2.map(id =>
       </div>
 
       <div class="my-5">
-        <ProductOverview2 
+        <ProductOverviewGallery 
           colors={data.products[1].colors} 
           images={data.products[1].images}
           title={data.products[1].title}
@@ -410,6 +415,51 @@ data.shoppingCart2.map(id =>
           data={data.products[2].data}
         />
       </div>
+
+      <div class="my-10">
+        <StoreNavigation title={data.products[0].title}/>
+        <div class="row mt-4">
+          {data.products.map(product => 
+            <div class="col-md-3">
+              <CardProduct
+                thumb_src = {product.thumb_src}
+                thumb_alt = {product.thumb_alt}
+                title = {product.title}
+                price={product.price}
+              />
+            </div>
+          )}        
+        </div>
+      </div>
+      <div class="my-10">
+        <StoreDoubleColumn title={data.products[1].title}/>
+     
+      </div>
+
+      <div class="my-10">
+        <TestimonialsFade title={data.products[1].title}/>
+      </div>
+
+      <div class="my-10">
+        <PromoSectionLarge 
+          title={data.products[0].title}
+          full_description={data.products[0].full_description}  
+        />
+      </div>
+
+      <div class="my-10">
+        <CheckoutOrderSummary 
+          title={data.products[0].title}
+        />
+      </div>
+
+      <div class="my-10">
+        <CheckoutMultiStep
+          title={data.products[0].title}
+        />
+      </div>
+
+      
 
       <Transactions />
       
