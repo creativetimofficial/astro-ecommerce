@@ -32,11 +32,11 @@ export default function ProductQuickview({
       <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div className="modal-content">
           <div className="card card-product">
-            <div className="card-body d-flex p-4">
+            <div className="card-body d-block d-md-flex p-4">
               {(thumb_src) && 
-              <img className="w-30 rounded-3 shadow-xs border" src={thumb_src} />
+              <img className="w-100 w-md-30 rounded-3 shadow-xs border mb-4 mb-md-0" src={thumb_src} />
               }
-              <div className="w-70 ps-4">
+              <div className="w-100 w-md-70 ps-4">
                 <div className="d-flex align-items-center justify-content-between">
                   {(title.length != 0) && 
                     <h4 className="mb-0">{title}</h4>
