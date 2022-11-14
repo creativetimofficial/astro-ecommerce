@@ -10,7 +10,7 @@ interface Props {
     title: string;
     price: number;
     size: string;
-    stock: string;
+    stock: boolean
     subtotal: number;
     shipping: number;
     tax: number;
