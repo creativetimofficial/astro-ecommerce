@@ -10,6 +10,7 @@ interface Props {
   colors: string[];
   rating: number;
   reviews: number;
+  stock: boolean;
 }
 
 export default function ProductQuickview({
@@ -18,7 +19,8 @@ export default function ProductQuickview({
   price,
   colors,
   rating,
-  reviews
+  reviews,
+  stock
 }: Props) {
 
   return (
@@ -30,14 +32,14 @@ export default function ProductQuickview({
       <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div className="modal-content">
           <div className="card card-product">
-            <div className="card-body d-flex p-4">
-              <div className="w-30 text-center">
+            <div className="card-body d-block d-md-flex p-4">
+              <div className="w-100 w-md-30 text-center">
                 {(thumb_src) && 
                 <img className="w-100 rounded-3 shadow-xs border mb-4" src={thumb_src} />
                 }
                 <a className="text-primary" href="#">View full details</a>
               </div>
-              <div className="w-70 ps-4">
+              <div className="w-100 w-md-70 ps-4">
                 <div className="d-flex justify-content-between">
                   {(title.length != 0) && 
                     <h4 className="mb-3">{title}</h4>
@@ -58,15 +60,15 @@ export default function ProductQuickview({
                   </>
                 }
                 
-                {(title.length != 0) ? 
-                  <div className="d-flex align-items-center">
-                    <i className="fas fa-minus-circle text-lg"></i>
-                    <p className="mb-0 ms-2 text-sm">Out of Stock</p>
-                  </div>
-                  :
+                {(stock) ? 
                   <div className="d-flex align-items-center">
                     <i className="fas fa-check text-lg text-success"></i>
                     <p className="mb-0 ms-2 text-sm">In Stock</p>
+                  </div>
+                  :
+                  <div className="d-flex align-items-center">
+                    <i className="fas fa-minus-circle text-lg"></i>
+                    <p className="mb-0 ms-2 text-sm">Out of Stock</p>
                   </div>
                 }
                 
