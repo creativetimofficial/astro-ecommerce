@@ -95,11 +95,12 @@ const data = {
         'Finish': "Hand sanded and finished with natural oil",
         'Includes': "Wood card tray and 3 refill packs",
         'Considerations': "Made from natural materials. Grain and color vary with each item.",
-      }
+      },
+      stock: true
     },
     {
       id: "02",
-      thumb_src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      thumb_src: "https://images.unsplash.com/photo-1548960254-5139d80bd5ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       thumb_alt: "pen-image",
       images: [
         {
@@ -133,6 +134,7 @@ const data = {
         "Stainless strap loops",
         "Ultra-soft 100% cotton",
       ],
+      size: "Medium",
       sizes: {
         'XXS': 1,
         'XS': 3,
@@ -156,7 +158,8 @@ const data = {
         'Finish': "Hand sanded and finished with natural oil",
         'Includes': "Wood card tray and 3 refill packs",
         'Considerations': "Made from natural materials. Grain and color vary with each item.",
-      }
+      },
+      stock: false
     },
     {
       id: "03",
@@ -184,12 +187,24 @@ const data = {
       colors: ['SpaceGray'],
       title: "iMac",
       price: 1399,
+      size: "Large",
+      sizes: {
+        'XXS': 1,
+        'XS': 3,
+        'S': 0,
+        'M': 1,
+        'L': 0,
+        'XL': 6,
+        '2XL': 2,
+        '3XL': 0
+      },
       data: {
         'Design': "If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. People are so scared to lose that they don't even try. Like, one thing people can't say is that I'm not trying, and I'm not trying my hardest, and I'm not trying to do the best way I know how.",
         'Material': "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it? People are so scared to lose that they don't even try.",
         'Considerations': "I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can’t do anything, you won’t do anything. I was taught I could do everything.",
         'Included': "We’re not always in the position that we want to be at. We’re constantly growing. We’re constantly making mistakes. We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don’t appreciate the moment until it’s passed."
       },
+      stock: true
     },
     {
       id: "04",
@@ -198,7 +213,19 @@ const data = {
       color: "Blue",
       title: "iPhone",
       description: "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
-      price: 1599.99
+      price: 1599.99,
+      size: "Small",
+      sizes: {
+        'XXS': 1,
+        'XS': 3,
+        'S': 0,
+        'M': 1,
+        'L': 0,
+        'XL': 6,
+        '2XL': 2,
+        '3XL': 0
+      },
+      stock: false
     }
   ],
   categories: [
@@ -395,6 +422,7 @@ data.shoppingCart2.map(id =>
           price={data.products[1].price}
           rating={data.products[1].rating}
           reviews={data.products[1].reviews}
+          stock={data.products[1].stock}
         />
       </div>
 
@@ -420,7 +448,7 @@ data.shoppingCart2.map(id =>
         <StoreNavigation title={data.products[0].title}/>
         <div class="row mt-4">
           {data.products.map(product => 
-            <div class="col-md-3">
+            <div class="col-12 col-md-6 col-lg-3">
               <CardProduct
                 thumb_src = {product.thumb_src}
                 thumb_alt = {product.thumb_alt}
@@ -449,13 +477,13 @@ data.shoppingCart2.map(id =>
 
       <div class="my-10">
         <CheckoutOrderSummary 
-          title={data.products[0].title}
+          products = {cartItems}
         />
       </div>
 
       <div class="my-10">
         <CheckoutMultiStep
-          title={data.products[0].title}
+          products = {cartItems2}
         />
       </div>
 
