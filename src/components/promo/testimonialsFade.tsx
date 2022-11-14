@@ -12,12 +12,12 @@ export default function TestimonialsFade({
     <>
       <section>
         <div className="page-header min-vh-50 rounded-top" style={styles.pageHeader}>
-          <div className="fade opacity-10"></div>
+          <div className="faded opacity-10"></div>
           <div className="container z-index-2">
             <div className="row justify-content-center">
               <div className="col-sm-9 text-center mx-auto pt-6">
                 <h1 className="mb-2">Get 50% off during our one-time sale</h1>
-                <p className="lead mb-sm-5 px-8">We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game.</p>
+                <p className="lead mb-sm-5 px-md-8">We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game.</p>
                 <button className="btn btn-dark btn-lg">Get access to our one-time sale</button>
               </div>
             </div>
@@ -26,7 +26,7 @@ export default function TestimonialsFade({
         <div className="container">
           <h4 className="font-weight-bolder mt-4 mb-5">What are people saying?</h4> 
           <div className="row">
-            <div className="col-4">
+            <div className="col-12 col-md-6 col-lg-4">
               <svg className="opacity-2 mb-4" width="40px" height="40px" viewBox="0 0 270 270" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <title>quote-down</title>
                 <g id="quote-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -36,7 +36,7 @@ export default function TestimonialsFade({
               <p>Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.</p>
               <h6>Collin Marcus, New Orleans</h6>
             </div>
-            <div className="col-4">
+            <div className="col-12 col-md-6 col-lg-4">
               <svg className="opacity-2 mb-4" width="40px" height="40px" viewBox="0 0 270 270" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <title>quote-down</title>
                 <g id="quote-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -46,7 +46,7 @@ export default function TestimonialsFade({
               <p>The networking at Web Summit is like no other European tech conference. We’re constantly trying to express ourselves and actualize.</p>
               <h6>Simon Lauren, London UK</h6>
             </div>
-            <div className="col-4">
+            <div className="col-12 col-md-12 col-lg-4">
               <svg className="opacity-2 mb-4" width="40px" height="40px" viewBox="0 0 270 270" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <title>quote-down</title>
                 <g id="quote-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
