@@ -48,7 +48,7 @@ export default function CardProduct({
            
             {(price) && 
               <p className="mb-0 text-sm text-body mt-1 mb-3">
-                {price}
+                ${price.toFixed(2)}
               </p>
             }
            
@@ -56,7 +56,7 @@ export default function CardProduct({
               <ProductBadge colors={colors} />
             }
 
-            {(price) &&
+            {!(description || colors) &&
               <a href="#" className="font-weight-normal text-body text-sm">Shop Now</a>
             }
           </div>
