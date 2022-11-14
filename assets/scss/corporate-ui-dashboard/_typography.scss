@@ -102,6 +102,10 @@ a {
   line-height: $text-xs-line-height;
 }
 
+.text-base {
+  font-size: $font-size-base;
+}
+
 p, .p {
   @include font-size($p-font-size);
 }
