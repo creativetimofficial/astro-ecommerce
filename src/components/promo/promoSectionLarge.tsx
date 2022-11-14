@@ -13,7 +13,7 @@ export default function TestimonialsFade({
   return (
     <>
       <section>
-        <div className="page-header min-vh-75 rounded-3" style={styles.pageHeader}>
+        <div className="page-header min-vh-75 rounded-3 py-5 py-md-0" style={styles.pageHeader}>
           <span className="mask bg-gradient-dark opacity-8"></span>
           <div className="container">
             <div className="row justify-content-center">
