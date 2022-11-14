@@ -5,7 +5,7 @@ interface Props {
   color: string;
   size: string;
   price: number;
-  stock: string;
+  stock: boolean;
 }
 
 export default function CartItem({
@@ -29,15 +29,15 @@ export default function CartItem({
             <p className="mb-0">{size}</p>
 
           <div className="d-flex align-items-center mt-6">
-           {(title.length != 0) ? 
-            <>
-              <i className="fas fa-minus-circle text-lg"></i>
-              <p className="mb-0 ms-2 text-sm">Out of Stock</p>
-            </>
-            :
+           {(stock) ? 
             <>
               <i className="fas fa-check text-lg text-success"></i>
               <p className="mb-0 ms-2 text-sm">In Stock</p>
+            </>
+            :
+            <>
+              <i className="fas fa-minus-circle text-lg"></i>
+              <p className="mb-0 ms-2 text-sm">Out of Stock</p>
             </>
            }
           </div>
