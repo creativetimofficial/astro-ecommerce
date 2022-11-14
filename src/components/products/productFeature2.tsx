@@ -24,11 +24,11 @@ export default function ProductOverview({
             <h2 className="mb-3">{title}</h2>
           }
           {(full_description.length != 0) && 
-            <p className="mb-5 w-70">{full_description}</p>
+            <p className="mb-5 w-lg-70">{full_description}</p>
           }
           
           <div className="nav-wrapper position-relative end-0 pb-4 border-bottom">
-            <ul className="nav nav-pills nav-fill p-1 w-50" role="tablist">
+            <ul className="nav nav-pills nav-fill p-1 w-lg-50" role="tablist">
               <li className="nav-item">
                 <a className="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#first-tab" role="tab" aria-controls="profile" aria-selected="true">
                   Design
@@ -59,7 +59,7 @@ export default function ProductOverview({
               aria-labelledby="#profile"
             >
               <div className="row mt-5">
-                <div className="col-12 col-lg-6 mb-lg-0 mb-4 pe-10">
+                <div className="col-12 col-lg-6 mb-lg-0 mb-4 pe-lg-10">
                   <h5 className="mt-5 mb-4">Adaptive and modular</h5>
                   <p>If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. People are so scared to lose that they don't even try. 
                     <br/><br/>
