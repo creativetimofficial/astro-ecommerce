@@ -11,14 +11,14 @@ export default function StoreNavigationDoubleColumn({
 
   return (
     <>
-    <nav className="navbar navbar-expand-lg shadow-none flex-wrap top-0 px-0 py-0">
+    <nav className="navbar navbar-expand-md shadow-none flex-wrap top-0 px-0 py-0">
       <StoreNavbar
         title={title}
       />
       <hr className="horizontal w-100 my-0 dark" />
     </nav>
     <div className="row mt-5">
-      <div className="col-6">
+      <div className="col-12 col-lg-6 mb-4 mb-lg-0">
         <h6 className="w-100 pb-3 border-bottom">Clothing</h6>
         <div className="d-flex pt-2">
           <ul className="nav flex-column ms-n3">
@@ -53,7 +53,7 @@ export default function StoreNavigationDoubleColumn({
               </a>
             </li>
           </ul>
-          <ul className="nav flex-column ms-10">
+          <ul className="nav flex-column ms-6 ms-md-11 ms-lg-10">
             <li className="nav-item">
               <a className="nav-link text-body" href="#" target="_blank">
                 Jackets
@@ -82,8 +82,8 @@ export default function StoreNavigationDoubleColumn({
           </ul>
         </div>
       </div>
-      <div className="col-3">
-      <h6 className="w-100 pb-3 border-bottom">Accessories</h6>
+      <div className="col-6 col-lg-3">
+        <h6 className="w-100 pb-3 border-bottom">Accessories</h6>
         <ul className="nav flex-column ms-n3 pt-2">
           <li className="nav-item">
             <a className="nav-link text-body" href="#" target="_blank">
@@ -117,7 +117,7 @@ export default function StoreNavigationDoubleColumn({
           </li>
         </ul>
       </div>
-      <div className="col-3">
+      <div className="col-6 col-lg-3">
       <h6 className="w-100 pb-3 border-bottom ">Categories</h6>
         <ul className="nav flex-column ms-n3 pt-2">
           <li className="nav-item">
