@@ -21,6 +21,8 @@ import TestimonialsFade from '../components/promo/testimonialsFade';
 import PromoSectionLarge from '../components/promo/promoSectionLarge';
 import CheckoutOrderSummary from '../components/checkout/checkoutOrderSummary';
 import CheckoutMultiStep from '../components/checkout/checkoutMultiStep';
+import ReviewSimple from '../components/reviews/reviewSimple';
+import ReviewSummaryChart from '../components/reviews/reviewSummaryChart';
 
 const data = {
   products: [
@@ -246,6 +248,56 @@ const data = {
       title: "Sale"
     },
   ],
+  reviews: [
+    {
+      avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80",
+      name: "Hector Gibbs",
+      date: "July 17, 2022",
+      rating: 5,
+      comment: "As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. ",
+      productID: "01"
+    },
+    {
+      avatar: "https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80",
+      name: "Willie Manson",
+      date: "Aug 18, 2022",
+      rating: 4,
+      comment: "It really matters and then like it really doesn’t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn’t matter.",
+      productID: "01"
+    },
+    {
+      avatar: "https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80",
+      name: "Mary Doyle",
+      date: "Nov 11, 2022",
+      rating: 5,
+      comment: "It really matters and then like it really doesn’t matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn’t matter.",
+      productID: "01"
+    },
+    {
+      avatar: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80",
+      name: "Joe Molly",
+      date: "Mar 23, 2022",
+      rating: 3,
+      comment: "It’s like a little kid, a little boy, looking at colors, and no one told him what colors are good, before somebody tells you you shouldn’t like pink.",
+      productID: "01"
+    },
+    {
+      avatar: "https://images.unsplash.com/photo-1534126416832-a88fdf2911c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80",
+      name: "Keisha Megan",
+      date: "Jun 21, 2022",
+      rating: 4,
+      comment: "For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
+      productID: "01"
+    },
+    {
+      avatar: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80",
+      name: "Kevin Klein",
+      date: "Dec 01, 2022",
+      rating: 5,
+      comment: "Society has put up so many boundaries, so many limitations on what’s right and wrong that it’s almost impossible to get a pure thought out.",
+      productID: "01"
+    },
+  ],
   shoppingCart: [
     "01", 
     "02", 
@@ -256,6 +308,8 @@ const data = {
     "03",
     "04"
   ]
+
+
   
 };
 
@@ -267,6 +321,13 @@ let cartItems2 = [];
 data.shoppingCart2.map(id => 
   data.products.filter(x => x.id == id).map(x => cartItems2.push(x))
 )
+// let productReviews = [];
+// data.reviews.map(review => {
+// if (review.productID == 1) {
+//   productReviews.push(review);
+// }
+// });
+let productReviews = data.reviews.filter(x => x.productID == "01");
 
 ---
 
@@ -485,6 +546,14 @@ data.shoppingCart2.map(id =>
         <CheckoutMultiStep
           products = {cartItems2}
         />
+      </div>
+
+      <div class="my-10">
+        <ReviewSimple reviews = {data.reviews}/>
+      </div>
+
+      <div class="my-10">
+        <ReviewSummaryChart reviews = {productReviews}/>
       </div>
 
       
