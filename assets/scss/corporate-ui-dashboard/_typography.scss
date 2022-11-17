@@ -112,6 +112,12 @@ p, .p {
 .lead {
   @include font-size($lead-font-size);
 }
+.text-2xl {
+  @include font-size($font-size-2xl !important);
+}
+.text-xl {
+  @include font-size($font-size-xl !important);
+}
 .text-lg {
   @include font-size($font-size-lg !important);
 }
