@@ -23,6 +23,8 @@ import CheckoutOrderSummary from '../components/checkout/checkoutOrderSummary';
 import CheckoutMultiStep from '../components/checkout/checkoutMultiStep';
 import ReviewSimple from '../components/reviews/reviewSimple';
 import ReviewSummaryChart from '../components/reviews/reviewSummaryChart';
+import OrderSummaries from '../components/order/orderSummaries';
+import OrderHistory from '../components/order/orderHistory';
 
 const data = {
   products: [
@@ -188,6 +190,7 @@ const data = {
       color: "Yellow",
       colors: ['SpaceGray'],
       title: "iMac",
+      description: "There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented",
       price: 1399,
       size: "Large",
       sizes: {
@@ -298,6 +301,44 @@ const data = {
       productID: "01"
     },
   ],
+  orders: [
+    {
+      orderNumber: 23791,
+      productIDs: ["01", "02"],
+      productQuantity: {
+        "01": 1,
+        "02": 9,
+        "03": 4,
+        "04": 6
+      },
+      ShippingStatus: {
+        "01": "Processed",
+        "02": "Delivered",
+        "03": "Order Placed",
+        "04": "Shipped",
+      },
+      payment: {
+        cardNumber: "4242",
+        expiringDate: "02/24",
+      },
+      date: "March 23, 2022",
+      address: "Floyd Miles, 7319, Cynthia Pass Toronto, ON N3Y 4H8",
+      email: "g*****@mail.com",
+      phoneNumber: "+1*****21",
+    },
+    {
+      productIDs: ["01"],
+      address: "Floyd Miles, 7319, Cynthia Pass Toronto, ON N3Y 4H8",
+      email: "bo*****@mail.com",
+      phoneNumber: "+4*****11",
+      ShippingStatus: [
+        "Order Placed",
+        "Processed",
+        "Shipped",
+        "Delivered"
+      ],
+    }
+  ],
   shoppingCart: [
     "01", 
     "02", 
@@ -321,13 +362,23 @@ let cartItems2 = [];
 data.shoppingCart2.map(id => 
   data.products.filter(x => x.id == id).map(x => cartItems2.push(x))
 )
-// let productReviews = [];
-// data.reviews.map(review => {
-// if (review.productID == 1) {
-//   productReviews.push(review);
-// }
-// });
+
+// filter reviews with ID 01
 let productReviews = data.reviews.filter(x => x.productID == "01");
+
+let orderProducts = [];
+data.orders[0].productIDs.forEach(productID => {
+  data.products.forEach(product => {
+    if (product.id == productID) {
+      orderProducts.push(product);
+    }
+  });
+})
+// for (let productID in data.orders[0].productIDs) {
+//   // orderProducts.push(data.products.filter(x => x.id == productID));
+// }
+
+// let orderProducts = data.products.filter(x => x.id == orderid[i]);
 
 ---
 
@@ -556,8 +607,14 @@ let productReviews = data.reviews.filter(x => x.productID == "01");
         <ReviewSummaryChart reviews = {productReviews}/>
       </div>
 
-      
+      <div class="my-10">
+        <OrderSummaries order={data.orders[0]} products={orderProducts} />
+      </div>
 
+      <div class="my-10">
+        <OrderHistory />
+      </div>
+      
       <Transactions />
       
     </div>
