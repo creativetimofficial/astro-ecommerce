@@ -304,19 +304,18 @@ const data = {
   orders: [
     {
       orderNumber: 23791,
-      productIDs: ["01", "02"],
-      productQuantity: {
-        "01": 1,
-        "02": 9,
-        "03": 4,
-        "04": 6
-      },
-      ShippingStatus: {
-        "01": "Processed",
-        "02": "Delivered",
-        "03": "Order Placed",
-        "04": "Shipped",
-      },
+      products: [
+        {
+          id: "01",
+          status: "Processed",
+          quantity: 1
+        },
+        {
+          id: "02",
+          status: "Delivered",
+          quantity: 9
+        }
+      ],
       payment: {
         cardNumber: "4242",
         expiringDate: "02/24",
@@ -327,16 +326,17 @@ const data = {
       phoneNumber: "+1*****21",
     },
     {
-      productIDs: ["01"],
+      orderNumber: 72131,
+      products: [
+        {
+          id: "03",
+          status: "Order Placed",
+          quantity: 1
+        }
+      ],
       address: "Floyd Miles, 7319, Cynthia Pass Toronto, ON N3Y 4H8",
       email: "bo*****@mail.com",
       phoneNumber: "+4*****11",
-      ShippingStatus: [
-        "Order Placed",
-        "Processed",
-        "Shipped",
-        "Delivered"
-      ],
     }
   ],
   shoppingCart: [
@@ -367,9 +367,10 @@ data.shoppingCart2.map(id =>
 let productReviews = data.reviews.filter(x => x.productID == "01");
 
 let orderProducts = [];
-data.orders[0].productIDs.forEach(productID => {
+
+data.orders[0].products.forEach(productDetails => {
   data.products.forEach(product => {
-    if (product.id == productID) {
+    if (product.id == productDetails.id) {
       orderProducts.push(product);
     }
   });
