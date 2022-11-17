@@ -3,16 +3,11 @@ interface Props {
     id: string;
     thumb_src: string;
     thumb_alt: string;
-    description: string;
-    color: string;
     title: string;
     price: number;
-    size: string;
-    stock: boolean
-    subtotal: number;
-    shipping: number;
-    tax: number;
+    description: string;
   });
+  status: string;
   address: string;
   email: string;
   phoneNumber: string;
@@ -20,10 +15,28 @@ interface Props {
 
 export default function OrderCardProduct({
   product,
+  status,
   address,
   email,
   phoneNumber
 }: Props) {
+
+  let widthClass = "";
+
+  switch (status) {
+    case "Order Placed":
+      widthClass = " w-5"
+      break;
+    case "Processed":
+      widthClass = " w-40"
+      break;
+    case "Shipped":
+      widthClass = " w-70"
+      break;
+    case "Delivered":
+      widthClass = " w-100"
+      break;
+  }
 
   return (
     <>
@@ -52,13 +65,38 @@ export default function OrderCardProduct({
         <div className="mt-4">
           <h6>Preparing to ship on March 24, 2021</h6>
           <div className="progress my-4">
-            <div className="progress-bar bg-primary w-35" role="progressbar"></div>
+            <div className={`progress-bar bg-primary` + widthClass} role="progressbar"></div>
           </div>
           <div className="d-flex justify-content-between">
             <p className="font-weight-semibold text-primary">Order placed</p>
-            <p className="font-weight-semibold text-primary">Processed</p>
-            <p className="font-weight-semibold">Shipped</p>
-            <p className="font-weight-semibold">Delivered</p>
+            {status == "Order Placed" && 
+            <>
+              <p className="font-weight-semibold">Processed</p>
+              <p className="font-weight-semibold">Shipped</p>
+              <p className="font-weight-semibold">Delivered</p>
+            </>
+            }
+            {status == "Processed" && 
+            <>
+              <p className="font-weight-semibold text-primary">Processed</p>
+              <p className="font-weight-semibold">Shipped</p>
+              <p className="font-weight-semibold">Delivered</p>
+            </>
+            }
+            {status == "Shipped" && 
+            <>
+              <p className="font-weight-semibold text-primary">Processed</p>
+              <p className="font-weight-semibold text-primary">Shipped</p>
+              <p className="font-weight-semibold">Delivered</p>
+            </>
+            }
+            {status == "Delivered" && 
+            <>
+              <p className="font-weight-semibold text-primary">Processed</p>
+              <p className="font-weight-semibold text-primary">Shipped</p>
+              <p className="font-weight-semibold text-primary">Delivered</p>
+            </>
+            }
           </div>
         </div>
       </div>
