@@ -20,7 +20,7 @@ export default function OrderSummary({
   }
   return (
     <>
-      <ul className="list-unstyled mt-0 mt-md-5">
+      <ul className="list-unstyled">
         <li className="border-bottom mt-3">
           <div className="d-flex justify-content-between">
             <p className={`opacity-8` + variant}>Subtotal</p>
