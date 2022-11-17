@@ -3,8 +3,13 @@ import OrderSummary from '../cart/orderSummary';
 
 interface Props {
   order: {
-    orderNumber: number,
-    ShippingStatus: Map<string,string>
+    orderNumber: string,
+    products: 
+    {
+      id: string,
+      status: string,
+      quantity: number
+    }[],
     address: string,
     email: string,
     date: string,
@@ -13,21 +18,14 @@ interface Props {
       expiringDate: string;
     },
     phoneNumber: string,
-    productQuantity: Map<string,number>,
   }
   products: ({
     id: string;
     thumb_src: string;
     thumb_alt: string;
-    description: string;
-    color: string;
     title: string;
     price: number;
-    size: string;
-    stock: boolean
-    subtotal: number;
-    shipping: number;
-    tax: number;
+    description: string;
   })[];
 }
 
@@ -39,15 +37,21 @@ export default function OrderSummaries({
   let orderCards = [];
 
    products.map(product => {  
-    // Object.entries(order.products).map(([product]) => {  
-      orderCards.push(
-        <OrderCardProduct 
-          product={product} 
-          address={order.address} 
-          email={order.email} 
-          phoneNumber={order.phoneNumber} 
-        /> 
-      )
+    let status = "";
+    order.products.map(productDetails => {
+      if (productDetails.id == product.id) {
+        status = productDetails.status;
+      }
+    })
+    orderCards.push(
+      <OrderCardProduct 
+        product={product} 
+        status={status}
+        address={order.address} 
+        email={order.email} 
+        phoneNumber={order.phoneNumber} 
+      /> 
+    )
   });
 
 
