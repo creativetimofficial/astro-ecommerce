@@ -73,8 +73,6 @@ export default function OrderSummaries({
 
       {orderCards}
 
-      
-
       <div className="row bg-gray-200 p-4 mx-1 rounded-2">
         <div className="col-3">
           <h5 className="text-base">Billing Address</h5>
