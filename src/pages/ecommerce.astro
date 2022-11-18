@@ -25,6 +25,8 @@ import ReviewSimple from '../components/reviews/reviewSimple';
 import ReviewSummaryChart from '../components/reviews/reviewSummaryChart';
 import OrderSummaries from '../components/order/orderSummaries';
 import OrderHistory from '../components/order/orderHistory';
+import IncentiveLarge from '../components/incentives/incentiveLarge';
+import IncentiveCols from '../components/incentives/incentiveCols';
 
 const data = {
   products: [
@@ -614,6 +616,14 @@ data.orders[0].products.forEach(productDetails => {
 
       <div class="my-10">
         <OrderHistory />
+      </div>
+
+      <div class="my-10">
+        <IncentiveLarge />
+      </div>
+
+      <div class="my-10">
+        <IncentiveCols />
       </div>
       
       <Transactions />
