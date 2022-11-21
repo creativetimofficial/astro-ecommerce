@@ -6,8 +6,8 @@ interface Props {
     title: string;
     price: number;
     description: string;
-    quantity: number;
   });
+  quantity: number;
   status: string;
   address: string;
   email: string;
@@ -19,6 +19,7 @@ export default function OrderCardProduct({
   status,
   address,
   email,
+  quantity,
   phoneNumber
 }: Props) {
 
@@ -50,7 +51,7 @@ export default function OrderCardProduct({
             <h5 className="text-base">{product.title}</h5>
             <h6 className="text-sm font-weight-bold">${product.price.toFixed(2)}</h6>
             <p className="text-sm mb-0 opacity-8">{product.description}</p>
-            <p className="text-dark text-sm mt-2"><b>Qty:</b> {product.quantity}</p>
+            <p className="text-dark text-sm mt-2"><b>Qty:</b> {quantity}</p>
           </div>
           <div className="col-3">
             <h5 className="text-base">Delivery Address</h5>
