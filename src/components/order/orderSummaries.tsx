@@ -38,22 +38,25 @@ export default function OrderSummaries({
 
    products.map(product => {  
     let status = "";
+    let orderQuantity = 0;
+
     order.products.map(productDetails => {
       if (productDetails.id == product.id) {
         status = productDetails.status;
+        orderQuantity = productDetails.quantity
       }
     })
     orderCards.push(
       <OrderCardProduct 
         product={product} 
         status={status}
+        quantity={orderQuantity}
         address={order.address} 
         email={order.email} 
         phoneNumber={order.phoneNumber} 
       /> 
     )
   });
-
 
   let subtotal = 0;
   products.map(product => 
@@ -95,12 +98,8 @@ export default function OrderSummaries({
             textColor=""  
           />
         </div>
-
       </div>
-
     </div>
-
     </>
-    
   );
 };
