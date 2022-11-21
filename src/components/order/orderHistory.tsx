@@ -1,12 +1,22 @@
 import OrderHistoryCard from './orderHistoryCard';
 
 interface Props {
-  order: {
-    avatar: string;
-    name: string;
-    date: string;
-    rating: number;
-    comment: string;
+  orders: {
+    orderNumber: string,
+    products: 
+    {
+      id: string,
+      status: string,
+      quantity: number
+    }[],
+    address: string,
+    email: string,
+    date: string,
+    payment: {
+      cardNumber: string;
+      expiringDate: string;
+    },
+    phoneNumber: string,
   }[];
   products: ({
     id: string;
@@ -18,26 +28,32 @@ interface Props {
   })[];
 }
 
-export default function OrderSummary({
-  order,
+export default function OrderHistory({
+  orders,
   products
 }: Props) {
 
-  // let ordersList = [];
+  let orderHistoryCards = [];
 
-  // products.map(product => {  
+  orders.forEach(order => {
+    let orderProducts = [];
 
-  //   ordersList.push(
-  //     <OrderHistoryCard product={product} />
-  //   )
-  // });
+    order.products.forEach(productDetails => {
+      products.forEach(product => {
+        if (product.id == productDetails.id) {
+          orderProducts.push(product);
+        }
+      });
+    })
+    orderHistoryCards.push(<OrderHistoryCard order={order} products={orderProducts} />)
+  });
   return (
     <>
     <div>
       <h3 className="mb-0">Order history</h3>
       <p>Check the status of recent orders, manage returns and download invoices.</p>
 
-    <OrderHistoryCard />
+      {orderHistoryCards}
     </div>
 
     </>
