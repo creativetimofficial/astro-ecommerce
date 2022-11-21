@@ -310,12 +310,14 @@ const data = {
         {
           id: "01",
           status: "Processed",
-          quantity: 1
+          quantity: 1,
+          dateModified: "March 23, 2022",
         },
         {
           id: "02",
           status: "Delivered",
-          quantity: 9
+          quantity: 3,
+          dateModified: "June 28, 2022",
         }
       ],
       payment: {
@@ -328,17 +330,54 @@ const data = {
       phoneNumber: "+1*****21",
     },
     {
-      orderNumber: 72131,
+      orderNumber: "WB2341",
       products: [
         {
           id: "03",
           status: "Order Placed",
-          quantity: 1
+          quantity: 1,
+          dateModified: "March 23, 2022",
         }
       ],
+      payment: {
+        cardNumber: "4119",
+        expiringDate: "01/27",
+      },
+      date: "March 28, 2022",
       address: "Floyd Miles, 7319, Cynthia Pass Toronto, ON N3Y 4H8",
-      email: "bo*****@mail.com",
-      phoneNumber: "+4*****11",
+      email: "as*****@mail.com",
+      phoneNumber: "+4*****23",
+    },
+    {
+      orderNumber: "010110",
+      products: [
+        {
+          id: "04",
+          status: "Order Placed",
+          quantity: 1,
+          dateModified: "Sep 09, 2022",
+        },
+        {
+          id: "01",
+          status: "Shipped",
+          quantity: 1,
+          dateModified: "Sep 12, 2022",
+        },
+        {
+          id: "02",
+          status: "Delivered",
+          quantity: 1,
+          dateModified: "Sep 13, 2022",
+        }
+      ],
+      payment: {
+        cardNumber: "5290",
+        expiringDate: "11/27",
+      },
+      date: "Sep 07, 2022",
+      address: "Floyd Miles, 7319, Cynthia Pass Toronto, ON N3Y 4H8",
+      email: "ju*****@mail.com",
+      phoneNumber: "+4*****52",
     }
   ],
   shoppingCart: [
@@ -377,11 +416,18 @@ data.orders[0].products.forEach(productDetails => {
     }
   });
 })
-// for (let productID in data.orders[0].productIDs) {
-//   // orderProducts.push(data.products.filter(x => x.id == productID));
-// }
 
-// let orderProducts = data.products.filter(x => x.id == orderid[i]);
+let orderHistoryProducts = new Set();
+
+data.orders.forEach((order) => {
+  order.products.forEach(productDetails => {
+    data.products.forEach(product => {
+      if (product.id == productDetails.id) {
+        orderHistoryProducts.add(product);
+      }
+    });
+  })
+})
 
 ---
 
@@ -615,7 +661,7 @@ data.orders[0].products.forEach(productDetails => {
       </div>
 
       <div class="my-10">
-        <OrderHistory />
+        <OrderHistory orders = {data.orders} products={orderHistoryProducts} />
       </div>
 
       <div class="my-10">
