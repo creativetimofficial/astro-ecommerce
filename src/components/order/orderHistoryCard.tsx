@@ -1,28 +1,59 @@
+import OrderProductRow from "./orderProductRow";
+
 interface Props {
-  // product: ({
-  //   id: string;
-  //   thumb_src: string;
-  //   thumb_alt: string;
-  //   title: string;
-  //   price: number;
-  //   description: string;
-  //   quantity: number;
-  // });
-  // status: string;
-  // address: string;
-  // email: string;
-  // phoneNumber: string;
+  order: {
+    orderNumber: string,
+    products: 
+    {
+      id: string,
+      status: string,
+      dateModified: string;
+    }[],
+    address: string,
+    email: string,
+    date: string,
+    payment: {
+      cardNumber: string;
+      expiringDate: string;
+    },
+    phoneNumber: string,
+  }
+  products: ({
+    id: string;
+    thumb_src: string;
+    thumb_alt: string;
+    title: string;
+    price: number;
+    description: string;
+  })[];
 }
 
 export default function OrderHistoryCard({
-  product,
-  status,
-  address,
-  email,
-  phoneNumber
+  products,
+  order
 }: Props) {
 
+  let orderHistoryCards = [];
+
+  order.products.map(productDetails => {  
+    let productStatus = "";
+    let dateModified = "";
+
+    products.map(product => {
+      if (productDetails.id == product.id) {
+        productStatus = productDetails.status;
+        dateModified = productDetails.dateModified;
  
+        orderHistoryCards.push(
+          <OrderProductRow
+            product={product} 
+            status={productStatus}
+            dateModified={dateModified}
+          /> 
+        )
+      }
+    })
+  });
 
   return (
     <>
@@ -31,19 +62,19 @@ export default function OrderHistoryCard({
           <div className="d-flex">
             <div className="p-4 me-4">
               <h6>Data placed</h6>
-              <p className="text-sm mb-0">January 22, 2022</p>
+              <p className="text-sm mb-0">{order.date}</p>
             </div>
             <div className="p-4 me-4">
               <h6>Order number</h6>
-              <p className="text-sm mb-0">XK98321111</p>
+              <p className="text-sm mb-0">{order.orderNumber}</p>
             </div>
             <div className="p-4">
               <h6>Total amount</h6>
               <p className="font-weight-bold text-sm mb-0">$299.00</p>
             </div>
           </div>
-          <button className="btn btn-white mb-0 me-4" data-bs-toggle="modal" data-bs-target="#invoiceModal">View invoice</button>
-          <div className="modal fade" id="invoiceModal" role="dialog" aria-labelledby="invoiceModal" aria-hidden="true">
+          <button className="btn btn-white mb-0 me-4" data-bs-toggle="modal" data-bs-target="#invoiceModal1">View invoice</button>
+          <div className="modal fade" id="invoiceModal1" role="dialog" aria-labelledby="invoiceModal1" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div className="modal-content">
                 <div className="card p-4">
@@ -155,39 +186,7 @@ export default function OrderHistoryCard({
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row" className="d-flex align-items-center text-sm text-secondary py-3">
-              <img className="w-10 rounded-3 shadow-xs" src="https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=274&q=80" alt="ss" />
-              <p className="text-sm text-dark font-weight-bold mb-0 ms-3">iMac</p>
-            </th>
-            <td className="text-sm text-secondary pt-3">$70.00</td>
-            <td className="text-sm text-secondary pt-3">Delivered Sep 03, 2022</td>
-            <td className="text-sm text-secondary pt-3 text-end">
-              <a href="#" className="text-primary">ViewProduct</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" className="d-flex align-items-center text-sm text-secondary py-3">
-              <img className="w-10 rounded-3 shadow-xs" src="https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=274&q=80" alt="ss" />
-              <p className="text-sm text-dark font-weight-bold mb-0 ms-3">iMac</p>
-            </th>
-            <td className="text-sm text-secondary pt-3">$28.00</td>
-            <td className="text-sm text-secondary pt-3">Delivered Sep 03, 2022</td>
-            <td className="text-sm text-secondary pt-3 text-end">
-              <a href="#" className="text-primary">ViewProduct</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" className="d-flex align-items-center text-sm text-secondary py-3">
-              <img className="w-10 rounded-3 shadow-xs" src="https://images.unsplash.com/photo-1612810806695-30f7a8258391?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=274&q=80" alt="ss" />
-              <p className="text-sm text-dark font-weight-bold mb-0 ms-3">iMac</p>
-            </th>
-            <td className="text-sm text-secondary pt-3">$140.00</td>
-            <td className="text-sm text-secondary pt-3">Delivered Sep 03, 2022</td>
-            <td className="text-sm text-secondary pt-3 text-end">
-              <a href="#" className="text-primary">ViewProduct</a>
-            </td>
-          </tr>
+          {orderHistoryCards}
         </tbody>
       </table>
     </>
