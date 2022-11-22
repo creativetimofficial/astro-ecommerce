@@ -47,7 +47,7 @@ export default function CheckoutSummary({
             )}
             <OrderSummary subtotal={subtotalCheckout}/>
           </div>
-          <div className="col-12 col-lg-6 p-5">
+          <div className="col-12 col-lg-6 p-3 p-md-5">
             <button className="btn btn-dark btn-lg w-100">
               <i className="fab fa-apple me-2"></i>
               Pay
@@ -123,9 +123,7 @@ export default function CheckoutSummary({
                     </button>
                   </h5>
                   <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRental">
-                    <div className="accordion-body text-sm opacity-8">
-                      
-                    </div>
+                    <div className="accordion-body text-sm opacity-8"></div>
                   </div>
                 </div>
               </div>
