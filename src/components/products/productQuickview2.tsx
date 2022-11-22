@@ -32,19 +32,19 @@ export default function ProductQuickview({
       <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div className="modal-content">
           <div className="card card-product">
-            <div className="card-body d-block d-md-flex p-4">
-              <div className="w-100 w-md-30 text-center">
+            <div className="card-body d-block d-lg-flex p-4">
+              <button type="button" className="btn-close text-dark position-absolute end-0 me-4" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div className="w-70 w-md-60 w-lg-30 text-center">
                 {(thumb_src) && 
                 <img className="w-100 rounded-3 shadow-xs border mb-4" src={thumb_src} />
                 }
                 <a className="text-primary" href="#">View full details</a>
               </div>
-              <div className="w-100 w-md-70 ps-4">
+              <div className="w-100 w-lg-70 ps-4 mt-5 mt-lg-0">
                 <div className="d-flex justify-content-between">
                   {(title.length != 0) && 
                     <h4 className="mb-3">{title}</h4>
                   }
-                  <button type="button" className="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 {(price) && 
                   <>
