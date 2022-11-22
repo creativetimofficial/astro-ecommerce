@@ -36,7 +36,7 @@ export default function productOverviewGallery({
         {(images.length != 0) && 
           <ProductImages images={images}/>
         }
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-lg-6 mt-5 mt-lg-0">
           {(title.length != 0) && 
             <h2>{title}</h2>
           }
