@@ -1,4 +1,3 @@
-import ProductCartItem from './productCartItem';
 import ProductCartItem2 from './productCartItem2';
 import OrderSummary from './orderSummary';
 
