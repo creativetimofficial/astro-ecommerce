@@ -24,7 +24,7 @@ export default function ReviewSimple({
   });
   return (
     <>
-    <div className="w-50 mx-auto">
+    <div className="w-100 w-md-80 w-lg-50 mx-auto">
       {CommentsList}
     </div>
 
