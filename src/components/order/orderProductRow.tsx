@@ -22,7 +22,7 @@ export default function OrderSummary({
     <>
       <tr>
         <th scope="row" className="d-flex align-items-center text-sm text-secondary py-3">
-          <img className="w-10 rounded-3 shadow-xs" src={product.thumb_src} alt={product.thumb_alt} />
+          <img className="w-20 w-lg-10 rounded-3 shadow-xs" src={product.thumb_src} alt={product.thumb_alt} />
           <p className="text-sm text-dark font-weight-bold mb-0 ms-3">{product.title}</p>
         </th>
         <td className="text-sm text-secondary pt-3">${product.price.toFixed(2)}</td>
