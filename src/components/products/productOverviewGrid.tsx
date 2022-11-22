@@ -39,7 +39,7 @@ export default function ProductOverview({
       <ProductGallery images={images}/>
       }
       <div className="row mt-5">
-        <div className="col-12 col-md-8 border-end">
+        <div className="col-12 col-lg-8 border-end">
           {(title.length != 0) && 
             <h2>{title}</h2>
           }
@@ -64,7 +64,7 @@ export default function ProductOverview({
            }
 
         </div>
-        <div className="col-12 col-md-4 ps-4">
+        <div className="col-12 col-lg-4 ps-4">
           <form action="" method="post">
             {(price.length != 0) && 
             <div className="d-flex">
