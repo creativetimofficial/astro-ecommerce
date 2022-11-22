@@ -21,7 +21,7 @@ export default function CheckoutSingleItem({
     <>
       <div className="d-flex mb-4">
         <img className="w-20 rounded-3 shadow-xs" src={thumb_src} alt={thumb_alt} />
-        <div className="w-70 pt-2 ps-4">
+        <div className="w-60 w-md-70 pt-2 ps-3 ps-md-4">
           <h6 className="text-lg text-white mb-1">{title}</h6>
           <p className="mb-0 text-white opacity-8">{color}</p>
           <p className="mb-0 text-sm text-white opacity-8">{size}</p>
