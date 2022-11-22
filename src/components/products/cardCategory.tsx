@@ -20,7 +20,7 @@ export default function CardProduct({
   return (
     <>
       <a href="#">
-        <div className={`card card-background align-items-start ${classList}`}>
+        <div className={`card card-background align-items-start mb-4 mb-lg-0 ${classList}`}>
           <div className="full-background" style={{backgroundImage: `url(${thumb_src})`, backgroundSize: 'cover'}}></div>
           <div className={`card-body ${classBody}`}>
             <div className="d-block mt-8">

@@ -21,9 +21,9 @@ export default function CartItem({
 
   return (
     <>
-      <div className="d-flex">
-        <img className="w-30 rounded-3 shadow-xs border" src={thumb_src} alt={thumb_alt} />
-        <div className="w-50 pt-2 ps-4">
+      <div className="d-block d-md-flex">
+        <img className="w-50 w-md-30 rounded-3 shadow-xs border" src={thumb_src} alt={thumb_alt} />
+        <div className="w-100 w-md-50 pt-2 ps-md-4">
           <h6 className="text-lg mb-1">{title}</h6>
           <div className="d-flex">
             <p className="pe-3 mb-0">{color}</p>
@@ -44,7 +44,7 @@ export default function CartItem({
            }
           </div>
         </div>
-        <div className="w-10">
+        <div className="w-20 w-md-10 mt-4 mt-md-0">
           <input type="number" min={0} className="form-control" placeholder="1" aria-label="amount" />
         </div>
         <div className="w-10 text-end">
