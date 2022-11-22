@@ -42,22 +42,22 @@ export default function OrderCardProduct({
 
   return (
     <>
-      <div className="card shadow-xs border p-4 mb-4">
+      <div className="card shadow-xs border p-3 p-md-4 mb-4">
         <div className="row border-bottom pb-4">
-          <div className="col-2">
-            <img className="w-100 rounded-3 shadow-xs" src={product.thumb_src} alt={product.thumb_alt} />
+          <div className="col-12 col-md-6 col-lg-2">
+            <img className="w-100 rounded-3 shadow-xs mb-3 mb-md-0" src={product.thumb_src} alt={product.thumb_alt} />
           </div>
-          <div className="col-5">
+          <div className="col-12 col-md-6 col-lg-5">
             <h5 className="text-base">{product.title}</h5>
             <h6 className="text-sm font-weight-bold">${product.price.toFixed(2)}</h6>
             <p className="text-sm mb-0 opacity-8">{product.description}</p>
             <p className="text-dark text-sm mt-2"><b>Qty:</b> {quantity}</p>
           </div>
-          <div className="col-3">
+          <div className="col-12 col-md-6 col-lg-3 mt-md-4 mt-lg-0">
             <h5 className="text-base">Delivery Address</h5>
-            <p className="text-sm mb-0 opacity-8 pe-7">{address}</p>
+            <p className="text-sm mb-0 opacity-8 pe-md-7">{address}</p>
           </div>
-          <div className="col-2">
+          <div className="col-12 col-md-6 col-lg-2 mt-4 mt-lg-0">
             <h5 className="text-base">Shipping updates</h5>
             <p className="text-sm mb-2 opacity-8">{email}</p>
             <p className="text-sm opacity-8">{phoneNumber}</p>
@@ -69,7 +69,7 @@ export default function OrderCardProduct({
           <div className="progress my-4">
             <div className={`progress-bar bg-primary` + widthClass} role="progressbar"></div>
           </div>
-          <div className="d-flex justify-content-between">
+          <div className="d-block d-md-flex justify-content-between">
             <p className="font-weight-semibold text-primary">Order placed</p>
             {status == "Order Placed" && 
             <>
