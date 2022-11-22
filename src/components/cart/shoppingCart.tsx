@@ -30,7 +30,7 @@ export default function ShoppingCart({
       <div className="container">
         <h2 className="mb-4">Shopping Cart</h2>
         <div className="row">
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-lg-7">
             {products.map((product, i) => 
               <>
               {i != 0 &&
@@ -49,7 +49,7 @@ export default function ShoppingCart({
             )}
             
           </div>
-          <div className="col-12 col-md-5">
+          <div className="col-12 col-lg-5 mt-5 mt-lg-0">
             <div className="card shadow-xs border bg-gray-100">
               <div className="card-body p-lg-5">
                 <h5 className="mb-4">Order Summary</h5>
