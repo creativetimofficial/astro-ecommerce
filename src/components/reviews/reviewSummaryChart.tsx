@@ -32,9 +32,9 @@ export default function ReviewSummaryChart({
   return (
     <>
     <div className="row">
-      <div className="col-12 col-md-5">
-        <div className="card shadow-xs">
-          <div className="card-body p-5">
+      <div className="col-12 col-lg-5">
+        <div className="card shadow-xs mb-4">
+          <div className="card-body p-md-5">
           <h4 className="mb-3">Customer Reviews</h4>
           <div className="d-flex">
             <ReviewRating rating={rating}/>
@@ -49,7 +49,7 @@ export default function ReviewSummaryChart({
           </div>
         </div>
       </div>
-      <div className="col-12 col-md-7 max-height-500 overflow-scroll shadow-xs rounded-3 pt-4">
+      <div className="col-12 col-lg-7 max-height-500 overflow-scroll shadow-xs rounded-3 pt-4">
         <div className="card card-plain">
           <div className="card-body">
             {CommentsList}
