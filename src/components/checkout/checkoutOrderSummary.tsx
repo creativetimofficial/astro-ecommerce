@@ -34,7 +34,7 @@ export default function CheckoutSummary({
     <>
       <section>
         <div className="row">
-          <div className="col-12 col-lg-6 p-5">
+          <div className="col-12 col-lg-6 p-3 p-md-5">
             <h5 className="mb-4">Contact information</h5>
             <div className="form-group">
               <label>Email address</label>
@@ -52,7 +52,7 @@ export default function CheckoutSummary({
             <hr className="dark horizontal"/>
             <button className="btn btn-primary float-end mt-2 mb-0">Pay now</button>
           </div>
-          <div className="col-12 col-lg-6 p-5 bg-dark bg-gradient rounded-end">
+          <div className="col-12 col-lg-6 p-3 p-md-5 bg-dark bg-gradient rounded-end">
             <small className="text-white opacity-6">Amount due</small>
             <h3 className="text-white mb-4">${subtotalCheckout.toFixed(2)}</h3>
             {products.map((product, i) => 
