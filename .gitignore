@@ -1,0 +1,8 @@
+Gemfile.lock
+node_modules/
+/node_modules
+*.zip
+build-product/
+.DS_Store
+dist/
+package-lock.json
