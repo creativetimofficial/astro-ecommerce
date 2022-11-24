@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 // import { useLogout } from '../../../hooks/auth/useLogout';
 import DashboardContext from './dashboardContext';
-import Tooltip from 'react-bootstrap/cjs/Tooltip.js';
+import Tooltip from 'react-bootstrap/Tooltip';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import useCopyToClipboard from '../../hooks/tools/copyToClipboard';
 
