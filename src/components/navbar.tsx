@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 // import { useLogout } from '../../../hooks/auth/useLogout';
 import DashboardContext from './dashboardContext';
-import Tooltip from 'react-bootstrap/cjs/Tooltip.js';
+// import Tooltip from 'react-bootstrap/cjs/Tooltip.js';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import useCopyToClipboard from '../../hooks/tools/copyToClipboard';
 
@@ -25,11 +25,7 @@ const Navbar = () => {
     document.body.classList.toggle('g-sidenav-pinned');
   };
 
-  const copyAddressTooltip = (props: any) => (
-    <Tooltip id="button-tooltip" {...props}>
-      {value ? 'Copied' : 'Copy Address'}
-    </Tooltip>
-  );
+
 
   return (
     <nav
