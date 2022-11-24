@@ -16,7 +16,7 @@ export default function OrderSummary({
   let variant = "";
 
   if (textColor) {
-    variant = " text-"+textColor;
+    variant = ` text-${textColor}`;
   }
   return (
     <>
