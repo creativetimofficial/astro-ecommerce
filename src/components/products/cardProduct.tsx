@@ -1,4 +1,3 @@
-import React from 'react';
 import ProductBadge from './productBadge';
 
 interface Props {
