@@ -25,9 +25,9 @@ export default function OrderSummary({
           <img className="w-20 w-lg-10 rounded-3 shadow-xs" src={product.thumb_src} alt={product.thumb_alt} />
           <p className="text-sm text-dark font-weight-bold mb-0 ms-3">{product.title}</p>
         </th>
-        <td className="text-sm text-secondary pt-3">${product.price.toFixed(2)}</td>
-        <td className="text-sm text-secondary pt-3">{status} {dateModified}</td>
-        <td className="text-sm text-secondary pt-3 text-end">
+        <td className="text-sm text-secondary align-middle pt-3">${product.price.toFixed(2)}</td>
+        <td className="text-sm text-secondary align-middle pt-3">{status} {dateModified}</td>
+        <td className="text-sm text-secondary align-middle pt-3 text-end">
           <a href="#" className="text-primary">ViewProduct</a>
         </td>
       </tr>
