@@ -63,8 +63,9 @@ export default function productOverviewGallery({
           
           <div className="d-flex align-items-center mt-4">
             <button className="btn btn-primary btn-lg mb-0 me-4">Add to Bag</button>
-            <a href="#">
-              <i className="far fa-heart text-2xl"></i>
+            <a href="#favorite" >
+              <i id="heart1" className="far fa-heart text-2xl"></i>
+              <i id="heart2" className="fas fa-heart text-2xl text-danger d-none"></i>
             </a>
           </div>
             <ProductAccordion data={data} />
