@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface Props {
   thumb_src: string;
   title: string;
