@@ -1,15 +1,4 @@
-import UpperNavbar from './upperNavbar';
-
-interface Props {
-  title: string;
-
-}
-
-export default function StoreNavbar({
-  title,
-
-}: Props) {
-
+export default function StoreNavbar() {
   return (
     <>
       <div className="container py-2">
