@@ -9,7 +9,7 @@ export default function ProductAccordion({
   const accordion = [];
   let i = 0;
 
-  Object.entries(data).map(([title,value],i) => {    
+  Object.entries(data).map(([title,value],i) => {
     if (i != 0) {
       accordion.push(
         <div className="accordion-item">
