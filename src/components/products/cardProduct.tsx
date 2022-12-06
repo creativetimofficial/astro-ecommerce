@@ -55,7 +55,7 @@ export default function CardProduct({
               <ProductBadge colors={colors} />
             }
 
-            {!(description || colors) &&
+            {!(description || colors || color) &&
               <a href="#" className="font-weight-normal text-body text-sm">Shop Now</a>
             }
           </div>
