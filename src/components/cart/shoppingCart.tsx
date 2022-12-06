@@ -27,8 +27,8 @@ export default function ShoppingCart({
 
   return (
     <>
-      <div className="container">
-        <h2 className="mb-4">Shopping Cart</h2>
+      <div className="container mt-5">
+        <h2 className="mb-5">Shopping Cart</h2>
         <div className="row">
           <div className="col-12 col-lg-7">
             {products.map((product, i) => 
