@@ -1,9 +1,24 @@
-export default function TestimonialsFade() {
+interface Props {
+  pageHeaderBgImg: string;
+  pageHeaderMinVh: string;
+}
+
+export default function TestimonialsFade({
+  pageHeaderBgImg,
+  pageHeaderMinVh
+}: Props) {
+
+  const styles = {
+    pageHeader: {
+      backgroundImage: 'url(' + pageHeaderBgImg + ')',
+      minHeight: pageHeaderMinVh,
+    },
+  } as const;
 
   return (
     <>
       <section>
-        <div className="page-header min-vh-50 rounded-top" style={styles.pageHeader}>
+        <div className="page-header rounded-top" style={styles.pageHeader}>
           <div className="faded opacity-10"></div>
           <div className="container z-index-2">
             <div className="row justify-content-center">
@@ -52,12 +67,5 @@ export default function TestimonialsFade() {
         </div>
       </section>
     </>
-    
   );
 };
-
-  const styles = {
-    pageHeader: {
-      backgroundImage: 'url(https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2729&q=80)'
-    },
-  } as const;
