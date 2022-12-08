@@ -122,6 +122,10 @@
       &[disabled] {
         cursor: not-allowed;
         pointer-events: all;
+
+        &:hover {
+          background-color: $white;
+        }
       }
 
       &:hover {

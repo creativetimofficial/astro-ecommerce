@@ -36,9 +36,7 @@ export default function ProductAccordion({
         </div>
       )
     } else {
-      tabs.push(
-     
-      )
+      tabs.push()
     }
   })
 

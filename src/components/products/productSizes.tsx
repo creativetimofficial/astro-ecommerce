@@ -22,7 +22,7 @@ export default function ProductSizes({
             : 
               <input className="form-check-input rounded-2" disabled type="radio" name="flexRadioDefault" id="customRadio1" />
             } 
-            <span className="position-absolute">{size}</span>
+            <span className="position-absolute cursor-pointer">{size}</span>
           </div>
         </div>
         )}

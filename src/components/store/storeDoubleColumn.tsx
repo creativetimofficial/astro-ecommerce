@@ -1,22 +1,6 @@
-import StoreNavbar from './storeNavbar'
-
-interface Props {
-  title: string;
-}
-
-export default function StoreNavigationDoubleColumn({
-  title,
-
-}: Props) {
-
+export default function StoreNavigationDoubleColumn() {
   return (
     <>
-    <nav className="navbar navbar-expand-md shadow-none flex-wrap top-0 px-0 py-0">
-      <StoreNavbar
-        title={title}
-      />
-      <hr className="horizontal w-100 my-0 dark" />
-    </nav>
     <div className="row mt-5">
       <div className="col-12 col-lg-6 mb-4 mb-lg-0">
         <h6 className="w-100 pb-3 border-bottom">Clothing</h6>

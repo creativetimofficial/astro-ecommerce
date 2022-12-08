@@ -1,4 +1,3 @@
-
 import ProductFeatureImg from './productFeatureImg';
 import ProductFeatureDetails from './productFeatureDetails';
 
@@ -9,7 +8,7 @@ interface Props {
     alt: string;
   })[];
   full_description: string;
-  featuresDetails: Map<string,string>
+  featuresDetails: Map<string,string>;
 }
 
 export default function ProductOverview({

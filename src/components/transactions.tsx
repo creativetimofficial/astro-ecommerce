@@ -106,7 +106,7 @@ const Transactions = () => {
                 <span className="btn-inner--text">Download CSV</span>
               </button>
               <a
-                href={`https://explorer.elrond.com/accounts/${getAddress}`}
+                href="#"
                 target="_blank"
                 className="btn btn-sm ms-2 btn-white btn-icon d-flex align-items-center mb-0"
               >
