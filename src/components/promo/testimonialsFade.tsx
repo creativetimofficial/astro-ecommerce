@@ -1,12 +1,4 @@
-import StoreNavbar from './storeNavbar';
-
-interface Props {
-  title: string;
-}
-
-export default function TestimonialsFade({
-  title,
-}: Props) {
+export default function TestimonialsFade() {
 
   return (
     <>
