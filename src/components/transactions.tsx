@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import DashboardContext from './dashboardContext';
-import ReactPaginate from 'react-paginate';
 
 const Transactions = () => {
   const { getTransactions, getAddress } = useContext(DashboardContext);
@@ -208,27 +207,6 @@ const Transactions = () => {
             </table>
           </div>
         </div>
-        {/* <div className="card-footer">
-          <ReactPaginate
-            breakLabel="..."
-            nextLabel=">"
-            onPageChange={handlePageClick}
-            pageRangeDisplayed={1}
-            pageCount={pageCount}
-            previousClassName="page-item"
-            nextClassName="page-item"
-            previousLinkClassName="page-link font-weight-bold"
-            nextLinkClassName="page-link font-weight-bold"
-            breakClassName="page-item"
-            breakLinkClassName="page-link font-weight-bold"
-            previousLabel="<"
-            renderOnZeroPageCount={undefined}
-            className="pagination justify-content-end mb-0"
-            pageClassName="page-item"
-            pageLinkClassName="page-link font-weight-normal"
-            activeClassName="active"
-          />
-        </div> */}
       </div>
     </>
   );
