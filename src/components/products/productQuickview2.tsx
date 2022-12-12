@@ -75,15 +75,21 @@ export default function ProductQuickview({
                 <h6 className="mt-4">Size:</h6>
                 <div className="row mb-2">
                   <div className="col-6">
-                    <div className="p-3 rounded border border-primary">
-                      <h6>18L</h6>
-                      <p className="mb-0">Perfect for a reasonable amount of snacks.</p>
+                    <div className="form-check">
+                      <input className="form-check-input rounded-2" type="radio" name="flexRadioDefault" id="18l" />
+                      <label className="cursor-pointer label-lg" htmlFor="18l">
+                        <h6>18L</h6>
+                        <p className="mb-0">Perfect for a reasonable amount of snacks.</p>
+                      </label>
                     </div>
                   </div>
                   <div className="col-6">
-                    <div className="p-3 rounded border">
-                      <h6>20L</h6>
-                      <p className="mb-0">Enough room for a serious amount of snacks.</p>
+                    <div className="form-check">
+                      <input className="form-check-input rounded-2" type="radio" name="flexRadioDefault" id="20l" />
+                      <label className="cursor-pointer label-lg" htmlFor="20l">
+                        <h6>20L</h6>
+                        <p className="mb-0">Enough room for a serious amount of snacks.</p>
+                      </label>
                     </div>
                   </div>
                 </div>
