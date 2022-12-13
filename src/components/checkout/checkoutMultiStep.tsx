@@ -3,6 +3,7 @@ import ShippingInfo from './shippingInfo';
 import BillingInfo from './billingInfo';
 import OrderSummary from '../cart/orderSummary';
 import CheckoutSingleItemDark from '../checkout/checkoutSingleItemDark';
+import ReviewRating from '../reviews/reviewRating';
 
 interface Props {
   products: ({
@@ -123,7 +124,9 @@ export default function CheckoutSummary({
                     </button>
                   </h5>
                   <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRental">
-                    <div className="accordion-body text-sm opacity-8"></div>
+                    <div className="accordion-body text-sm opacity-8">
+                      <ReviewRating />
+                    </div>
                   </div>
                 </div>
               </div>
