@@ -14,15 +14,15 @@ export default function ProductSizes({
       </div>
       <div className="d-flex flex-wrap text-center my-4">
 
-        {Object.entries(sizes).map(([size, amount]) => 
+        {Object.entries(sizes).map(([size, amount], i) => 
         <div className="mb-3 me-3">
           <div className="form-check">
             {(amount != 0) ?
-              <input className="form-check-input rounded-2" type="radio" name="flexRadioDefault" id="customRadio1" />
+              <input className="form-check-input rounded-2" type="radio" name="flexRadioDefault" id={`input`+(i)} />
             : 
-              <input className="form-check-input rounded-2" disabled type="radio" name="flexRadioDefault" id="customRadio1" />
+              <input className="form-check-input rounded-2" disabled type="radio" name="flexRadioDefault" id={`input`+(i)} />
             } 
-            <span className="position-absolute cursor-pointer">{size}</span>
+            <label className="cursor-pointer" htmlFor={`input`+(i)}>{size}</label>
           </div>
         </div>
         )}

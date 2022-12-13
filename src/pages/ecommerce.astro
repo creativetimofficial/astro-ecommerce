@@ -66,6 +66,16 @@ data.orders.forEach((order) => {
 
 ---
 
+<script>
+  function toggleHeart(e) {
+    e.target.classList.toggle('fas');
+    e.target.classList.toggle('far');
+    e.target.classList.toggle('text-danger');
+
+  }
+  
+  document.getElementById('heart1').addEventListener("click", toggleHeart);
+</script>
 
 <Layout title="Welcome to CorporateAstro.">
 	<main>

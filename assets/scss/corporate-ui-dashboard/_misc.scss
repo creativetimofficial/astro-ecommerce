@@ -374,3 +374,10 @@ hr.horizontal {
     margin-right: $text-border-after-mr;
   }
 }
+
+// Checkboxes in Accordion 
+.accordion {
+  .form-check-input {
+    margin-left: 0;
+  }
+}
