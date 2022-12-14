@@ -1,11 +1,4 @@
-interface Props {
-  title: string;
-}
-
-export default function OrderSummary({
-
-}: Props) {
-
+export default function OrderSummary() {
   return (
     <>
       <div className="form-group">
