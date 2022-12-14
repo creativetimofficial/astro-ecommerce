@@ -4,6 +4,7 @@ import data from '../../public/data.json';
 import InfoCards from '../components/infoCards';
 import '../../assets/scss/corporate-ui-dashboard.scss';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import StoreNavbar from '../components/store/storeNavbar';
 import Transactions from '../components/transactions';
 import CardProduct from '../components/products/cardProduct';
@@ -272,6 +273,10 @@ data.orders.forEach((order) => {
         </nav>
         <StoreDoubleColumn title={data.products[1].title}/>
      
+      </div>
+
+      <div class="my-10">
+        <Footer />
       </div>
 
       <div class="my-10">
