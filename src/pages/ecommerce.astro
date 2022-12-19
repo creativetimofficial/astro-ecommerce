@@ -1,11 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import data from '../../public/data.json';
-import InfoCards from '../components/infoCards';
-import '../../assets/scss/corporate-ui-dashboard.scss';
+import '../../assets/scss/astro-corporate.scss';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import StoreNavbar from '../components/store/storeNavbar';
-import Transactions from '../components/transactions';
 import CardProduct from '../components/products/cardProduct';
 import CardCategory from '../components/products/cardCategory';
 import ProductOverviewGrid from '../components/products/productOverviewGrid';
@@ -87,7 +86,6 @@ data.orders.forEach((order) => {
       <Navbar />
     </div>
     <div class="container py-4 px-5">
-      <InfoCards />
 
       <div class="row">
         {data.products.map(product => 
@@ -275,6 +273,10 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
+        <Footer />
+      </div>
+
+      <div class="my-10">
         <TestimonialsFade 
           pageHeaderBgImg={"https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2729&q=80"} 
           pageHeaderMinVh="50vh"
@@ -326,8 +328,6 @@ data.orders.forEach((order) => {
       <div class="my-10">
         <IncentiveCols />
       </div>
-      
-      <Transactions />
       
     </div>
 	</main>
