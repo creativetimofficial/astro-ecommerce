@@ -1,25 +1,10 @@
 import React, { useContext } from 'react';
-// import { useLogout } from '../../../hooks/auth/useLogout';
 import DashboardContext from './dashboardContext';
-// import Tooltip from 'react-bootstrap/cjs/Tooltip.js';
-// import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import useCopyToClipboard from '../../hooks/tools/copyToClipboard';
 
 const Navbar = () => {
   const { getAddress } = useContext(DashboardContext);
   const [value, copy] = useCopyToClipboard();
-
-  // const { logout } = useLogout();
-
-  const elrondLink = [
-    { name: 'Main Site', link: 'https://elrond.com' },
-    { name: 'Explorer', link: 'https://explorer.elrond.com' },
-    { name: 'Bridge', link: 'https://bridge.elrond.com' },
-    { name: 'Docs', link: 'https://docs.elrond.com' },
-    { name: 'Growth', link: 'https://growth.elrond.com' },
-    { name: 'Maiar', link: 'https://maiar.com' },
-    { name: 'Maiar Exchange', link: 'https://maiar.exchange' },
-  ];
 
   const toggleAside = () => {
     document.body.classList.toggle('g-sidenav-pinned');
@@ -31,7 +16,6 @@ const Navbar = () => {
     <nav
       className="navbar navbar-main navbar-expand-lg px-0 shadow-none"
       id="navbarBlur"
-      // eslint-disable-next-line react/no-unknown-property
       navbar-scroll="true"
     >
       <div className="container-fluid py-1 px-5">
@@ -83,34 +67,11 @@ const Navbar = () => {
               </svg>
 
               <a
-                href={`https://explorer.elrond.com/accounts/${getAddress}`}
+                href="#"
                 className="text-white text-dark ms-1 text-sm text-decoration-underline"
                 target="_blank"
-              >
+              />
                 <span className="d-none d-lg-block">{getAddress}</span>
-                {/* <span className="d-lg-none">
-                  {getAddress.substr(0, 7) + '...' + getAddress.substr(56, 61)}
-                </span> */}
-              </a>
-              {/* <OverlayTrigger
-                placement="bottom"
-                delay={{ show: 100, hide: 100 }}
-                overlay={copyAddressTooltip}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                  width={18}
-                  height={18}
-                  strokeWidth={2}
-                  className="ms-1 cursor-pointer"
-                  onClick={() => copy(getAddress)}
-                >
-                  <path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 013.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0121 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 017.5 16.125V3.375z" />
-                  <path d="M15 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0017.25 7.5h-1.875A.375.375 0 0115 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 009.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V7.875C3 6.839 3.84 6 4.875 6z" />
-                </svg>
-              </OverlayTrigger> */}
             </li>
             <li className="nav-item dropdown pe-2 d-flex align-items-center">
               <a
@@ -135,26 +96,52 @@ const Navbar = () => {
                 className="dropdown-menu dropdown-menu-end  px-2 py-3 me-sm-n4"
                 aria-labelledby="dropdownMenuButton"
               >
-                {elrondLink.map((data) => (
-                  <li key={data.name}>
-                    <a
-                      className="dropdown-item border-radius-md"
-                      href={data.link}
-                      target="_blank"
-                    >
-                      <div className="d-flex py-1">
-                        <div className="d-flex flex-column justify-content-center">
-                          <h6 className="text-sm font-weight-normal mb-1">
-                            {data.name}
-                          </h6>
-                          <p className="text-xs text-secondary d-flex align-items-center mb-0 ">
-                            {data.link}
-                          </p>
-                        </div>
+                <li>
+                  <a
+                    className="dropdown-item border-radius-md"
+                    href="#"
+                    target="_blank"
+                  >
+                    <div className="d-flex py-1">
+                      <div className="d-flex flex-column justify-content-center">
+                        <h6 className="text-sm font-weight-normal mb-1">
+                          Item
+                        </h6>
                       </div>
-                    </a>
-                  </li>
-                ))}
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item border-radius-md"
+                    href="#"
+                    target="_blank"
+                  >
+                    <div className="d-flex py-1">
+                      <div className="d-flex flex-column justify-content-center">
+                        <h6 className="text-sm font-weight-normal mb-1">
+                          Item
+                        </h6>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item border-radius-md"
+                    href="#"
+                    target="_blank"
+                  >
+                    <div className="d-flex py-1">
+                      <div className="d-flex flex-column justify-content-center">
+                        <h6 className="text-sm font-weight-normal mb-1">
+                          Item
+                        </h6>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
               </ul>
             </li>
             <li className="nav-item ps-2 d-flex align-items-center">
