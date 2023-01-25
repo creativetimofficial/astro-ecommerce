@@ -11,6 +11,6 @@ export default defineConfig({
   integrations: [react()],
   output: "server",
   adapter: vercel(),
-  site: 'https://creativetimofficial.github.io',
+  site: 'https://github.com/creativetimofficial',
   base: '/astro-ecommerce',
 });
