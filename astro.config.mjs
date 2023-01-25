@@ -10,5 +10,7 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   integrations: [react()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel(),
+  site: 'https://creativetimofficial.github.io',
+  base: '/astro-ecommerce',
 });
