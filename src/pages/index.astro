@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import data from '../../public/data.json';
-import '../../assets/scss/astro-corporate.scss';
+import '../../assets/scss/astro-ecommerce.scss';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import StoreNavbar from '../components/store/storeNavbar';
@@ -70,17 +70,16 @@ data.orders.forEach((order) => {
     e.target.classList.toggle('fas');
     e.target.classList.toggle('far');
     e.target.classList.toggle('text-danger');
-
   }
   
   document.getElementById('heart1').addEventListener("click", toggleHeart);
 </script>
 
-<Layout title="Welcome to CorporateAstro.">
+<Layout title="Astro Ecommerce">
 	<main>
     <div class="pt-0 pb-7 bg-cover"
       style={{
-        backgroundImage: 'url("/header-blue-purple.jpg")',
+        backgroundImage: 'url("./header-blue-purple.jpg")',
       }}
     >
       <Navbar />
