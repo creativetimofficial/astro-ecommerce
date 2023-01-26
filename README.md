@@ -1,8 +1,6 @@
-# Welcome to [Astro](https://astro.build)
+# Welcome to [Astro Ecommerce](https://www.creative-tim.com/astro)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/astro-ecommerce.svg?maxAge=2592000)](https://github.com/creativetimofficial/astro-ecommerce/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/astro-ecommerce.svg?maxAge=2592000)](https://github.com/creativetimofficial/astro-ecommerce/issues?q=is%3Aissue+is%3Aclosed)
 
 ![basics](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/astro-ecommerce/astro-ecommerce-1.jpg)
 
@@ -79,6 +77,14 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
 | `npm run astro --help` | Get help using the Astro CLI                       |
 
+#### Social Media
+
+Twitter: <https://twitter.com/CreativeTim>
+Facebook: <https://www.facebook.com/CreativeTim>
+Dribbble: <https://dribbble.com/creativetim>
+TikTok: <https://tiktok.com/@creative.tim>
+Instagram: <https://instagram.com/creativetimofficial>
+
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [our documentation](https://www.creative-tim.com/learning-lab/astro/overview/astro-ecommerce) or jump into our [Discord server](https://discord.com/invite/TGZqBvZB).
