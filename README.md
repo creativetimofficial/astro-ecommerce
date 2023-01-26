@@ -80,9 +80,13 @@ All commands are run from the root of the project, from a terminal:
 #### Social Media
 
 Twitter: <https://twitter.com/CreativeTim>
+
 Facebook: <https://www.facebook.com/CreativeTim>
+
 Dribbble: <https://dribbble.com/creativetim>
+
 TikTok: <https://tiktok.com/@creative.tim>
+
 Instagram: <https://instagram.com/creativetimofficial>
 
 ## 👀 Want to learn more?
