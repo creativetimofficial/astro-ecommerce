@@ -77,14 +77,8 @@ data.orders.forEach((order) => {
 
 <Layout title="Astro Ecommerce">
 	<main>
-    <div class="pt-0 pb-7 bg-cover"
-      style={{
-        backgroundImage: 'url("./header-blue-purple.jpg")',
-      }}
-    >
-      <Navbar />
-    </div>
-    <div class="container py-4 px-5">
+    <Navbar />
+    <div class="container mt-5">
 
       <div class="row">
         {data.products.map(product => 
@@ -330,5 +324,5 @@ data.orders.forEach((order) => {
       
     </div>
 	</main>
-
+  <Footer />
 </Layout>

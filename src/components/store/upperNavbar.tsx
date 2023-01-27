@@ -3,12 +3,12 @@ export default function UpperNavbar() {
     <>
       <div className="w-100 bg-slate-900">
         <div className="container align-items-center d-flex">
-          <ul className="navbar-nav d-none d-lg-flex">
-            <li className="nav-item dropdown pe-2 d-flex align-items-center">
-              <a href="javascript:;" className="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <ul className="navbar-nav">
+            <li className="nav-item dropdown pe-2">
+              <a href="javascript:;" className="nav-link dropdown-toggle text-white p-0" id="dropdownCurrency" data-bs-toggle="dropdown" aria-expanded="false">
                 CAD
               </a>
-              <ul className="dropdown-menu px-2 py-3" aria-labelledby="dropdownMenuButton" data-bs-popper="static">
+              <ul className="dropdown-menu position-absolute px-2 py-3" aria-labelledby="dropdownCurrency" data-bs-popper="static">
                 <li className="mb-2">
                   <a className="dropdown-item border-radius-md" href="javascript:;">
                     <p className="mb-0">EUR</p>
@@ -28,14 +28,14 @@ export default function UpperNavbar() {
             </li>
           </ul>
           <div className="ms-md-auto p-0 d-flex align-items-center">
-            <ul className="navbar-nav d-none d-lg-flex">
+            <ul className="navbar-nav d-none d-lg-flex flex-row">
               <li className="nav-item px-3 py-3 border-radius-sm d-flex align-items-center">
-                <a href="#" className="nav-link text-white p-0">
+                <a href="#" className="nav-link text-white p-0 text-sm">
                   Sign In
                 </a>
               </li>
               <li className="nav-item px-3 py-3 border-radius-sm d-flex align-items-center">
-                <a href="#" className="nav-link text-white p-0">
+                <a href="#" className="nav-link text-white p-0 text-sm">
                   Create an account
                 </a>
               </li>
