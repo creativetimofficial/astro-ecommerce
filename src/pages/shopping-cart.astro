@@ -2,9 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import data from '../../public/data.json';
 import '../../assets/scss/astro-ecommerce.scss';
+import Navbar from '../components/navbar';
+import UpperNavbar from '../components/store/upperNavbar';
 import CardProduct from '../components/products/cardProduct';
 import ShoppingCart from '../components/cart/shoppingCart';
-import StoreNavigation from '../components/store/storeNavigation';
 import StoreDoubleColumn from '../components/store/storeDoubleColumn';
 
 let cartItems = [];
@@ -15,7 +16,8 @@ data.shoppingCart.map(id =>
 
 <Layout title="Shopping Cart">
 	<main>
-    <StoreNavigation title={data.products[0].title}/>
+    <UpperNavbar />
+    <Navbar />
 
     <ShoppingCart products = {cartItems}/>
     
