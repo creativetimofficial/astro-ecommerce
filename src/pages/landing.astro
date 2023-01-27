@@ -4,7 +4,7 @@ import data from '../../public/data.json';
 import '../../assets/scss/astro-ecommerce.scss';
 import CardCategory from '../components/products/cardCategory';
 import ProductFeature from '../components/products/productFeature';
-import StoreNavigation from '../components/store/storeNavigation';
+import Navbar from '../components/navbar';
 import StoreDoubleColumn from '../components/store/storeDoubleColumn';
 import TestimonialsFade from '../components/promo/testimonialsFade';
 import PromoSectionLarge from '../components/promo/promoSectionLarge';
@@ -12,7 +12,7 @@ import PromoSectionLarge from '../components/promo/promoSectionLarge';
 
 <Layout title="Landing Page">
 	<main>
-    <StoreNavigation title={data.products[0].title}/>
+    <Navbar />
     <PromoSectionLarge 
       title={"Check out our new collection"}
       full_description={data.products[0].full_description}  
