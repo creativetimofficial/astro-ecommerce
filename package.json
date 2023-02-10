@@ -1,8 +1,9 @@
 {
-  "name": "@example/basics",
+  "name": "astro-ecommerce",
   "type": "module",
-  "version": "0.0.1",
-  "private": true,
+  "version": "1.0.0",
+  "description": "The ultimate starter template for your e-commerce web project",
+  "main": "assets/js/astro-ecommerce.min.js",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,6 +11,25 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "keywords": [
+    "Astro",
+    "Ecommerce",
+    "Corporate",
+    "Store Theme",
+    "Online Store",
+    "Ecommerce template",
+    "Astro e-commerce",
+    "Astro ecommerce",
+    "Astro store",
+    "Store theme",
+    "ecommerce theme",
+    "Astro Ecommerce theme",
+    "Astro Ecommerce store",
+    "Astro template",
+    "Astro store template"
+  ],
+  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "license": "MIT",
   "dependencies": {
     "@astrojs/react": "^1.2.1",
     "@types/react": "^18.0.21",
@@ -23,5 +43,13 @@
   },
   "devDependencies": {
     "sass": "^1.55.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativetimofficial/astro-ecommerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/creativetimofficial/astro-ecommerce/issues"
+  },
+  "homepage": "https://www.creative-tim.com/astro"
 }
