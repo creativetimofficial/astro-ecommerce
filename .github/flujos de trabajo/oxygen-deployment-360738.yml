@@ -45,7 +45,7 @@ jobs:
           build_command: "HYDROGEN_ASSET_BASE_URL=$OXYGEN_ASSET_BASE_URL yarn build"
 
       # Create GitHub Deployment
-      - name: Create GitHub Deployment
+      - name: oxygen-deployment-360738.yml
         uses: shopify/github-deployment-action@v1
         if: always()
         with:
