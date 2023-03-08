@@ -4,11 +4,14 @@
   background-position: $icon-shape-bg-position;
   border-radius: $border-radius-lg;
 
-  i {
-    color: $white;
-    opacity: $icon-shape-icon-opacity;
+  // i, svg {
+
+  // }
+  i{
     top: $info-icon-top;
+    color: $white;
     position: $info-icon-position;
+    opacity: $icon-shape-icon-opacity;
   }
 
   .ni {
@@ -20,7 +23,7 @@
   width: $icon-xxs-width;
   height: $icon-xxs-height;
 
-  i {
+  i,svg {
     top: $info-icon-top-xxs;
     font-size: .5rem;
   }
@@ -30,7 +33,7 @@
   width: $icon-xs-width;
   height: $icon-xs-height;
 
-  i {
+  i,svg {
     top: $info-icon-top-xs;
     font-size: .5rem;
   }
@@ -40,7 +43,7 @@
   width: $icon-sm-width;
   height: $icon-sm-height;
 
-  i {
+  i,svg {
     top: $info-icon-top-sm;
     font-size: .65rem;
   }
@@ -50,7 +53,7 @@
   width: $icon-md-width;
   height: $icon-md-height;
 
-  i {
+  i,svg {
     top: $info-icon-top-md;
     font-size: $font-size-sm;
   }
@@ -59,7 +62,7 @@
     background-position-x: $icon-striped-bg-md;
     background-position-y: $icon-striped-bg-md;
 
-    i {
+    i,svg {
       top: 11%;
       margin-left: -10px;
       font-size: $font-size-sm;
@@ -70,7 +73,7 @@
 .icon-lg {
   width: $icon-lg-width;
   height: $icon-lg-height;
-  i {
+  i,svg {
     top: $info-icon-top-lg;
     font-size: $font-size-xl;
   }
@@ -79,7 +82,7 @@
     background-position-x: $icon-striped-bg-lg;
     background-position-y: $icon-striped-bg-lg;
 
-    i {
+    i,svg {
       top: 21%;
       margin-left: -15px;
     }
@@ -91,7 +94,7 @@
   height: $icon-xl-height;
   border-radius: $border-radius-lg;
 
-  i {
+  i,svg {
     top: $info-icon-top-xl;
     font-size: 1.6rem;
   }
@@ -100,7 +103,7 @@
     background-position-x: $icon-striped-bg-xl;
     background-position-y: $icon-striped-bg-xl;
 
-    i {
+    i,svg {
       top: 30%;
       margin-left: -15px;
     }

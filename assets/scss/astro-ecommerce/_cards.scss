@@ -1,7 +1,32 @@
 .card {
+
   box-shadow: $card-box-shadow;
+  
+  &.blur {
+    
+    box-shadow: $card-box-shadow;
+    border: 1px solid $white;
+    
+    .card-header {
+      background-color: transparent;
+    }
+    
+    .card-body {
+      background-color: transparent;
+    }
+    
+    .card-footer {
+      background-color: transparent;
+    }
+  }
+  
   .card-header {
     padding: $card-header-padding;
+    border-bottom: 0;
+  }
+  
+  .card-footer {
+    border-top: 0;
   }
 
 
@@ -29,6 +54,10 @@
 
 
 
+  &.card-body {
+    padding: $card-body-padding;
+  }
+  
   .card-body {
     padding: $card-body-padding;
   }
@@ -36,6 +65,7 @@
   &.card-plain {
     background-color: $card-plain-bg-color;
     box-shadow: $card-plain-box-shadow;
+    border: $card-plain-border;
   }
 
   .card-footer {
@@ -61,4 +91,3 @@
 }
 
 @import 'cards/card-background';
-@import 'cards/card-product';

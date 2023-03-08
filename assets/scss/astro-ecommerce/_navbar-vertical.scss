@@ -34,7 +34,7 @@
         }
       }
       .icon {
-        padding: 10px;
+        padding: 8px;
       }
     }
 
@@ -100,8 +100,8 @@
           }
           // Navbar navigation
           .navbar-nav .nav-link {
-            padding-top: $navbar-vertical-nav-link-padding-y;
-            padding-bottom: $navbar-vertical-nav-link-padding-y;
+            padding-top: $navbar-padding-y;
+            padding-bottom: $navbar-padding-y;
             margin: 0;
 
             .nav-link-text,
@@ -110,6 +110,9 @@
             i {
               pointer-events: none;
             }
+            .nav-link-text {
+              line-height: 21px;
+            }
           }
 
           .navbar-nav .nav-item {
@@ -117,8 +120,6 @@
           }
 
           .navbar-nav > .nav-item {
-            margin-top: 0.125rem;
-
             .icon {
               .ni {
                 top: 0;
@@ -137,13 +138,28 @@
             border-radius: $border-radius-sm;
           }
           // Second level
-          .navbar-nav .nav .nav-link {
-            padding-top: 0.417rem;
-            padding-bottom: 0.417rem;
-            padding-left: 15px;
-
-            > span.sidenav-normal {
-              transition: all 0.1s ease 0s;
+          .navbar-nav .nav {
+            gap: 4px;
+            .nav-link {
+             padding-top: $navbar-padding-y;
+             padding-bottom: $navbar-padding-y;
+             padding-left: 1rem;
+ 
+             > span.sidenav-normal {
+               transition: all 0.1s ease 0s;
+             }
+            }
+            .nav-item {
+              .nav-item {
+                .nav-link {
+                  padding-top: $navbar-padding-collapse-y;
+                  padding-bottom: $navbar-padding-collapse-y;
+                  margin-left: $navbar-vertical-collapse-margin-left + 0.3rem;
+                  &:before {
+                    content: none;
+                  }
+                }
+              }
             }
           }
         }
@@ -183,15 +199,11 @@
     display: block;
   }
   @include media-breakpoint-up(xl) {
-    &:hover {
-      max-width: $navbar-vertical-open-width;
-    }
-
     .sidenav-toggler {
       padding: 1.5rem;
     }
 
-    &.fixed-start ~ .main-content {
+    &.fixed-start:not(.d-lg-none) ~ .main-content {
       margin-left: $navbar-vertical-open-width;
       &.main-content-documentation{
         margin-left: 21rem;
@@ -212,11 +224,20 @@
   }
 
   .navbar-brand {
+    span {
+      line-height: 1rem;
+      font-size: 12px;
+    }
+    svg {
+      margin-left: 2.5px;
+    }
     padding: $navbar-vertical-navbar-brand-padding;
   }
 }
 
 .sidenav-header {
+  justify-content: center;
+  display: flex;
   height: $sidenav-header-width;
 }
 
@@ -234,8 +255,19 @@
 .g-sidenav-show {
   .sidenav {
     .nav-item .collapse {
+      margin-top: 8px;
       height: auto;
       @include transition($transition-base);
+      .nav-item .collapse {
+        margin-top: 0px;
+      }
+      .nav-item .collapsing {
+        margin-top: 0px;
+      }
+    }
+    
+    .nav-item .collapsing {
+      margin-top: 8px;
     }
 
     .nav-link-text {
@@ -299,7 +331,7 @@
            .icon {
              svg {
                .color-background{
-                 fill: rgba($white, .5);
+                 fill: rgba($white, 1);
                }
                .color-foreground {
                  fill: $white;
@@ -311,7 +343,7 @@
         &.border-start{
            border-color: rgba($dark, .5) !important;
            .nav-link.active {
-             color: $dark;
+             color: $white;
              &:before{
                border: 2px solid $dark;
              }
@@ -320,7 +352,7 @@
       }
 
       .nav-link {
-        color: rgba($dark, .8);
+        color: rgba($white, .8);
         &.active {
           box-shadow: none;
         }
@@ -393,7 +425,7 @@
       .nav-link.active {
        color: $white;
        font-weight: $font-weight-bold;
-       background-color: $slate-800;
+       background-color: $dark;
 
        .icon {
          svg {
@@ -405,9 +437,7 @@
        }
      }
      &.border-start{
-       margin-left: $navbar-nav-link-border-margin-left;
        .nav-link.active {
-         background: transparent;
          &:before{
            content: "";
            position: absolute;
@@ -418,6 +448,11 @@
            margin-left: $navbar-nav-link-before-margin-left;
          }
        }
+     }
+     .nav-sm{
+      .nav-link.active {
+        background-color: transparent;
+      }
      }
     }
   }
@@ -447,14 +482,21 @@
       font-weight: 700;
       content: "\f107";
       margin-left: auto;
-      color: rgba($dark-gradient-state,0.5);
+      color: rgba($light-gradient-state,0.5);
       @include transition($transition-base);
     }
     // Expanded
     &[aria-expanded="true"] {
       &:after {
-        color: $dark-gradient-state;
+        color: $light-gradient-state;
         transform: rotate(180deg);
+      }
+    }
+  }
+  &.bg-white {
+    .navbar-nav .nav-link[data-bs-toggle="collapse"] {
+      &:after {
+        color: rgba($dark-gradient-state,0.5);
       }
     }
   }
@@ -465,47 +507,25 @@
       .collapsing {
         .nav {
           @include transition($transition-base);
-
           .nav-item {
             .nav-link {
               position: relative;
-              background-color: transparent;
               box-shadow: none;
-              color: rgba($dark-gradient-state,0.5);
+              color: $light-gradient-state;
               margin-left: $navbar-vertical-collapse-margin-left;
 
-              &:before {
-                content: "";
-                position: absolute;
-                left: $navbar-vertical-collapse-left;
-                top: $navbar-vertical-collapse-top;
-                transform: $navbar-vertical-collapse-translate;
-                height: $navbar-vertical-collapse-dot-size;
-                width: $navbar-vertical-collapse-dot-size;
-                border-radius: $border-radius-2xl;
-                background: rgba($dark-gradient-state, 0.5);
-              }
-
               &.active {
-                color: $dark-gradient-state;
-
-                &:before {
-                  height: $navbar-vertical-collapse-dot-size-active;
-                  width: $navbar-vertical-collapse-dot-size-active;
-                  background: $dark-gradient-state;
+                .nav-link {
+                  &.active {
+                    background-color: transparent;
+                  }
                 }
               }
             }
 
             &.active {
               .nav-link {
-                color: $dark-gradient-state;
-
-                &:before {
-                  height: $navbar-vertical-collapse-dot-size-active;
-                  width: $navbar-vertical-collapse-dot-size-active;
-                  background: $dark-gradient-state;
-                }
+                color: $white;
               }
             }
             // Third level
@@ -613,27 +633,45 @@
 
     .navbar-vertical {
       max-width: $navbar-vertical-hidden-width !important;
-
+      
       &.fixed-start ~ .main-content {
         margin-left: $navbar-vertical-hidden-width + 1.5;
       }
 
+      &.navbar-expand-xs {
+        .navbar-collapse {
+          overflow-x: hidden;
+        }
+      }
       .navbar-brand {
         img {
           width: auto !important;
         }
 
         span {
+          display: none;
           opacity: 0;
         }
       }
 
-      .nav-item {
-        .nav-link {
-          .icon {
-            padding: 10px;
-          }
+      .docs-info {
+        display: none;
+      }
 
+      .sidenav-footer {
+        #sidenavCard .card-body {
+          div.mb-3 {
+            margin: 0 !important;
+          }
+        }
+      }
+
+
+      .nav-item {
+        h6 {
+          padding-left: 0.3rem !important;
+        }
+        .nav-link {
           .nav-link-text,
           .sidenav-normal {
             opacity: 0;
@@ -642,7 +680,6 @@
 
           .sidenav-mini-icon {
             min-width: $navbar-icon-min-width;
-            margin-left: $navbar-icon-margin-left;
             opacity: 1;
           }
 
@@ -653,12 +690,13 @@
 
         .collapse {
           .nav {
+            border: 0 !important;
             margin-left: 0 !important;
             padding-left: 0 !important;
 
             .nav-item {
               .nav-link {
-                margin-left: $navbar-vertical-nav-link-padding-x;
+                margin-left: 0 !important;
 
                 &:before {
                   content: none;
@@ -751,6 +789,10 @@
           }
         }
 
+        .docs-info {
+          display: block;
+        }
+        
         .card.card-background {
           .icon-shape {
             margin-bottom: 1rem !important;

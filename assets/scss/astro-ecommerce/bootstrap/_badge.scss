@@ -1,3 +1,5 @@
+// stylelint-disable custom-property-empty-line-before
+
 // Base class
 //
 // Requires one of the contextual, color modifier classes for `color` and
@@ -22,7 +24,7 @@
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  @include border-radius(var(--#{$prefix}badge-border-radius));
+  border-radius: var(--#{$prefix}badge-border-radius, 0); // stylelint-disable-line property-disallowed-list
   @include gradient-bg();
 
   // Empty badges collapse automatically

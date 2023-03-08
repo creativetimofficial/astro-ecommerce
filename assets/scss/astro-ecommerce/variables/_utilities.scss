@@ -10,6 +10,7 @@ $move-hover-transform:          perspective(999px) rotateX(7deg) translate3d(0px
 // Sections Height Utilities
 $section-height-25-min-height:  25vh !default;
 $section-height-35-min-height:  35vh !default;
+$section-height-40-min-height:  40vh !default;
 $section-height-45-min-height:  45vh !default;
 $section-height-50-min-height:  50vh !default;
 $section-height-55-min-height:  55vh !default;
@@ -70,23 +71,9 @@ $width-85:                    85% !default;
 $width-90:                    90% !default;
 $width-95:                    95% !default;
 $width-100:                   100% !default;
-$width-rem:                   1rem !default;
-$width-2rem:                  2rem !default;
-
-// extra min width values variables - CT
-$min-width-50:                     50px !default;
-$min-width-100:                     100px !default;
-$min-width-150:                     150px !default;
-$min-width-200:                     200px !default;
-$min-width-250:                     250px !default;
-$min-width-300:                     300px !default;
-$min-width-350:                     350px !default;
-$min-width-400:                     400px !default;
-$min-width-450:                     450px !default;
-$min-width-500:                     500px !default;
 
 // extra max width values variables - CT
-$max-width-50:                      50px !default;
+$max-width-50:                       50px !default;
 $max-width-100:                     100px !default;
 $max-width-150:                     150px !default;
 $max-width-200:                     200px !default;
@@ -98,6 +85,7 @@ $max-width-450:                     450px !default;
 $max-width-500:                     500px !default;
 
 // extra height values variables - CT
+$height-50:                          50px !default;
 $height-100:                        100px !default;
 $height-150:                        150px !default;
 $height-200:                        200px !default;
@@ -108,7 +96,7 @@ $height-600:                        600px !default;
 
 
 // extra min height values variables - CT
-$min-height-50:                     50px !default;
+$min-height-50:                      50px !default;
 $min-height-100:                    100px !default;
 $min-height-150:                    150px !default;
 $min-height-160:                    160px !default;
@@ -120,7 +108,7 @@ $min-height-500:                    500px !default;
 $min-height-600:                    600px !default;
 
 // extra min height values variables - CT
-$max-height-50:                     50px !default;
+$max-height-50:                      50px !default;
 $max-height-100:                    100px !default;
 $max-height-150:                    150px !default;
 $max-height-160:                    160px !default;
@@ -195,19 +183,17 @@ $width: (
   "90": $width-90,
   "95": $width-95,
   "100": $width-100,
-  "rem": $width-rem,
-  "2rem": $width-2rem,
   "auto": auto
 ) !default;
 
 
 // blur effect variables
 $blur-border-radius-rounded:    40px !default;
-$blur-box-shadow:               inset 0px 0px 2px #fefefed1 !default;
-$blur-backdrop-filter:          blur(27.2px) !default;
+$blur-box-shadow:               inset 0px 12px 16px -4px rgba(12, 26, 36, 0.04) !default;
+$blur-backdrop-filter:          blur(13.6px) !default;
 $blur-backdrop-filter-btn:      blur(2.7px) !default;
 $blur-backdrop-filter-less:     saturate(20%) blur(30px) !default;
-$blur-background-color:         rgba($white, 0.85) !default;
+$blur-background-color:         rgba($white, 0.65) !default;
 
 $shadow-blur-box-shadow:        inset 0 0px 1px 1px rgba(254, 254, 254, .9), 0 20px 27px 0 rgba(0, 0, 0, .05) !default;
 

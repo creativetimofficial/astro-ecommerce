@@ -1,0 +1,19 @@
+.accordion {
+  .accordion-button {
+    font-size: inherit !important;
+  }
+
+  div {
+    button[aria-expanded='true'] {
+      .collapse-close {
+        display: none;
+      }
+    }
+
+    button[aria-expanded='false'] {
+      .collapse-open {
+        display: none;
+      }
+    }
+  }
+}

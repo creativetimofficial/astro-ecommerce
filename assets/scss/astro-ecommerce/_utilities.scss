@@ -166,6 +166,11 @@ $utilities: (
     class: mw,
     values: (100: 100%)
   ),
+  "min-width": (
+    property: min-width,
+    class: min-w,
+    values: (100: 100%)
+  ),
   "viewport-width": (
     property: width,
     class: vw,
@@ -180,7 +185,13 @@ $utilities: (
     property: height,
     class: h,
     values: (
+      5: 5%,
+      10: 10%,
+      15: 15%,
+      20: 20%,
       25: 25%,
+      30: 30%,
+      40: 40%,
       50: 50%,
       75: 75%,
       100: 100%,
@@ -203,6 +214,7 @@ $utilities: (
     values: (
       25: $section-height-25-min-height,
       35: $section-height-35-min-height,
+      40: $section-height-40-min-height,
       45: $section-height-45-min-height,
       50: $section-height-50-min-height,
       55: $section-height-55-min-height,
@@ -536,6 +548,7 @@ $utilities: (
         "white": $white,
         "body": $body-color,
         "muted": $text-muted,
+        "gray-200": $gray-200,
         "black-50": rgba($black, .5),
         "white-50": rgba($white, .5),
         "reset": inherit,
@@ -547,8 +560,11 @@ $utilities: (
   "background-color": (
     property: background-color,
     class: bg,
+    local-vars: (
+      "bg-opacity": 1
+    ),
     values: map-merge(
-      $theme-colors,
+      $utilities-bg-colors,
       (
         "body": $body-bg,
         "white": $white,
@@ -565,6 +581,23 @@ $utilities: (
         "slate-800": $slate-800,
         "slate-900": $slate-900,
       )
+    )
+  ),
+  "bg-opacity": (
+    css-var: true,
+    class: bg-opacity,
+    values: (
+      0: 0,
+      1: .1,
+      2: .2,
+      3: .3,
+      4: .4,
+      5: .5,
+      6: .6,
+      7: .7,
+      8: .8,
+      9: .9,
+      10: 1
     )
   ),
   // scss-docs-end utils-bg-color
@@ -601,22 +634,46 @@ $utilities: (
   "rounded-top": (
     property: border-top-left-radius border-top-right-radius,
     class: rounded-top,
-    values: (null: $border-radius)
+    values: (null: $border-radius,
+      0: 0,
+      1: $border-radius-sm,
+      2: $border-radius,
+      3: $border-radius-lg,
+      circle: 50%,
+      pill: $border-radius-pill)
   ),
   "rounded-end": (
     property: border-top-right-radius border-bottom-right-radius,
     class: rounded-end,
-    values: (null: $border-radius)
+    values: (null: $border-radius,
+      0: 0,
+      1: $border-radius-sm,
+      2: $border-radius,
+      3: $border-radius-lg,
+      circle: 50%,
+      pill: $border-radius-pill)
   ),
   "rounded-bottom": (
     property: border-bottom-right-radius border-bottom-left-radius,
     class: rounded-bottom,
-    values: (null: $border-radius)
+    values: (null: $border-radius,
+      0: 0,
+      1: $border-radius-sm,
+      2: $border-radius,
+      3: $border-radius-lg,
+      circle: 50%,
+      pill: $border-radius-pill)
   ),
   "rounded-start": (
     property: border-bottom-left-radius border-top-left-radius,
     class: rounded-start,
-    values: (null: $border-radius)
+    values: (null: $border-radius,
+      0: 0,
+      1: $border-radius-sm,
+      2: $border-radius,
+      3: $border-radius-lg,
+      circle: 50%,
+      pill: $border-radius-pill)
   ),
   // scss-docs-end utils-border-radius
   // scss-docs-start utils-visibility
@@ -649,6 +706,7 @@ $utilities: (
   "z-index": (
     property: z-index,
     values: (
+      n1: -1,
       0: 0,
       1: 1,
       2: 2,
@@ -731,11 +789,28 @@ $utilities: (
       pill: $border-radius-pill
     )
   ),
+  // Max Height Values vh
+  "max-height-vh": (
+    property: max-height,
+    class: max-height-vh,
+    values: (
+      10: $max-height-vh-10,
+      20: $max-height-vh-20,
+      30: $max-height-vh-30,
+      40: $max-height-vh-40,
+      50: $max-height-vh-50,
+      60: $max-height-vh-60,
+      70: $max-height-vh-70,
+      80: $max-height-vh-80,
+      90: $max-height-vh-90,
+      100: $max-height-vh-100,
+    )
+  ),
   // Max Height Values
- "max-height-px": (
-   property: max-height,
-   class: max-height,
-   values: (
+  "max-height-px": (
+    property: max-height,
+    class: max-height,
+    values: (
     50: $max-height-50,
     100: $max-height-100,
     150: $max-height-150,
@@ -746,25 +821,8 @@ $utilities: (
     400: $max-height-400,
     500: $max-height-500,
     600: $max-height-600
-   )
- ),
-  // Max Height Values vh
- "max-height-vh": (
-   property: max-height,
-   class: max-height-vh,
-   values: (
-    10: $max-height-vh-10,
-    20: $max-height-vh-20,
-    30: $max-height-vh-30,
-    40: $max-height-vh-40,
-    50: $max-height-vh-50,
-    60: $max-height-vh-60,
-    70: $max-height-vh-70,
-    80: $max-height-vh-80,
-    90: $max-height-vh-90,
-    100: $max-height-vh-100,
-   )
- ),
+    )
+  ),
  // Min Height Values
   "min-height-px": (
     property: min-height,
@@ -787,6 +845,7 @@ $utilities: (
     property: height,
     class: height,
     values: (
+     50: $height-50,
      100: $height-100,
      150: $height-150,
      200: $height-200,
@@ -796,29 +855,12 @@ $utilities: (
      600: $height-600
     )
   ),
-  // Min Width Values
-  "min-width-px": (
-    property: min-width,
-    class: min-width,
-    values: (
-     50: $min-width-50,
-     100: $min-width-100,
-     150: $min-width-150,
-     200: $min-width-200,
-     250: $min-width-250,
-     300: $min-width-300,
-     350: $min-width-350,
-     400: $min-width-400,
-     450: $min-width-450,
-     500: $min-width-500
-    )
-  ),
   // Max Width Values
    "max-width-px": (
      property: max-width,
      class: max-width,
      values: (
-      50: $max-width-50,
+      50:  $max-width-50,
       100: $max-width-100,
       150: $max-width-150,
       200: $max-width-200,

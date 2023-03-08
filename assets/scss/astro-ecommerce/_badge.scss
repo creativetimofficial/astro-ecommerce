@@ -1,5 +1,5 @@
 @each $prop, $value in $theme-colors {
-  .badge.bg-#{$prop} {
+  .badge.bg-#{$prop}:not(.badge-opaque) {
     background: rgba($value, .1) !important;
   }
 }
@@ -7,13 +7,29 @@
   text-transform: inherit;
 }
 
-@each $prop, $value in $colors {
-  .badge.bg-#{$prop} {
-    background: $value !important;
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
   }
 }
 
-// @import 'badges/badge';
-// @import 'badges/badge-circle';
-// @import 'badges/badge-dot';
-// @import 'badges/badge-floating';
+// Size variations
+
+.badge-sm {
+  padding: $badge-sm-padding;
+  font-size: $badge-sm-font-size;
+  border-radius: $border-radius-sm;
+}
+
+.badge-md {
+  padding: $badge-md-padding;
+  border-radius: $border-radius-md;
+}
+
+.badge-lg {
+  padding: $badge-lg-padding;
+}

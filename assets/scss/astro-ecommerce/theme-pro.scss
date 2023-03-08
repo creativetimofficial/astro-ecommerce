@@ -1,0 +1,35 @@
+/*!
+
+=========================================================
+* Corporate UI Dashboard Pro - v1.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/corporate-ui-dashboard-pro
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+
+* Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+
+// {{ site.product.name }} Core styling components
+
+@import "theme";
+
+// PRO Components
+@import "accordion";
+@import "backgrounds";
+@import "cards-extend";
+@import "components";
+@import "dark-version";
+@import "dropdown-extend";
+@import "floating-elements";
+@import "list-check";
+@import "misc-extend";
+@import "rtl-extend";
+
+// Plugins
+@import "plugins/pro/plugins-extend";

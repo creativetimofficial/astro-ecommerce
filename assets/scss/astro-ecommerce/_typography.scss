@@ -86,7 +86,8 @@ h6, .h6 {
 h1, .h1,
 h2, .h2,
 h3, .h3,
-h4, .h4 {
+h4, .h4, 
+h5, .h5 {
   letter-spacing: $letter-tighter;
 }
 
@@ -102,21 +103,11 @@ a {
   line-height: $text-xs-line-height;
 }
 
-.text-base {
-  font-size: $font-size-base;
-}
-
 p, .p {
   @include font-size($p-font-size);
 }
 .lead {
   @include font-size($lead-font-size);
-}
-.text-2xl {
-  @include font-size($font-size-2xl !important);
-}
-.text-xl {
-  @include font-size($font-size-xl !important);
 }
 .text-lg {
   @include font-size($font-size-lg !important);
@@ -290,6 +281,24 @@ p {
 
 // Font Size
 
+.text-base {
+  font-size :$font-size-base;
+}
+.text-xxs {
+  font-size :$font-size-xxs;
+}
+.text-xs {
+  font-size :$font-size-xs;
+}
+.text-sm {
+  font-size :$font-size-sm;
+}
+.text-lg {
+  font-size :$font-size-lg;
+}
+.text-xl {
+  font-size :$font-size-xl;
+}
 .text-2xl {
   font-size: $font-size-2xl;
 }

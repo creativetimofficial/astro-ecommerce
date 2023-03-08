@@ -1,5 +1,9 @@
-@import "mixins/banner";
-@include bsBanner(Grid);
+/*!
+ * Bootstrap Grid v5.2.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 
 $include-column-box-sizing: true !default;
 

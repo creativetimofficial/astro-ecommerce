@@ -71,6 +71,7 @@
 }
 
 .form-check-label{
+  user-select: none;
   font-size:$font-size-sm;
   font-weight: $font-weight-normal;
 }
@@ -81,90 +82,12 @@
   appearance: none;
 }
 
-
-// Ecommerce Astro
-
-.card-product {
-  .form-check:not(.form-switch) .form-check-input {
-    &[type="radio"] {
-      display: none;
-
-      + label {
-        transition: border 0s;
-        width: 70px;
-        height: 70px;
-        border: 1px solid #cbd3da;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: .5rem;
-        user-select: none;
-      
-        &.label-lg {
-          width: 100% !important;
-          height: 100% !important;
-          padding: .75rem;
-          display: block;
-        }
-      }
-
-      &:checked + label {
-        border-color: $primary;
-      }
-    }
-  }
-  .form-check {
-    position: relative;
-    padding-left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .form-check-input {
-      + label {
-        margin-left: 0;
-        margin-top: 0 !important;
-        cursor: pointer;
-      }     
-
-      &[disabled] {
-        + label {
-          cursor: not-allowed;
-          pointer-events: all;
-        }
-        &:hover + label {
-          background-color: $white;
-        }
-      }
-
-      &:hover + label {
-        background-color: $light;
-      }
-    }
-  }
-
-}
-
-.product-quickview {
-  .form-check:not(.form-switch) .form-check-input {
-    &[type="radio"] {
-      transition: border 0s;
-      width: 240px;
-      height: 120px;
-
-      &:after {
-        transition: opacity $form-check-transition-time ease-in-out;
-        width: 66px;
-        height: 66px;
-        background-color: $white;
-        opacity: 0;
-        border-radius: 4px;
-        top: 2px;
-        left: 2px;
-      }
-  
-      &:checked:after {
-        opacity: 1;
+// radio styling for list group 
+.list-group {
+  .list-group-item {
+    .form-check {
+      .form-check-input {
+        margin: 0;
       }
     }
   }

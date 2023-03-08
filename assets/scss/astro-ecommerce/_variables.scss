@@ -66,13 +66,13 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-$primary:       #3066ff !default;
-$secondary:     #9ba5b4 !default;
-$info:          #17a2b8 !default;
-$success:       #12a366 !default;
-$warning:       #ffc107 !default;
-$danger:        #dc3545 !default;
-$light:         $slate-300 !default;
+$primary:       #774DD3 !default;
+$secondary:     #64748b !default;
+$info:          #55A6F8 !default;
+$success:       #67C23A !default;
+$warning:       #F19937 !default;
+$danger:        #EA4E3D !default;
+$light:         $slate-350 !default;
 $dark:          $slate-800 !default;
 
 // scss-docs-start theme-colors-map
@@ -91,29 +91,29 @@ $theme-colors: (
 
 
 // Gradient colors
-$primary-gradient:            #774dd3 !default;
-$primary-gradient-state:      #6a38d9 !default;
+$primary-gradient:            #1B46C2 !default;
+$primary-gradient-state:      #825EE4 !default;
 
-$secondary-gradient:          #64748b !default;
-$secondary-gradient-state:    #64748b !default;
+$secondary-gradient:          #64748B !default;
+$secondary-gradient-state:    #8AAAD8 !default;
 
 $info-gradient:               #55a6f8 !default;
-$info-gradient-state:         #369aff !default;
+$info-gradient-state:         #0868E7 !default;
 
-$success-gradient:            #67c23a !default;
-$success-gradient-state:      #4aa91b !default;
+$success-gradient:            #2DCE50 !default;
+$success-gradient-state:      #7ADE48 !default;
 
-$danger-gradient:             #ea4e3d !default;
-$danger-gradient-state:       #ee321d !default;
+$danger-gradient:             #EA4E3D !default;
+$danger-gradient-state:       #F53B58 !default;
 
-$warning-gradient:            #f19937 !default;
-$warning-gradient-state:      #f58100 !default;
+$warning-gradient:            #F19937 !default;
+$warning-gradient-state:      #FB6340 !default;
 
-$dark-gradient:               $slate-800 !default;
-$dark-gradient-state:         $slate-800 !default;
+$dark-gradient:               #3F5578 !default;
+$dark-gradient-state:         #1E293B !default;
 
-$light-gradient:              #dde0e5 !default;
-$light-gradient-state:        #ced4da !default;
+$light-gradient:              #CED4DA !default;
+$light-gradient-state:        #EBEFF4 !default;
 
 $dark-gradient-dark:          #323a54 !default;
 $dark-gradient-state-dark:    #1a2035 !default;
@@ -141,7 +141,106 @@ $min-contrast-ratio:          4.5 !default;
 $color-contrast-dark:         $black !default;
 $color-contrast-light:        $white !default;
 
+// fusv-disable
+$blue-100: tint-color($blue, 8) !default;
+$blue-200: tint-color($blue, 6) !default;
+$blue-300: tint-color($blue, 4) !default;
+$blue-400: tint-color($blue, 2) !default;
+$blue-500: $blue !default;
+$blue-600: shade-color($blue, 2) !default;
+$blue-700: shade-color($blue, 4) !default;
+$blue-800: shade-color($blue, 6) !default;
+$blue-900: shade-color($blue, 8) !default;
 
+$indigo-100: tint-color($indigo, 8) !default;
+$indigo-200: tint-color($indigo, 6) !default;
+$indigo-300: tint-color($indigo, 4) !default;
+$indigo-400: tint-color($indigo, 2) !default;
+$indigo-500: $indigo !default;
+$indigo-600: shade-color($indigo, 2) !default;
+$indigo-700: shade-color($indigo, 4) !default;
+$indigo-800: shade-color($indigo, 6) !default;
+$indigo-900: shade-color($indigo, 8) !default;
+
+$purple-100: tint-color($purple, 8) !default;
+$purple-200: tint-color($purple, 6) !default;
+$purple-300: tint-color($purple, 4) !default;
+$purple-400: tint-color($purple, 2) !default;
+$purple-500: $purple !default;
+$purple-600: shade-color($purple, 2) !default;
+$purple-700: shade-color($purple, 4) !default;
+$purple-800: shade-color($purple, 6) !default;
+$purple-900: shade-color($purple, 8) !default;
+
+$pink-100: tint-color($pink, 8) !default;
+$pink-200: tint-color($pink, 6) !default;
+$pink-300: tint-color($pink, 4) !default;
+$pink-400: tint-color($pink, 2) !default;
+$pink-500: $pink !default;
+$pink-600: shade-color($pink, 2) !default;
+$pink-700: shade-color($pink, 4) !default;
+$pink-800: shade-color($pink, 6) !default;
+$pink-900: shade-color($pink, 8) !default;
+
+$red-100: tint-color($red, 8) !default;
+$red-200: tint-color($red, 6) !default;
+$red-300: tint-color($red, 4) !default;
+$red-400: tint-color($red, 2) !default;
+$red-500: $red !default;
+$red-600: shade-color($red, 2) !default;
+$red-700: shade-color($red, 4) !default;
+$red-800: shade-color($red, 6) !default;
+$red-900: shade-color($red, 8) !default;
+
+$orange-100: tint-color($orange, 8) !default;
+$orange-200: tint-color($orange, 6) !default;
+$orange-300: tint-color($orange, 4) !default;
+$orange-400: tint-color($orange, 2) !default;
+$orange-500: $orange !default;
+$orange-600: shade-color($orange, 2) !default;
+$orange-700: shade-color($orange, 4) !default;
+$orange-800: shade-color($orange, 6) !default;
+$orange-900: shade-color($orange, 8) !default;
+
+$yellow-100: tint-color($yellow, 8) !default;
+$yellow-200: tint-color($yellow, 6) !default;
+$yellow-300: tint-color($yellow, 4) !default;
+$yellow-400: tint-color($yellow, 2) !default;
+$yellow-500: $yellow !default;
+$yellow-600: shade-color($yellow, 2) !default;
+$yellow-700: shade-color($yellow, 4) !default;
+$yellow-800: shade-color($yellow, 6) !default;
+$yellow-900: shade-color($yellow, 8) !default;
+
+$green-100: tint-color($green, 8) !default;
+$green-200: tint-color($green, 6) !default;
+$green-300: tint-color($green, 4) !default;
+$green-400: tint-color($green, 2) !default;
+$green-500: $green !default;
+$green-600: shade-color($green, 2) !default;
+$green-700: shade-color($green, 4) !default;
+$green-800: shade-color($green, 6) !default;
+$green-900: shade-color($green, 8) !default;
+
+$teal-100: tint-color($teal, 8) !default;
+$teal-200: tint-color($teal, 6) !default;
+$teal-300: tint-color($teal, 4) !default;
+$teal-400: tint-color($teal, 2) !default;
+$teal-500: $teal !default;
+$teal-600: shade-color($teal, 2) !default;
+$teal-700: shade-color($teal, 4) !default;
+$teal-800: shade-color($teal, 6) !default;
+$teal-900: shade-color($teal, 8) !default;
+
+$cyan-100: tint-color($cyan, 8) !default;
+$cyan-200: tint-color($cyan, 6) !default;
+$cyan-300: tint-color($cyan, 4) !default;
+$cyan-400: tint-color($cyan, 2) !default;
+$cyan-500: $cyan !default;
+$cyan-600: shade-color($cyan, 2) !default;
+$cyan-700: shade-color($cyan, 4) !default;
+$cyan-800: shade-color($cyan, 6) !default;
+$cyan-900: shade-color($cyan, 8) !default;
 // fusv-enable
 
 // Characters which are escaped by the escape-svg function
@@ -218,6 +317,10 @@ $position-values: (
   8: 8%,
   9: 9%,
   10: 10%,
+  15: 15%,
+  30: 30%,
+  35: 35%,
+  40: 40%,
   50: 50%,
   100: 100%
 ) !default;
@@ -310,7 +413,7 @@ $container-padding-x: $grid-gutter-width !default;
 // Define common padding and border radius sizes and more.
 
 $border-width:                1px !default;
-$border-color:                $gray-300 !default;
+$border-color:                $slate-350 !default;
 
 $border-radius-xs:            .125rem !default;
 $border-radius-sm:            .25rem !default;
@@ -331,7 +434,6 @@ $border-widths: (
 ) !default;
 
 $rounded-pill:                50rem !default;
-
 $box-shadow-xxs:              0 0.0625rem 0.25rem 0px rgba(12,26,36, .06) !default;
 $box-shadow-xs:               0 0.125rem 5px -.0625rem rgba(12,26,36, .1), 0 .0625rem .0625rem 0 rgba(12,26,36, .04) !default;
 $box-shadow-sm:               0 0.25rem 0.375rem -.125rem rgba(12, 26, 36, 0.12), 0 0.125rem 0.25rem -0.125rem rgba(12, 26, 36, 0.08) !default;
@@ -479,7 +581,7 @@ $text-gradient-bg-clip:       text !default;
 $text-gradient-text-fill:     transparent !default;
 $text-gradient-position:      relative !default;
 $text-gradient-zindex:        1 !default;
-$text-gradient-bg-primary:    linear-gradient(310deg, #7928CA, #FF0080) !default;
+$text-gradient-bg-primary:    linear-gradient(310deg, $primary-gradient, $primary-gradient-state) !default;
 $text-gradient-bg-info:       linear-gradient(310deg, #2152FF, #21D4FD) !default;
 $text-gradient-bg-success:    linear-gradient(310deg, #17AD37, #C1E823) !default;
 $text-gradient-bg-warning:    linear-gradient(310deg, #F53939, #FBCF33) !default;
@@ -522,8 +624,8 @@ $a-letter-spacing:            -0.025rem !default;
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
-$table-head-spacer-y:         .75rem !default;
-$table-head-spacer-x:         1.5rem !default;
+$table-head-spacer-y:         .5rem !default;
+$table-head-spacer-x:         1rem !default;
 $table-head-font-size:        .65rem !default;
 $table-head-font-weight:      $font-weight-bold !default;
 $table-head-text-transform:   capitalize !default;
@@ -537,10 +639,10 @@ $table-border-width:          $border-width !default;
 $table-border-color:          $gray-300 !default;
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .5rem !default;
-$table-cell-padding-x:        .5rem !default;
-$table-cell-padding-y-sm:     .25rem !default;
-$table-cell-padding-x-sm:     .25rem !default;
+$table-cell-padding-y:        1rem !default;
+$table-cell-padding-x:        1rem !default;
+$table-cell-padding-y-sm:     .5rem !default;
+$table-cell-padding-x-sm:     .5rem !default;
 
 $table-cell-vertical-align:   top !default;
 
@@ -683,14 +785,14 @@ $btn-just-icon-padding-x-lg:         1rem !default;
 $btn-just-icon-padding-y-lg:         1rem !default;
 $btn-just-icon-width:         2.375rem !default;
 $btn-just-icon-height:        $btn-just-icon-width !default;
-$btn-just-icon-width-sm:      1.5875rem !default;
+$btn-just-icon-width-sm:      1.75rem !default;
 $btn-just-icon-height-sm:     $btn-just-icon-width-sm !default;
 $btn-just-icon-sm-font-size:  .5rem !default;
 $btn-just-icon-width-lg:      3.25rem !default;
 $btn-just-icon-height-lg:     $btn-just-icon-width-lg !default;
 $btn-just-icon-lg-font-size:  1.2rem !default;
 $btn-just-icon-lg-position:   relative !default;
-$btn-just-icon-lg-top:        2px !default;
+$btn-just-icon-lg-top:        0px !default;
 
 // we've overwritten the default Bootstrap function
 // for dynamically adding font color since the colors
@@ -999,6 +1101,7 @@ $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius:           0.75rem !default;
+$nav-pills-font-size:               0.75rem !default;
 $nav-pills-link-active-color:       $dark !default;
 $nav-pills-link-active-bg:          $white !default;
 $nav-pills-link-transition:         background-color .3s ease !default;
@@ -1010,7 +1113,8 @@ $nav-pills-vertical-link-radius:    .875rem !default;
 
 // Navbar
 
-$navbar-padding-y:                  $spacer * 0.5 !default;
+$navbar-padding-y:                  .625rem !default;
+$navbar-padding-collapse-y:         .5rem !default;
 $navbar-padding-x:                  null !default;
 $navbar-box-shadow:                 0 2px 12px 0 rgba(0, 0, 0, .16) !default;
 
@@ -1073,9 +1177,9 @@ $dropdown-spacer:                   1.625rem !default;
 $dropdown-font-size:                $font-size-sm !default;
 $dropdown-color:                    $slate-500 !default;
 $dropdown-bg:                       $white !default;
-$dropdown-border-color:             transparent !default;
+$dropdown-border-color:             $white !default;
 $dropdown-border-radius:            $border-radius-default !default;
-$dropdown-border-width:             0 !default;
+$dropdown-border-width:             1px !default;
 $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;
 $dropdown-transition-time:          .3s ease !default;
 $dropdown-divider-bg:               $dropdown-border-color !default;
@@ -1084,7 +1188,7 @@ $dropdown-box-shadow:               $box-shadow-lg !default;
 
 $dropdown-link-color:               $slate-500 !default;
 $dropdown-link-hover-color:         $h-color !default;
-$dropdown-link-hover-bg:            $gray-200 !default;
+$dropdown-link-hover-bg:            $gray-100 !default;
 
 $dropdown-link-active-color:        $slate-700 !default;
 $dropdown-link-active-bg:           transparent !default;
@@ -1151,9 +1255,9 @@ $pagination-transition:              color .15s ease-in-out, background-color .1
 $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * 0.5 !default;
-$card-border-width:                 0 !default;
-$card-border-radius:                0.375rem !default;
-$card-border-color:                 rgba($black, .125) !default;
+$card-border-width:                 1px !default;
+$card-border-radius:                $border-radius-default !default;
+$card-border-color:                 $border-color !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * 0.5 !default;
 $card-cap-padding-x:                $card-spacer-x !default;
@@ -1162,7 +1266,7 @@ $card-cap-color:                    null !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
 $card-bg:                           $white !default;
-
+$card-box-shadow:                   $box-shadow-xs !default;
 $card-img-overlay-padding:          $spacer !default;
 
 $card-group-margin:                 $grid-gutter-width * 0.5 !default;
@@ -1278,7 +1382,7 @@ $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
 $badge-padding-y:                   .35em !default;
 $badge-padding-x:                   .9em !default;
-$badge-border-radius-custom:        1.45rem !default;
+$badge-border-radius-custom:        0.25rem !default;
 $badge-border-radius:               $badge-border-radius-custom !default;
 
 
@@ -1346,7 +1450,7 @@ $alert-dismissible-padding-r:       $alert-padding-x * 3 !default; // 3x covers 
 // Progress bars
 
 $progress-height:                   8px !default;
-$progress-bar-height:               8px !default;
+$progress-bar-height:               100% !default;
 $progress-height-sm:                4px !default;
 $progress-height-lg:                20px !default;
 $progress-font-size:                $font-size-base * .75 !default;
@@ -1362,7 +1466,7 @@ $progress-bar-transition:           width .6s ease !default;
 // List group
 
 $list-group-color:                  inherit !default;
-$list-group-bg:                     $white !default;
+$list-group-bg:                     none !default;
 $list-group-border-color:           rgba($black, .125) !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius-default !default;
@@ -1469,7 +1573,7 @@ $btn-close-width:            1em !default;
 $btn-close-height:           $btn-close-width !default;
 $btn-close-padding-x:        .25em !default;
 $btn-close-padding-y:        $btn-close-padding-x !default;
-$btn-close-color:            $dark !default;
+$btn-close-color:            $white !default;
 $btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$btn-close-color}' viewBox='0 0 16 16'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
 $btn-close-focus-shadow:     $input-btn-focus-box-shadow !default;
 $btn-close-opacity:          .5 !default;

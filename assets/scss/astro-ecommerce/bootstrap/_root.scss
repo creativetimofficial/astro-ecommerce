@@ -1,3 +1,5 @@
+// stylelint-disable custom-property-empty-line-before
+
 :root {
   // Note: Custom variable values only support SassScript inside `#{}`.
 
@@ -64,6 +66,7 @@
   --#{$prefix}border-radius-pill: #{$border-radius-pill};
   // scss-docs-end root-border-var
 
+  --#{$prefix}heading-color: #{$headings-color};
   --#{$prefix}link-color: #{$link-color};
   --#{$prefix}link-hover-color: #{$link-hover-color};
 
