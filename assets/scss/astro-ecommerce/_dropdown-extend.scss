@@ -11,6 +11,9 @@
 }
 
 @include media-breakpoint-up(lg) {
+  .dropdown-2xl {
+    min-width: $dropdown-2xl-min-width;
+  }
   .dropdown-xl {
     min-width: $dropdown-xl-min-width;
   }
