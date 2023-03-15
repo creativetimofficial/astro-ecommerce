@@ -50,7 +50,7 @@ export default function storeNavigationGrid() {
                   />
                 </a>
                 <div
-                  className="p-4 mt-0 dropdown-menu dropdown-menu-animation blur shadow-blur dropdown-2xl mt-lg-3 border-radius-lg"
+                  className="p-4 mt-0 dropdown-menu dropdown-menu-animation dropdown-2xl mt-lg-3 border-radius-lg ms-n2"
                   aria-labelledby="dropdownMenuPages"
                 >
                   <div className="row">
