@@ -80,7 +80,7 @@ export default function storeNavigationGridDark() {
                 <a href="#" className="p-0 text-white nav-link" id="dropdownFurniture" data-bs-toggle="dropdown" aria-expanded="false">
                   Furniture
                 </a>
-                <ul className="p-4 mt-0 dropdown-menu dropdown-menu-animation blur shadow-blur dropdown-2xl mt-lg-3 border-radius-lg" aria-labelledby="dropdownFurniture">
+                <ul className="p-4 mt-0 dropdown-menu dropdown-menu-animation blur shadow-blur dropdown-3xl mt-lg-3 border-radius-lg ms-n2" aria-labelledby="dropdownFurniture">
                   <div className="row">
                     <div className="col-3">
                       <div className="card card-plain">
