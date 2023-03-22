@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import data from "../../public/data.json";
 import "../../assets/scss/astro-ecommerce.scss";
 import Navbar from "../components/navbar";
+import PageHeader from "../components/header";
 import ProductOverviews from "../components/products/productOverviews";
 import CardProduct from "../components/products/cardProduct";
 import CardCategory from "../components/products/cardCategory";
@@ -69,20 +70,11 @@ import StoreNavigationColumnsDark from "../components/store/storeNavigationColum
     <div class="mt-5">
       <StoreNavigationGridDark />
 
-      <div class="page-header align-items-center min-vh-50" style="background-image: url('/store-bg.jpg');">
-        <span class="mask bg-dark opacity-8"></span>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="mx-auto text-center col-lg-7">
-              <h1 class="mb-2 text-white">Spring Collection is here</h1>
-              <p class="text-white text-lead mb-4">
-                The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?
-              </p>
-              <button class="btn btn-outline-white">Explore</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <PageHeader 
+        bgImage={data.header.bgImage}
+        title={data.header.title}
+        description={data.header.description}
+      />
     </div>
     <div class="mt-5">
       <StoreNavigationColumnsDark />
