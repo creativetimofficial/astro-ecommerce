@@ -1,4 +1,5 @@
 {
+  "siteTitle": "Corporate UI",
   "products": [
     {
       "id": "01",
@@ -384,5 +385,16 @@
     "02", 
     "03",
     "04"
-  ]
+  ],
+  "currencies": [
+    "USD",
+    "EUR",
+    "CHF",
+    "HUF"
+  ],
+  "header": {
+    "bgImage": "./store-bg.jpg",
+    "title": "Spring Collection is here",
+    "description": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?"
+  }
 }
