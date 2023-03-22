@@ -1,3 +1,17 @@
+import data from '../../../public/data.json';
+import CardProduct from '../products/cardProduct';
+
+const currencies = []
+data.currencies.forEach(currency => {
+  currencies.push(
+    <li className="mb-2">
+      <a className="dropdown-item border-radius-md" href="javascript:;">
+        <span>{currency}</span>
+      </a>
+    </li>
+  )
+})
+
 export default function storeNavigationGridDark() {
   return (
     <>
@@ -5,7 +19,7 @@ export default function storeNavigationGridDark() {
         <div className="container py-2">
           <nav aria-label="breadcrumb">
             <div className="d-flex align-items-center">
-              <span className="px-3 text-lg text-white font-weight-bold me-4">Corporate UI</span>
+              <span className="px-3 text-lg text-white font-weight-bold me-4">{data.siteTitle}</span>
             </div>
           </nav>
           <div className="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
@@ -42,21 +56,7 @@ export default function storeNavigationGridDark() {
                   </svg>
                 </a>
                 <ul className="dropdown-menu dropdown-menu-end me-sm-n4" aria-labelledby="dropdownMenuButton">
-                  <li className="mb-2">
-                    <a className="dropdown-item border-radius-md" href="javascript:;">
-                      <span>USD</span>
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a className="dropdown-item border-radius-md" href="javascript:;">
-                      <span>EUR</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item border-radius-md" href="javascript:;">
-                      <span>CHF</span>
-                    </a>
-                  </li>
+                  {currencies}
                 </ul>
               </li>
               <li className="nav-item d-flex align-items-center ps-2">
@@ -81,83 +81,18 @@ export default function storeNavigationGridDark() {
                   Furniture
                 </a>
                 <ul className="p-4 mt-0 dropdown-menu dropdown-menu-animation blur shadow-blur dropdown-3xl mt-lg-3 border-radius-lg ms-n2" aria-labelledby="dropdownFurniture">
-                  <div className="row">
-                    <div className="col-3">
-                      <div className="card card-plain">
-                        <a href="#">
-                          <div className="height-200">
-                            <img
-                              className="w-100 h-100 border-radius-md"
-                              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-                              alt="watch-image"
-                            />
-                          </div>
-                          <div className="card-body text-center">
-                            <h5 className="font-weight-bold">
-                              Basic Starter Pack
-                            </h5>
-                            <a href="#">Shop now</a>
-                          </div>
-                        </a>
+                  <div className="d-flex overflow-scroll">
+                    {data.products.map(product => 
+                      <div className="col-md-6 col-lg-3 me-4">
+                        <CardProduct 
+                          thumb_src = {product.thumb_src}
+                          thumb_alt = {product.thumb_alt}
+                          title = {product.title}
+                          position = "center"
+                          imageHeight = "height-200"
+                        />
                       </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="card card-plain">
-                        <a href="#">
-                          <div className="height-200">
-                            <img
-                              className="w-100 h-100 border-radius-md"
-                              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-                              alt="watch-image"
-                            />
-                          </div>
-                          <div className="card-body text-center">
-                            <h5 className="font-weight-bold">
-                              Basic Starter Pack
-                            </h5>
-                            <a href="#">Shop now</a>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="card card-plain">
-                        <a href="#">
-                          <div className="height-200">
-                            <img
-                              className="w-100 h-100 border-radius-md"
-                              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-                              alt="watch-image"
-                            />
-                          </div>
-                          <div className="card-body text-center">
-                            <h5 className="font-weight-bold">
-                              Basic Starter Pack
-                            </h5>
-                            <a href="#">Shop now</a>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="card card-plain">
-                        <a href="#">
-                          <div className="height-200">
-                            <img
-                              className="w-100 h-100 border-radius-md"
-                              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-                              alt="watch-image"
-                            />
-                          </div>
-                          <div className="card-body text-center">
-                            <h5 className="font-weight-bold">
-                              Basic Starter Pack
-                            </h5>
-                            <a href="#">Shop now</a>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
+                    )}
                   </div>
                 </ul>
               </li>
