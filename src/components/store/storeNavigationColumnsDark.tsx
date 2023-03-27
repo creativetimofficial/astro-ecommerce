@@ -1,3 +1,58 @@
+import data from '../../../public/data.json';
+
+const currencies = [];
+data.currencies.forEach(currency => {
+  currencies.push(
+    <li className="mb-2">
+      <a className="dropdown-item border-radius-md" href="javascript:;">
+        <span>{currency}</span>
+      </a>
+    </li>
+  )
+})
+
+const storeCategories = [];
+
+data.storeCategories.forEach(category => {
+  let categoryItems = [];
+
+  // Check if the category has more than 6 items
+  const hasMoreThanSixItems = category.items.length > 6;
+
+  category.items.forEach((item, index) => {
+    categoryItems.push(
+      <li key={index} className="nav-item">
+        <a className="nav-link text-body" href={item.link} target="_blank">
+          {item.label}
+        </a>
+      </li>
+    );
+  });
+
+  // Split the items into two columns if there are more than 6 items
+  const columnCount = hasMoreThanSixItems ? 2 : 1;
+  const columnSize = Math.ceil(categoryItems.length / columnCount);
+  const columns = [];
+
+  for (let i = 0; i < columnCount; i++) {
+    columns.push(
+      <ul key={i} className="nav flex-column">
+        {categoryItems.slice(i * columnSize, (i + 1) * columnSize)}
+      </ul>
+    );
+  }
+
+  storeCategories.push(
+    <div key={category.label} className="col-12 col-lg-3 mb-4 mb-lg-0 me-4">
+      <h6 className="w-100 pb-3 border-bottom border-secondary">{category.label}</h6>
+      <div className="d-flex pt-2">
+        {columns}
+      </div>
+    </div>
+  );
+});
+
+
 export default function storeNavigationColumnsDark() {
   return (
     <>
@@ -42,21 +97,7 @@ export default function storeNavigationColumnsDark() {
                   </svg>
                 </a>
                 <ul className="dropdown-menu dropdown-menu-end me-sm-n4" aria-labelledby="dropdownMenuButton">
-                  <li className="mb-2">
-                    <a className="dropdown-item border-radius-md" href="javascript:;">
-                      <span>USD</span>
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a className="dropdown-item border-radius-md" href="javascript:;">
-                      <span>EUR</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item border-radius-md" href="javascript:;">
-                      <span>CHF</span>
-                    </a>
-                  </li>
+                  {currencies}
                 </ul>
               </li>
               <li className="nav-item d-flex align-items-center ps-2">
@@ -81,161 +122,8 @@ export default function storeNavigationColumnsDark() {
                   Furniture
                 </a>
                 <ul className="p-4 mt-0 dropdown-menu dropdown-menu-animation blur shadow-blur dropdown-3xl mt-lg-3 border-radius-lg ms-n2" aria-labelledby="dropdownFurniture">
-                  <div className="row">
-                    <div className="col-12 col-lg-4 mb-4 mb-lg-0">
-                      <h6 className="w-100 pb-3 border-bottom border-secondary">Clothing</h6>
-                      <div className="d-flex pt-2">
-                        <ul className="nav flex-column ms-n2">
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Tops
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Dresses
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Pants
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Denim
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Sweaters
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              T-Shirts
-                            </a>
-                          </li>
-                        </ul>
-                        <ul className="nav flex-column ms-6 ms-md-11 ms-lg-10">
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Jackets
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Activewear
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Shorts
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Swimwear
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link text-body" href="#" target="_blank">
-                              Browse All
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="col-6 col-lg-2">
-                      <h6 className="w-100 pb-3 border-bottom border-secondary">Accessories</h6>
-                      <ul className="nav flex-column ms-n2 pt-2">
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Shoes
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Jewelry
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Handbags
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Socks
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Hats
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Browse All
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-6 col-lg-2">
-                      <h6 className="w-100 pb-3 border-bottom border-secondary">Categories</h6>
-                      <ul className="nav flex-column ms-n2 pt-2">
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            New Arrivals
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Sale
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Basic Tee
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Artwork Tees
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-6 col-lg-3">
-                      <h6 className="w-100 pb-3 border-bottom border-secondary">Templates</h6>
-                      <ul className="nav flex-column ms-n2 pt-2">
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            New Releases
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Sale
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Free Templates
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Premium Templates
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link text-body" href="#" target="_blank">
-                            Admin Dashboards
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                  <div className="d-flex overflow-scroll">
+                      {storeCategories}
                   </div>
                 </ul>
               </li>
