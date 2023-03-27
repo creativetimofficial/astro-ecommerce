@@ -1,3 +1,17 @@
+import data from '../../../public/data.json';
+import CardProduct from '../products/cardProduct';
+
+const currencies = []
+data.currencies.forEach(currency => {
+  currencies.push(
+    <li className="mb-2">
+      <a className="dropdown-item border-radius-md" href="javascript:;">
+        <span>{currency}</span>
+      </a>
+    </li>
+  )
+})
+
 export default function storeNavigationGrid() {
   return (
     <>
@@ -53,83 +67,18 @@ export default function storeNavigationGrid() {
                   className="p-4 mt-0 dropdown-menu dropdown-menu-animation dropdown-2xl mt-lg-3 border-radius-lg ms-n2"
                   aria-labelledby="dropdownMenuPages"
                 >
-                  <div className="row">
-                    <div className="col-3">
-                      <div className="card card-plain">
-                        <a href="#">
-                          <div className="height-200">
-                            <img
-                              className="w-100 h-100 border-radius-md"
-                              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-                              alt="watch-image"
-                            />
-                          </div>
-                          <div className="card-body text-center">
-                            <h5 className="font-weight-bold">
-                              Basic Starter Pack
-                            </h5>
-                            <a href="#">Shop now</a>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="card card-plain">
-                        <a href="#">
-                          <div className="height-200">
-                            <img
-                              className="w-100 h-100 border-radius-md"
-                              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-                              alt="watch-image"
-                            />
-                          </div>
-                          <div className="card-body text-center">
-                            <h5 className="font-weight-bold">
-                              Basic Starter Pack
-                            </h5>
-                            <a href="#">Shop now</a>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="card card-plain">
-                        <a href="#">
-                          <div className="height-200">
-                            <img
-                              className="w-100 h-100 border-radius-md"
-                              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-                              alt="watch-image"
-                            />
-                          </div>
-                          <div className="card-body text-center">
-                            <h5 className="font-weight-bold">
-                              Basic Starter Pack
-                            </h5>
-                            <a href="#">Shop now</a>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="col-3">
-                      <div className="card card-plain">
-                        <a href="#">
-                          <div className="height-200">
-                            <img
-                              className="w-100 h-100 border-radius-md"
-                              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-                              alt="watch-image"
-                            />
-                          </div>
-                          <div className="card-body text-center">
-                            <h5 className="font-weight-bold">
-                              Basic Starter Pack
-                            </h5>
-                            <a href="#">Shop now</a>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
+                  <div className="d-flex overflow-scroll">
+                    {data.products.map(product => 
+                        <div className="col-md-6 col-lg-3 me-4">
+                          <CardProduct 
+                            thumb_src = {product.thumb_src}
+                            thumb_alt = {product.thumb_alt}
+                            title = {product.title}
+                            position = "center"
+                            imageHeight = "height-200"
+                          />
+                        </div>
+                      )}
                   </div>
                 </div>
               </li>
@@ -186,21 +135,7 @@ export default function storeNavigationGrid() {
                   </svg>
                 </a>
                 <ul className="dropdown-menu dropdown-menu-end me-sm-n4" aria-labelledby="dropdownMenuButton">
-                  <li className="mb-2">
-                    <a className="dropdown-item border-radius-md" href="javascript:;">
-                      <span>USD</span>
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a className="dropdown-item border-radius-md" href="javascript:;">
-                      <span>EUR</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item border-radius-md" href="javascript:;">
-                      <span>CHF</span>
-                    </a>
-                  </li>
+                  {currencies}
                 </ul>
               </li>
               <li className="nav-item d-flex align-items-center ps-2">
