@@ -71,20 +71,24 @@ import StoreNavigationColumnsDark from "../components/store/storeNavigationColum
       <StoreNavigationGridDark />
 
       <PageHeader 
-        bgImage={data.header.bgImage}
-        title={data.header.title}
-        description={data.header.description}
-        filterColor={data.header.filterColor}
+        bgImage={data.header[0].bgImage}
+        title={data.header[0].title}
+        description={data.header[0].description}
+        filterColor={data.header[0].filterColor}
+        titleColor={data.header[0].titleColor}
+        descriptionColor={data.header[0].descriptionColor}
       />
     </div>
     <div class="mt-5">
       <StoreNavigationColumnsDark />
 
       <PageHeader 
-        bgImage={data.header.bgImage}
-        title={data.header.title}
-        description={data.header.description}
-        filterColor={data.header.filterColor}
+        bgImage={data.header[0].bgImage}
+        title={data.header[0].title}
+        description={data.header[0].description}
+        filterColor={data.header[0].filterColor}
+        titleColor={data.header[0].titleColor}
+        descriptionColor={data.header[0].descriptionColor}
       />
     </div>
 
@@ -94,10 +98,12 @@ import StoreNavigationColumnsDark from "../components/store/storeNavigationColum
       </div>
 
       <PageHeader 
-        bgImage={data.header.bgImage}
-        title={data.header.title}
-        description={data.header.description}
-        filterColor={data.header.filterColor}
+        bgImage={data.header[0].bgImage}
+        title={data.header[0].title}
+        description={data.header[0].description}
+        filterColor={data.header[0].filterColor}
+        titleColor={data.header[0].titleColor}
+        descriptionColor={data.header[0].descriptionColor}
       />
     </div>
 
@@ -107,10 +113,26 @@ import StoreNavigationColumnsDark from "../components/store/storeNavigationColum
       </div>
 
       <PageHeader 
-        bgImage={data.header.bgImage}
-        title={data.header.title}
-        description={data.header.description}
-        filterColor={data.header.filterColor}
+        bgImage={data.header[0].bgImage}
+        title={data.header[0].title}
+        description={data.header[0].description}
+        filterColor={data.header[0].filterColor}
+        titleColor={data.header[0].titleColor}
+        descriptionColor={data.header[0].descriptionColor}
+      />
+    </div>
+    
+    <div class="position-relative pt-2 my-5">
+      <div class="container position-sticky z-index-sticky">
+        <StoreNavigationColumns />
+      </div>
+      <PageHeader 
+        bgImage={data.header[1].bgImage}
+        title={data.header[1].title}
+        description={data.header[1].description}
+        filterColor={data.header[1].filterColor}
+        titleColor={data.header[1].titleColor}
+        descriptionColor={data.header[1].descriptionColor}
       />
     </div>
   </main>
