@@ -392,12 +392,25 @@
     "CHF",
     "HUF"
   ],
-  "header": {
-    "bgImage": "./store-bg.jpg",
-    "title": "Spring Collection is here",
-    "description": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
-    "filterColor": "bg-dark"
-  },
+  "header": [
+    {
+      "bgImage": "./store-bg.jpg",
+      "title": "Spring Collection is here",
+      "description": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
+      "filterColor": "bg-dark opacity-8",
+      "titleColor": "text-white",
+      "descriptionColor": "text-white"
+    },
+    {
+      "bgImage": "./volant-unsplash.jpg",
+      "title": "Exclusive discounts for members",
+      "description": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
+      "filterColor": "bg-light opacity-2",
+      "titleColor": "text-dark",
+      "descriptionColor": "text-dark opacity-8"
+
+    }
+  ],
   "storeCategories": [
     {
       "label": "Sofas and armchairs",
