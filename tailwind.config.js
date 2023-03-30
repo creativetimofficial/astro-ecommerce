@@ -6,24 +6,32 @@ module.exports = withMT({
     extend: {
       colors: {
         blue: {
-          DEFAULT: "#3364F6",
-          500: "#3364F6",
-        },
-        cyan: {
-          DEFAULT: "#22F7DD",
-          500: "#22F7DD",
+          DEFAULT: "#3066FF",
+          500: "#3066FF",
         },
         yellow: {
-          DEFAULT: "#FBCA1D",
-          500: "#FBCA1D",
+          DEFAULT: "#F19937",
+          500: "#F19937",
         },
         red: {
-          DEFAULT: "#F2542D",
-          500: "#F2542D",
+          DEFAULT: "#EA4E3D",
+          500: "#EA4E3D",
+        },
+        green: {
+          DEFAULT: "#67C23A",
+          500: "#67C23A",
+        },
+        sky: {
+          DEFAULT: "#55A6F8",
+          500: "#55A6F8",
+        },
+        slate: {
+          DEFAULT: "#64748B",
+          500: "#64748B",
         },
         dark: {
-          DEFAULT: "#1E1E1E",
-          500: "#1E1E1E",
+          DEFAULT: "#1E293B",
+          500: "#1E293B",
         },
       },
     },
