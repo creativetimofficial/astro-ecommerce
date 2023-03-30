@@ -1,11 +1,3 @@
-import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-} from "@material-tailwind/react";
 import React from "react";
 import {
   Navbar,
@@ -15,11 +7,18 @@ import {
   Typography,
   Input,
   Avatar,
+  Card,
+  CardBody,
 } from "@material-tailwind/react";
-import { Bars3Icon, XMarkIcon, PlayCircleIcon,
+import {
+  Bars3Icon,
+  XMarkIcon,
+  PlayCircleIcon,
   BoltIcon,
-  ArrowsPointingOutIcon, } from "@heroicons/react/24/outline";
+  ArrowsPointingOutIcon,
+} from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
+import ThemeProvider from "./components/theme-provider";
 
 const users = [
   {
@@ -183,7 +182,6 @@ function TeamCard({ img, name, title, desc }) {
   );
 }
 
-
 export default function ExampleCard() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
@@ -196,7 +194,7 @@ export default function ExampleCard() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className=" z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -325,236 +323,226 @@ export default function ExampleCard() {
       </header>
 
       <section className="px-4 py-12">
-      <div className="container mx-auto">
-        <div className="mb-20 grid lg:grid-cols-2">
-          <div className="lg:pr-10">
-            <img
-              src="https://images.unsplash.com/photo-1534120247760-c44c3e4a62f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2996&q=80"
-              alt="background image"
-              className="h-full min-h-[20rem] w-full rounded-xl object-cover"
-            />
-          </div>
-          <div className="grid items-center py-12 px-2 lg:ml-8 lg:py-20">
-            <Icon>
-              <BoltIcon className="h-6 w-6" strokeWidth={2} />
-            </Icon>
-            <Typography variant="h3" color="blue-gray" className="mb-2">
-              See our projects
-            </Typography>
-            <Typography
-              color="blue-gray"
-              variant="lead"
-              className="mb-10 font-normal text-gray-700"
-            >
-              People are so scared to lose that they don&apos;t even try. Like,
-              one thing people can&apos;t say is that I&apos;m not trying, and
-              I&apos;m not trying my hardest.
-            </Typography>
-            <div className="flex gap-2">
-              <Button
-                variant="outlined"
-                size="lg"
+        <div className="container mx-auto">
+          <div className="mb-20 grid lg:grid-cols-2">
+            <div className="lg:pr-10">
+              <img
+                src="https://images.unsplash.com/photo-1534120247760-c44c3e4a62f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2996&q=80"
+                alt="background image"
+                className="h-full min-h-[20rem] w-full rounded-xl object-cover"
+              />
+            </div>
+            <div className="grid items-center py-12 px-2 lg:ml-8 lg:py-20">
+              <Icon>
+                <BoltIcon className="h-6 w-6" strokeWidth={2} />
+              </Icon>
+              <Typography variant="h3" color="blue-gray" className="mb-2">
+                See our projects
+              </Typography>
+              <Typography
                 color="blue-gray"
-                className="flex items-center"
+                variant="lead"
+                className="mb-10 font-normal text-gray-700"
               >
-                <PlayCircleIcon
-                  className="-mt-0.5 mr-1.5 h-6 w-6"
-                  strokeWidth={2}
-                />
-                demo
-              </Button>
-              <Button size="lg">learn more</Button>
-            </div>
-          </div>
-        </div>
-        <div className="mb-20 grid lg:grid-cols-2">
-          <div className="grid items-center py-12 px-2 lg:mr-16 lg:py-20">
-            <Icon>
-              <ArrowsPointingOutIcon className="h-6 w-6" strokeWidth={2} />
-            </Icon>
-            <Typography variant="h3" color="blue-gray" className="mb-2">
-              Read More About Us
-            </Typography>
-            <Typography
-              color="blue-gray"
-              variant="lead"
-              className="mb-10 font-normal text-gray-700"
-            >
-              Pain is what we go through as we become older. We get insulted by
-              others, lose trust for those others. We get back stabbed by
-              friends. It becomes harder for us to give others a hand.
-            </Typography>
-            <div className="flex gap-2">
-              <Button
-                variant="outlined"
-                size="lg"
-                color="blue-gray"
-                className="flex items-center"
-              >
-                <PlayCircleIcon
-                  className="-mt-0.5 mr-1.5 h-6 w-6"
-                  strokeWidth={2}
-                />
-                demo
-              </Button>
-              <Button size="lg">learn more</Button>
-            </div>
-          </div>
-          <div className="row-start-1 lg:row-auto lg:pl-10">
-            <img
-              src="https://images.unsplash.com/photo-1601933513793-1252ce25d644?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-              alt="background image"
-              className="h-full min-h-[20rem] w-full rounded-xl object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section className="py-8 px-8 lg:py-24">
-      <div className="container mx-auto grid gap-12 lg:grid-cols-3">
-        <div className="col-span-1">
-          <Typography color="blue" className="mb-2 !font-semibold">
-            Our Team
-          </Typography>
-          <Typography variant="h2" color="blue-gray" className="mb-4">
-            Leadership team
-          </Typography>
-          <Typography
-            variant="lead"
-            color="gray"
-            className="mb-10 lg:mr-16"
-          >
-            They&apos;re slowed down by their perception of themselves. If
-            you&apos;re taught you can&apos;t do anything, you won&apos;t do
-            anything.
-          </Typography>
-          <div className="flex flex-wrap gap-3">
-            <Button variant="outlined" size="lg" color="blue-gray">
-              about us
-            </Button>
-            <Button size="lg">open position</Button>
-          </div>
-        </div>
-        <div className="col-span-2 grid justify-center gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {members.map((props, key) => (
-            <TeamCard key={key} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section className="py-8 px-8 lg:py-20">
-      <div className="container mx-auto">
-        <Card
-          color="blue"
-          shadow={false}
-          className="flex-col-reverse overflow-hidden rounded-3xl md:flex-row md:gap-8"
-        >
-          <CardBody className="py-20 px-14 md:w-7/12">
-            <div className="mb-6 flex items-center">
-              {[...Array(5).keys()].map((el, key) => (
-                <StarIcon
-                  className="h-6 w-6 text-yellow-600"
-                  key={key}
-                />
-              ))}
-            </div>
-            <Typography
-              variant="h2"
-              color="white"
-              className="mb-10 font-normal"
-            >
-              &quot;We&apos;sre not always in the position that we want to be
-              at. We&apo;sre constantly growing.
-            </Typography>
-            <Typography variant="lead" color="white">
-              &#8212; Renee Wells
-            </Typography>
-            <Typography color="white" className="font-normal opacity-70">
-              Product Designer, Quotient
-            </Typography>
-          </CardBody>
-          <div className="relative grid h-96 place-items-center md:h-auto md:w-5/12">
-            <img
-              src="https://images.unsplash.com/photo-1611042553365-9b101441c135?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1365&q=80"
-              alt="testimonial image"
-              className="h-full w-full object-cover md:absolute"
-            />
-          </div>
-        </Card>
-      </div>
-    </section>
-    
-    <section className="py-8 px-8 lg:py-20">
-      <div className="container mx-auto text-center">
-        <Typography
-          color="blue-gray"
-          className="mb-8 font-medium opacity-60"
-        >
-          Join 10K + companies already growing
-        </Typography>
-        <div className="flex flex-wrap items-center justify-center gap-6">
-          {logos.map((logo, key) => (
-            <img
-              key={key}
-              src={`/logos/logo-${logo}.svg`}
-              alt="logo"
-              className="w-40"
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <footer className="mt-10 px-8 pt-20">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="h4" className="mb-6">
-            Material Tailwind
-          </Typography>
-          <div className="grid grid-cols-3 justify-between gap-4">
-            {links.map(({ title, items }) => (
-              <ul key={title}>
-                <Typography
-                  variant="small"
+                People are so scared to lose that they don&apos;t even try.
+                Like, one thing people can&apos;t say is that I&apos;m not
+                trying, and I&apos;m not trying my hardest.
+              </Typography>
+              <div className="flex gap-2">
+                <Button
+                  variant="outlined"
+                  size="lg"
                   color="blue-gray"
-                  className="mb-3 font-medium opacity-40"
+                  className="flex items-center"
                 >
-                  {title}
-                </Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      color="gray"
-                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
-                    >
-                      {link}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
+                  <PlayCircleIcon
+                    className="-mt-0.5 mr-1.5 h-6 w-6"
+                    strokeWidth={2}
+                  />
+                  demo
+                </Button>
+                <Button size="lg">learn more</Button>
+              </div>
+            </div>
+          </div>
+          <div className="mb-20 grid lg:grid-cols-2">
+            <div className="grid items-center py-12 px-2 lg:mr-16 lg:py-20">
+              <Icon>
+                <ArrowsPointingOutIcon className="h-6 w-6" strokeWidth={2} />
+              </Icon>
+              <Typography variant="h3" color="blue-gray" className="mb-2">
+                Read More About Us
+              </Typography>
+              <Typography
+                color="blue-gray"
+                variant="lead"
+                className="mb-10 font-normal text-gray-700"
+              >
+                Pain is what we go through as we become older. We get insulted
+                by others, lose trust for those others. We get back stabbed by
+                friends. It becomes harder for us to give others a hand.
+              </Typography>
+              <div className="flex gap-2">
+                <Button
+                  variant="outlined"
+                  size="lg"
+                  color="blue-gray"
+                  className="flex items-center"
+                >
+                  <PlayCircleIcon
+                    className="-mt-0.5 mr-1.5 h-6 w-6"
+                    strokeWidth={2}
+                  />
+                  demo
+                </Button>
+                <Button size="lg">learn more</Button>
+              </div>
+            </div>
+            <div className="row-start-1 lg:row-auto lg:pl-10">
+              <img
+                src="https://images.unsplash.com/photo-1601933513793-1252ce25d644?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                alt="background image"
+                className="h-full min-h-[20rem] w-full rounded-xl object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 px-8 lg:py-24">
+        <div className="container mx-auto grid gap-12 lg:grid-cols-3">
+          <div className="col-span-1">
+            <Typography color="blue" className="mb-2 !font-semibold">
+              Our Team
+            </Typography>
+            <Typography variant="h2" color="blue-gray" className="mb-4">
+              Leadership team
+            </Typography>
+            <Typography variant="lead" color="gray" className="mb-10 lg:mr-16">
+              They&apos;re slowed down by their perception of themselves. If
+              you&apos;re taught you can&apos;t do anything, you won&apos;t do
+              anything.
+            </Typography>
+            <div className="flex flex-wrap gap-3">
+              <Button variant="outlined" size="lg" color="blue-gray">
+                about us
+              </Button>
+              <Button size="lg">open position</Button>
+            </div>
+          </div>
+          <div className="col-span-2 grid justify-center gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {members.map((props, key) => (
+              <TeamCard key={key} {...props} />
             ))}
           </div>
         </div>
-        <div className="mt-16 flex flex-wrap items-end justify-center gap-y-4 gap-x-8 border-t border-blue-gray-50 py-6 md:justify-between">
-          <div className="text-center md:text-start">
-            <Typography variant="h4" color="blue-gray" className="mb-2">
-              Move faster with Material Tailwind
+      </section>
+
+      <section className="py-8 px-8 lg:py-20">
+        <div className="container mx-auto">
+          <Card
+            color="blue"
+            shadow={false}
+            className="flex-col-reverse overflow-hidden rounded-3xl md:flex-row md:gap-8"
+          >
+            <CardBody className="py-20 px-14 md:w-7/12">
+              <div className="mb-6 flex items-center">
+                {[...Array(5).keys()].map((el, key) => (
+                  <StarIcon className="h-6 w-6 text-yellow-600" key={key} />
+                ))}
+              </div>
+              <Typography
+                variant="h2"
+                color="white"
+                className="mb-10 font-normal"
+              >
+                &quot;We&apos;sre not always in the position that we want to be
+                at. We&apo;sre constantly growing.
+              </Typography>
+              <Typography variant="lead" color="white">
+                &#8212; Renee Wells
+              </Typography>
+              <Typography color="white" className="font-normal opacity-70">
+                Product Designer, Quotient
+              </Typography>
+            </CardBody>
+            <div className="relative grid h-96 place-items-center md:h-auto md:w-5/12">
+              <img
+                src="https://images.unsplash.com/photo-1611042553365-9b101441c135?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1365&q=80"
+                alt="testimonial image"
+                className="h-full w-full object-cover md:absolute"
+              />
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-8 px-8 lg:py-20">
+        <div className="container mx-auto text-center">
+          <Typography color="blue-gray" className="mb-8 font-medium opacity-60">
+            Join 10K + companies already growing
+          </Typography>
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            {logos.map((logo, key) => (
+              <img
+                key={key}
+                src={`/logos/logo-${logo}.svg`}
+                alt="logo"
+                className="w-40"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer className="mt-10 px-8 pt-20">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
+            <Typography variant="h4" className="mb-6">
+              Material Tailwind
             </Typography>
-            <Typography color="gray" className="font-normal">
-              Save countless hours of design and ship great looking designs
-              faster.
+            <div className="grid grid-cols-3 justify-between gap-4">
+              {links.map(({ title, items }) => (
+                <ul key={title}>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="mb-3 font-medium opacity-40"
+                  >
+                    {title}
+                  </Typography>
+                  {items.map((link) => (
+                    <li key={link}>
+                      <Typography
+                        as="a"
+                        href="#"
+                        color="gray"
+                        className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                      >
+                        {link}
+                      </Typography>
+                    </li>
+                  ))}
+                </ul>
+              ))}
+            </div>
+          </div>
+          <div className="mt-16 flex flex-wrap items-end justify-center gap-y-4 gap-x-8 border-t border-blue-gray-50 py-6 md:justify-between">
+            <div className="text-center md:text-start">
+              <Typography variant="h4" color="blue-gray" className="mb-2">
+                Move faster with Material Tailwind
+              </Typography>
+              <Typography color="gray" className="font-normal">
+                Save countless hours of design and ship great looking designs
+                faster.
+              </Typography>
+            </div>
+            <Typography color="gray" className="text-center font-normal">
+              &copy; {currentYear} Material Tailwind, All rights reserved.
             </Typography>
           </div>
-          <Typography color="gray" className="text-center font-normal">
-            &copy; {currentYear} Material Tailwind, All rights reserved.
-          </Typography>
         </div>
-      </div>
-    </footer>
-    </>
+      </footer>
+    </ThemeProvider>
   );
 }

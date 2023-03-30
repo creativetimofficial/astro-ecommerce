@@ -2,71 +2,71 @@ import { ThemeProvider as MTThemeProvider } from "@material-tailwind/react";
 const customTheme = {
   button: {
     valid: {
-      colors: [
-        'dark'
-      ],
+      colors: ["dark"],
     },
     styles: {
       base: {
         initial: {
-          className: "capitalize font-medium"
-        }
+          textTransform: "capitalize",
+          fontWeight: "font-medium",
+        },
       },
       variants: {
         filled: {
           cyan: {
             background: "bg-cyan",
-            color: "text-dark"
+            color: "text-dark",
           },
           yellow: {
             background: "bg-yellow",
-            color: "text-dark"
+            color: "text-dark",
           },
           blue: {
             background: "bg-blue-500",
-            color: "text-white"
+            color: "text-white",
           },
           red: {
             background: "bg-red",
-            color: "text-white"
+            color: "text-white",
           },
           dark: {
             background: "bg-dark",
             color: "text-white",
-            className: "border border-[#383B3D]"
+            className: "border border-[#383B3D]",
           },
         },
         outlined: {
           cyan: {
             background: "bg-cyan",
-            color: "text-dark"
+            color: "text-dark",
           },
           yellow: {
             background: "bg-yellow",
-            color: "text-dark"
+            color: "text-dark",
           },
           blue: {
             background: "bg-blue",
-            color: "text-white"
+            color: "text-white",
           },
           red: {
             background: "bg-red",
-            color: "text-white"
+            color: "text-white",
           },
           dark: {
             background: "bg-dark",
             color: "text-white",
-            className: "border border-[#383B3D]"
+            className: "border border-[#383B3D]",
           },
-        }
+        },
       },
-
     },
-  }
+  },
+};
+
+export function ThemeProvider({ children }: any) {
+  return (
+    <MTThemeProvider value={customTheme as any}>{children}</MTThemeProvider>
+  );
 }
 
-export function ThemeProvider({ children }) {
-  return <MTThemeProvider value={customTheme}>{children}</MTThemeProvider>;
-}
- 
 export default ThemeProvider;

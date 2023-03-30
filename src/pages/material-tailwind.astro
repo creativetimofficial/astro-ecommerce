@@ -2,7 +2,7 @@
 import { ThemeProvider } from "../components/theme-provider";
 import Card from "../example";
 ---
- 
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -12,8 +12,6 @@ import Card from "../example";
     <title>Astro</title>
   </head>
   <body>
-    <ThemeProvider>
-      <Card />
-    </ThemeProvider>
+    <Card client:load />
   </body>
 </html>
