@@ -202,7 +202,7 @@ export default function ExampleCard() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Material Tailwind PRO
+            Corporate UI
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -211,7 +211,7 @@ export default function ExampleCard() {
             <NavItem>Pricing</NavItem>
           </ul>
           <div className="ml-auto hidden gap-2 lg:flex">
-            <Button variant="text" size="sm">
+            <Button className="text-dark" variant="text" size="sm">
               login
             </Button>
             <Button size="sm">sign up</Button>
@@ -257,7 +257,7 @@ export default function ExampleCard() {
               color="blue-gray"
               className="mb-8 text-4xl !leading-tight md:text-5xl"
             >
-              Your work with Material Tailwind
+              Your work with Astro Ecommerce
             </Typography>
             <Typography
               variant="lead"
@@ -456,8 +456,8 @@ export default function ExampleCard() {
                 color="white"
                 className="mb-10 font-normal"
               >
-                &quot;We&apos;sre not always in the position that we want to be
-                at. We&apo;sre constantly growing.
+                &quot;We&apos;re not always in the position that we want to be
+                at. We&apos;re constantly growing.
               </Typography>
               <Typography variant="lead" color="white">
                 &#8212; Renee Wells
