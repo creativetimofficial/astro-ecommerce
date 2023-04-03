@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import data from "../../public/data.json";
+import HeaderBlog from "../components/blog/header"
+import BlogSection from "../components/blog/blog"
+import TestimonialsBlog from "../components/blog/testimonials"
+import LatestBlog from "../components/blog/latest-blog"
+import FooterBlog from "../components/blog/footer"
+---
+
+
+<Layout title="Blog Page">
+	<main>
+    <HeaderBlog client:load />
+    <div class="container mx-auto">
+      <BlogSection />
+      <TestimonialsBlog />
+      <LatestBlog />
+      <FooterBlog />
+    </div>
+
+  </main>
+</Layout>
