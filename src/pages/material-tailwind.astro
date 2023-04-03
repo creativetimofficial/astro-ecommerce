@@ -1,17 +1,16 @@
 ---
-import { ThemeProvider } from "../components/theme-provider";
-import Card from "../example";
+import Layout from '../layouts/Layout.astro';
+import Example from "../example";
+import data from "../../public/data.json";
+import Header from "../header"
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Card client:load />
-  </body>
-</html>
+<Layout title="About Us Page">
+	<main>
+    <Example client:load />
+
+    <div class="position-relative pt-2 my-5">
+      <Header client:load  />
+    </div>
+  </main>
+</Layout>
