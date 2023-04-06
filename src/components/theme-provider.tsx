@@ -9,35 +9,12 @@ const customTheme = {
         initial: {
           textTransform: "capitalize",
           fontWeight: "font-medium",
-        },
+        }
       },
       variants: {
         filled: {
-          cyan: {
-            background: "bg-cyan",
-            color: "text-dark",
-          },
-          yellow: {
-            background: "bg-yellow",
-            color: "text-dark",
-          },
-          blue: {
-            background: "bg-blue-500",
-            color: "text-white",
-          },
-          red: {
-            background: "bg-red",
-            color: "text-white",
-          },
-          dark: {
-            background: "bg-dark",
-            color: "text-white",
-            className: "border border-[#383B3D]",
-          },
-        },
-        outlined: {
-          cyan: {
-            background: "bg-cyan",
+          sky: {
+            background: "bg-sky",
             color: "text-dark",
           },
           yellow: {
@@ -48,15 +25,52 @@ const customTheme = {
             background: "bg-blue",
             color: "text-white",
           },
+          green: {
+            background: "bg-green",
+            color: "text-white",
+          },
           red: {
             background: "bg-red",
+            color: "text-white",
+          },
+          slate: {
+            background: "bg-slate",
             color: "text-white",
           },
           dark: {
             background: "bg-dark",
             color: "text-white",
-            className: "border border-[#383B3D]",
+          }
+        },
+        outlined: {
+          sky: {
+            color: "text-sky",
+            border: "border border-sky",
           },
+          yellow: {
+            color: "text-yellow",
+            border: "border border-yellow",
+          },
+          blue: {
+            color: "text-blue",
+            border: "border border-blue",
+          },
+          red: {
+            color: "text-red",
+            border: "border border-red"
+          },
+          green: {
+            color: "text-green",
+            border: "border border-green"
+          },
+          slate: {
+            color: "text-slate",
+            border: "border border-slate"
+          },
+          dark: {
+            color: "text-dark",
+            border: "border border-dark"
+          }
         },
       },
     },
@@ -70,26 +84,34 @@ const customTheme = {
     styles: {
       variants: {
         outlined: {
-          cyan: {
-            background: "bg-cyan",
-            color: "text-dark"
+          sky: {
+            color: "text-sky",
+            border: "border border-sky",
           },
           yellow: {
-            background: "bg-yellow",
-            color: "text-dark"
+            color: "text-yellow",
+            border: "border border-yellow",
           },
           blue: {
-            background: "bg-blue",
-            color: "text-white"
+            color: "text-blue",
+            border: "border border-blue",
           },
           red: {
-            background: "bg-red",
-            color: "text-white"
+            color: "text-red",
+            border: "border border-red"
+          },
+          green: {
+            color: "text-green",
+            border: "border border-green"
+          },
+          slate: {
+            color: "text-slate",
+            border: "border border-slate"
           },
           dark: {
-            background: "bg-dark",
-            color: "text-white"
-          },
+            color: "text-dark",
+            border: "border border-dark"
+          }
         }
       },
 
@@ -99,25 +121,33 @@ const customTheme = {
     styles: {
       variants: {
         filled: {
-          cyan: {
-            background: "bg-cyan",
-            color: "text-dark"
+          sky: {
+            background: "bg-sky",
+            color: "text-dark",
           },
           yellow: {
             background: "bg-yellow",
-            color: "text-dark"
+            color: "text-dark",
           },
           blue: {
             background: "bg-blue",
-            color: "text-white"
+            color: "text-white",
+          },
+          green: {
+            background: "bg-green",
+            color: "text-white",
           },
           red: {
             background: "bg-red",
-            color: "text-white"
+            color: "text-white",
+          },
+          slate: {
+            background: "bg-slate",
+            color: "text-white",
           },
           dark: {
             background: "bg-dark",
-            color: "text-white"
+            color: "text-white",
           }
         }
       },
@@ -138,8 +168,8 @@ const customTheme = {
     styles: {
       variants: {
         filled: {
-          cyan: {
-            background: "bg-cyan"
+          sky: {
+            background: "bg-sky"
           },
           yellow: {
             background: "bg-yellow"
@@ -147,13 +177,18 @@ const customTheme = {
           blue: {
             background: "bg-blue"
           },
+          green: {
+            background: "bg-green"
+          },
           red: {
             background: "bg-red"
           },
+          slate: {
+            background: "bg-slate"
+          },
           dark: {
             background: "bg-dark"
-          },
-
+          }
         }
       }
     }
@@ -166,24 +201,34 @@ const customTheme = {
       },
       variants: {
         outlined: {
-          cyan: {
-            background: "bg-cyan"
+          sky: {
+            color: "text-sky",
+            border: "border border-sky",
           },
           yellow: {
-            background: "bg-yellow"
+            color: "text-yellow",
+            border: "border border-yellow",
           },
           blue: {
-            background: "bg-blue"
+            color: "text-blue",
+            border: "border border-blue",
           },
           red: {
-            background: "bg-red"
+            color: "text-red",
+            border: "border border-red"
+          },
+          green: {
+            color: "text-green",
+            border: "border border-green"
+          },
+          slate: {
+            color: "text-slate",
+            border: "border border-slate"
           },
           dark: {
-            background: "bg-dark",
-            className: "border border-[#383B3D]"
-
-          },
-
+            color: "text-dark",
+            border: "border border-dark"
+          }
         }
       }
     }
