@@ -50,7 +50,7 @@ export function ContentSectionTwo() {
             Unsplash
           </a>
         </Typography>
-        <figure className="my-10 border-l-2 border-blue-500 py-4 pl-6">
+        <figure className="my-10 border-l-2 border-blue py-4 pl-6">
           <blockquote cite="#">
             <Typography
               variant="lead"
