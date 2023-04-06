@@ -5,73 +5,77 @@ import {
   Typography,
   Chip,
 } from "@material-tailwind/react";
+import ThemeProvider from "../theme-provider";
+
 import { CheckIcon } from "@heroicons/react/24/outline";
 
 function PricingCard({ title, desc, price, plan, options, marked }) {
   return (
-    <Card className="border border-blue-gray-50">
-      <CardBody className="flex flex-wrap-reverse items-end justify-between gap-2 p-8">
-        <div className="mt-1.5">
-          <Typography
-            variant="h3"
-            color="blue-gray"
-            className={marked ? "flex items-center gap-3" : ""}
-          >
-            {title}{" "}
-            {marked && (
-              <Chip
-                value="popular"
-                className="!rounded-full !py-1.5 !px-3"
-              />
-            )}
+    <ThemeProvider>
+      <Card className="border border-blue-gray-50">
+        <CardBody className="flex flex-wrap-reverse items-end justify-between gap-2 p-8">
+          <div className="mt-1.5">
+            <Typography
+              variant="h3"
+              color="blue-gray"
+              className={marked ? "flex items-center gap-3" : ""}
+            >
+              {title}{" "}
+              {marked && (
+                <Chip
+                  value="popular"
+                  className="!rounded-full !py-1.5 !px-3"
+                />
+              )}
+            </Typography>
+            <Typography color="gray" className="mt-1 font-normal">
+              {desc}
+            </Typography>
+          </div>
+          <div className="flex">
+            <Typography variant="h2" color="blue-gray" className="mt-1">
+              $
+            </Typography>
+            <Typography variant="h1" color="blue-gray" className="text-7xl">
+              {price}
+            </Typography>
+            <Typography
+              color="gray"
+              className="mt-auto mb-2 ml-1 font-medium"
+            >
+              per month
+            </Typography>
+          </div>
+        </CardBody>
+        <CardBody className="border-y border-blue-gray-50 p-8">
+          <Typography variant="h5" color="blue-gray" className="uppercase">
+            Features
           </Typography>
-          <Typography color="gray" className="mt-1 font-normal">
-            {desc}
+          <Typography color="gray" className="font-normal">
+            Everthing in our <strong className="text-gray-700">{plan}</strong>{" "}
+            plan plus...
           </Typography>
-        </div>
-        <div className="flex">
-          <Typography variant="h2" color="blue-gray" className="mt-1">
-            $
-          </Typography>
-          <Typography variant="h1" color="blue-gray" className="text-7xl">
-            {price}
-          </Typography>
-          <Typography
-            color="gray"
-            className="mt-auto mb-2 ml-1 font-medium"
-          >
-            per month
-          </Typography>
-        </div>
-      </CardBody>
-      <CardBody className="border-y border-blue-gray-50 p-8">
-        <Typography variant="h5" color="blue-gray" className="uppercase">
-          Features
-        </Typography>
-        <Typography color="gray" className="font-normal">
-          Everthing in our <strong className="text-gray-700">{plan}</strong>{" "}
-          plan plus...
-        </Typography>
 
-        <ul className="mt-8 grid gap-4 md:grid-cols-2">
-          {options.map((option, key) => (
-            <li key={key} className="flex items-center gap-3">
-              <div className="h-6 w-6 rounded-full bg-green-500/20 p-1 text-green-500">
-                <CheckIcon className="h-4 w-4" strokeWidth={3} />
-              </div>
-              <Typography color="gray" className="font-normal opacity-80">
-                {option}
-              </Typography>
-            </li>
-          ))}
-        </ul>
-      </CardBody>
-      <CardBody className="p-8">
-        <Button size="lg" fullWidth>
-          get started
-        </Button>
-      </CardBody>
-    </Card>
+          <ul className="mt-8 grid gap-4 md:grid-cols-2">
+            {options.map((option, key) => (
+              <li key={key} className="flex items-center gap-3">
+                <div className="h-6 w-6 rounded-full bg-green-500/20 p-1 text-green-500">
+                  <CheckIcon className="h-4 w-4" strokeWidth={3} />
+                </div>
+                <Typography color="gray" className="font-normal opacity-80">
+                  {option}
+                </Typography>
+              </li>
+            ))}
+          </ul>
+        </CardBody>
+        <CardBody className="p-8">
+          <Button color="dark" fullWidth>
+            get started
+          </Button>
+        </CardBody>
+      </Card>
+    </ThemeProvider>
   );
 }
 
