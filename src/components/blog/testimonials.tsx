@@ -52,9 +52,9 @@ const testimonials = [
     rating: 5,
     feedback:
       "The time is now for it to be okay to be great. People in this world shun people for being great.",
-    client: "Renee Wells",
+    client: "Mark Wells",
     title: "Product Designer, Quotient",
-    img: "https://images.unsplash.com/photo-1611042553365-9b101441c135?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1365&q=80",
+    img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
   },
   {
     rating: 4,
@@ -62,7 +62,7 @@ const testimonials = [
       "For being a bright color. For standing out. But the time is now to be okay to be the greatest you.",
     client: "Candice Wu",
     title: "Engineering Manager, Amazon",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    img: "https://images.unsplash.com/photo-1592621385612-4d7129426394?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=800",
   },
   {
     rating: 3,
@@ -70,7 +70,7 @@ const testimonials = [
       "Would you believe in what you believe in, if you were the only one who believed it?",
     client: "Olivia Rhye",
     title: "CEO & Founder, Quotient",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbSUyMG1lbWJlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    img: "https://images.unsplash.com/photo-1589156288859-f0cb0d82b065?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80",
   },
 ];
 
