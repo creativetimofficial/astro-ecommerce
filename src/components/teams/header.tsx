@@ -8,6 +8,7 @@ import {
   Input,
   Avatar,
 } from "@material-tailwind/react";
+import ThemeProvider from "../theme-provider";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
 
@@ -62,7 +63,7 @@ export function HeroSectionOne() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="fixed z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -82,7 +83,7 @@ export function HeroSectionOne() {
             <Button variant="text" size="sm">
               login
             </Button>
-            <Button size="sm">sign up</Button>
+            <Button color="dark" size="sm">sign up</Button>
           </div>
           <IconButton
             size="sm"
@@ -110,7 +111,7 @@ export function HeroSectionOne() {
               <Button variant="outlined" size="sm" fullWidth>
                 login
               </Button>
-              <Button size="sm" fullWidth>
+              <Button color="dark" size="sm" fullWidth>
                 sign up
               </Button>
             </div>
@@ -136,8 +137,8 @@ export function HeroSectionOne() {
               world shun people for being great.
             </Typography>
             <div className="mb-6 flex w-full flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
-              <Button className="w-full px-4 md:w-[12rem]">get started</Button>
-              <Button variant="outlined" className="w-full px-4 md:w-[12rem]">Read more</Button>
+              <Button color="dark" className="w-full px-4 md:w-[12rem]">get started</Button>
+              <Button color="dark" variant="outlined" className="w-full px-4 md:w-[12rem]">Read more</Button>
             </div>
             <Typography
               variant="small"
@@ -190,7 +191,7 @@ export function HeroSectionOne() {
           />
         </div>
       </header>
-    </>
+    </ThemeProvider>
   );
 }
 
