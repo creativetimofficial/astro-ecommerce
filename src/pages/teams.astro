@@ -4,13 +4,15 @@ import HeaderTeams from "../components/teams/header"
 import StatsTeams from "../components/teams/stats"
 import ContentTeams from "../components/teams/content"
 import TeamSectionTeams from "../components/teams/team"
+import FooterTeams from "../components/teams/footer"
 ---
 
 <Layout title="Teams">
 	<main>
-    <HeaderTeams />
-    <StatsTeams />
-    <ContentTeams />
-    <TeamSectionTeams />
+    <HeaderTeams client:load />
+    <StatsTeams client:load />
+    <ContentTeams client:load />
+    <TeamSectionTeams client:load />
+    <FooterTeams client:load />
   </main>
 </Layout>
