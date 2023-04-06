@@ -6,6 +6,7 @@ import {
   IconButton,
   Typography,
 } from "@material-tailwind/react";
+import ThemeProvider from "../theme-provider";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -45,7 +46,7 @@ export function HeroSectionThree() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="fixed z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -53,7 +54,7 @@ export function HeroSectionThree() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Material Tailwind PRO
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -65,7 +66,7 @@ export function HeroSectionThree() {
             <Button variant="text" size="sm">
               login
             </Button>
-            <Button size="sm">sign up</Button>
+            <Button color="dark" size="sm">sign up</Button>
           </div>
           <IconButton
             size="sm"
@@ -93,7 +94,7 @@ export function HeroSectionThree() {
               <Button variant="outlined" size="sm" fullWidth>
                 login
               </Button>
-              <Button size="sm" fullWidth>
+              <Button color="dark" size="sm" fullWidth>
                 sign up
               </Button>
             </div>
@@ -137,7 +138,7 @@ export function HeroSectionThree() {
           <div className="mb-20 flex justify-center gap-3">
             <Button
               variant="outlined"
-              color="blue-gray"
+              color="dark"
               size="lg"
               className="flex items-center"
             >
@@ -147,7 +148,7 @@ export function HeroSectionThree() {
               />
               demo
             </Button>
-            <Button size="lg">sign up</Button>
+            <Button color="dark" size="lg">sign up</Button>
           </div>
         </div>
         <div className="mx-0 pb-8 lg:container lg:mx-auto">
@@ -158,7 +159,7 @@ export function HeroSectionThree() {
           />
         </div>
       </header>
-    </>
+    </ThemeProvider>
   );
 }
 
