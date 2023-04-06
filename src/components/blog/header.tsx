@@ -8,6 +8,7 @@ import {
   Input,
   Avatar,
 } from "@material-tailwind/react";
+import ThemeProvider from "../theme-provider";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
 
@@ -66,7 +67,7 @@ export function HeroSectionOne() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="fixed z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -86,7 +87,7 @@ export function HeroSectionOne() {
             <Button variant="text" size="sm">
               login
             </Button>
-            <Button size="sm">sign up</Button>
+            <Button color="dark" size="sm">sign up</Button>
           </div>
           <IconButton
             size="sm"
@@ -114,7 +115,7 @@ export function HeroSectionOne() {
               <Button variant="outlined" size="sm" fullWidth>
                 login
               </Button>
-              <Button size="sm" fullWidth>
+              <Button color="dark" size="sm" fullWidth>
                 sign up
               </Button>
             </div>
@@ -140,7 +141,7 @@ export function HeroSectionOne() {
             </Typography>
             <div className="mb-6 flex w-full flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
               <Input label="Enter your email" size="lg" />
-              <Button className="w-full px-4 md:w-[12rem]">get started</Button>
+              <Button color="dark" className="w-full px-4 md:w-[12rem]">get started</Button>
             </div>
             <Typography
               variant="small"
@@ -187,13 +188,13 @@ export function HeroSectionOne() {
             </div>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1604328727766-a151d1045ab4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            src="https://images.unsplash.com/photo-1464564531096-f0163633a18a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1788&q=80"
             alt="team work"
             className="lg:0 mb-8 h-96 w-full rounded-xl object-cover lg:h-[40rem] lg:w-1/2"
           />
         </div>
       </header>
-    </>
+    </ThemeProvider>
   );
 }
 
