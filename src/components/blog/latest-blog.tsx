@@ -6,6 +6,7 @@ import {
   Chip,
   Button,
 } from "@material-tailwind/react";
+import ThemeProvider from "../theme-provider";
 import { color } from "@material-tailwind/react/types/components/chip";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
@@ -108,38 +109,40 @@ const posts = [
 
 export function BlogSectionThree() {
   return (
-    <section>
-      <div className="container mx-auto px-8 py-10">
-        <div className="mb-16 text-center">
-          <Typography color="blue" className="mb-2 !font-semibold">
-            Latest Posts
-          </Typography>
-          <Typography variant="h2" color="blue-gray">
-            Corporate UI Ecommerce
-          </Typography>
-          <Typography variant="lead" color="gray">
-            Interviews, tips, guides, industry best practices, and news.
-          </Typography>
-        </div>
+    <ThemeProvider>
+      <section>
+        <div className="container mx-auto px-8 py-10">
+          <div className="mb-16 text-center">
+            <Typography color="blue" className="mb-2 !font-semibold">
+              Latest Posts
+            </Typography>
+            <Typography variant="h2" color="blue-gray">
+              Corporate UI Ecommerce
+            </Typography>
+            <Typography variant="lead" color="gray">
+              Interviews, tips, guides, industry best practices, and news.
+            </Typography>
+          </div>
 
-        <div className="grid grid-cols-1 items-start gap-y-16 gap-x-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map(({ img, author, date, title, desc, tags }: any) => (
-            <BlogPostCard
-              key={title}
-              img={img}
-              author={author}
-              date={date}
-              title={title}
-              desc={desc}
-              tags={tags}
-            />
-          ))}
+          <div className="grid grid-cols-1 items-start gap-y-16 gap-x-8 md:grid-cols-2 lg:grid-cols-3">
+            {posts.map(({ img, author, date, title, desc, tags }: any) => (
+              <BlogPostCard
+                key={title}
+                img={img}
+                author={author}
+                date={date}
+                title={title}
+                desc={desc}
+                tags={tags}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="px-12 pb-20 text-center">
-        <Button size="lg">view all posts</Button>
-      </div>
-    </section>
+        <div className="px-12 pb-20 text-center">
+          <Button color="dark" size="lg">view all posts</Button>
+        </div>
+      </section>
+    </ThemeProvider>
   );
 }
 
