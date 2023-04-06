@@ -12,4 +12,23 @@
   &.progress-lg {
     height: $progress-height-lg;
   }
+
+  &.progress-vertical {
+    display: flex;
+    align-items: end;
+    height: 100%;
+    width: $progress-bar-height;
+
+    &.progress-sm {
+      width: $progress-height-sm;
+    }
+    &.progress-lg {
+      width: $progress-height-lg;
+    }
+
+    .progress-bar {
+      width: 100%;
+      border-radius: .125rem;
+    }    
+  }
 }

@@ -1,6 +1,8 @@
 .nav {
   &.nav-pills {
     background: $nav-pills-background;
+    box-shadow: $nav-pills-link-box-shadow;
+    border: 1px solid white;
     border-radius: $nav-pills-border-radius;
     position: relative;
     &.nav-pills-vertical {
@@ -14,6 +16,7 @@
     .nav-link {
       z-index: 3;
       color: $dark;
+      font-size: $nav-pills-font-size;
       border-radius: $nav-pills-link-border-radius;
       background-color: inherit;
       &.active {
@@ -21,6 +24,28 @@
       }
       &:hover:not(.active) {
         color: $dark;
+      }
+    }
+    &.nav-pills-lg {
+      padding: .25rem;
+      border-radius: $border-radius-default;
+      .nav-link {
+        padding: 11px 0 11px 0;
+        border-radius: $border-radius-default;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-sm;
+        color: $slate-500;
+        &:hover:not(.active) {
+          color: $primary;
+        }
+        &.active {
+          color: $primary;
+        }
+        &.moving-tab{
+          .nav-link.active {
+            color: $white;
+          }
+        }
       }
     }
     &.nav-pills-primary {
@@ -115,6 +140,12 @@
     }
     .nav-item{
       z-index: 3;
+      .nav-link {
+        gap: 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }

@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import data from "../../public/data.json";
+import HeaderAbout from "../components/about/header"
+import FeaturesAbout from "../components/about/features"
+import TeamAbout from "../components/about/team"
+import TestimonialAbout from "../components/about/testimonials"
+import FooterAbout from "../components/about/footer"
+---
+
+
+<Layout title="About Us Page">
+	<main>
+    <HeaderAbout client:load />
+    <FeaturesAbout client:load />
+    <TestimonialAbout client:load />
+    <TeamAbout client:load />
+    <FooterAbout client:load />
+  </main>
+</Layout>

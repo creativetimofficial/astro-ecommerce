@@ -104,6 +104,8 @@
     }
 
     .dropdown-menu {
+      backdrop-filter: blur(13.6px);
+      -webkit-backdrop-filter: blur(13.6px);
       &:before {
         font-family: "FontAwesome";
         content: "\f0d8";
@@ -115,6 +117,15 @@
         color: $white;
         transition: $dropdown-animation-arrow-transition;
       }
+    }
+
+    .dropdown-toggle + .dropdown-menu {
+      &:before {
+        content: "";
+      }
+    }
+    [data-bs-toggle="dropdown"] {
+      outline: none;
     }
 
     .dropdown-item .arrow {

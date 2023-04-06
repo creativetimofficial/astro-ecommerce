@@ -1,0 +1,128 @@
+/*!
+Simple-DataTables
+Github: https://github.com/fiduswriter/Simple-DataTables
+*/
+
+// Creative Tim Changes
+
+.dataTable-wrapper{
+	.dataTable-top{
+		padding: $card-header-padding;
+		.dataTable-dropdown{
+			float: left;
+			label{
+				margin-bottom: 0;
+				margin-left: 0;
+				color: $secondary;
+				font-weight: $font-weight-normal;
+				.dataTable-selector{
+					border-color: $gray-200;
+					border-radius: $border-radius-sm;
+				}
+			}
+		}
+		.dataTable-search{
+			input{
+				font-size: $font-size-sm;
+				color: $input-color;
+				border:1px solid $gray-400;
+				@include border-radius($input-border-radius, 0);
+				&:focus-visible{
+					outline: none;
+				}
+			}
+		}
+	}
+	.dataTable-container{
+		.table{
+			thead{
+				tr{
+					th{
+						padding: $table-head-spacer-x $table-head-spacer-x;
+						opacity: .7;
+						font-weight: bolder;
+						color: $secondary;
+						font-size: $font-size-xxs;
+					}
+				}
+			}
+			tbody{
+				tr{
+					td{
+						padding: $table-head-spacer-y $table-head-spacer-x;
+					}
+				}
+			}
+		}
+	}
+	.dataTable-bottom{
+		padding: $card-header-padding;
+    padding-top: 0.5rem;
+		.dataTable-info{
+			color: $secondary;
+			font-size: $font-size-sm;
+		}
+		.dataTable-pagination {
+			.dataTable-pagination-list {
+				.pager:first-of-type {
+					
+				}
+				li {
+					a {
+						display: $page-link-display;
+				    align-items: $page-link-align-items;
+				    justify-content: $page-link-justify-content;
+				    color: $secondary;
+				    padding: 0;
+				    margin: $page-link-margin;
+				    border-radius: $border-radius-sm !important;
+				    width: $page-link-width;
+				    height: $page-link-height;
+				    font-size: $font-size-sm;
+				    font-weight: $font-weight-bold;
+						margin-left: 0;
+						&:hover {
+							background: transparent;
+							border: 1px solid $gray-400;
+						}
+					}
+				}
+				.active {
+					a {
+						cursor: pointer;
+						background: $gray-200;
+						color: $secondary;
+						border: 1px solid $gray-400;
+						border-radius: $border-radius-sm !important;
+						&:hover {
+							background: $gray-200;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.no-footer{
+		.dataTable-container{
+			border-bottom: 0;
+		}
+	}
+}
+
+.dataTable-table {
+  thead,
+  tbody,
+  tfoot {
+    td,
+    th {
+      vertical-align: middle !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+	.dataTable-top > div:last-child{
+		float: left;
+		margin-top: $spacer;
+	}
+}

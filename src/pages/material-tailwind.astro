@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Example from "../example";
+import data from "../../public/data.json";
+import Header from "../header"
+---
+
+<Layout title="About Us Page">
+	<main>
+    <Example client:load />
+
+    <div class="position-relative pt-2 my-5">
+      <Header client:load  />
+    </div>
+  </main>
+</Layout>

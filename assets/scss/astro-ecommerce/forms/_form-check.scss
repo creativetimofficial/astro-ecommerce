@@ -71,6 +71,7 @@
 }
 
 .form-check-label{
+  user-select: none;
   font-size:$font-size-sm;
   font-weight: $font-weight-normal;
 }
@@ -81,6 +82,16 @@
   appearance: none;
 }
 
+// radio styling for list group 
+.list-group {
+  .list-group-item {
+    .form-check {
+      .form-check-input {
+        margin: 0;
+      }
+    }
+  }
+}
 
 // Ecommerce Astro
 

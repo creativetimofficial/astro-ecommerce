@@ -11,15 +11,15 @@
   &:active:hover {
     box-shadow: $btn-hover-box-shadow;
     //transform: $btn-active-hover-transform;
-    opacity: $btn-hover-opacity;
+    // opacity: $btn-hover-opacity;
   }
 
   @include hover {
-    opacity: 0.85;
+    // opacity: 0.85;
 
     &:not(.btn-icon-only){
       box-shadow: $btn-hover-box-shadow;
-      opacity: 0.85;
+      // opacity: 0.85;
       // transform: $btn-hover-transform;
     }
   }
@@ -111,20 +111,64 @@
 }
 
 .btn-check{
+  +.btn{
+    color: $body-color;
+    &:hover{
+      border-color: $slate-350;
+    }
+  }
+
+  
   &:checked{
+    &:focus{
+      +.btn{
+        box-shadow: none;
+        &:hover {
+          box-shadow: $btn-hover-box-shadow;
+        }
+      }
+    }
     +.btn{
-      font-weight: $font-weight-bolder;
       color: $primary;
+      font-weight: $font-weight-bold;
+      background-color: $gray-100;
       border: 1px solid $slate-350;
+      border-color: $slate-350;
       svg{
         .color-background{
           fill: $white;
         }
       }
       &:hover{
+        border-color: $slate-350;
         svg{
           .color-background{
             fill: $dark;
+          }
+        }
+      }
+    }
+  }
+  
+  &.btn-check-icon {
+    &:checked{
+      +.btn{
+        color: $primary;
+        border: 1px solid $primary;
+        svg{
+          .color-background{
+            fill: $primary;
+          }
+        }
+      }
+    }
+    +.btn{
+      &:hover{
+        color: $primary;
+        border: 1px solid $primary;
+        svg{
+          .color-background{
+            fill: $white;
           }
         }
       }

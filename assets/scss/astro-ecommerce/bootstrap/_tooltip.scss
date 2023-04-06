@@ -1,3 +1,5 @@
+// stylelint-disable custom-property-empty-line-before
+
 // Base class
 .tooltip {
   // scss-docs-start tooltip-css-vars
@@ -116,5 +118,5 @@
   color: var(--#{$prefix}tooltip-color);
   text-align: center;
   background-color: var(--#{$prefix}tooltip-bg);
-  @include border-radius(var(--#{$prefix}tooltip-border-radius));
+  border-radius: var(--#{$prefix}tooltip-border-radius, 0); // stylelint-disable-line property-disallowed-list
 }

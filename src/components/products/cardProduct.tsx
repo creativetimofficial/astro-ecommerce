@@ -9,6 +9,7 @@ interface Props {
   color: string;
   colors: string[];
   position: string;
+  imageHeight: string;
 }
 
 export default function CardProduct({
@@ -19,17 +20,19 @@ export default function CardProduct({
   price,
   color,
   colors,
-  position
+  position,
+  imageHeight
 }: Props) {
 
   const classList = "card-body " + "text-" + position;
+  const height = imageHeight == null ? "height-300" : imageHeight
 
   return (
     <>
       <div className="card card-product border border-white mb-5 shadow-xs">
         <a href="#">
-          <div className="height-300">
-            <img className="w-100 h-100 rounded-top" src={thumb_src} alt={thumb_alt} />
+          <div className={height + " rounded-2"} style={{backgroundImage: `url(${thumb_src})`, backgroundSize: "cover", backgroundPosition: "center"}}>
+
           </div>
           <div className={classList}>
             {(color) && 
