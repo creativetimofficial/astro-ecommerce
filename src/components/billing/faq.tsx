@@ -1,4 +1,4 @@
-import React from "react";
+import { React, Fragment, useState } from "react";
 import {
   Accordion,
   AccordionHeader,
@@ -34,9 +34,11 @@ const faqs = [
 ];
 
 export function Faqs() {
-  const [open, setOpen] = React.useState(0);
-  const handleOpen = (value) => setOpen(open === value ? 0 : value);
-
+  const [open, setOpen] = useState(1);
+ 
+  const handleOpen = (value) => {
+    setOpen(open === value ? 0 : value);
+  };
   return (
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto">
