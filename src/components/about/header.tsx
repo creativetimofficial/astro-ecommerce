@@ -6,6 +6,8 @@ import {
   IconButton,
   Typography,
 } from "@material-tailwind/react";
+import ThemeProvider from "../theme-provider";
+
 import {
   Bars3Icon,
   XMarkIcon,
@@ -44,7 +46,7 @@ export function HeroSectionTwo() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="fixed z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -52,7 +54,7 @@ export function HeroSectionTwo() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Material Tailwind PRO
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -64,7 +66,7 @@ export function HeroSectionTwo() {
             <Button variant="text" size="sm">
               login
             </Button>
-            <Button size="sm">sign up</Button>
+            <Button color="dark" size="sm">sign up</Button>
           </div>
           <IconButton
             size="sm"
@@ -92,7 +94,7 @@ export function HeroSectionTwo() {
               <Button variant="outlined" size="sm" fullWidth>
                 login
               </Button>
-              <Button size="sm" fullWidth>
+              <Button color="dark" size="sm" fullWidth>
                 sign up
               </Button>
             </div>
@@ -102,15 +104,15 @@ export function HeroSectionTwo() {
       <header className="h-full w-screen place-items-center bg-white px-8 py-28">
         <div className="container mx-auto grid items-center lg:grid-cols-2">
           <div className="text-center lg:text-left">
-            <div className="mb-8 inline-flex items-center rounded-full bg-blue-50 py-1 pl-1 pr-3">
+            <div className="mb-8 inline-flex items-center rounded-full bg-dark/30 py-1 pl-1 pr-3">
               <Typography
                 variant="small"
-                className="mr-3 rounded-full bg-white py-0.5 px-3 font-medium text-blue-500"
+                className="mr-3 rounded-full bg-white py-0.5 px-3 font-medium text-dark-500"
               >
                 New
               </Typography>
               <Typography
-                color="blue"
+                color="dark"
                 variant="small"
                 className="!flex !items-center !font-semibold"
               >
@@ -134,7 +136,7 @@ export function HeroSectionTwo() {
               we lose family over time.
             </Typography>
             <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
-              <Button size="lg" className="flex items-center">
+              <Button color="dark" className="flex items-center">
                 <img
                   src="/logos/logo-ios.svg"
                   alt="ios"
@@ -142,7 +144,7 @@ export function HeroSectionTwo() {
                 />
                 Download Ios
               </Button>
-              <Button size="lg" className="flex items-center">
+              <Button color="dark" className="flex items-center">
                 <img
                   src="/logos/logo-android.svg"
                   alt="ios"
@@ -153,11 +155,11 @@ export function HeroSectionTwo() {
             </div>
           </div>
           <div className="hidden justify-end lg:flex">
-            <img src="https://images.unsplash.com/photo-1680252112129-91e7840cba38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80" alt="iphone" className="w-3/5" />
+            <img src="https://images.unsplash.com/photo-1591814540398-58332a4483a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80" alt="iphone" className="w-full rounded-3xl" />
           </div>
         </div>
       </header>
-    </>
+    </ThemeProvider>
   );
 }
 
