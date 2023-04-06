@@ -11,6 +11,8 @@ import {
   Card,
   CardBody,
 } from "@material-tailwind/react";
+import ThemeProvider from "../theme-provider";
+
 import { Bars3Icon, XMarkIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 
 interface NavItemPropsType {
@@ -35,44 +37,46 @@ function NavItem({ children }: NavItemPropsType) {
 
 function PricingCard({ price, desc, options }) {
   return (
-    <Card className="border border-blue-gray-50">
-      <CardBody className="p-8 text-center">
-        <div className="mb-8 inline-flex items-center rounded-full bg-blue-50 py-1 pl-1 pr-3">
-          <Typography
-            variant="small"
-            className="mr-3 rounded-full bg-white py-px px-3 font-medium text-blue-500"
-          >
-            Basic Plan
+    <ThemeProvider>
+      <Card className="border border-blue-gray-50">
+        <CardBody className="p-8 text-center">
+          <div className="mb-8 inline-flex items-center rounded-full bg-blue-50 py-1 pl-1 pr-3">
+            <Typography
+              variant="small"
+              className="mr-3 rounded-full bg-white py-px px-3 font-medium text-blue-500"
+            >
+              Basic Plan
+            </Typography>
+            <Typography color="blue" variant="small" className="font-medium">
+              Most Popular
+            </Typography>
+          </div>
+          <Typography variant="h1" color="blue-gray" className="mb-2">
+            {price}
           </Typography>
-          <Typography color="blue" variant="small" className="font-medium">
-            Most Popular
+          <Typography color="gray" className="font-normal">
+            {desc}
           </Typography>
-        </div>
-        <Typography variant="h1" color="blue-gray" className="mb-2">
-          {price}
-        </Typography>
-        <Typography color="gray" className="font-normal">
-          {desc}
-        </Typography>
 
-        <ul className="my-8 flex flex-col gap-3 border-y border-blue-gray-50 py-6">
-          {options.map((option, key) => (
-            <li key={key} className="flex items-center gap-2">
-              <CheckCircleIcon
-                className="h-6 w-6 text-blue-500"
-                strokeWidth={2}
-              />
-              <Typography color="gray" className="font-normal opacity-80">
-                {option}
-              </Typography>
-            </li>
-          ))}
-        </ul>
-        <Button size="lg" fullWidth>
-          get started
-        </Button>
-      </CardBody>
-    </Card>
+          <ul className="my-8 flex flex-col gap-3 border-y border-blue-gray-50 py-6">
+            {options.map((option, key) => (
+              <li key={key} className="flex items-center gap-2">
+                <CheckCircleIcon
+                  className="h-6 w-6 text-blue-500"
+                  strokeWidth={2}
+                />
+                <Typography color="gray" className="font-normal opacity-80">
+                  {option}
+                </Typography>
+              </li>
+            ))}
+          </ul>
+          <Button color="dark" fullWidth>
+            get started
+          </Button>
+        </CardBody>
+      </Card>
+    </ThemeProvider>
   );
 }
 
@@ -125,7 +129,7 @@ export function PricingSectionOne() {
   ];
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="absolute z-50 border-0"
         shadow={false}
@@ -173,7 +177,7 @@ export function PricingSectionOne() {
               <Button variant="outlined" size="sm" fullWidth>
                 login
               </Button>
-              <Button size="sm" fullWidth>
+              <Button color="dark" size="sm" fullWidth>
                 sign up
               </Button>
             </div>
@@ -181,7 +185,7 @@ export function PricingSectionOne() {
         </MobileNav>
       </Navbar>
       <section>
-        <div className="min-h-[50vh] bg-blue-600 px-8 py-24">
+        <div className="min-h-[50vh] bg-dark px-8 py-24">
           <div className="container mx-auto text-center">
             <Typography
               color="white"
@@ -220,7 +224,7 @@ export function PricingSectionOne() {
           </div>
         </div>
       </section>
-    </>
+    </ThemeProvider>
   );
 }
 
