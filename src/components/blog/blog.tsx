@@ -89,33 +89,33 @@ function BlogPostCard({
 
 const posts = [
   {
-    img: "https://images.unsplash.com/photo-1486728297118-82a07bc48a28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2429&q=80",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
     tag: "Management",
     title: "Katie's management lessons",
     desc: "Finding temporary housing for your dog should be as easy as renting an Airbnb.",
-    date: "17 Jan 2022",
+    date: "17 Apr 2023",
     author: {
       img: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
       name: "Alec Whitten",
     },
   },
   {
-    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHRlYW0lMjB3b3JrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    img: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
     tag: "Product",
     title: "Rover raised to $65 million",
     desc: "That's the idea behind Rover, which raised $65 million to expand its products sitting.",
-    date: "16 Jan 2022",
+    date: "16 Apr 2023",
     author: {
       img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
       name: "Demi Wilkinson",
     },
   },
   {
-    img: "https://images.unsplash.com/photo-1548611716-3000815a5803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGRlc2slMjBzZXR1cHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    img: "https://images.unsplash.com/photo-1523132797263-747d5d0dbbb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2274&q=80",
     tag: "Design",
     title: "What is Prototyping?",
     desc: "If you've ever wanted to train a machine learning model and integrate it with IFTTT.",
-    date: "15 Jan 2022",
+    date: "15 Apr 2023",
     author: {
       img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
       name: "Candice Wu",
@@ -126,7 +126,7 @@ const posts = [
     tag: "Strategy",
     title: "US venture investment tricks",
     desc: "Venture investment in U.S. startups rose sequentially in the second quarter boosted.",
-    date: "14 Jan 2022",
+    date: "14 Apr 2023",
     author: {
       img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80",
       name: "Natali Craig",
@@ -137,7 +137,7 @@ const posts = [
     tag: "Development",
     title: "MLabs mixes machine learning",
     desc: "MateVerse, a platform where novices can spin out machine learning and few outsized.",
-    date: "13 Jan 2022",
+    date: "13 Apr 2023",
     author: {
       img: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
       name: "Alec Whitten",
@@ -148,7 +148,7 @@ const posts = [
     tag: "Customer Support",
     title: "5 Ways to improve your App",
     desc: "Create first, edit second. Never do them at the same time.",
-    date: "12 Jan 2022",
+    date: "12 Apr 2023",
     author: {
       img: "https://images.unsplash.com/photo-1590086782792-42dd2350140d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
       name: "Orlando Diggs",
