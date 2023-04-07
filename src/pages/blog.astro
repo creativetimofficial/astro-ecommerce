@@ -11,12 +11,12 @@ import FooterBlog from "../components/blog/footer"
 
 <Layout title="Blog Page">
 	<main>
-    <HeaderBlog client:load />
+    <HeaderBlog client:only="react" />
     <div class="container mx-auto">
-      <BlogSection />
-      <TestimonialsBlog />
-      <LatestBlog />
-      <FooterBlog />
+      <BlogSection client:only="react"/>
+      <TestimonialsBlog client:only="react" />
+      <LatestBlog client:only="react" />
+      <FooterBlog client:only="react" />
     </div>
 
   </main>

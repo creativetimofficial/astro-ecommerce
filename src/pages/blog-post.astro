@@ -10,9 +10,9 @@ import FooterBlogPost from "../components/blog-post/footer"
 
 <Layout title="Blog Page">
 	<main>
-    <HeaderBlogPost client:load />
-    <IntroductionBlogPost />
-    <ConclusionBlogPost client:load />
-    <FooterBlogPost client:load />
+    <HeaderBlogPost client:only="react" />
+    <IntroductionBlogPost client:only="react" />
+    <ConclusionBlogPost client:only="react" />
+    <FooterBlogPost client:only="react" />
   </main>
 </Layout>

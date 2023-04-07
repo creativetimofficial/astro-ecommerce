@@ -9,10 +9,10 @@ import FooterTeams from "../components/teams/footer"
 
 <Layout title="Teams">
 	<main>
-    <HeaderTeams client:load />
-    <StatsTeams client:load />
-    <ContentTeams client:load />
-    <TeamSectionTeams client:load />
-    <FooterTeams client:load />
+    <HeaderTeams client:only="react" />
+    <StatsTeams client:only="react" />
+    <ContentTeams client:only="react" />
+    <TeamSectionTeams client:only="react" />
+    <FooterTeams client:only="react" />
   </main>
 </Layout>
