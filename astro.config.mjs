@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 import react from "@astrojs/react";
 
@@ -8,6 +8,11 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind()],
-  site: 'https://creativetimofficial.github.io',
-  base: '/astro-ecommerce'
+  site: "https://creativetimofficial.github.io",
+  base: "/astro-ecommerce",
+  vite: {
+    ssr: {
+      noExternal: ["@material-tailwind/react"],
+    },
+  },
 });
