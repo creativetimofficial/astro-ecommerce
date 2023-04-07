@@ -1,12 +1,13 @@
 import React from "react";
+
 import {
   Navbar,
   MobileNav,
   Button,
   IconButton,
   Typography,
-  Input,
   Avatar,
+  Input,
 } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
