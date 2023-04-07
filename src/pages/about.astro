@@ -11,10 +11,10 @@ import FooterAbout from "../components/about/footer"
 
 <Layout title="About Us Page">
 	<main>
-    <HeaderAbout client:load />
-    <FeaturesAbout client:load />
-    <TestimonialAbout client:load />
-    <TeamAbout client:load />
-    <FooterAbout client:load />
+    <HeaderAbout client:only="react" />
+    <FeaturesAbout client:only="react" />
+    <TestimonialAbout client:only="react" />
+    <TeamAbout client:only="react" />
+    <FooterAbout client:only="react" />
   </main>
 </Layout>
