@@ -11,5 +11,12 @@ const isProd = process.env.NODE_ENV === "production";
 export default defineConfig({
   integrations: [react(), tailwind()],
   site: "https://creativetimofficial.github.io",
-  base: "/astro-ecommerce"
+  base: "./",
+  vite: isProd
+    ? {
+        ssr: {
+          noExternal: ["@material-tailwind/react"],
+        },
+      }
+    : {},
 });
