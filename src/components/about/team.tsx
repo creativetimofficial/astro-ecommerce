@@ -28,7 +28,7 @@ function TeamCard({ img, name, title, desc }: TeamCardPropsType) {
       <Typography color="blue" className="mb-3 font-normal">
         {title}
       </Typography>
-      <Typography color="gray" className="mb-4">
+      <Typography color="gray" className="mb-4 font-normal">
         {desc}
       </Typography>
       <div className="flex items-center">
