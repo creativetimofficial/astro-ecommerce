@@ -159,6 +159,14 @@ const posts = [
 export function BlogSectionOne() {
   return (
     <section>
+      <div className="text-center mb-16">
+        <Typography variant="h2" className="normal-case text-4xl">
+          Our posts
+        </Typography>
+        <Typography variant="p" className="text-lg">
+          Check out our latest blog posts
+        </Typography>
+      </div>
       <div className="mx-auto grid grid-cols-1 items-start gap-y-24 gap-x-8 pb-16 md:grid-cols-2 lg:grid-cols-3">
         {posts.map(({ img, tag, title, desc, date, author }) => (
           <BlogPostCard
