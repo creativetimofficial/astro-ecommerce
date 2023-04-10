@@ -84,7 +84,7 @@ export function TeamSectionOne() {
           <Typography
             variant="lead"
             color="gray"
-            className="mx-auto lg:w-8/12 lg:px-20"
+            className="mx-auto lg:w-8/12 lg:px-20 font-normal"
           >
             This is the paragraph where you can write more details about your
             team. Keep you user engaged by providing meaningful information.
