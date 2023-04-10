@@ -1,4 +1,5 @@
 import React from "react";
+import ThemeProvider from "../theme-provider";
 
 import {
   Navbar,
@@ -42,7 +43,7 @@ export function HeroSectionFour() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="absolute z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -124,7 +125,7 @@ export function HeroSectionFour() {
           </div>
         </div>
       </header>
-    </>
+    </ThemeProvider>
   );
 }
 

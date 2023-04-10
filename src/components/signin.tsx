@@ -1,4 +1,5 @@
 import React from "react";
+import ThemeProvider from "./theme-provider";
  
 import { Navbar, Typography, IconButton, Input, MobileNav, Checkbox, Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -35,7 +36,7 @@ export function SignIn() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="absolute z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -145,7 +146,7 @@ export function SignIn() {
         />
       </section>
     
-    </>
+    </ThemeProvider>
   );
 }
 
