@@ -137,7 +137,7 @@ export function PricingSectionOne() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Corporate UI
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -185,7 +185,7 @@ export function PricingSectionOne() {
         </MobileNav>
       </Navbar>
       <section>
-        <div className="min-h-[50vh] bg-dark px-8 py-24">
+        <div className="min-h-[50vh] px-8 py-24 flex align-center flex-col justify-center text-center bg-cover" style={{backgroundImage: `url('./bg-billing.jpg')`}}>
           <div className="container mx-auto text-center">
             <Typography
               color="white"
