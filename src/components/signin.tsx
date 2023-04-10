@@ -43,7 +43,7 @@ export function SignIn() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Corporate UI
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -95,12 +95,12 @@ export function SignIn() {
           <Typography variant="h3" color="blue-gray" className="mb-2">
             Welcome back
           </Typography>
-          <Typography color="gray" className="mb-16">
+          <Typography color="gray" className="font-normal mb-16">
             Welcome back, please enter your details.
           </Typography>
 
           <form action="#" className="mx-auto max-w-[24rem] text-left">
-            <div className="mb-8">
+            <div className="mb-4">
               <Input size="lg" label="Email" type="email" name="email" />
             </div>
             <div className="mb-4">
@@ -111,7 +111,7 @@ export function SignIn() {
                 <Checkbox
                   label="Remember for 30 days"
                   labelProps={{
-                    className: "font-medium",
+                    className: "font-normal",
                   }}
                 />
               </div>
