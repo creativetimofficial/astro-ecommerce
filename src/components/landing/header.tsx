@@ -66,7 +66,7 @@ export function HeroSectionTwo() {
             <Button variant="text" size="sm">
               login
             </Button>
-            <Button color="dark" size="sm">sign up</Button>
+            <Button size="sm">sign up</Button>
           </div>
           <IconButton
             size="sm"
@@ -94,7 +94,7 @@ export function HeroSectionTwo() {
               <Button variant="outlined" size="sm" fullWidth>
                 login
               </Button>
-              <Button color="dark" size="sm" fullWidth>
+              <Button size="sm" fullWidth>
                 sign up
               </Button>
             </div>
@@ -102,7 +102,7 @@ export function HeroSectionTwo() {
         </MobileNav>
       </Navbar>
       <header className="h-screen min-h-screen w-screen bg-white">
-        <div className="relative h-screen flex align-center flex-col justify-center text-center bg-cover" style={{backgroundImage: `url('https://images.unsplash.com/photo-1627384113972-f4c0392fe5aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80')`}}>
+        <div className="relative h-screen flex align-center flex-col justify-center text-center bg-cover" style={{backgroundImage: `url('https://images.unsplash.com/photo-1626761191814-a9dc9efd085c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80')`}}>
           <span className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800"></span>
           <Typography
             variant="h1"
