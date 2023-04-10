@@ -153,7 +153,7 @@ export function HeroSectionThree() {
         </div>
         <div className="mx-0 pb-8 lg:container lg:mx-auto">
           <img
-            src="https://images.unsplash.com/photo-1571715268998-d6e79bed5fc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2344&q=80"
+            src="https://images.unsplash.com/photo-1665690399857-9de8bbbeb108?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
             alt="credit cards"
             className="h-96 w-full object-cover md:h-[34rem] lg:h-[44rem] lg:rounded-xl"
           />
