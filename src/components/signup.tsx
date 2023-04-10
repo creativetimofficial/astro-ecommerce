@@ -43,7 +43,7 @@ export function SignUp() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Corporate UI
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -95,7 +95,7 @@ export function SignUp() {
           <Typography variant="h3" color="blue-gray" className="mb-2">
             Create an account
           </Typography>
-          <Typography color="gray" className="mb-12">
+          <Typography color="gray" className="font-normal mb-12">
             Start your 30 days free trial.
           </Typography>
           <form action="#" className="mx-auto max-w-[24rem] text-left">
