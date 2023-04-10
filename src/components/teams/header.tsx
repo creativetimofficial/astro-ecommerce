@@ -71,7 +71,7 @@ export function HeroSectionOne() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Corporate UI
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -83,7 +83,7 @@ export function HeroSectionOne() {
             <Button variant="text" size="sm">
               login
             </Button>
-            <Button color="dark" size="sm">sign up</Button>
+            <Button size="sm">sign up</Button>
           </div>
           <IconButton
             size="sm"
@@ -111,7 +111,7 @@ export function HeroSectionOne() {
               <Button variant="outlined" size="sm" fullWidth>
                 login
               </Button>
-              <Button color="dark" size="sm" fullWidth>
+              <Button size="sm" fullWidth>
                 sign up
               </Button>
             </div>
@@ -143,14 +143,14 @@ export function HeroSectionOne() {
             <Typography
               variant="small"
               color="gray"
-              className="inline-flex items-center"
+              className="font-normal inline-flex items-center"
             >
               We care about your data in our&nbsp;
               <Typography
                 as="a"
                 href="#"
                 variant="small"
-                className="underline decoration-gray-500 underline-offset-4"
+                className="underline decoration-gray-500 underline-offset-4 font-normal"
               >
                 privacy policy
               </Typography>
@@ -185,9 +185,9 @@ export function HeroSectionOne() {
             </div>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1274&q=80"
+            src="https://images.unsplash.com/photo-1651558529203-970fcdcc397b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
             alt="team work"
-            className="lg:0 mb-8 h-96 w-full rounded-xl object-cover lg:h-[40rem] lg:w-1/2"
+            className="lg:0 mb-8 h-full w-full rounded-xl object-cover lg:h-[50rem] lg:w-1/2"
           />
         </div>
       </header>

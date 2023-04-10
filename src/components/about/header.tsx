@@ -66,7 +66,7 @@ export function HeroSectionTwo() {
             <Button variant="text" size="sm">
               login
             </Button>
-            <Button color="dark" size="sm">sign up</Button>
+            <Button size="sm">sign up</Button>
           </div>
           <IconButton
             size="sm"
@@ -94,7 +94,7 @@ export function HeroSectionTwo() {
               <Button variant="outlined" size="sm" fullWidth>
                 login
               </Button>
-              <Button color="dark" size="sm" fullWidth>
+              <Button size="sm" fullWidth>
                 sign up
               </Button>
             </div>
@@ -154,8 +154,8 @@ export function HeroSectionTwo() {
               </Button>
             </div>
           </div>
-          <div className="hidden justify-end lg:flex">
-            <img src="https://images.unsplash.com/photo-1591814540398-58332a4483a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80" alt="iphone" className="w-full rounded-3xl" />
+          <div className="hidden justify-center lg:flex">
+            <img src="https://images.unsplash.com/photo-1650615567023-0721bceeecb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" alt="iphone" className="max-w-md rounded-3xl" />
           </div>
         </div>
       </header>

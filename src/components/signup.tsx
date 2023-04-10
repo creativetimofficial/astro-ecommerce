@@ -1,7 +1,9 @@
 import React from "react";
+import ThemeProvider from "./theme-provider";
  
 import { Navbar, Typography, IconButton, Input, MobileNav, Checkbox, Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 
 interface NavItemPropsType {
   children: React.ReactNode;
@@ -35,7 +37,7 @@ export function SignUp() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="absolute z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -43,7 +45,7 @@ export function SignUp() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Corporate UI
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -95,7 +97,7 @@ export function SignUp() {
           <Typography variant="h3" color="blue-gray" className="mb-2">
             Create an account
           </Typography>
-          <Typography color="gray" className="mb-12">
+          <Typography color="gray" className="font-normal mb-12">
             Start your 30 days free trial.
           </Typography>
           <form action="#" className="mx-auto max-w-[24rem] text-left">
@@ -171,7 +173,7 @@ export function SignUp() {
           </form>
         </div>
       </section>
-    </>
+    </ThemeProvider>
   );
 }
 

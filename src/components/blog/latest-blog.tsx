@@ -117,7 +117,7 @@ export function BlogSectionThree() {
               Latest Posts
             </Typography>
             <Typography variant="h2" color="blue-gray">
-              Corporate UI Ecommerce
+              Astro Ecommerce
             </Typography>
             <Typography variant="lead" color="gray">
               Interviews, tips, guides, industry best practices, and news.

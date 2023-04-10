@@ -1,4 +1,5 @@
 import React from "react";
+import ThemeProvider from "./theme-provider";
  
 import { 
   Button,
@@ -43,7 +44,7 @@ export function TermsConditions() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="absolute z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -51,7 +52,7 @@ export function TermsConditions() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Corporate UI
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -265,7 +266,7 @@ export function TermsConditions() {
           </Card>
         </div>
       </section>
-    </>
+    </ThemeProvider>
   );
 }
 

@@ -13,6 +13,7 @@ import {
   Checkbox
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import ThemeProvider from "./theme-provider";
 
 interface NavItemPropsType {
   children: React.ReactNode;
@@ -46,7 +47,7 @@ export function Reset() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar
         className="absolute z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
         shadow={false}
@@ -54,7 +55,7 @@ export function Reset() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Corporate UI
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -104,7 +105,7 @@ export function Reset() {
       <section className="h-screen w-full p-4">
         <div className="relative h-[50vh] w-full overflow-hidden rounded-xl mt-14">
           <img
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1920&q=100"
+            src="https://images.unsplash.com/photo-1651238029038-1922acc3abfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
             alt="background image"
             className="h-full w-full object-cover"
           />
@@ -120,7 +121,7 @@ export function Reset() {
               <Typography variant="h3" color="white" className="mb-2">
                 Reset Password
               </Typography>
-              <Typography variant="small" color="white">
+              <Typography variant="small" color="white" className="font-normal">
                 You will receive an e-mail in maximum 60 seconds
               </Typography>
             </CardHeader>
@@ -139,7 +140,7 @@ export function Reset() {
         </div>
       </section>
     
-    </>
+    </ThemeProvider>
   );
 }
 

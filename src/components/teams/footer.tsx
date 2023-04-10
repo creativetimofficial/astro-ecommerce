@@ -13,7 +13,7 @@ export function FooterOne() {
           <div className="flex flex-wrap items-end justify-center gap-8 md:justify-between">
             <div className="text-center md:text-left">
               <Typography variant="h4" className="mb-6">
-                Corporate UI
+                Astro Ecommerce
               </Typography>
               <ul className="flex flex-wrap items-center justify-center md:justify-start">
                 {links.map((link, idx) => (
