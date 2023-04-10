@@ -159,12 +159,12 @@ const posts = [
 export function BlogSectionOne() {
   return (
     <section>
-      <div className="text-center mb-16">
-        <Typography variant="h2" className="normal-case text-4xl">
-          Our posts
+      <div className="text-center mb-24 w-1/2 mx-auto">
+        <Typography variant="h2" className="normal-case text-4xl mb-3">
+          Check out what's new
         </Typography>
         <Typography variant="p" className="text-lg">
-          Check out our latest blog posts
+          The time is now for it to be okay to be great. People in this world should. We get back freezes every winter
         </Typography>
       </div>
       <div className="mx-auto grid grid-cols-1 items-start gap-y-24 gap-x-8 pb-16 md:grid-cols-2 lg:grid-cols-3">
