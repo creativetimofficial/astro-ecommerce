@@ -66,7 +66,7 @@ export function HeroSectionTwo() {
             <Button variant="text" size="sm">
               login
             </Button>
-            <Button color="dark" size="sm">sign up</Button>
+            <Button size="sm">sign up</Button>
           </div>
           <IconButton
             size="sm"
@@ -94,7 +94,7 @@ export function HeroSectionTwo() {
               <Button variant="outlined" size="sm" fullWidth>
                 login
               </Button>
-              <Button color="dark" size="sm" fullWidth>
+              <Button size="sm" fullWidth>
                 sign up
               </Button>
             </div>

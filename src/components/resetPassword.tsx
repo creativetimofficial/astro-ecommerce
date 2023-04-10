@@ -67,7 +67,7 @@ export function Reset() {
             <Button variant="text" size="sm">
               login
             </Button>
-            <Button color="dark" size="sm">sign up</Button>
+            <Button size="sm">sign up</Button>
           </div>
           <IconButton
             size="sm"
