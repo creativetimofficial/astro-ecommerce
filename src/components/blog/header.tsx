@@ -76,7 +76,7 @@ export function HeroSectionOne() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Corporate UI
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -131,7 +131,7 @@ export function HeroSectionOne() {
               color="blue-gray"
               className="mb-8 text-4xl !leading-tight md:text-5xl"
             >
-              Your work with Corporate UI Astro
+              Your work with Astro Ecommerce
             </Typography>
             <Typography
               variant="lead"

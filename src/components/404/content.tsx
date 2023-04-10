@@ -50,7 +50,7 @@ export function HeroSectionFour() {
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-            Corporate UI
+            Astro Ecommerce
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
