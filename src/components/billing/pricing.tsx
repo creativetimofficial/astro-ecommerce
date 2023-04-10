@@ -82,6 +82,14 @@ function PricingCard({ title, desc, price, plan, options, marked }) {
 export function PricingSectionTwo() {
   return (
     <section className="py-8 px-8 lg:py-40">
+      <div className="w-1/2 mb-12 mx-auto text-center">
+        <Typography variant="h2" className="text-4xl mb-4">
+          Choose a plan for your next project
+        </Typography>
+        <Typography variant="p" className="text-lg">
+          You have Free Unlimited Updates and Premium Support on each package. You also have 20 days to request a refund.
+        </Typography>
+      </div>
       <div className="container mx-auto grid gap-10 lg:grid-cols-2">
         <PricingCard
           title="Basic Plan"
