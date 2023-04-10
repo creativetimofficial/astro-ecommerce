@@ -1,11 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeaderLanding from "../components/landing/header"
-
+import CategoriesSection from "../components/landing/categories"
+import ContentSection from "../components/landing/content"
+import BasicSection from "../components/landing/starterPack"
+import TestimonialSection from "../components/landing/testimonials"
+import FooterSection from "../components/landing/footer"
 ---
 
 <Layout title="Landing Page">
 	<main>
     <HeaderLanding client:only="react" />
+    <CategoriesSection client:only="react" />
+    <ContentSection client:only="react" />
+    <BasicSection client:only="react" />
+    <TestimonialSection client:only="react" />
+    <FooterSection client:only="react" />
   </main>
 </Layout>
