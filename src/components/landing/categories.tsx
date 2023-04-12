@@ -2,15 +2,13 @@ import {
   Card,
   CardHeader,
   CardBody,
-  IconButton,
+
   Typography,
 } from "@material-tailwind/react";
 
 interface CategoriesCardPropsType {
   img: string;
-  name: string;
-  title: string;
-  desc: string;
+  category: string;
 }
 
 function CategoriesCard({ img, category }: CategoriesCardPropsType) {
@@ -23,7 +21,8 @@ function CategoriesCard({ img, category }: CategoriesCardPropsType) {
         floated={false}
         shadow={false}
         color="transparent"
-        className="absolute inset-0 m-0 h-full w-full rounded-none bg-[url('https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')] bg-cover bg-center"
+        className="absolute inset-0 m-0 h-full w-full rounded-none bg-[url('https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80')] bg-cover bg-center"
+        // style={{backgroundImage: `url('`+{img}+`')`}}
       >
         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
       </CardHeader>
