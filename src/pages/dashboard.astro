@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from "../components/dashboard/navbar";
+import Sidebar from "../components/dashboard/sidebar";
+
+---
+
+<Layout title="Dashboard Page">
+  <div class="flex m-4">
+    <Sidebar client:only="react" />
+    <main class="w-full ml-12">
+      <Navbar client:idle />
+    </main>
+  </div>
+</Layout>
