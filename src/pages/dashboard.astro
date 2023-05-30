@@ -13,15 +13,15 @@ import Charts from '../components/dashboard/charts';
   <div class="flex m-4">
     <Sidebar client:only="react" />
     <main class="w-full ml-12">
-      <Navbar client:idle />
+      <Navbar client:only="react" />
 
-      <Table client:idle />
+      <Table client:only="react" />
       
       <div class="my-10">
-        <Charts client:idle />
+        <Charts client:only="react" />
       </div>      
 
-      <SpeedDial client:idle />
+      <SpeedDial client:only="react" />
       
       <Footer client:only="react" />
     </main>
