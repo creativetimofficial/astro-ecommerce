@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from "../components/dashboard/navbar";
 import Sidebar from "../components/dashboard/sidebar";
+import Table from "../components/dashboard/table";
+import SpeedDial from '../components/dashboard/speedDial';
+import Footer from '../components/dashboard/footer';
+import Charts from '../components/dashboard/charts';
 
 ---
 
@@ -10,6 +14,16 @@ import Sidebar from "../components/dashboard/sidebar";
     <Sidebar client:only="react" />
     <main class="w-full ml-12">
       <Navbar client:idle />
+
+      <Table client:idle />
+      
+      <div class="my-5">
+        <Charts client:idle />
+      </div>      
+
+      <SpeedDial client:idle />
+      
+      <Footer client:only="react" />
     </main>
   </div>
 </Layout>
