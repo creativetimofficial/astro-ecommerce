@@ -86,7 +86,7 @@ const TABLE_ROWS = [
 export default function Example() {
   return (
     <ThemeProvider>
-      <Card className="w-full mt-12">
+      <Card className="w-full mt-10">
         <CardHeader floated={false} shadow={false} className="rounded-none">
           <div className="mb-8 flex items-center justify-between gap-8">
             <div>
