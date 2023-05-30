@@ -112,6 +112,10 @@ function ProfileMenu() {
 // nav list menu
 const navListMenuItems = [
   {
+    title: "404",
+    href: "/astro-ecommerce/404"
+  },
+  {
     title: "About Us",
     href: "/astro-ecommerce/about"
   },
@@ -130,6 +134,34 @@ const navListMenuItems = [
   {
     title: "Our Team",
     href: "/astro-ecommerce/teams"
+  },
+  {
+    title: "Blog Post",
+    href: "/astro-ecommerce/blog-post"
+  },
+  {
+    title: "Comming Soon",
+    href: "/astro-ecommerce/commin-soon"
+  },
+  {
+    title: "Dashboard",
+    href: "/astro-ecommerce/dashboard"
+  },
+  {
+    title: "Login",
+    href: "/astro-ecommerce/login"
+  },
+  {
+    title: "Reset",
+    href: "/astro-ecommerce/reset"
+  },
+  {
+    title: "Sign Up",
+    href: "/astro-ecommerce/signup"
+  },
+  {
+    title: "Terms",
+    href: "/astro-ecommerce/terms"
   },
 ];
  
