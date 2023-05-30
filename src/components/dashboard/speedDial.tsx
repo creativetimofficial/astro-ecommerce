@@ -11,13 +11,15 @@ import {
   CogIcon,
   Square3Stack3DIcon,
 } from "@heroicons/react/24/outline";
+import ThemeProvider from "../theme-provider";
  
 export default function DefaultSpeedDial() {
   return (
+    <ThemeProvider>
       <div className="absolute bottom-5 right-5">
         <SpeedDial>
           <SpeedDialHandler>
-            <IconButton size="lg" className="rounded-full">
+            <IconButton color="dark" size="lg" className="rounded-full">
               <PlusIcon className="h-5 w-5 transition-transform group-hover:rotate-45" />
             </IconButton>
           </SpeedDialHandler>
@@ -34,5 +36,6 @@ export default function DefaultSpeedDial() {
           </SpeedDialContent>
         </SpeedDial>
       </div>
+    </ThemeProvider>
   );
 }
