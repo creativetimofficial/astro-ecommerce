@@ -112,6 +112,12 @@ const customTheme = {
             color: "text-dark",
             border: "border border-dark"
           }
+        },
+        filled: {
+          dark: {
+            background: "bg-dark",
+            color: "text-white"
+          }
         }
       },
 
