@@ -1,4 +1,4 @@
-import React from "react";
+import { React, Fragment, useState } from "react";
 import {
   Accordion,
   AccordionHeader,
@@ -6,32 +6,6 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-const faqs = [
-  {
-    title: "Is there a free trial available?",
-    desc: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free personalized 30-minute onboarding call to get you up and running as soon as possible.",
-  },
-  {
-    title: "Can I change my plan later?",
-    desc: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free personalized 30-minute onboarding call to get you up and running as soon as possible.",
-  },
-  {
-    title: "What is your cancellation policy?",
-    desc: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free personalized 30-minute onboarding call to get you up and running as soon as possible.",
-  },
-  {
-    title: "Can other info be added to an invoice?",
-    desc: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free personalized 30-minute onboarding call to get you up and running as soon as possible.",
-  },
-  {
-    title: "How does billing work?",
-    desc: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free personalized 30-minute onboarding call to get you up and running as soon as possible.",
-  },
-  {
-    title: "How do I change my account email?",
-    desc: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free personalized 30-minute onboarding call to get you up and running as soon as possible.",
-  },
-];
 
 function Icon({ id, open }) {
   return (
@@ -51,9 +25,7 @@ function Icon({ id, open }) {
 }
 
 export function Faqs() {
-  const [open, setOpen] = React.useState(0);
-  const handleOpen = (value) => setOpen(open === value ? 0 : value);
-
+  
   return (
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto">
