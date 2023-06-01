@@ -1,105 +1,254 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
+  Typography,
   Button,
   IconButton,
-  Typography,
+  List,
+  ListItem,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
 } from "@material-tailwind/react";
-import { ThemeProvider } from "./theme-provider";
-
 import {
+  ChevronDownIcon,
+  UserCircleIcon,
+  CubeTransparentIcon,
   Bars3Icon,
   XMarkIcon,
-  ArrowSmallRightIcon,
+  Square3Stack3DIcon,
 } from "@heroicons/react/24/outline";
 
-interface NavItemPropsType {
-  children: React.ReactNode;
-}
+import ThemeProvider from "./theme-provider";
 
-function NavItem({ children }: NavItemPropsType) {
+ 
+const colors = {
+  blue: "bg-blue-50 text-blue-500",
+  orange: "bg-orange-50 text-orange-500",
+  green: "bg-green-50 text-green-500",
+  "blue-gray": "bg-blue-gray-50 text-blue-gray-500",
+  purple: "bg-purple-50 text-purple-500",
+  teal: "bg-teal-50 text-teal-500",
+  cyan: "bg-cyan-50 text-cyan-500",
+  pink: "bg-pink-50 text-pink-500",
+};
+ 
+// nav list menu
+const navListMenuItems = [
+  {
+    title: "404",
+    href: "/404"
+  },
+  {
+    title: "500",
+    href: "/500"
+  },
+  {
+    title: "About Us",
+    href: "/about"
+  },
+  {
+    title: "Landing Page",
+    href: "/landing"
+  },
+  {
+    title: "Billing Page",
+    href: "/billing"
+  },
+  {
+    title: "Blog Page",
+    href: "/blog"
+  },
+  {
+    title: "Our Team",
+    href: "/teams"
+  },
+  {
+    title: "Blog Post",
+    href: "/blog-post"
+  },
+  {
+    title: "Comming Soon",
+    href: "/comming-soon"
+  },
+  {
+    title: "Dashboard",
+    href: "/dashboard"
+  },
+  {
+    title: "Login",
+    href: "/login"
+  },
+  {
+    title: "Reset",
+    href: "/reset"
+  },
+  {
+    title: "Sign Up",
+    href: "/signup"
+  },
+  {
+    title: "Terms",
+    href: "/terms"
+  },
+];
+ 
+function NavListMenu() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+ 
+  const triggers = {
+    onMouseEnter: () => setIsMenuOpen(true),
+    onMouseLeave: () => setIsMenuOpen(false),
+  };
+ 
+  const renderItems = navListMenuItems.map(({ title, href }) => (
+    <a href={href} key={title}>
+      <MenuItem>
+        <Typography variant="p" color="blue-gray" className="mb-1 font-normal">
+          {title}
+        </Typography>
+      </MenuItem>
+    </a>
+  ));
+ 
   return (
-    <li>
+    <React.Fragment>
+      <Menu open={isMenuOpen} handler={setIsMenuOpen}>
+        <MenuHandler>
+          <Typography as="a" href="#" variant="small" className="font-normal">
+            <MenuItem
+              {...triggers}
+              className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
+            >
+              <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Pages{" "}
+              <ChevronDownIcon
+                strokeWidth={2}
+                className={`h-3 w-3 transition-transform ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}
+              />
+            </MenuItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList
+          {...triggers}
+          className="hidden grid-cols-7 gap-3 overflow-visible lg:grid"
+        >
+          <ul className="col-span-12 flex w-full flex-col gap-1">
+            {renderItems}
+          </ul>
+        </MenuList>
+      </Menu>
+      <MenuItem className="flex items-center gap-2 text-blue-gray-900 lg:hidden">
+        <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Pages{" "}
+      </MenuItem>
+      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
+        {renderItems}
+      </ul>
+    </React.Fragment>
+  );
+}
+ 
+function NavList() {
+  return (
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
         as="a"
         href="#"
         variant="small"
-        color="gray"
-        className="font-normal transition-colors hover:text-gray-900"
+        color="blue-gray"
+        className="font-normal"
       >
-        {children}
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          <CubeTransparentIcon className="h-[18px] w-[18px]" />
+          Blocks
+        </ListItem>
       </Typography>
-    </li>
+      <NavListMenu />
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-normal"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          <UserCircleIcon className="h-[18px] w-[18px]" />
+          Account
+        </ListItem>
+      </Typography>
+    </List>
   );
 }
-export default function DefaultNavbar() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen((cur) => !cur);
-
+ 
+export default function Example() {
+  const [openNav, setOpenNav] = React.useState(false);
+ 
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
+      () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
-
+ 
   return (
     <ThemeProvider>
-      <Navbar
-        className="fixed z-50 border-x-0 border-t-0 !border-b !border-blue-gray-50"
-        shadow={false}
-        fullWidth
-      >
-        <div className="container mx-auto flex items-center">
-          <Typography color="blue-gray" className="!mb-0 !font-bold">
+      <Navbar className="absolute mx-auto left-0 right-0 top-3 max-w-screen-xl px-4 py-2 z-10">
+        <div className="flex items-center justify-between text-blue-gray-900">
+          <Typography
+            as="a"
+            href="#"
+            variant="h6"
+            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          >
             Astro Ecommerce
           </Typography>
-          <ul className="ml-10 hidden items-center gap-6 lg:flex">
-            <NavItem>Home</NavItem>
-            <NavItem>About</NavItem>
-            <NavItem>Resources</NavItem>
-            <NavItem>Pricing</NavItem>
-          </ul>
-          <div className="ml-auto hidden gap-2 lg:flex">
-            <Button variant="text" size="sm">
-              login
-            </Button>
-            <Button size="sm">sign up</Button>
+          <div className="hidden lg:block">
+            <NavList />
+          </div>
+          <div className="hidden gap-2 lg:flex">
+            <a href="./login">
+              <Button variant="text" size="sm" color="blue-gray">
+                Sign In
+              </Button>
+            </a>
+            <a href="./signup">
+              <Button size="sm" color="dark">
+                Sign Up
+              </Button>
+            </a>
           </div>
           <IconButton
-            size="sm"
             variant="text"
             color="blue-gray"
-            onClick={handleOpen}
-            className="ml-auto inline-block lg:hidden"
+            className="lg:hidden"
+            onClick={() => setOpenNav(!openNav)}
           >
-            {open ? (
-              <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+            {openNav ? (
+              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
             ) : (
-              <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
             )}
           </IconButton>
         </div>
-        <MobileNav open={open}>
-          <div className="container mx-auto mt-3 border-t border-blue-gray-50 px-2 pt-4">
-            <ul className="flex flex-col gap-4">
-              <NavItem>Home</NavItem>
-              <NavItem>About</NavItem>
-              <NavItem>Resources</NavItem>
-              <NavItem>Pricing</NavItem>
-            </ul>
-            <div className="mt-8 mb-4 flex gap-2">
-              <Button variant="outlined" size="sm" fullWidth>
-                login
+        <Collapse open={openNav}>
+          <NavList />
+          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+            <a href="./login">
+              <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+                Sign In
               </Button>
-              <Button size="sm" fullWidth>
-                sign up
+            </a>
+            <a href="./signup">
+              <Button size="sm" fullWidth color="dark">
+                Sign Up
               </Button>
-            </div>
+            </a>
           </div>
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </ThemeProvider>
-  )
+  );
 }
