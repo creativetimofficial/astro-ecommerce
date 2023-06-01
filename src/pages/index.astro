@@ -1,16 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Example from "../example";
 import data from "../../public/data.json";
-import Header from "../header"
+import HeaderAbout from "../components/about/header"
+import FeaturesAbout from "../components/about/features"
+import TeamAbout from "../components/about/team"
+import Accordion from "../components/about/accordion"
+import Feature from "../components/about/feature"
+import Stats from "../components/about/stats"
+import TestimonialAbout from "../components/about/testimonials"
+import FooterAbout from "../components/about/footer"
+import PricingAbout from "../components/about/pricing"
 ---
 
-<Layout title="About Us Page">
-	<main>
-    <Example client:only="react" />
 
-    <div class="position-relative pt-2 my-5">
-      <Header client:only="react"  />
+<Layout title="Index Page">
+	<main>
+    <HeaderAbout client:only="react" />
+    <FeaturesAbout client:only="react" />
+    <TestimonialAbout client:only="react" />
+
+    <section class="py-8 px-8 lg:py-16">
+      <div class="container mx-auto">
+        <Feature client:only="react" />
+        <Stats client:only="react" />
+      </div>
+    </section>
+
+    <TeamAbout client:only="react" />
+    
+    <PricingAbout client:only="react" />
+    <section class="py-8 px-8 lg:py-16">
+      <div class="container flex mx-auto">
+        <div class="w-1/2 pr-10">
+          <h2 class="text-3xl font-bold mb-4">Frequently Asked Question</h2>
+          <p class="text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec aliquet massa. Sed ut dolor nec orci tincidunt interdum. Nu  </p>
+        </div>
+        <div class="w-1/2">
+          <Accordion client:only="react" />
+        </div>
+      </div>
+    </section>
     </div>
+    <FooterAbout client:only="react" />
   </main>
 </Layout>
