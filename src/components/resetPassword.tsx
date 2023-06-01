@@ -14,7 +14,7 @@ export function Reset() {
     <ThemeProvider>
       <Navbar />
       <section className="h-screen w-full p-4">
-        <div className="relative h-[50vh] w-full overflow-hidden rounded-xl mt-14">
+        <div className="relative h-[50vh] w-full overflow-hidden rounded-xl mt-16">
           <img
             src="https://images.unsplash.com/photo-1651238029038-1922acc3abfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
             alt="background image"
