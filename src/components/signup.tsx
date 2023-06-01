@@ -39,7 +39,7 @@ export function SignUp() {
               fullWidth
             >
               <img
-                src="/logos/logo-google.png"
+                src="../../public/logos/logo-google.png"
                 alt="google"
                 className="h-6 w-6"
               />{" "}
@@ -79,7 +79,7 @@ export function SignUp() {
             >
               Already have an account?{" "}
               <a
-                href="#"
+                href="./login"
                 className="font-medium text-blue-500 transition-colors hover:text-blue-700"
               >
                 Log in
