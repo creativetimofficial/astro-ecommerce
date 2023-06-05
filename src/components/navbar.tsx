@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
   Button,
   Menu,
@@ -144,8 +144,8 @@ const navListMenuItems = [
     href: "/blog-post"
   },
   {
-    title: "Comming Soon",
-    href: "/comming-soon"
+    title: "Coming Soon",
+    href: "/coming-soon"
   },
   {
     title: "Dashboard",
@@ -180,7 +180,7 @@ function NavListMenu() {
   const renderItems = navListMenuItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="p" color="blue-gray" className="mb-1 font-normal">
+        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
           {title}
         </Typography>
       </MenuItem>
@@ -299,9 +299,9 @@ export default function ComplexNavbar() {
         </IconButton>
         <ProfileMenu />
       </div>
-      <MobileNav open={isNavOpen} className="overflow-scroll">
+      <Collapse open={isNavOpen} className="overflow-scroll">
         <NavList />
-      </MobileNav>
+      </Collapse>
     </Navbar>
   );
 }
