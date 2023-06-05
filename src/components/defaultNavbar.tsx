@@ -70,8 +70,8 @@ const navListMenuItems = [
     href: "/blog-post"
   },
   {
-    title: "Comming Soon",
-    href: "/comming-soon"
+    title: "Coming Soon",
+    href: "/coming-soon"
   },
   {
     title: "Dashboard",
@@ -106,7 +106,7 @@ function NavListMenu() {
   const renderItems = navListMenuItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="p" color="blue-gray" className="mb-1 font-normal">
+        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
           {title}
         </Typography>
       </MenuItem>
