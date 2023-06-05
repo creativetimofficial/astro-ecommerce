@@ -163,7 +163,7 @@ export function BlogSectionOne() {
         <Typography variant="h2" className="normal-case text-4xl mb-3">
           Check out what's new
         </Typography>
-        <Typography variant="p" className="text-lg">
+        <Typography variant="paragraph" className="text-lg">
           The time is now for it to be okay to be great. People in this world should. We get back freezes every winter
         </Typography>
       </div>
