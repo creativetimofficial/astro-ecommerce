@@ -2,7 +2,7 @@ import { ThemeProvider as MTThemeProvider } from "@material-tailwind/react";
 const customTheme = {
   button: {
     valid: {
-      colors: ["dark"],
+      colors: ["dark", "slate", "sky", "yellow", "blue", "green", "red"],
     },
     styles: {
       base: {
