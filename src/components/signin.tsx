@@ -47,7 +47,7 @@ export function SignIn() {
               fullWidth
             >
               <img
-                src="../../public/logos/logo-google.png"
+                src=".//logos/logo-google.png"
                 alt="google"
                 className="-mt-0.5 h-7 w-7"
               />
