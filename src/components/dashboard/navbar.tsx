@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
   Button,
   Menu,
@@ -22,7 +22,6 @@ import {
   InboxArrowDownIcon,
   LifebuoyIcon,
   PowerIcon,
-  RocketLaunchIcon,
   Bars2Icon,
 } from "@heroicons/react/24/outline";
  
@@ -113,19 +112,60 @@ function ProfileMenu() {
 // nav list menu
 const navListMenuItems = [
   {
-    title: "@material-tailwind/html",
-    description:
-      "Learn how to use @material-tailwind/html, packed with rich components and widgets.",
+    title: "404",
+    href: "/404"
   },
   {
-    title: "@material-tailwind/react",
-    description:
-      "Learn how to use @material-tailwind/react, packed with rich components for React.",
+    title: "500",
+    href: "/500"
   },
   {
-    title: "Material Tailwind PRO",
-    description:
-      "A complete set of UI Elements for building faster websites in less time.",
+    title: "About Us",
+    href: "/about"
+  },
+  {
+    title: "Landing Page",
+    href: "/landing"
+  },
+  {
+    title: "Billing Page",
+    href: "/billing"
+  },
+  {
+    title: "Blog Page",
+    href: "/blog"
+  },
+  {
+    title: "Our Team",
+    href: "/teams"
+  },
+  {
+    title: "Blog Post",
+    href: "/blog-post"
+  },
+  {
+    title: "Coming Soon",
+    href: "/coming-soon"
+  },
+  {
+    title: "Dashboard",
+    href: "/dashboard"
+  },
+  {
+    title: "Login",
+    href: "/login"
+  },
+  {
+    title: "Reset",
+    href: "/reset"
+  },
+  {
+    title: "Sign Up",
+    href: "/signup"
+  },
+  {
+    title: "Terms",
+    href: "/terms"
   },
 ];
  
@@ -137,14 +177,11 @@ function NavListMenu() {
     onMouseLeave: () => setIsMenuOpen(false),
   };
  
-  const renderItems = navListMenuItems.map(({ title, description }) => (
-    <a href="#" key={title}>
+  const renderItems = navListMenuItems.map(({ title, href }) => (
+    <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="h6" color="blue-gray" className="mb-1">
+        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
           {title}
-        </Typography>
-        <Typography variant="small" color="gray" className="font-normal">
-          {description}
         </Typography>
       </MenuItem>
     </a>
@@ -154,7 +191,7 @@ function NavListMenu() {
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal">
+          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -171,17 +208,9 @@ function NavListMenu() {
         </MenuHandler>
         <MenuList
           {...triggers}
-          className="hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid"
+          className="hidden grid-cols-7 gap-3 overflow-visible lg:grid"
         >
-          <Card
-            color="blue"
-            shadow={false}
-            variant="gradient"
-            className="col-span-3 grid h-full w-full place-items-center rounded-md"
-          >
-            <RocketLaunchIcon strokeWidth={1} className="h-28 w-28" />
-          </Card>
-          <ul className="col-span-4 flex w-full flex-col gap-1">
+          <ul className="col-span-12 flex w-full flex-col gap-1 outline-none focus:outline-none">
             {renderItems}
           </ul>
         </MenuList>
@@ -247,7 +276,7 @@ export default function ComplexNavbar() {
   }, []);
  
   return (
-    <Navbar className="w-full max-w-screen-3xl p-2 lg:pl-6">
+    <Navbar className="sticky inset-0 z-10 mx-auto max-w-screen-3xl p-2 lg:rounded-lg lg:pl-6 mt-4">
       <div className="relative mx-auto flex items-center text-blue-gray-900">
         <Typography
           as="a"
@@ -270,9 +299,9 @@ export default function ComplexNavbar() {
         </IconButton>
         <ProfileMenu />
       </div>
-      <MobileNav open={isNavOpen} className="overflow-scroll">
+      <Collapse open={isNavOpen} className="overflow-scroll">
         <NavList />
-      </MobileNav>
+      </Collapse>
     </Navbar>
   );
 }
