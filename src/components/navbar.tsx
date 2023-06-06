@@ -191,7 +191,7 @@ function NavListMenu() {
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal">
+          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -210,7 +210,7 @@ function NavListMenu() {
           {...triggers}
           className="hidden grid-cols-7 gap-3 overflow-visible lg:grid"
         >
-          <ul className="col-span-12 flex w-full flex-col gap-1">
+          <ul className="col-span-12 flex w-full flex-col gap-1 outline-none focus:outline-none">
             {renderItems}
           </ul>
         </MenuList>
@@ -276,7 +276,7 @@ export default function ComplexNavbar() {
   }, []);
  
   return (
-    <Navbar className="mx-auto max-w-screen-2xl p-2 lg:rounded-full lg:pl-6 mt-4">
+    <Navbar className="sticky inset-0 z-10 mx-auto max-w-screen-2xl p-2 lg:rounded-full lg:pl-6 mt-4">
       <div className="relative mx-auto flex items-center text-blue-gray-900">
         <Typography
           as="a"
