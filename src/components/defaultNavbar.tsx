@@ -117,7 +117,7 @@ function NavListMenu() {
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal">
+          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -136,7 +136,7 @@ function NavListMenu() {
           {...triggers}
           className="hidden grid-cols-7 gap-3 overflow-visible lg:grid"
         >
-          <ul className="col-span-12 flex w-full flex-col gap-1">
+          <ul className="col-span-12 flex w-full flex-col gap-1 outline-none focus:outline-none">
             {renderItems}
           </ul>
         </MenuList>
