@@ -34,7 +34,7 @@
     "@astrojs/react": "^1.2.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "astro": "^2.0.1",
+    "astro": "^0.17.3",
     "forward-ref": "^1.0.0",
     "json-server": "^0.17.0",
     "react": "^18.2.0",

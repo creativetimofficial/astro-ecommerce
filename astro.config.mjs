@@ -9,3 +9,4 @@ export default defineConfig({
   site: 'https://creativetimofficial.github.io',
   base: '/astro-ecommerce',
 });
+
