@@ -2,13 +2,32 @@
 import Layout from '../layouts/Layout.astro';
 import HeaderPresentation from "../components/presentation/header"
 import FeaturePresentation from "../components/presentation/feature"
-import FooterSection from "../components/landing/footer"
+import LogosPresentation from "../components/presentation/logos"
+import DevPresentation from "../components/presentation/developer"
+import PalettePresentation from "../components/presentation/palette"
+import CodePresentation from "../components/presentation/code"
+import ExamplePresentation from "../components/presentation/example"
+import FigmaPresentation from "../components/presentation/figma"
+import AstroPresentation from "../components/presentation/astro"
+import PagesPresentation from "../components/presentation/pages"
+import GithubPresentation from "../components/presentation/github"
+import FooterPresentation from "../components/presentation/footer"
+
 ---
 
 <Layout title="Presentation Page">
 	<main>
     <HeaderPresentation client:only="react" />
     <FeaturePresentation client:only="react" />
-
+    <LogosPresentation client:only="react" />
+    <DevPresentation client:only="react" />
+    <PalettePresentation client:only="react" />
+    <CodePresentation client:only="react" />
+    <ExamplePresentation client:only="react" />
+    <FigmaPresentation client:only="react" />
+    <AstroPresentation client:only="react" />
+    <PagesPresentation client:only="react" />
+    <GithubPresentation client:only="react" />
+    <FooterPresentation client:only="react" />
   </main>
 </Layout>
