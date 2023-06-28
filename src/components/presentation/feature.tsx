@@ -4,18 +4,13 @@ import {
   EyeIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   BoltIcon,
-  FaceSmileIcon,
-  LinkIcon,
-  HeartIcon,
 } from "@heroicons/react/24/outline";
 
 function FeatureCard({ icon, title, children }) {
   return (
     <Card color="transparent" shadow={false}>
       <CardBody className="grid justify-center text-center">
-        <div className="mx-auto mb-6 grid h-12 w-12 place-items-center rounded-full bg-blue-100/80 p-2.5 text-blue-500 ring-8 ring-blue-100/40">
-          {icon}
-        </div>
+        {icon}
         <Typography
           variant="h5"
           color="blue-gray"
@@ -36,21 +31,25 @@ function FeatureCard({ icon, title, children }) {
 
 const features = [
   {
-    icon: <EyeIcon className="h-6 w-6" strokeWidth={2} />,
+    icon: (
+      <img className="w-40 mx-auto mb-4" src="icon1.png" />
+    ),
     title: "For Designers",
     description:
       "This template comes packed with designer files based on Figma.",
   },
   {
     icon: (
-      <ChatBubbleOvalLeftEllipsisIcon className="h-6 w-6" strokeWidth={2} />
+      <img className="w-40 mx-auto mb-4" src="icon2.png" />
     ),
     title: "For Developers",
     description:
       "Save months of work when you use our fully coded components and pages.",
   },
   {
-    icon: <BoltIcon className="h-6 w-6" strokeWidth={2} />,
+    icon: (
+      <img className="w-40 mx-auto mb-4" src="icon3.png" />
+    ),
     title: "For Store Owners",
     description:
       "Save time and money by helping your team focus on customization and features.",
