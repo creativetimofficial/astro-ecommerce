@@ -4,7 +4,7 @@ const logos = [
   "microsoft",
   "cisco",
   "ibm",
-  "amazon",
+  "amazons",
   "salesforce",
   "vodafone",
 ];
@@ -15,7 +15,7 @@ export function LogoSectionOne() {
       <div className="container mx-auto text-center">
         <Typography
           color="blue-gray"
-          className="text-lg font-bolder mb-8"
+          className="text-xl font-extrabold mb-8"
         >
           Trusted by the best companies
         </Typography>
