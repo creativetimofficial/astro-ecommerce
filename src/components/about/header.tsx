@@ -19,10 +19,10 @@ export function HeroSectionTwo() {
       <header className="h-full w-screen place-items-center bg-white px-8 py-28">
         <div className="container mx-auto grid items-center lg:grid-cols-2">
           <div className="text-center lg:text-left">
-            <div className="mb-8 inline-flex items-center rounded-full bg-dark/30 py-1 pl-1 pr-3">
+            <div className="mb-8 inline-flex items-center rounded-lg border border-dark/30 py-1 pl-1 pr-3">
               <Typography
                 variant="small"
-                className="mr-3 rounded-full bg-white py-0.5 px-3 font-medium text-dark-500"
+                className="mr-3 rounded-md bg-dark py-0.5 px-3 font-medium text-white"
               >
                 New
               </Typography>
