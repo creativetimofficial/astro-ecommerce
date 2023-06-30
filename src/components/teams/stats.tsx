@@ -4,7 +4,7 @@ function StatsCard({ count, title, desc }) {
   return (
     <Card color="transparent" shadow={false}>
       <CardBody>
-        <Typography variant="h1" color="blue" className="mb-4 text-6xl">
+        <Typography variant="h1" className="mb-4 text-6xl text-dark">
           {count}
         </Typography>
         <Typography variant="h5" color="blue-gray" className="mb-2">
