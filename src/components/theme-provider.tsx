@@ -201,6 +201,11 @@ const customTheme = {
   },
 
   input: {
+    valid: {
+      colors: [
+        'dark'
+      ],
+    },
     styles: {
       base: {
      
