@@ -3,7 +3,7 @@ import { Typography, Card } from "@material-tailwind/react";
 function StatsCard({ count, title }) {
   return (
     <Card color="transparent" shadow={false}>
-      <Typography variant="h1" color="blue" className="mb-4 text-6xl">
+      <Typography variant="h1" className="mb-4 text-6xl text-dark">
         {count}
       </Typography>
       <Typography variant="h5" color="blue-gray">
@@ -42,7 +42,7 @@ export function StatsSectionTwo() {
           className="h-full w-full rounded-xl object-cover object-center"
         />
         <div className="p-2 lg:p-8">
-          <Typography color="blue" className="mb-2 font-medium">
+          <Typography color="dark" className="mb-2 font-bold text-lg">
             Build better, launch faster
           </Typography>
           <Typography variant="h1" color="blue-gray" className="mb-20">
