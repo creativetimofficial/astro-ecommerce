@@ -53,9 +53,8 @@ export function FigmaPresentation() {
         <div className="container mx-auto relative">
           <div className="text-left">
             <Typography
-              color="blue"
-              variant="small"
-              className="!font-bold mb-5"
+              color="dark"
+              className="!font-bold text-lg mb-5"
             >
               High standards of UI & UX
             </Typography>
@@ -67,14 +66,14 @@ export function FigmaPresentation() {
             >
               From idea to design. From design to code. From code to live.
             </Typography>
-            <Typography color="gray" className="mb-5 w-[30rem]">
+            <Typography color="gray" className="mb-5 lg:w-[30rem]">
               All the sections and pages made with these elements will be fully responsive and will look beautiful on all types of screens, including phones, tables, or desktops.
             </Typography>
           </div>
-          <div className="flex relative">
-            <div className="w-1/2">
+          <div className="lg:flex relative">
+            <div className="lg::w-1/2">
               <div className="p-2 lg:p-0 mb-5">
-                <div className="grid gap-y-16 gap-x-8 md:grid-cols-2">
+                <div className="grid gap-y-16 gap-x-8 grid-cols-2 md:grid-cols-2">
                   {stats.map((props, key) => (
                     <StatsCard key={key} {...props} />
                   ))}
@@ -86,7 +85,7 @@ export function FigmaPresentation() {
                 </Button>
               </a>
             </div>
-            <img src="https://www.creative-tim.com/astro/assets/img/components.png" alt="iphone" className="w-1/2 rounded-3xl ml-auto absolute -right-32 -top-24" />
+            <img src="https://www.creative-tim.com/astro/assets/img/components.png" alt="iphone" className="lg:w-1/2 rounded-3xl hidden md:flex ml-auto lg:absolute -right-32 -top-24" />
           </div>
         </div>
       </div>
