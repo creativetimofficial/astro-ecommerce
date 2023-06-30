@@ -10,11 +10,10 @@ export function CodePresentation() {
     <ThemeProvider>
       <div className="h-full w-screen place-items-center bg-white px-8 py-8">
         <div className="container mx-auto relative">
-          <div className="text-center mx-64">
+          <div className="text-center mg:mx-64">
             <Typography
-              color="blue"
-              variant="small"
-              className="!font-bold mb-5"
+              color="dark"
+              className="!font-bold text-lg mb-5"
             >
               Powerful Ecommerce UI Tool
             </Typography>
