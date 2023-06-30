@@ -14,9 +14,9 @@ export function HeroPresentation() {
   return (
     <ThemeProvider>
       <Navbar />
-      <header className="h-full w-screen place-items-center bg-white px-8 py-8">
+      <header className="h-full w-screen place-items-center bg-white px-8 py-8 lg:mb-64">
         <div className="container mx-auto grid items-center lg:grid-cols-2">
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left pt-32">
             <div className="mb-8 inline-flex items-center rounded-lg border border-dark/30 py-1 pl-1 pr-3">
               <Typography
                 variant="small"
@@ -52,7 +52,7 @@ export function HeroPresentation() {
               </Button>
               <Button color="dark" className="flex items-center">
                 <img
-                  src=".//logos/logo-android.svg"
+                  src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/figma-logo.png"
                   alt="ios"
                   className="-mt-0.5 mr-1.5 h-6 w-6"
                 />
@@ -61,7 +61,7 @@ export function HeroPresentation() {
             </div>
           </div>
           <div className="hidden lg:flex">
-            <img src="https://www.creative-tim.com/astro/assets/img/header-img.png" alt="iphone" className="max-w-md rounded-3xl ml-auto" />
+            <img src="https://www.creative-tim.com/astro/assets/img/header-img.png" alt="iphone" className="absolute top-0 right-0" />
           </div>
         </div>
       </header>
