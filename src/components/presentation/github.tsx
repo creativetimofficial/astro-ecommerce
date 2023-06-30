@@ -12,17 +12,17 @@ export function AstroSection() {
         >
           <CardBody className="py-20 px-14 md:w-7/12">
             <Typography color="white" className="font-normal opacity-70">
-              Frontend web architecture
+              Open Source
             </Typography>
             <Typography
               variant="h2"
               color="white"
-              className="mb-10 font-normal"
+              className="mb-5 font-normal"
             >
-              What is Astro?
+              Let's join forces for a better web!
             </Typography>
             <Typography variant="lead" color="white">
-              Astro is an all-in-one web framework for building fast, content-focused websites. The framework is based in Astro Islands architecture, which represents a leading paradigm shift for frontend web architecture.
+              Astro Ecommerce is an open source and powerful design system that lets you create Ecommerce websites that your users will love.
             </Typography>
             <a href="https://github.com/creativetimofficial/astro-ecommerce">
               <Button color="white" size="sm" variant="outlined" className="flex items-center mt-5">
