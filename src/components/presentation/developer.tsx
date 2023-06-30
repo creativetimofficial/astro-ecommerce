@@ -12,9 +12,8 @@ export function DevPresentation() {
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
           <div className="text-center lg:text-left">
             <Typography
-              color="blue"
-              variant="small"
-              className="!flex !items-center !font-bold mb-5"
+              color="dark"
+              className="!flex !items-center !font-bold text-lg justify-center lg:justify-start mb-5"
             >
               Attention to hiqh-quality code
             </Typography>
@@ -31,7 +30,7 @@ export function DevPresentation() {
             </Typography>
             
           </div>
-          <img src="https://www.creative-tim.com/astro/assets/img/image-devs.png" alt="components" className="rounded-3xl ml-auto absolute top-0 -right-24" />
+          <img src="https://www.creative-tim.com/astro/assets/img/image-devs.png" alt="components" className="rounded-3xl ml-auto hidden md:flex lg:absolute top-0 -right-24" />
         </div>
       </div>
     </ThemeProvider>
