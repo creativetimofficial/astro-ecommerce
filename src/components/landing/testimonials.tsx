@@ -6,9 +6,8 @@ export function TestimonialSectionOne() {
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto">
         <Card
-          color="blue"
           shadow={false}
-          className="flex-col-reverse overflow-hidden rounded-3xl md:flex-row md:gap-8"
+          className="flex-col-reverse overflow-hidden rounded-3xl md:flex-row md:gap-8 bg-dark"
         >
           <CardBody className="py-20 px-14 md:w-7/12">
             <div className="mb-6 flex items-center">
