@@ -79,7 +79,7 @@ export function FeatureSectionOne() {
   return (
     <section className="px-4">
       <div className="container mx-auto mb-20 text-center">
-        <Typography color="blue" className="mb-2 font-bold">
+        <Typography color="dark" className="mb-2 font-bold text-lg">
           Social Analytics
         </Typography>
         <Typography variant="h2" color="blue-gray" className="mb-4">
