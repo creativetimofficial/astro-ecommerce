@@ -7,7 +7,7 @@ export function ContentSectionOne() {
       <section className="py-16 px-8 lg:py-28">
         <div className="container mx-auto grid items-center lg:grid-cols-2">
           <div className="row-start-2 mt-12 lg:row-auto lg:mt-0 lg:pr-12">
-            <Typography color="blue" className="mb-2 !font-semibold">
+            <Typography color="dark" className="mb-2 font-bold text-lg">
               Our Vision
             </Typography>
             <Typography variant="h2" color="blue-gray" className="mb-6">
