@@ -26,20 +26,23 @@ export function HeroSectionThree() {
       <Navbar />
       <header className="h-full min-h-screen w-screen bg-white pt-32">
         <div className="container mx-auto grid items-center text-center">
-          <div className="mx-auto mb-8 inline-flex w-max items-center rounded-full bg-blue-50 py-1 pl-1 pr-3">
+          <div className="mb-8 inline-flex w-max mx-auto items-center rounded-lg border border-dark/30 py-1 pl-1 pr-3">
             <Typography
               variant="small"
-              className="mr-3 rounded-full bg-white px-2.5 py-0.5 font-medium text-blue-500"
+              className="mr-3 rounded-md bg-dark py-0.5 px-3 font-medium text-white"
             >
               What&apos;s new?
             </Typography>
             <Typography
-              color="blue"
+              color="dark"
               variant="small"
               className="!flex !items-center !font-semibold"
             >
               Get a new virtual card
-              <ArrowSmallRightIcon className="ml-1.5 h-4 w-4" strokeWidth={3} />
+              <ArrowSmallRightIcon
+                className="ml-1.5 h-4 w-4"
+                strokeWidth={3}
+              />
             </Typography>
           </div>
           <Typography
