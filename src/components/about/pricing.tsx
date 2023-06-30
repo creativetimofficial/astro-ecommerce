@@ -23,7 +23,7 @@ function PricingCard({ title, desc, price, plan, options, marked }) {
               {marked && (
                 <Chip
                   value="popular"
-                  className="!rounded-full !py-1.5 !px-3"
+                  className="!rounded-lg bg-dark !py-1.5 !px-3"
                 />
               )}
             </Typography>
