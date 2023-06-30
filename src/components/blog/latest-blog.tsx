@@ -113,7 +113,7 @@ export function BlogSectionThree() {
       <section>
         <div className="container mx-auto px-8 py-10">
           <div className="mb-16 text-center">
-            <Typography color="blue" className="mb-2 !font-semibold">
+            <Typography color="dark" className="mb-2 font-bold text-lg">
               Latest Posts
             </Typography>
             <Typography variant="h2" color="blue-gray">
