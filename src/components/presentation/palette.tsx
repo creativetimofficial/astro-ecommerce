@@ -8,7 +8,7 @@ export function PalettePresentation() {
  
   return (
     <ThemeProvider>
-      <div className="h-full w-screen place-items-center bg-white px-8 py-8 mt-60 mb-24">
+      <div className="h-full w-screen place-items-center bg-white px-8 py-8 mt-12 lg:mt-72 mb-24">
         <div className="container mx-auto grid items-center relative lg:grid-cols-2">
           <div className="hidden lg:flex">
             <img src="https://www.creative-tim.com/astro/assets/img/palette.png" alt="iphone" className="max-w-xl rounded-3xl mx-auto" />
@@ -16,9 +16,8 @@ export function PalettePresentation() {
           
           <div className="text-center lg:text-left">
             <Typography
-              color="blue"
-              variant="small"
-              className="!flex !items-center !font-bold mb-5"
+              color="dark"
+              className="!flex !items-center justify-center lg:justify-start !font-bold text-lg mb-5"
             >
               Attention to beautiful design
             </Typography>
