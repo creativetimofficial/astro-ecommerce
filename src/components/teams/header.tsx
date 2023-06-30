@@ -35,7 +35,7 @@ export function HeroSectionOne() {
   return (
     <ThemeProvider>
       <Navbar />
-      <header className="h-full min-h-screen w-screen bg-white px-4 pt-24">
+      <header className="h-full min-h-screen w-screen bg-white px-4 pt-5">
         <div className="container mx-auto flex flex-col-reverse items-center lg:flex-row">
           <div className="mr-0 lg:mr-16 xl:mr-24">
             <Typography
