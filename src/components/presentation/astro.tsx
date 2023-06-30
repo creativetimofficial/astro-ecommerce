@@ -17,7 +17,7 @@ export function AstroSection() {
             <Typography
               variant="h2"
               color="white"
-              className="mb-10 font-normal"
+              className="mb-5 font-normal"
             >
               What is Astro?
             </Typography>
