@@ -78,7 +78,7 @@ export function TeamSectionOne() {
     <section className="py-8 px-8 lg:py-16">
       <div className="container mx-auto">
         <div className="mb-24 text-center">
-          <Typography color="blue" className="mb-2 !font-semibold">
+          <Typography color="dark" className="mb-2 !font-semibold text-lg">
             Our Team
           </Typography>
           <Typography variant="h2" color="blue-gray" className="mb-4">
