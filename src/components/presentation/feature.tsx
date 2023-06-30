@@ -1,10 +1,5 @@
 import React from "react";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
-import {
-  EyeIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
-  BoltIcon,
-} from "@heroicons/react/24/outline";
 
 function FeatureCard({ icon, title, children }) {
   return (
@@ -32,7 +27,7 @@ function FeatureCard({ icon, title, children }) {
 const features = [
   {
     icon: (
-      <img className="w-40 mx-auto mb-4" src="icon1.png" />
+      <img className="w-32 mx-auto mb-4" src="icon1.png" />
     ),
     title: "For Designers",
     description:
@@ -40,7 +35,7 @@ const features = [
   },
   {
     icon: (
-      <img className="w-40 mx-auto mb-4" src="icon2.png" />
+      <img className="w-32 mx-auto mb-4" src="icon2.png" />
     ),
     title: "For Developers",
     description:
@@ -48,7 +43,7 @@ const features = [
   },
   {
     icon: (
-      <img className="w-40 mx-auto mb-4" src="icon3.png" />
+      <img className="w-32 mx-auto mb-4" src="icon3.png" />
     ),
     title: "For Store Owners",
     description:
@@ -58,9 +53,9 @@ const features = [
 
 export function FeatureLanding() {
   return (
-    <section className="px-4">
+    <section className="px-4 mt-12">
       <div className="container mx-auto mb-20 text-center">
-        <Typography color="blue" className="mb-2 font-bold">
+        <Typography color="dark" className="text-lg mb-2 font-bold">
           Design & Code by Creative Tim
         </Typography>
         <Typography variant="h2" color="blue-gray" className="mb-4">
