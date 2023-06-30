@@ -22,14 +22,14 @@ function PricingCard({ price, desc, options }) {
     <ThemeProvider>
       <Card className="border border-blue-gray-50">
         <CardBody className="p-8 text-center">
-          <div className="mb-8 inline-flex items-center rounded-full bg-blue-50 py-1 pl-1 pr-3">
+          <div className="mb-8 inline-flex items-center rounded-lg bg-dark/10 py-1 pl-1 pr-3">
             <Typography
               variant="small"
-              className="mr-3 rounded-full bg-white py-px px-3 font-medium text-blue-500"
+              className="mr-3 rounded-md bg-white py-px px-3 font-medium text-dark-500"
             >
               Basic Plan
             </Typography>
-            <Typography color="blue" variant="small" className="font-medium">
+            <Typography color="darl" variant="small" className="font-medium">
               Most Popular
             </Typography>
           </div>
