@@ -9,6 +9,7 @@ const customTheme = {
         initial: {
           textTransform: "capitalize",
           fontWeight: "font-medium",
+          // fontSize: "!text-sm",
         }
       },
       variants: {
