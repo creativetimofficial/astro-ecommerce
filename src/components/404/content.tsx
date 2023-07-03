@@ -31,7 +31,7 @@ export function HeroSectionFour() {
           <div className="w-auto mx-auto">
             <div className="flex items-center">
               <a className="z-10" href="./">
-                <Button color="white" className="w-full px-4">
+                <Button color="dark" className="w-full px-4">
                   Go Home
                 </Button>
               </a>
