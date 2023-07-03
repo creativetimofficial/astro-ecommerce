@@ -38,14 +38,6 @@ const colors = {
 // nav list menu
 const navListMenuItems = [
   {
-    title: "404",
-    href: "/404"
-  },
-  {
-    title: "500",
-    href: "/500"
-  },
-  {
     title: "About Us",
     href: "/about"
   },
@@ -93,6 +85,14 @@ const navListMenuItems = [
     title: "Terms",
     href: "/terms"
   },
+  {
+    title: "404",
+    href: "/404"
+  },
+  {
+    title: "500",
+    href: "/500"
+  }
 ];
  
 function NavListMenu() {
@@ -154,6 +154,7 @@ function NavListMenu() {
 function NavList() {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+      <NavListMenu />
       <Typography
         as="a"
         href="#"
@@ -166,7 +167,6 @@ function NavList() {
           Blocks
         </ListItem>
       </Typography>
-      <NavListMenu />
       <Typography
         as="a"
         href="#"
