@@ -112,14 +112,6 @@ function ProfileMenu() {
 // nav list menu
 const navListMenuItems = [
   {
-    title: "404",
-    href: "/404"
-  },
-  {
-    title: "500",
-    href: "/500"
-  },
-  {
     title: "About Us",
     href: "/about"
   },
@@ -167,6 +159,14 @@ const navListMenuItems = [
     title: "Terms",
     href: "/terms"
   },
+  {
+    title: "404",
+    href: "/404"
+  },
+  {
+    title: "500",
+    href: "/500"
+  }
 ];
  
 function NavListMenu() {
