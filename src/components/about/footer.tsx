@@ -14,7 +14,7 @@ export function FooterOne() {
           <div className="flex flex-wrap items-end justify-center gap-8 md:justify-between">
             <div className="text-center md:text-left">
               <Typography variant="h4" className="mb-6">
-                Astro Ecommerce
+                Astro Material React
               </Typography>
               <ul className="flex flex-wrap items-center justify-center md:justify-start">
                 {links.map((link, idx) => (
@@ -38,7 +38,7 @@ export function FooterOne() {
                 Stay up to date
               </Typography>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Input label="Enter your email" />
+                <Input color="black" label="Enter your email" />
                 <Button color="dark">subscribe</Button>
               </div>
             </div>

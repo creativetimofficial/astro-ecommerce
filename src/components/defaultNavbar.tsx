@@ -203,7 +203,7 @@ export default function Example() {
             variant="h6"
             className="mr-4 cursor-pointer py-1.5 lg:ml-2"
           >
-            Astro Ecommerce
+            Astro Material React
           </Typography>
           <div className="hidden lg:block">
             <NavList />

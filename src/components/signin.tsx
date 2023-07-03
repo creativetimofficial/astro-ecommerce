@@ -18,10 +18,10 @@ export function SignIn() {
 
           <form action="#" className="mx-auto max-w-[24rem] text-left">
             <div className="mb-4">
-              <Input size="lg" label="Email" type="email" name="email" />
+              <Input color="black" size="lg" label="Email" type="email" name="email" />
             </div>
             <div className="mb-4">
-              <Input size="lg" label="Password" type="password" name="password" />
+              <Input color="black" size="lg" label="Password" type="password" name="password" />
             </div>
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="-ml-3">

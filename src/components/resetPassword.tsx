@@ -39,6 +39,7 @@ export function Reset() {
             <CardBody className="flex flex-col gap-4">
               <Input
                 variant="static"
+                color="black"
                 label="Email"
                 size="lg"
                 placeholder="john@example.com"

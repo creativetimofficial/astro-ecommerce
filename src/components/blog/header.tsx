@@ -46,7 +46,7 @@ export function HeroSectionOne() {
               color="blue-gray"
               className="mb-8 text-4xl !leading-tight md:text-5xl"
             >
-              Your work with Astro Ecommerce
+              Your work with Astro Material React
             </Typography>
             <Typography
               variant="lead"
@@ -56,7 +56,7 @@ export function HeroSectionOne() {
               world shun people for being great.
             </Typography>
             <div className="mb-6 flex w-full flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
-              <Input label="Enter your email" size="lg" />
+              <Input color="black" label="Enter your email" size="lg" />
               <Button color="dark" className="w-full px-4 md:w-[12rem]">get started</Button>
             </div>
             <Typography

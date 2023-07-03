@@ -26,7 +26,7 @@ export function DevPresentation() {
               Develop consistenly using Astro architecture principles
             </Typography>
             <Typography variant="lead" color="gray" className="lg:pr-20">
-              Using Astro Ecommerce you get everything you need to start creating your fully functional and responsive Ecommerce website in days, not months.
+              Using Astro Material React you get everything you need to start creating your fully functional and responsive Ecommerce website in days, not months.
             </Typography>
             
           </div>

@@ -41,11 +41,11 @@ export default function Example() {
       <div className="mb-2 flex items-center gap-4 p-4">
         <img src=".//logo-ct-dark.png" alt="brand" className="h-8 w-8" />
         <Typography variant="h5" color="blue-gray">
-          Astro Ecommerce
+          Astro Material React
         </Typography>
       </div>
       <div className="p-2">
-        <Input icon={<MagnifyingGlassIcon className="h-5 w-5" />} label="Search" />
+        <Input color="black" icon={<MagnifyingGlassIcon className="h-5 w-5" />} label="Search" />
       </div>
       <List>
         <Accordion
@@ -158,10 +158,10 @@ export default function Example() {
       <Alert open={openAlert} className="mt-auto bg-dark" onClose={() => setOpenAlert(false)}>
         <CubeTransparentIcon className="mb-4 h-12 w-12" />
         <Typography variant="h6" className="mb-1">
-          Astro Ecommerce
+          Astro Material React
         </Typography>
         <Typography variant="small" className="font-normal opacity-80">
-          Upgrade to Astro Ecommerce PRO and get even more components, plugins, advanced features
+          Upgrade to Astro Material React PRO and get even more components, plugins, advanced features
           and premium.
         </Typography>
         <div className="mt-4 flex gap-3">

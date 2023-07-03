@@ -202,9 +202,7 @@ const customTheme = {
 
   input: {
     valid: {
-      colors: [
-        'dark'
-      ],
+      colors: ["dark", "slate", "sky", "yellow", "blue", "green", "red"],
     },
     styles: {
       base: {
