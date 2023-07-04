@@ -50,7 +50,7 @@ export function ContentSectionTwo() {
             Unsplash
           </a>
         </Typography>
-        <figure className="my-10 border-l-2 border-blue py-4 pl-6">
+        <figure className="my-10 border-l-2 border-gray py-4 pl-6">
           <blockquote cite="#">
             <Typography
               variant="lead"
@@ -65,7 +65,7 @@ export function ContentSectionTwo() {
           </blockquote>
           <figcaption>
             <Typography color="gray" className="font-normal opacity-80">
-              — Olivia Rhype, Product Designer
+              — Tina Andrew, Product Designer
             </Typography>
           </figcaption>
         </figure>
