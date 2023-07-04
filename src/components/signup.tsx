@@ -80,7 +80,7 @@ export function SignUp() {
               Already have an account?{" "}
               <a
                 href="./login"
-                className="font-medium text-blue-500 transition-colors hover:text-blue-700"
+                className="font-medium text-dark transition-colors hover:text-blue-700"
               >
                 Log in
               </a>
