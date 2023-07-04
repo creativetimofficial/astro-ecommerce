@@ -64,9 +64,9 @@ function ProfileMenu() {
           <Avatar
             variant="circular"
             size="sm"
-            alt="candice wu"
-            className="border border-blue-500 p-0.5"
-            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+            alt="Tania Andrew"
+            className="border border-gray-300 p-0.5"
+            src="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"
           />
           <ChevronDownIcon
             strokeWidth={2.5}
@@ -266,8 +266,26 @@ function NavList() {
  
 export default function ComplexNavbar() {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
+  const [shouldShowBorder, setShouldShowBorder] = React.useState(false);
+
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
  
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setShouldShowBorder(true);
+      } else {
+        setShouldShowBorder(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -276,7 +294,11 @@ export default function ComplexNavbar() {
   }, []);
  
   return (
-    <Navbar className="sticky inset-0 z-10 mx-auto max-w-screen-2xl p-2 lg:rounded-full lg:pl-6 mt-4">
+    <Navbar
+      className={`sticky inset-0 z-10 shadow-none mx-auto max-w-screen-2xl p-2 lg:pl-6 mt-4 ${
+        shouldShowBorder ? "border-b border-gray-300" : ""
+      }`}
+    >
       <div className="relative mx-auto flex items-center text-blue-gray-900">
         <Typography
           as="a"
