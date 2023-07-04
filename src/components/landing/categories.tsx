@@ -68,8 +68,7 @@ export function TeamSectionOne() {
           </Typography>
           <Typography
             variant="lead"
-            color="gray"
-            className="l:px-20"
+            className="l:px-20 text-blue-gray-800"
           >
             This is the paragraph where you can write more details about your
             categories. Keep you user engaged by providing meaningful information.
