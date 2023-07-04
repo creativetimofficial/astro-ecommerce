@@ -237,7 +237,7 @@ export default function Example() {
           <NavList />
           <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
             <a href="./login">
-              <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+              <Button variant="outlined" size="sm" color="dark" fullWidth>
                 Sign In
               </Button>
             </a>
