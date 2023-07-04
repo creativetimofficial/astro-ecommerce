@@ -35,7 +35,7 @@ function BlogPostCard({
       <CardBody className="p-0">
         <Typography
           variant="small"
-          color="blue"
+          color="blue-gray"
           className="mb-3 !font-semibold"
         >
           {author}&nbsp;&bull;&nbsp;{date}
@@ -55,12 +55,11 @@ function BlogPostCard({
           {desc}
         </Typography>
         <div className="flex items-center gap-2">
-          {tags.map(({ color, value }) => (
+          {tags.map(({ value }) => (
             <Chip
               key={value}
-              color={color}
               value={value}
-              className="!rounded-full !px-3 !py-1.5"
+              className="!rounded-full !px-3 !py-1.5 bg-dark"
             />
           ))}
         </div>
@@ -77,9 +76,9 @@ const posts = [
     title: "Search and Discover",
     desc: "As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others.",
     tags: [
-      { color: "blue", value: "lifestyle" },
-      { color: "indigo", value: "research" },
-      { color: "pink", value: "health" },
+      { color: "dark", value: "lifestyle" },
+      { color: "dark", value: "research" },
+      { color: "dark", value: "health" },
     ],
   },
   {
@@ -89,9 +88,9 @@ const posts = [
     title: "US investment ticks up",
     desc: "Venture investment in U.S. startups rose sequentially in the second quarter of 2022, boosted by large, ate-stage financings.",
     tags: [
-      { color: "teal", value: "product" },
-      { color: "pink", value: "tools" },
-      { color: "red", value: "sass" },
+      { color: "dark", value: "product" },
+      { color: "dark", value: "tools" },
+      { color: "dark", value: "sass" },
     ],
   },
   {
@@ -101,8 +100,8 @@ const posts = [
     title: "Web3 startups $5M",
     desc: "Insticator is announcing that it has raised $5.2 million in Series A funding. The startup allows online publishers to add quizzes.",
     tags: [
-      { color: "green", value: "software development" },
-      { color: "pink", value: "tools" },
+      { color: "dark", value: "software development" },
+      { color: "dark", value: "tools" },
     ],
   },
 ];
