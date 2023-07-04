@@ -43,7 +43,7 @@ export function HeroSectionTwo() {
             >
               Our company mission is to lead the design apps
             </Typography>
-            <Typography variant="lead" color="gray" className="lg:pr-20">
+            <Typography variant="lead" className="lg:pr-20 text-blue-gray-800">
               It becomes harder for us to give others a hand. We get our heart
               broken by people we love, even that we give them all we have. Then
               we lose family over time.
