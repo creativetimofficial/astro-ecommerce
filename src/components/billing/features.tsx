@@ -7,13 +7,13 @@ import {
   FaceSmileIcon,
   LinkIcon,
   HeartIcon,
-} from "@heroicons/react/24/outline";
+} from "@heroicons/react/24/solid";
 
 function FeatureCard({ icon, title, children }) {
   return (
     <Card color="transparent" shadow={false}>
       <CardBody className="grid justify-center text-center">
-        <div className="mx-auto mb-6 grid h-12 w-12 place-items-center rounded-full bg-blue-100/80 p-2.5 text-blue-500 ring-8 ring-blue-100/40">
+        <div className="mx-auto mb-6 grid h-12 w-12 place-items-center rounded-full bg-dark p-2.5 text-white">
           {icon}
         </div>
         <Typography
