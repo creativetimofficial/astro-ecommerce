@@ -23,7 +23,7 @@ export function ContentSectionThree() {
               Unsplash
             </a>
           </Typography>
-          <Typography color="gray" className="my-12 font-normal">
+          <Typography className="my-12 font-normal text-blue-gray-800">
             The time is now for it to be okay to be great. People in this world
             shun people for being great. For being a bright color. For standing
             out. But the time is now to be okay to be the greatest you. Would you
@@ -42,7 +42,7 @@ export function ContentSectionThree() {
           <Typography variant="h2" color="blue-gray" className="mb-6">
             Conclusion
           </Typography>
-          <Typography color="gray" className="mb-10 font-normal">
+          <Typography className="mb-10 font-normal text-blue-gray-800">
             There&apos;s nothing I really wanted to do in life that I wasn&apos;t
             able to get good at. That&apos;s my skill. I&apos;m not really
             specifically talented at anything except for the ability to learn.

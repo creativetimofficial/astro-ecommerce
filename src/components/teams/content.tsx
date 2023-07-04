@@ -13,7 +13,7 @@ export function ContentSectionOne() {
             <Typography variant="h2" color="blue-gray" className="mb-6">
               Find some great partners
             </Typography>
-            <Typography variant="lead" color="gray" className="mb-12">
+            <Typography variant="lead" className="mb-12 text-blue-gray-800">
               I always felt like I could do anything. That&apos;s the main thing
               people are controlled by! They&apos;re slowed down by{" "}
               <a

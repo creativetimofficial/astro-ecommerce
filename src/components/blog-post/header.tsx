@@ -54,8 +54,7 @@ export function HeroSectionThree() {
           </Typography>
           <Typography
             variant="lead"
-            color="gray"
-            className="mx-auto mb-12 w-full px-8 lg:w-10/12 lg:px-12 xl:w-8/12 xl:px-20"
+            className="mx-auto text-blue-gray-800 mb-12 w-full px-8 lg:w-10/12 lg:px-12 xl:w-8/12 xl:px-20"
           >
             People are so scared to lose that they don&apos;t even try. Like,
             one thing people can&apos;t say is that I&apos;m not trying, and

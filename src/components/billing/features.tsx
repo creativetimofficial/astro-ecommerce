@@ -87,8 +87,7 @@ export function FeatureSectionOne() {
         </Typography>
         <Typography
           variant="lead"
-          color="blue-gray"
-          className="mx-auto w-full px-4 text-gray-700 md:w-10/12 lg:w-7/12 lg:px-8"
+          className="mx-auto w-full px-4 text-blue-gray-800 md:w-10/12 lg:w-7/12 lg:px-8"
         >
           We&apos;re constantly trying to express ourselves and actualize our
           dreams. If you have the opportunity to play

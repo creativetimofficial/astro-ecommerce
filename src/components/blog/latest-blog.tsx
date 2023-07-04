@@ -118,7 +118,7 @@ export function BlogSectionThree() {
             <Typography variant="h2" color="blue-gray">
               Astro Material React
             </Typography>
-            <Typography variant="lead" color="gray">
+            <Typography variant="lead" className="text-blue-gray-800">
               Interviews, tips, guides, industry best practices, and news.
             </Typography>
           </div>

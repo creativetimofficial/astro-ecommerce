@@ -50,7 +50,7 @@ export function HeroSectionOne() {
             </Typography>
             <Typography
               variant="lead"
-              className="mb-16 text-gray-700 md:pr-16 xl:pr-28"
+              className="mb-16 text-blue-gray-800 md:pr-16 xl:pr-28"
             >
               The time is now for it to be okay to be great. People in this
               world shun people for being great.

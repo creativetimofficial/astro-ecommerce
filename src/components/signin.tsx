@@ -12,7 +12,7 @@ export function SignIn() {
           <Typography variant="h3" color="blue-gray" className="mb-2">
             Welcome back
           </Typography>
-          <Typography color="gray" className="font-normal mb-16">
+          <Typography className="font-normal mb-16 text-blue-gray-800">
             Welcome back, please enter your details.
           </Typography>
 

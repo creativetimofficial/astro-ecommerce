@@ -12,7 +12,7 @@ export function SignUp() {
           <Typography variant="h3" color="blue-gray" className="mb-2">
             Create an account
           </Typography>
-          <Typography color="gray" className="font-normal mb-12">
+          <Typography className="font-normal mb-12 text-blue-gray-800">
             Start your 30 days free trial.
           </Typography>
           <form action="#" className="mx-auto max-w-[24rem] text-left">
