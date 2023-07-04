@@ -60,7 +60,7 @@ export default function Example() {
           <ListItem className="p-0" selected={open === 1}>
             <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
               <ListItemPrefix>
-                <PresentationChartBarIcon className="h-5 w-5" />
+                <PresentationChartBarIcon className="h-5 w-5 opacity-50" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 Dashboard
@@ -102,7 +102,7 @@ export default function Example() {
           <ListItem className="p-0" selected={open === 2}>
             <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
               <ListItemPrefix>
-                <ShoppingBagIcon className="h-5 w-5" />
+                <ShoppingBagIcon className="h-5 w-5 opacity-50" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 E-Commerce
@@ -129,7 +129,7 @@ export default function Example() {
         <hr className="my-2 border-blue-gray-50" />
         <ListItem>
           <ListItemPrefix>
-            <InboxIcon className="h-5 w-5" />
+            <InboxIcon className="h-5 w-5 opacity-50" />
           </ListItemPrefix>
           Inbox
           <ListItemSuffix>
@@ -138,19 +138,19 @@ export default function Example() {
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <UserCircleIcon className="h-5 w-5" />
+            <UserCircleIcon className="h-5 w-5 opacity-50" />
           </ListItemPrefix>
           Profile
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <Cog6ToothIcon className="h-5 w-5" />
+            <Cog6ToothIcon className="h-5 w-5 opacity-50" />
           </ListItemPrefix>
           Settings
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <PowerIcon className="h-5 w-5" />
+            <PowerIcon className="h-5 w-5 opacity-50" />
           </ListItemPrefix>
           Log Out
         </ListItem>
