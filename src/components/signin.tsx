@@ -26,13 +26,14 @@ export function SignIn() {
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="-ml-3">
                 <Checkbox
+                  color="blue-gray"
                   label="Remember for 30 days"
                   labelProps={{
                     className: "font-normal",
                   }}
                 />
               </div>
-              <Typography as="a" href="#" color="blue" className="font-medium">
+              <Typography as="a" href="#" color="blue-gray" className="font-medium">
                 Forgot password
               </Typography>
             </div>
