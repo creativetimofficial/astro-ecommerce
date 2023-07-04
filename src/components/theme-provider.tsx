@@ -7,8 +7,7 @@ const customTheme = {
     styles: {
       base: {
         initial: {
-          textTransform: "capitalize",
-          fontWeight: "font-medium",
+          fontWeight: "font-bold",
           // fontSize: "!text-sm",
         }
       },
@@ -73,6 +72,11 @@ const customTheme = {
             border: "border border-dark"
           }
         },
+        text: {
+          dark: {
+            color: "text-dark"
+          }
+        },
       },
     },
   },
@@ -122,6 +126,23 @@ const customTheme = {
         }
       },
 
+    },
+  },
+  checkbox: {
+    valid: {
+      colors: [
+        'dark'
+      ],
+    },
+    styles: {
+      variants: {
+        filled: {
+          dark: {
+            color: "bg-dark",
+            border: "text-white"
+          }
+        }
+      }
     },
   },
   navbar: {
