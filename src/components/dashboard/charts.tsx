@@ -4,11 +4,16 @@ import dynamic from "next/dynamic";
 import {
   Navbar,
   MobileNav,
+  Card,
+  CardHeader,
+  CardBody,
   Button,
   IconButton,
   Typography,
   Input,
 } from "@material-tailwind/react";
+import { UserPlusIcon } from "@heroicons/react/24/solid";
+import ThemeProvider from "../theme-provider";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
@@ -116,21 +121,39 @@ export function HeroSectionFour() {
   );
 
   return (
-    <>
-        <div className="mtr-container mtr-mx-auto -mtr-mt-28 mtr-px-4 mtr-pb-16">
-          <div className="mtr-relative mtr-mx-auto mtr-max-w-screen-lg mtr-rounded-2xl mtr-bg-white mtr-pt-8 mtr-pr-2.5 mtr-shadow-2xl mtr-shadow-gray-500/40">
-            <Typography variant="h6" className="mtr-pl-6">
-              Users over time
+    <ThemeProvider>
+      <Card className="w-full mt-10">
+        <CardHeader floated={false} shadow={false} className="rounded-none flex items-center justify-between">
+          <div>
+            <Typography variant="h5" color="blue-gray">
+              User Insights
             </Typography>
-            <Chart
-              type="area"
-              series={ariaChartData.series}
-              options={ariaChartData.options}
-              height={400}
-            />
+            <Typography color="gray" className="mt-1 font-normal">
+              Check information about all users
+            </Typography>
           </div>
-        </div>
-    </>
+          <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
+            <Button variant="outlined" color="dark" size="sm">
+              view all
+            </Button>
+            <Button className="flex items-center gap-3" color="dark" size="sm">
+              <UserPlusIcon strokeWidth={2} className="h-4 w-4" /> Add member
+            </Button>
+          </div>
+        </CardHeader>
+        <CardBody className="overflow-scroll px-4">
+          <Typography variant="h6" className="mtr-pl-6">
+            Users over time
+          </Typography>
+          <Chart
+            type="area"
+            series={ariaChartData.series}
+            options={ariaChartData.options}
+            height={400}
+          />
+        </CardBody>
+      </Card>
+    </ThemeProvider>
   );
 }
 
