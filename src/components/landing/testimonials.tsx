@@ -30,11 +30,11 @@ export function TestimonialSectionOne() {
               Product Designer, Quotient
             </Typography>
           </CardBody>
-          <div className="relative grid h-96 place-items-center md:h-auto md:w-5/12">
+          <div className="relative grid h-96 place-items-center md:h-auto md:w-5/12 m-12">
             <img
               src="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"
               alt="testimonial image"
-              className="h-full w-full object-cover md:absolute"
+              className="h-full w-full object-cover md:absolute rounded-2xl"
             />
           </div>
         </Card>
