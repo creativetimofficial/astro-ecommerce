@@ -44,7 +44,7 @@ export function ContentSectionOne() {
               actualize our dreams.
             </Typography>
             <div className="inline-flex flex-wrap gap-3">
-              <Button variant="outlined" color="blue-gray" size="lg">
+              <Button variant="outlined" color="dark" size="lg">
                 get in touch
               </Button>
               <Button color="dark" size="lg">our process</Button>
