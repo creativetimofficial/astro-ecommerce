@@ -20,8 +20,8 @@ export function TestimonialSectionOne() {
               color="white"
               className="mb-10 font-normal"
             >
-              &quot;We&apos;sre not always in the position that we want to be
-              at. We&apo;sre constantly growing.
+              "We're not always in the position that we want to be
+              at. We're constantly growing."
             </Typography>
             <Typography variant="lead" color="white">
               &#8212; Renee Wells
@@ -30,11 +30,11 @@ export function TestimonialSectionOne() {
               Product Designer, Quotient
             </Typography>
           </CardBody>
-          <div className="relative grid h-96 place-items-center md:h-auto md:w-5/12">
+          <div className="relative grid h-96 place-items-center md:h-auto md:w-5/12 m-12">
             <img
-              src="https://images.unsplash.com/photo-1611042553365-9b101441c135?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1365&q=80"
+              src="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"
               alt="testimonial image"
-              className="h-full w-full object-cover md:absolute"
+              className="h-full w-full object-cover md:absolute rounded-2xl"
             />
           </div>
         </Card>

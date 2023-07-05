@@ -46,17 +46,17 @@ export function HeroSectionOne() {
               color="blue-gray"
               className="mb-8 text-4xl !leading-tight md:text-5xl"
             >
-              Your work with Astro Ecommerce
+              Your work with Astro Material React
             </Typography>
             <Typography
               variant="lead"
-              className="mb-16 text-gray-700 md:pr-16 xl:pr-28"
+              className="mb-16 text-blue-gray-800 md:pr-16 xl:pr-28"
             >
               The time is now for it to be okay to be great. People in this
               world shun people for being great.
             </Typography>
             <div className="mb-6 flex w-full flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
-              <Input label="Enter your email" size="lg" />
+              <Input color="black" label="Enter your email" size="lg" />
               <Button color="dark" className="w-full px-4 md:w-[12rem]">get started</Button>
             </div>
             <Typography

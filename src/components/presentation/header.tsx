@@ -41,10 +41,10 @@ export function HeroPresentation() {
               color="blue-gray"
               className="mb-8 leading-tight lg:text-5xl"
             >
-              The perfect starting point for your Astro Ecommerce
+              The perfect starting point for your Astro Material React
             </Typography>
             <Typography variant="lead" color="gray" className="lg:pr-20">
-              Astro Ecommerce is a free template designed to be both lightweight and feature-rich. It comes packed with everything you need to get your Online Store ready in no time.
+              Astro Material React is a free template designed to be both lightweight and feature-rich. It comes packed with everything you need to get your Online Store ready in no time.
             </Typography>
             <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
               <Button color="dark" variant="outlined" className="flex items-center">

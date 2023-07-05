@@ -57,8 +57,7 @@ export function StatsSectionOne() {
           </div>
           <Typography
             variant="lead"
-            color="gray"
-            className="w-full lg:w-4/12"
+            className="w-full lg:w-4/12 text-blue-gray-800"
           >
             Learn more about the team behind the company.
           </Typography>

@@ -12,27 +12,28 @@ export function SignIn() {
           <Typography variant="h3" color="blue-gray" className="mb-2">
             Welcome back
           </Typography>
-          <Typography color="gray" className="font-normal mb-16">
+          <Typography className="font-normal mb-16 text-blue-gray-800">
             Welcome back, please enter your details.
           </Typography>
 
           <form action="#" className="mx-auto max-w-[24rem] text-left">
             <div className="mb-4">
-              <Input size="lg" label="Email" type="email" name="email" />
+              <Input color="black" size="lg" label="Email" type="email" name="email" />
             </div>
             <div className="mb-4">
-              <Input size="lg" label="Password" type="password" name="password" />
+              <Input color="black" size="lg" label="Password" type="password" name="password" />
             </div>
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="-ml-3">
                 <Checkbox
+                  color="blue-gray"
                   label="Remember for 30 days"
                   labelProps={{
                     className: "font-normal",
                   }}
                 />
               </div>
-              <Typography as="a" href="#" color="blue" className="font-medium">
+              <Typography as="a" href="#" color="blue-gray" className="font-medium">
                 Forgot password
               </Typography>
             </div>

@@ -7,8 +7,8 @@ const customTheme = {
     styles: {
       base: {
         initial: {
-          textTransform: "capitalize",
-          fontWeight: "font-medium",
+          fontWeight: "font-bold",
+          // fontSize: "!text-sm",
         }
       },
       variants: {
@@ -72,6 +72,11 @@ const customTheme = {
             border: "border border-dark"
           }
         },
+        text: {
+          dark: {
+            color: "text-dark"
+          }
+        },
       },
     },
   },
@@ -121,6 +126,23 @@ const customTheme = {
         }
       },
 
+    },
+  },
+  checkbox: {
+    valid: {
+      colors: [
+        'dark'
+      ],
+    },
+    styles: {
+      variants: {
+        filled: {
+          dark: {
+            color: "bg-dark",
+            border: "text-white"
+          }
+        }
+      }
     },
   },
   navbar: {
@@ -202,9 +224,7 @@ const customTheme = {
 
   input: {
     valid: {
-      colors: [
-        'dark'
-      ],
+      colors: ["dark", "slate", "sky", "yellow", "blue", "green", "red"],
     },
     styles: {
       base: {

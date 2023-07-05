@@ -22,7 +22,7 @@ export function AstroSection() {
               Let's join forces for a better web!
             </Typography>
             <Typography variant="lead" color="white">
-              Astro Ecommerce is an open source and powerful design system that lets you create Ecommerce websites that your users will love.
+              Astro Material React is an open source and powerful design system that lets you create Ecommerce websites that your users will love.
             </Typography>
             <a href="https://github.com/creativetimofficial/astro-ecommerce">
               <Button color="white" size="sm" variant="outlined" className="flex items-center mt-5">

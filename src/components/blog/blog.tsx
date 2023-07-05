@@ -5,11 +5,13 @@ import {
   Typography,
   Avatar,
   Button,
+  ThemeProvider,
 } from "@material-tailwind/react";
 import {
   ArrowUpRightIcon,
   ArrowSmallDownIcon,
 } from "@heroicons/react/24/outline";
+import ThemeProvider from "../theme-provider";
 
 interface BlogPostCardPropsType {
   img: string;
@@ -36,7 +38,7 @@ function BlogPostCard({
       <CardBody>
         <Typography
           variant="small"
-          color="blue"
+          color="blue-gray"
           className="mb-1 !font-semibold"
         >
           {tag}
@@ -158,38 +160,40 @@ const posts = [
 
 export function BlogSectionOne() {
   return (
-    <section>
-      <div className="text-center mb-24 w-1/2 mx-auto">
-        <Typography variant="h2" className="normal-case text-4xl mb-3">
-          Check out what's new
-        </Typography>
-        <Typography variant="paragraph" className="text-lg">
-          The time is now for it to be okay to be great. People in this world should. We get back freezes every winter
-        </Typography>
-      </div>
-      <div className="mx-auto grid grid-cols-1 items-start gap-y-24 gap-x-8 pb-16 md:grid-cols-2 lg:grid-cols-3">
-        {posts.map(({ img, tag, title, desc, date, author }) => (
-          <BlogPostCard
-            key={title}
-            img={img}
-            tag={tag}
-            title={title}
-            desc={desc}
-            date={date}
-            author={{
-              img: author.img,
-              name: author.name,
-            }}
-          />
-        ))}
-      </div>
-      <div className="px-12 pb-20 text-center">
-        <Button variant="text" className="inline-flex items-center pl-4">
-          <ArrowSmallDownIcon className="mr-2 h-5 w-5" strokeWidth={2} />
-          load more
-        </Button>
-      </div>
-    </section>
+    <ThemeProvider>
+      <section>
+        <div className="text-center mb-24 w-1/2 mx-auto">
+          <Typography variant="h2" className="normal-case text-4xl mb-3">
+            Check out what's new
+          </Typography>
+          <Typography variant="paragraph" className="text-lg text-blue-gray-800">
+            The time is now for it to be okay to be great. People in this world should. We get back freezes every winter
+          </Typography>
+        </div>
+        <div className="mx-auto grid grid-cols-1 items-start gap-y-24 gap-x-8 pb-16 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map(({ img, tag, title, desc, date, author }) => (
+            <BlogPostCard
+              key={title}
+              img={img}
+              tag={tag}
+              title={title}
+              desc={desc}
+              date={date}
+              author={{
+                img: author.img,
+                name: author.name,
+              }}
+            />
+          ))}
+        </div>
+        <div className="px-12 pb-20 text-center">
+          <Button color="dark" variant="text" className="inline-flex items-center pl-4">
+            <ArrowSmallDownIcon className="mr-2 h-5 w-5" strokeWidth={2} />
+            load more
+          </Button>
+        </div>
+      </section>
+    </ThemeProvider>
   );
 }
 

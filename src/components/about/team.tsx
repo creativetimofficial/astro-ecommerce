@@ -25,7 +25,7 @@ function TeamCard({ img, name, title, desc }: TeamCardPropsType) {
       <Typography variant="h4" color="blue-gray" className="mb-1">
         {name}
       </Typography>
-      <Typography color="blue" className="mb-3 font-normal">
+      <Typography color="gray" className="mb-3 font-normal">
         {title}
       </Typography>
       <Typography color="gray" className="mb-4 font-normal">
@@ -49,7 +49,7 @@ function TeamCard({ img, name, title, desc }: TeamCardPropsType) {
 const members = [
   {
     img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbSUyMG1lbWJlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
-    name: "Olivia Rhye",
+    name: "Tina Andrew",
     title: "Founder & CEO",
     desc: "Today you are you! That is truer than true! There is no one alive!",
   },
@@ -86,8 +86,7 @@ export function TeamSectionOne() {
           </Typography>
           <Typography
             variant="lead"
-            color="gray"
-            className="mx-auto lg:w-8/12 lg:px-20"
+            className="mx-auto lg:w-8/12 lg:px-20 text-blue-gray-800"
           >
             This is the paragraph where you can write more details about your
             team. Keep you user engaged by providing meaningful information.

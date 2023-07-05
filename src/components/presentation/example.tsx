@@ -23,7 +23,7 @@ export function CodePresentation() {
               color="blue-gray"
               className="mb-8 leading-tight lg:text-5xl"
             >
-              Astro Ecommerce is the starting point for your next project!
+              Astro Material React is the starting point for your next project!
             </Typography>
             <Typography variant="lead" color="gray" className="mb-5">
               Don’t spend hours reinventing the wheel! Our UI tool comes packed with everything you need for you Online Store.

@@ -68,7 +68,7 @@ const testimonials = [
     rating: 3,
     feedback:
       "Would you believe in what you believe in, if you were the only one who believed it?",
-    client: "Olivia Rhye",
+    client: "Tina Andrew",
     title: "CEO & Founder, Quotient",
     img: "https://images.unsplash.com/photo-1589156288859-f0cb0d82b065?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80",
   },

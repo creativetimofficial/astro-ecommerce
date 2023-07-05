@@ -7,7 +7,7 @@ export function ContentSectionTwo() {
         <Typography variant="h2" color="blue-gray" className="mb-6">
           Introduction
         </Typography>
-        <Typography color="gray" className="mb-8 font-normal">
+        <Typography className="mb-8 font-normal text-blue-gray-800">
           It really matters and then like it really doesn&apos;t matter. What
           matters is the people who are sparked by it. And the people who are
           like offended by it, it doesn&apos;t matter. Because it&apos;s about
@@ -50,7 +50,7 @@ export function ContentSectionTwo() {
             Unsplash
           </a>
         </Typography>
-        <figure className="my-10 border-l-2 border-blue py-4 pl-6">
+        <figure className="my-10 border-l-2 border-gray py-4 pl-6">
           <blockquote cite="#">
             <Typography
               variant="lead"
@@ -64,12 +64,12 @@ export function ContentSectionTwo() {
             </Typography>
           </blockquote>
           <figcaption>
-            <Typography color="gray" className="font-normal opacity-80">
-              — Olivia Rhype, Product Designer
+            <Typography color="blue-gray" className="font-normal opacity-80">
+              — Tina Andrew, Product Designer
             </Typography>
           </figcaption>
         </figure>
-        <Typography color="gray" className="font-normal">
+        <Typography className="font-normal text-blue-gray-800">
           Why would anyone pick blue over pink? Pink is obviously a better
           color. Everyone&apos;s born confident, and everything&apos;s taken
           away from you{" "}

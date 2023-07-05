@@ -13,7 +13,7 @@ export function ContentSectionOne() {
             <Typography variant="h2" color="blue-gray" className="mb-6">
               Find some great partners
             </Typography>
-            <Typography variant="lead" color="gray" className="mb-12">
+            <Typography variant="lead" className="mb-12 text-blue-gray-800">
               I always felt like I could do anything. That&apos;s the main thing
               people are controlled by! They&apos;re slowed down by{" "}
               <a
@@ -44,7 +44,7 @@ export function ContentSectionOne() {
               actualize our dreams.
             </Typography>
             <div className="inline-flex flex-wrap gap-3">
-              <Button variant="outlined" color="blue-gray" size="lg">
+              <Button variant="outlined" color="dark" size="lg">
                 get in touch
               </Button>
               <Button color="dark" size="lg">our process</Button>

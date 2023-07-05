@@ -60,7 +60,7 @@ export function TermsConditions() {
               <Typography id="general" variant="h2" color="blue-gray" className="mb-6">
                 Terms & conditions
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 Welcome to Creative Tim!
                 <br/><br/>
                 These terms and conditions outline the rules and regulations for the use of Creative Tim's Website, located here.
@@ -74,7 +74,7 @@ export function TermsConditions() {
               <Typography id="cookies" variant="h2" color="blue-gray" className="mb-6">
                 Cookies
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 We employ the use of cookies. By accessing Creative Tim, you agreed to use cookies in agreement with the Creative Tim's Privacy Policy.
                 <br/><br/>
                 Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
@@ -83,7 +83,7 @@ export function TermsConditions() {
               <Typography id="license" variant="h2" color="blue-gray" className="mb-6">
                 License
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 Unless otherwise stated, Creative Tim and/or its licensors own the intellectual property rights for all material on Creative Tim. All intellectual property rights are reserved. You may access this from Creative Tim for your own personal use subjected to restrictions set in these terms and conditions.
                 <br/><br/>
                 You must not:
@@ -110,7 +110,7 @@ export function TermsConditions() {
               <Typography id="hyperlink" variant="h2" color="blue-gray" className="mb-6">
                 Hyperlinking to our Content
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 The following organizations may link to our Website without prior written approval:
                 <br/><br/>
                 You must not:
@@ -127,35 +127,35 @@ export function TermsConditions() {
               <Typography id="iframes" variant="h2" color="blue-gray" className="mb-6">
                 iFrames
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.
               </Typography>
 
               <Typography id="liability" variant="h2" color="blue-gray" className="mb-6">
                 Content Liability
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.
               </Typography>
 
               <Typography variant="h2" color="blue-gray" className="mb-6">
                 Your Privacy
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 Please read Privacy Policy
               </Typography>
 
               <Typography variant="h2" color="blue-gray" className="mb-6">
                 Reservation of Rights
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.
               </Typography>
 
               <Typography variant="h2" color="blue-gray" className="mb-6">
                 Removal of links from our website
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.
                 <br/><br/>
                 We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.
@@ -164,7 +164,7 @@ export function TermsConditions() {
               <Typography id="disclaimer" variant="h2" color="blue-gray" className="mb-6">
                 Disclaimer
               </Typography>
-              <Typography color="gray" className="mb-8 font-normal">
+              <Typography className="mb-8 font-normal text-blue-gray-800">
                 To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:
                 <br/><br/>
                 &#x2022; limit or exclude our or your liability for death or personal injury; <br/>

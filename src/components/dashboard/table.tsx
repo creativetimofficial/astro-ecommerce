@@ -98,7 +98,7 @@ export default function Example() {
               </Typography>
             </div>
             <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
-              <Button variant="outlined" color="blue-gray" size="sm">
+              <Button variant="outlined" color="dark" size="sm">
                 view all
               </Button>
               <Button className="flex items-center gap-3" color="dark" size="sm">
@@ -117,7 +117,7 @@ export default function Example() {
               </TabsHeader>
             </Tabs>
             <div className="w-full md:w-72">
-              <Input label="Search" icon={<MagnifyingGlassIcon className="h-5 w-5" />} />
+              <Input color="black" label="Search" icon={<MagnifyingGlassIcon className="h-5 w-5" />} />
             </div>
           </div>
         </CardHeader>
@@ -215,10 +215,10 @@ export default function Example() {
             Page 1 of 10
           </Typography>
           <div className="flex gap-2">
-            <Button variant="outlined" color="blue-gray" size="sm">
+            <Button variant="outlined" color="dark" size="sm">
               Previous
             </Button>
-            <Button variant="outlined" color="blue-gray" size="sm">
+            <Button variant="outlined" color="dark" size="sm">
               Next
             </Button>
           </div>

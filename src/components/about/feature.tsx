@@ -8,7 +8,7 @@ import {
 
 function Icon({ children }) {
   return (
-    <div className="mb-6 grid h-12 w-12 place-items-center rounded-full bg-blue-100/80 p-2.5 text-blue-500 ring-8 ring-blue-100/40">
+    <div className="mb-6 grid h-12 w-12 place-items-center rounded-full bg-dark p-2.5 text-white shadow">
       {children}
     </div>
   );
@@ -17,7 +17,7 @@ function Icon({ children }) {
 function ListItem({ children }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="inline-block rounded-full bg-blue-50 p-1 text-blue-500">
+      <div className="inline-block rounded-full bg-dark p-1 text-white">
         <CheckIcon className="h-4 w-4" strokeWidth={3} />
       </div>
       <Typography color="blue-gray" className="font-normal text-gray-700">
@@ -44,9 +44,8 @@ export function FeatureSectionTwo() {
             Get your own app
           </Typography>
           <Typography
-            color="blue-gray"
             variant="lead"
-            className="mb-10 font-normal text-gray-700"
+            className="mb-10 font-normal text-blue-gray-800"
           >
             The Arctic Ocean freezes every winter and much of the sea-ice then
             thaws every summer, and that process will continue whatever.
@@ -67,9 +66,8 @@ export function FeatureSectionTwo() {
             Medium Length Headline
           </Typography>
           <Typography
-            color="blue-gray"
             variant="lead"
-            className="mb-10 font-normal text-gray-700"
+            className="mb-10 font-normal text-blue-gray-800"
           >
             Change the color to match your brand or vision, add your logo,
             choose the perfect thumbnail, remove the playbar, add controls.

@@ -41,11 +41,11 @@ export default function Example() {
       <div className="mb-2 flex items-center gap-4 p-4">
         <img src=".//logo-ct-dark.png" alt="brand" className="h-8 w-8" />
         <Typography variant="h5" color="blue-gray">
-          Astro Ecommerce
+          Astro Material React
         </Typography>
       </div>
       <div className="p-2">
-        <Input icon={<MagnifyingGlassIcon className="h-5 w-5" />} label="Search" />
+        <Input color="black" icon={<MagnifyingGlassIcon className="h-5 w-5" />} label="Search" />
       </div>
       <List>
         <Accordion
@@ -60,7 +60,7 @@ export default function Example() {
           <ListItem className="p-0" selected={open === 1}>
             <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
               <ListItemPrefix>
-                <PresentationChartBarIcon className="h-5 w-5" />
+                <PresentationChartBarIcon className="h-5 w-5 opacity-50" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 Dashboard
@@ -102,7 +102,7 @@ export default function Example() {
           <ListItem className="p-0" selected={open === 2}>
             <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
               <ListItemPrefix>
-                <ShoppingBagIcon className="h-5 w-5" />
+                <ShoppingBagIcon className="h-5 w-5 opacity-50" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 E-Commerce
@@ -129,7 +129,7 @@ export default function Example() {
         <hr className="my-2 border-blue-gray-50" />
         <ListItem>
           <ListItemPrefix>
-            <InboxIcon className="h-5 w-5" />
+            <InboxIcon className="h-5 w-5 opacity-50" />
           </ListItemPrefix>
           Inbox
           <ListItemSuffix>
@@ -138,19 +138,19 @@ export default function Example() {
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <UserCircleIcon className="h-5 w-5" />
+            <UserCircleIcon className="h-5 w-5 opacity-50" />
           </ListItemPrefix>
           Profile
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <Cog6ToothIcon className="h-5 w-5" />
+            <Cog6ToothIcon className="h-5 w-5 opacity-50" />
           </ListItemPrefix>
           Settings
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <PowerIcon className="h-5 w-5" />
+            <PowerIcon className="h-5 w-5 opacity-50" />
           </ListItemPrefix>
           Log Out
         </ListItem>
@@ -158,10 +158,10 @@ export default function Example() {
       <Alert open={openAlert} className="mt-auto bg-dark" onClose={() => setOpenAlert(false)}>
         <CubeTransparentIcon className="mb-4 h-12 w-12" />
         <Typography variant="h6" className="mb-1">
-          Astro Ecommerce
+          Astro Material React
         </Typography>
         <Typography variant="small" className="font-normal opacity-80">
-          Upgrade to Astro Ecommerce PRO and get even more components, plugins, advanced features
+          Upgrade to Astro Material React PRO and get even more components, plugins, advanced features
           and premium.
         </Typography>
         <div className="mt-4 flex gap-3">
