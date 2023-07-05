@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeaderTeams from "../components/teams/header"
+import StatsTeams from "../components/teams/stats"
+import ContentTeams from "../components/teams/content"
+import TeamSectionTeams from "../components/teams/team"
+import FooterTeams from "../components/teams/footer"
+---
+
+<Layout title="Teams">
+	<main>
+    <HeaderTeams client:only="react" />
+    <StatsTeams client:only="react" />
+    <ContentTeams client:only="react" />
+    <TeamSectionTeams client:only="react" />
+    <FooterTeams client:only="react" />
+  </main>
+</Layout>

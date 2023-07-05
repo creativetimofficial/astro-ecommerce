@@ -1,4 +1,5 @@
 {
+  "siteTitle": "Corporate UI",
   "products": [
     {
       "id": "01",
@@ -203,6 +204,27 @@
         "3XL": 0
       },
       "stock": false
+    },
+    {
+      "id": "04",
+      "thumb_src": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_alt": "iWatch_thumb",
+      "color": "Black",
+      "title": "iWatch",
+      "description": "I think that’s a responsibility that I have, to push possibilities, to show people..",
+      "price": 599,
+      "size": "Regular",
+      "sizes": {
+        "XXS": 1,
+        "XS": 3,
+        "S": 0,
+        "M": 1,
+        "L": 0,
+        "XL": 6,
+        "2XL": 2,
+        "3XL": 0
+      },
+      "stock": false
     }
   ],
   "categories": [
@@ -221,6 +243,10 @@
     {
       "thumb_src": "https://images.unsplash.com/photo-1556217256-f4e659e15103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
       "title": "Sale"
+    },
+    {
+      "thumb_src": "https://images.unsplash.com/photo-1678263085701-8486555cd290?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "title": "Design"
     }
   ],
   "reviews": [
@@ -359,5 +385,168 @@
     "02", 
     "03",
     "04"
+  ],
+  "currencies": [
+    "USD",
+    "EUR",
+    "CHF",
+    "HUF"
+  ],
+  "header": [
+    {
+      "bgImage": "./store-bg.jpg",
+      "title": "Spring Collection is here",
+      "description": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
+      "filterColor": "bg-dark opacity-8",
+      "titleColor": "text-white",
+      "descriptionColor": "text-white"
+    },
+    {
+      "bgImage": "./volant-unsplash.jpg",
+      "title": "Exclusive discounts for members",
+      "description": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
+      "filterColor": "bg-light opacity-2",
+      "titleColor": "text-dark",
+      "descriptionColor": "text-dark opacity-8"
+
+    }
+  ],
+  "storeCategories": [
+    {
+      "label": "Sofas and armchairs",
+      "items": [
+        {
+          "label": "Sofas",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Armchairs",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Easy chairs",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Chaise longues",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Day beds",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Small sofas",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Poufs",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Footstools",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Sitting Ball",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Cushions",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Kids sofas",
+          "link": "https://www.creative-tim.com/"
+        }
+      ]
+    },
+    {
+      "label": "Chairs",
+      "items": [
+        {
+          "label": "Chairs",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Stools",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Indoor benches",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Easy chairs",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Chair covers",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Kids chairs",
+          "link": "https://www.creative-tim.com/"
+        }
+      ]
+    },
+    {
+      "label": "Bookcases",
+      "items": [
+        {
+          "label": "Bookcases",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Storage walls",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Sideboards",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "TV cabinets",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Wall shelves",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Computer Cabinets",
+          "link": "https://www.creative-tim.com/"
+        }
+      ]
+    },
+    {
+      "label": "Beds",
+      "items": [
+        {
+          "label": "Beds",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Bedside tables",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Chests of drawers",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Headboards",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Walk-in wardrobes",
+          "link": "https://www.creative-tim.com/"
+        },
+        {
+          "label": "Bedroom sets",
+          "link": "https://www.creative-tim.com/"
+        }
+      ]
+    }
   ]
 }

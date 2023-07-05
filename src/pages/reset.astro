@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResetPassword from "../components/resetPassword"
+import Footer from "../components/footer";
+---
+
+<Layout title="Reset Password">
+	<main>
+    <ResetPassword client:only="react" />
+    <Footer client:only="react" />
+  </main>
+</Layout>

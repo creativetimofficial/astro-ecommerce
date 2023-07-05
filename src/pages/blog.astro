@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeaderBlog from "../components/blog/header"
+import BlogSection from "../components/blog/blog"
+import TestimonialsBlog from "../components/blog/testimonials"
+import LatestBlog from "../components/blog/latest-blog"
+import FooterBlog from "../components/blog/footer"
+---
+
+
+<Layout title="Blog Page">
+	<main>
+    <HeaderBlog client:only="react" />
+    <div class="container mx-auto">
+      <BlogSection client:only="react"/>
+      <TestimonialsBlog client:only="react" />
+      <LatestBlog client:only="react" />
+      <FooterBlog client:only="react" />
+    </div>
+
+  </main>
+</Layout>

@@ -5,3 +5,4 @@ node_modules/
 build-product/
 .DS_Store
 dist/
+package-lock.json

@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Content500 from "../components/500/content"
+
+---
+
+<Layout title="500 Error Page">
+	<main>
+    <Content500 client:only="react" />
+  </main>
+</Layout>

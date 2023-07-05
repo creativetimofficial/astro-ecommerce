@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import data from "../../public/data.json";
+import HeaderBlogPost from "../components/blog-post/header"
+import IntroductionBlogPost from "../components/blog-post/introduction"
+import ConclusionBlogPost from "../components/blog-post/conclusion"
+import FooterBlogPost from "../components/blog-post/footer"
+---
+
+
+<Layout title="Blog Page">
+	<main>
+    <HeaderBlogPost client:only="react" />
+    <IntroductionBlogPost client:only="react" />
+    <ConclusionBlogPost client:only="react" />
+    <FooterBlogPost client:only="react" />
+  </main>
+</Layout>

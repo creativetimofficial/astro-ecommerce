@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro'
+import HeaderBilling from "../components/billing/header"
+import FeaturesBilling from "../components/billing/features"
+import LogosBilling from "../components/billing/logos"
+import PricingBilling from "../components/billing/pricing"
+import TestimonialsBilling from "../components/billing/testimonials"
+import FaqBilling from "../components/billing/faq"
+import FooterBilling from "../components/billing/footer"
+---
+
+<Layout title="Pricing page">
+	<main>
+    <HeaderBilling client:only="react"/>
+    <FeaturesBilling client:only="react" />
+    <LogosBilling client:only="react" />
+    <PricingBilling client:only="react" />
+    <TestimonialsBilling client:only="react" />
+    <FaqBilling client:only="react" />
+    <FooterBilling client:only="react" />
+  </main>
+</Layout>

@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SignIn from "../components/signin"
+
+---
+
+<Layout title="Sign In">
+	<main>
+    <SignIn client:only="react" />
+  </main>
+</Layout>

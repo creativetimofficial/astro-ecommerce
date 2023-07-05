@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Content404 from "../components/404/content"
+
+---
+
+<Layout title="404 Error Page">
+	<main>
+    <Content404 client:only="react" />
+  </main>
+</Layout>
