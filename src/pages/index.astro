@@ -1,46 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import data from "../../public/data.json";
-import HeaderAbout from "../components/about/header"
-import FeaturesAbout from "../components/about/features"
-import TeamAbout from "../components/about/team"
-import Accordion from "../components/about/accordion"
-import Feature from "../components/about/feature"
-import Stats from "../components/about/stats"
-import TestimonialAbout from "../components/about/testimonials"
-import FooterAbout from "../components/about/footer"
-import PricingAbout from "../components/about/pricing"
+import HeaderPresentation from "../components/presentation/header"
+import FeaturePresentation from "../components/presentation/feature"
+import LogosPresentation from "../components/presentation/logos"
+import DevPresentation from "../components/presentation/developer"
+import PalettePresentation from "../components/presentation/palette"
+import CodePresentation from "../components/presentation/code"
+import ExamplePresentation from "../components/presentation/example"
+import FigmaPresentation from "../components/presentation/figma"
+import AstroPresentation from "../components/presentation/astro"
+import PagesPresentation from "../components/presentation/pages"
+import GithubPresentation from "../components/presentation/github"
+import FooterPresentation from "../components/presentation/footer"
+
 ---
 
-
-<Layout title="Index Page">
+<Layout title="Presentation Page">
 	<main>
-    <HeaderAbout client:only="react" />
-    <FeaturesAbout client:only="react" />
-    <TestimonialAbout client:only="react" />
-
-    <section class="py-8 px-8 lg:py-16">
-      <div class="container mx-auto">
-        <Feature client:only="react" />
-        <Stats client:only="react" />
-      </div>
-    </section>
-
-    <TeamAbout client:only="react" />
-    
-    <PricingAbout client:only="react" />
-    <section class="py-8 px-8 lg:py-16">
-      <div class="container flex mx-auto">
-        <div class="w-1/2 pr-10">
-          <h2 class="text-3xl font-bold mb-4">Frequently Asked Question</h2>
-          <p class="text-lg mb-4">A lot of people don't appreciate the moment until it’s passed. I'm not trying my hardest, and I'm not trying to do</p>
-        </div>
-        <div class="w-1/2">
-          <Accordion client:only="react" />
-        </div>
-      </div>
-    </section>
-    </div>
-    <FooterAbout client:only="react" />
+    <HeaderPresentation client:only="react" />
+    <FeaturePresentation client:only="react" />
+    <LogosPresentation client:only="react" />
+    <DevPresentation client:only="react" />
+    <PalettePresentation client:only="react" />
+    <CodePresentation client:only="react" />
+    <ExamplePresentation client:only="react" />
+    <FigmaPresentation client:only="react" />
+    <AstroPresentation client:only="react" />
+    <PagesPresentation client:only="react" />
+    <GithubPresentation client:only="react" />
+    <FooterPresentation client:only="react" />
   </main>
 </Layout>
