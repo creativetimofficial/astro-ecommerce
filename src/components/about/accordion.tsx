@@ -35,7 +35,7 @@ export default function Example() {
         <AccordionHeader onClick={() => handleOpen(1)}>
           What is Astro Material React React?
         </AccordionHeader>
-        <AccordionBody>
+        <AccordionBody className="text-blue-gray-800">
           We&apos;re not always in the position that we want to be at.
           We&apos;re constantly growing. We&apos;re constantly making mistakes.
           We&apos;re constantly trying to express ourselves and actualize our
@@ -46,7 +46,7 @@ export default function Example() {
         <AccordionHeader onClick={() => handleOpen(2)}>
           How to use Astro Material React React?
         </AccordionHeader>
-        <AccordionBody>
+        <AccordionBody className="text-blue-gray-800">
           We&apos;re not always in the position that we want to be at.
           We&apos;re constantly growing. We&apos;re constantly making mistakes.
           We&apos;re constantly trying to express ourselves and actualize our
@@ -57,7 +57,7 @@ export default function Example() {
         <AccordionHeader onClick={() => handleOpen(3)}>
           What can I do with Astro Material React React?
         </AccordionHeader>
-        <AccordionBody>
+        <AccordionBody className="text-blue-gray-800">
           We&apos;re not always in the position that we want to be at.
           We&apos;re constantly growing. We&apos;re constantly making mistakes.
           We&apos;re constantly trying to express ourselves and actualize our
