@@ -136,6 +136,10 @@ const navListMenuItems = [
     href: "/blog-post"
   },
   {
+    title: "Marketing Page",
+    href: "/marketing"
+  },
+  {
     title: "Coming Soon",
     href: "/coming-soon"
   },
@@ -230,10 +234,6 @@ const navListItems = [
   {
     label: "Account",
     icon: UserCircleIcon,
-  },
-  {
-    label: "Blocks",
-    icon: CubeTransparentIcon,
   },
   {
     label: "Docs",
