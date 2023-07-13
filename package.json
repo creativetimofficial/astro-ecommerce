@@ -1,8 +1,8 @@
 {
-  "name": "astro-material-react",
-  "version": "1.0.0",
-  "description": "The ultimate starter template for your e-commerce web project",
-  "main": "assets/js/astro-ecommerce.min.js",
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,53 +10,18 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "keywords": [
-    "Astro",
-    "Ecommerce",
-    "Corporate",
-    "Store Theme",
-    "Online Store",
-    "Ecommerce template",
-    "Astro e-commerce",
-    "Astro ecommerce",
-    "Astro store",
-    "Store theme",
-    "ecommerce theme",
-    "Astro Ecommerce theme",
-    "Astro Ecommerce store",
-    "Astro template",
-    "Astro store template"
-  ],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
-  "license": "MIT",
   "dependencies": {
     "@astrojs/react": "^1.2.1",
-    "@astrojs/tailwind": "^3.1.1",
-    "@heroicons/react": "^2.0.16",
-    "@material-tailwind/react": "^2.0.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "astro": "^2.1.7",
+    "astro": "^2.0.1",
     "forward-ref": "^1.0.0",
-    "framer-motion": "^10.12.16",
     "json-server": "^0.17.0",
-    "next": "^13.4.4",
     "react": "^18.2.0",
-    "react-apexcharts": "^1.4.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/next": "^9.0.0",
-    "sass": "^1.55.0",
-    "tailwindcss": "^3.3.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/astro-ecommerce.git"
-  },
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/astro-ecommerce/issues"
-  },
-  "homepage": "https://www.creative-tim.com/astro"
+    "sass": "^1.55.0"
+  }
 }

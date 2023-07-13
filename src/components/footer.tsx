@@ -7,7 +7,7 @@ export default function Footer() {
           © <script>
             document.write(new Date().getFullYear()) 
           </script>
-          &nbsp;Astro Material React by
+          &nbsp;Astro Ecommerce by
           <a href="https://www.creative-tim.com" className="text-secondary ms-1" target="_blank">Creative Tim</a>.
         </div>
       </footer>
