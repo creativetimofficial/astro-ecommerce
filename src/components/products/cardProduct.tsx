@@ -26,33 +26,33 @@ export default function CardProduct({
 
   return (
     <>
-      <div className="card card-product border border-white mb-5 shadow-xs">
+      <div className="card card-product border mb-5 shadow-xs border-radius-lg">
         <a href="#">
-          <div className="height-300">
-            <img className="w-100 h-100 rounded-top" src={thumb_src} alt={thumb_alt} />
+          <div className="height-350">
+            <img className="w-100 h-100 p-4 rounded-top" src={thumb_src} alt={thumb_alt} />
           </div>
           <div className={classList}>
             {(color) && 
-              <p className="text-sm mb-1 text-body">{color}</p>
+              <h6 className="text-md mb-1 text-body">{color}</h6>
             }
             {(title) && 
-              <h5 className="font-weight-bold">
+              <h4 className="font-weight-bold">
                 {title}
-              </h5>
+              </h4>
             }
 
             {(description) && 
-              <p className="text-body text-sm">{description}</p>
-            }
-           
-            {(price) && 
-              <p className="mb-0 text-sm text-body mt-1 mb-3">
-                ${price.toFixed(2)}
-              </p>
+              <p className="text-body">{description}</p>
             }
            
             {(colors) &&
               <ProductBadge colors={colors} />
+            }
+            
+            {(price) && 
+              <h4 className="mb-0 text-lg mt-1 mb-3">
+                ${price.toFixed(2)}
+              </h4>
             }
 
             {!(description || colors || color) &&
