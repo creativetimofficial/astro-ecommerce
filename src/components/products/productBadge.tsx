@@ -13,7 +13,7 @@ export default function ProductBadge({
 }
 
 function badge(color:string) {
-  const badgeClass = "badge filter bg-" + color;
+  const badgeClass = "badge filter rounded-4 bg-" + color;
   const badge = <span className={badgeClass}></span>
   
   return badge;
