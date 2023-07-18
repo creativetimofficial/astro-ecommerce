@@ -79,8 +79,9 @@ data.orders.forEach((order) => {
 	<main>
     <Navbar />
     <div class="container mt-5">
-
-      <div class="row">
+      <h3>Product Lists</h3>
+      <p>Components and blocks for Product Lists</p>
+      <div class="row mt-5">
         {data.products.map(product => 
           <div class="col-md-6 col-lg-3">
             <CardProduct 
@@ -114,24 +115,33 @@ data.orders.forEach((order) => {
         )}        
       </div>
 
-      <div class="row mb-5">
-        {data.categories.map(category => 
+      <div class="row mb-8">
+        <div class="d-block text-center mb-5">
+          <h3>Shop by category</h3>
+          <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
+        </div>
+        {data.categories.slice(0, 4).map(category => 
           <div class="col-md-6 col-lg-3">
             <CardCategory
               thumb_src = {category.thumb_src}
               title = {category.title}
+              collection = {category.collection}
             />
           </div>
         )}
       </div>
 
       <div class="row mb-5">
+        <div class="d-block text-center mb-5">
+          <h3>Shop by category</h3>
+          <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
+        </div>
         <div class="col-md-6">
           <CardCategory
             classList = "h-100"
             cta = ""
-            thumb_src = {data.categories[0].thumb_src}
-            title = {data.categories[0].title}
+            thumb_src = {data.categories[4].thumb_src}
+            title = {data.categories[4].title}
           />
         </div>
         <div class="col-md-6">
@@ -139,16 +149,16 @@ data.orders.forEach((order) => {
             <CardCategory
               classList = ""
               cta = ""
-              thumb_src = {data.categories[1].thumb_src}
-              title = {data.categories[1].title}
+              thumb_src = {data.categories[5].thumb_src}
+              title = {data.categories[5].title}
             />
           </div>
           <div class="">
             <CardCategory
               classList = ""
               cta = ""
-              thumb_src = {data.categories[2].thumb_src}
-              title = {data.categories[2].title}
+              thumb_src = {data.categories[6].thumb_src}
+              title = {data.categories[6].title}
             />
           </div>
         </div>
