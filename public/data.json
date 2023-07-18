@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "01",
-      "thumb_src": "https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/suit-3.jpg",
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -73,7 +73,7 @@
     },
     {
       "id": "02",
-      "thumb_src": "https://images.unsplash.com/photo-1548960254-5139d80bd5ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/suit-1.jpg",
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -94,9 +94,9 @@
         }
       ],
       "color": "Black",
-      "colors": ["black", "green"],
-      "title": "Apple Watch",
-      "price": 199,
+      "colors": ["black", "green", "white"],
+      "title": "Pink Blouse",
+      "price": 1490,
       "rating": 5,
       "reviews": 117,
       "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
@@ -136,7 +136,7 @@
     },
     {
       "id": "03",
-      "thumb_src": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/suit-2.jpg",
       "thumb_alt": "iMac-image",
       "images": [
         {
@@ -182,7 +182,7 @@
     },
     {
       "id": "04",
-      "thumb_src": "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/suit-5.jpg",
       "thumb_alt": "iPhone_thumb",
       "color": "Blue",
       "title": "iPhone",
@@ -204,24 +204,39 @@
   ],
   "categories": [
     {
-      "thumb_src": "https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/category1.jpg",
       "title": "Silk Dresses",
       "collection": "Pre-fall"
     },
     {
-      "thumb_src": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/category2.jpg",
       "title": "Suits",
       "collection": "Designers"
     },
     {
-      "thumb_src": "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/category3.jpg",
       "title": "Festival",
       "collection": "Summer"
     },
     {
-      "thumb_src": "https://images.unsplash.com/photo-1556217256-f4e659e15103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/category4.jpg",
       "title": "Showroom",
       "collection": "Sale"
+    },
+    {
+      "thumb_src": "/images/product10.jpg",
+      "title": "Living Sofas",
+      "collection": "Interior Design"
+    },
+    {
+      "thumb_src": "/images/category5.jpg",
+      "title": "Chairs by Designers",
+      "collection": "Sale"
+    },
+    {
+      "thumb_src": "/images/product9.jpg",
+      "title": "Home care",
+      "collection": "Products"
     }
   ],
   "reviews": [
