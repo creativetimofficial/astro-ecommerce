@@ -23,8 +23,8 @@ export default function CardProduct({
         <div className={`card card-background align-items-start mb-4 mb-lg-0 ${classList}`}>
           <div className="full-background" style={{backgroundImage: `url(${thumb_src})`, backgroundSize: 'cover'}}></div>
           <div className={`card-body ${classBody}`}>
-            <div className="d-block mt-8">
-              <p className="text-white font-weight-bold mb-2">{collection}</p>
+            <div className="d-block mt-10">
+              <p className="text-white font-weight-bold mb-1">{collection}</p>
               <h4 className="text-white font-weight-bolder">{title}</h4>
               {/* {(cta != null) &&  */}
                 <a href="#" className="text-white text-sm font-weight-semibold mb-0">See products &#62;</a>  
