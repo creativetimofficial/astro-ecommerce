@@ -32,12 +32,11 @@
       "price": 399,
       "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
       "full_description": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
-      "details": "The Stater pack includes 2 black, 2 white, and 2 heather gray Basic Shirts. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming `Charcoal Gray` limited release.",
+      "details": "There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn.",
       "highlights": [
-        "Hand cut and sewn locally",
-        "Dryed with our proprietary colors",
-        "Pre-washed & pre-shrunk with caution",
-        "Ultra-soft 100% cotton"
+        "Oil is a primary source of energy for various sectors, including transportation, industries, and residential use.",
+        "Oil is highly versatile and used in the production of a wide range of products. It serves as a raw material for manufacturing plastics",
+        "Oil is a crucial source of petrochemicals, which are used in the production of plastics."
       ],
       "features": [
         "Multiple strap configuration",
@@ -49,14 +48,11 @@
       "reviews": 117,
       "size": "Small",
       "sizes": {
-        "XXS": 3,
         "XS": 3,
         "S": 0,
         "M": 1,
         "L": 1213,
-        "XL": 6,
-        "2XL": 2,
-        "3XL": 0
+        "XL": 6
       },
       "data": {
         "Features": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you.",
@@ -109,14 +105,11 @@
       ],
       "size": "Medium",
       "sizes": {
-        "XXS": 1,
         "XS": 3,
         "S": 0,
         "M": 1,
         "L": 0,
-        "XL": 6,
-        "2XL": 2,
-        "3XL": 0
+        "XL": 6
       },
       "data": {
         "Features": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you.",
@@ -163,14 +156,11 @@
       "price": 1399,
       "size": "Large",
       "sizes": {
-        "XXS": 1,
         "XS": 3,
         "S": 0,
         "M": 1,
         "L": 0,
-        "XL": 6,
-        "2XL": 2,
-        "3XL": 0
+        "XL": 6
       },
       "data": {
         "Design": "If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. People are so scared to lose that they don't even try. Like, one thing people can't say is that I'm not trying, and I'm not trying my hardest, and I'm not trying to do the best way I know how.",
@@ -187,17 +177,14 @@
       "color": "Blue",
       "title": "iPhone",
       "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
-      "price": 1599.99,
+      "price": 1599,
       "size": "Small",
       "sizes": {
-        "XXS": 1,
         "XS": 3,
         "S": 0,
         "M": 1,
         "L": 0,
-        "XL": 6,
-        "2XL": 2,
-        "3XL": 0
+        "XL": 6
       },
       "stock": false
     }
@@ -311,9 +298,9 @@
         "expiringDate": "01/27"
       },
       "date": "March 23, 2023",
-      "address": "Mike Jenkins, 4717, Don Valley Village Toronto, ON N3Y 4H8",
-      "email": "g*****@mail.com",
-      "phoneNumber": "+1*****21"
+      "address": "362 Ridgewood, Alaska 99669, USA",
+      "email": "michael@email.com",
+      "phoneNumber": "(808) 791-6935"
     },
     {
       "orderNumber": "WB2341",
@@ -330,9 +317,9 @@
         "expiringDate": "01/27"
       },
       "date": "March 28, 2023",
-      "address": "Mike Jenkins, 4717, Don Valley Village Toronto, ON N3Y 4H8",
-      "email": "as*****@mail.com",
-      "phoneNumber": "+4*****23"
+      "address": "362 Ridgewood, Alaska 99669, USA",
+      "email": "john@email.com",
+      "phoneNumber": "(307) 612-7721"
     },
     {
       "orderNumber": "010110",
@@ -361,9 +348,9 @@
         "expiringDate": "11/27"
       },
       "date": "Sep 07, 2023",
-      "address": "Mike Jenkins, 4717, Don Valley Village Toronto, ON N3Y 4H8",
-      "email": "ju*****@mail.com",
-      "phoneNumber": "+4*****52"
+      "address": "362 Ridgewood, Alaska 99669, USA",
+      "email": "doe@email.com",
+      "phoneNumber": "(307) 682-8835"
     }
   ],
   "shoppingCart": [
