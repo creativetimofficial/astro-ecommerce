@@ -49,9 +49,9 @@ export default function OrderCardProduct({
           </div>
           <div className="col-12 col-md-6 col-lg-5">
             <h5 className="text-base">{product.title}</h5>
-            <h6 className="text-sm font-weight-bold">${product.price.toFixed(2)}</h6>
+            <h6 className="text-sm font-weight-bold">${product.price.toLocaleString()}</h6>
             <p className="text-sm mb-0 opacity-8">{product.description}</p>
-            <p className="text-dark text-sm mt-2"><b>Qty:</b> {quantity}</p>
+            <p className="text-dark text-sm mt-2"><b>Quantity:</b> {quantity}</p>
           </div>
           <div className="col-12 col-md-6 col-lg-3 mt-md-4 mt-lg-0">
             <h5 className="text-base">Delivery Address</h5>
@@ -61,16 +61,16 @@ export default function OrderCardProduct({
             <h5 className="text-base">Shipping updates</h5>
             <p className="text-sm mb-2 opacity-8">{email}</p>
             <p className="text-sm opacity-8">{phoneNumber}</p>
-            <a className="text-sm text-primary font-weight-bold" href="#">Edit</a>
+            <a className="btn btn-white btn-sm" href="#">Edit</a>
           </div>
         </div>
         <div className="mt-4">
-          <h6>Preparing to ship on March 24, 2021</h6>
+          <h6 className="text-center">Preparing to ship on March 24, 2021</h6>
           <div className="progress my-4">
-            <div className={`progress-bar bg-primary` + widthClass} role="progressbar"></div>
+            <div className={`progress-bar bg-dark` + widthClass} role="progressbar"></div>
           </div>
           <div className="d-block d-md-flex justify-content-between">
-            <p className="font-weight-semibold text-primary">Order placed</p>
+            <p className="font-weight-semibold text-dark">Order placed</p>
             {status == "Order Placed" && 
             <>
               <p className="font-weight-semibold">Processed</p>
@@ -80,23 +80,23 @@ export default function OrderCardProduct({
             }
             {status == "Processed" && 
             <>
-              <p className="font-weight-semibold text-primary">Processed</p>
+              <p className="font-weight-semibold text-dark">Processed</p>
               <p className="font-weight-semibold">Shipped</p>
               <p className="font-weight-semibold">Delivered</p>
             </>
             }
             {status == "Shipped" && 
             <>
-              <p className="font-weight-semibold text-primary">Processed</p>
-              <p className="font-weight-semibold text-primary">Shipped</p>
+              <p className="font-weight-semibold text-dark">Processed</p>
+              <p className="font-weight-semibold text-dark">Shipped</p>
               <p className="font-weight-semibold">Delivered</p>
             </>
             }
             {status == "Delivered" && 
             <>
-              <p className="font-weight-semibold text-primary">Processed</p>
-              <p className="font-weight-semibold text-primary">Shipped</p>
-              <p className="font-weight-semibold text-primary">Delivered</p>
+              <p className="font-weight-semibold text-dark">Processed</p>
+              <p className="font-weight-semibold text-dark">Shipped</p>
+              <p className="font-weight-semibold text-dark">Delivered</p>
             </>
             }
           </div>
