@@ -295,7 +295,7 @@
       ],
       "payment": {
         "cardNumber": "0042",
-        "expiringDate": "01/27"
+        "expiringDate": "06/26"
       },
       "date": "March 23, 2023",
       "address": "362 Ridgewood, Alaska 99669, USA",
@@ -314,10 +314,10 @@
       ],
       "payment": {
         "cardNumber": "4119",
-        "expiringDate": "01/27"
+        "expiringDate": "06/26"
       },
       "date": "March 28, 2023",
-      "address": "362 Ridgewood, Alaska 99669, USA",
+      "address": "362 Ridgewood Dr, Soldotna, Alaska 99669, USA",
       "email": "john@email.com",
       "phoneNumber": "(307) 612-7721"
     },
