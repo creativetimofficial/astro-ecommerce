@@ -51,7 +51,7 @@ export default function CardProduct({
             
             {(price) && 
               <h4 className="mb-0 text-lg mt-1 mb-3">
-                ${price.toFixed(2)}
+                ${price.toLocaleString()}
               </h4>
             }
 
