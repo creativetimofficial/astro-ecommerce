@@ -221,6 +221,7 @@ data.orders.forEach((order) => {
           rating={data.products[0].rating}
           reviews={data.products[0].reviews}
           sizes={data.products[0].sizes}
+          images={data.products[0].images}
         />
         <ProductQuickview2 
           colors={data.products[1].colors}
@@ -229,7 +230,6 @@ data.orders.forEach((order) => {
           price={data.products[1].price}
           rating={data.products[1].rating}
           reviews={data.products[1].reviews}
-          stock={data.products[1].stock}
         />
       </div>
 
@@ -289,7 +289,7 @@ data.orders.forEach((order) => {
       <div class="my-10">
         <PromoSectionLarge 
           title={data.products[0].title}
-          full_description={data.products[0].full_description}  
+          full_description="The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?"  
           pageHeaderBgImg={"https://images.unsplash.com/photo-1525904097878-94fb15835963?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"} 
           pageHeaderMinVh="50vh"
           pageHeaderRadius="1rem"
