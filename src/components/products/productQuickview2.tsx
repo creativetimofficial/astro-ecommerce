@@ -36,40 +36,37 @@ export default function ProductQuickview({
               <button type="button" className="btn-close text-dark position-absolute end-0 me-4" data-bs-dismiss="modal" aria-label="Close"></button>
               <div className="w-70 w-md-60 w-lg-30 text-center">
                 {(thumb_src) && 
-                <img className="w-100 rounded-3 shadow-xs border mb-4" src={thumb_src} />
+                <img className="w-100 rounded-3 mb-4" src={thumb_src} />
                 }
-                <a className="text-primary" href="#">View full details</a>
+                <a className="text-body" href="#">View details</a>
               </div>
-              <div className="w-100 w-lg-70 ps-4 mt-5 mt-lg-0">
-                <div className="d-flex justify-content-between">
+              <div className="w-100 w-lg-70 ps-4 mt-5 mt-lg-0 text-center">
+                <div className="d-flex justify-content-center">
                   {(title.length != 0) && 
-                    <h4 className="mb-3">{title}</h4>
+                    <h4 className="mt-5 mb-3 text-center">{title}</h4>
                   }
                 </div>
                 {(price) && 
                   <>
-                    <div className="d-flex mb-3">
-                      <h5 className="mb-0 pe-3">${price.toFixed(2)}</h5>
-                      <div className="d-flex align-items-center border-start ps-3">
+                    <h5 className="text-center">${price.toLocaleString()}</h5>
+                    <input className="opacity-0 d-none" defaultValue={price} />
+                    <div className="d-flex justify-content-center mb-3">
+                      <div className="d-flex align-items-center justify-content-center">
                       {(rating != 0) && 
                         <ProductRating rating={rating} reviews={reviews} />
                       }
                       </div>
-                      <input className="opacity-0" defaultValue={price} />
                     </div>
                   </>
                 }
                 
-                {(stock) ? 
-                  <div className="d-flex align-items-center">
-                    <i className="fas fa-check text-lg text-success"></i>
-                    <p className="mb-0 ms-2 text-sm">In Stock</p>
-                  </div>
-                  :
-                  <div className="d-flex align-items-center">
-                    <i className="fas fa-minus-circle text-lg"></i>
-                    <p className="mb-0 ms-2 text-sm">Out of Stock</p>
-                  </div>
+                {(colors.length != 0) && 
+                  <>
+                    <h6 className="mt-4">Color</h6>
+                    {(colors) &&
+                      <ProductBadge colors={colors} />
+                    }
+                  </>
                 }
                 
                 <h6 className="mt-4">Size:</h6>
@@ -78,8 +75,8 @@ export default function ProductQuickview({
                     <div className="form-check">
                       <input className="form-check-input rounded-2" type="radio" name="flexRadioDefault" id="18l" />
                       <label className="cursor-pointer label-lg" htmlFor="18l">
-                        <h6>18L</h6>
-                        <p className="mb-0">Perfect for a reasonable amount of snacks.</p>
+                        <h6>2 Places</h6>
+                        <p className="mb-0">That’s what I do</p>
                       </label>
                     </div>
                   </div>
@@ -87,20 +84,20 @@ export default function ProductQuickview({
                     <div className="form-check">
                       <input className="form-check-input rounded-2" type="radio" name="flexRadioDefault" id="20l" />
                       <label className="cursor-pointer label-lg" htmlFor="20l">
-                        <h6>20L</h6>
-                        <p className="mb-0">Enough room for a serious amount of snacks.</p>
+                        <h6>4 Places</h6>
+                        <p className="mb-0">That’s what I’m here for</p>
                       </label>
                     </div>
                   </div>
                 </div>
 
-                <p>What size should I buy? <span data-bs-toggle="tooltip" data-bs-placement="top" title="More information related to sizes" data-container="body" data-animation="true"><i className="fas fa-question-circle ms-1"></i></span></p>
+                <p>What should I buy? <span data-bs-toggle="tooltip" data-bs-placement="top" title="More information related to sizes" data-container="body" data-animation="true"><i className="fas fa-question-circle ms-1"></i></span></p>
               
                 <div className="d-block text-center">
-                  <button className="btn btn-primary btn-lg w-100">Add to Bag</button>
+                  <button className="btn btn-dark w-100">Add to Cart</button>
                   <p className="mb-0 d-inline text-xl">
                     <i className="fas fa-shield-alt me-2"></i>
-                    Lifetime Guarantee
+                    Premium Quality
                   </p>
                 </div>
               </div>
