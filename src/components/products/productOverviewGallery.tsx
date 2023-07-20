@@ -43,7 +43,7 @@ export default function productOverviewGallery({
           {(price.length != 0) && 
             <>
               <div className="d-flex mb-3">
-                <h4 className="font-weight-normal">${price.toFixed(2)}</h4>
+                <h4 className="font-weight-normal">${price.toLocaleString()}</h4>
                 <input className="opacity-0" defaultValue={price} />
               </div>
             </>
