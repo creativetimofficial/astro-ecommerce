@@ -31,11 +31,11 @@ export default function CheckoutSummary({
 
   return (
     <>
-      <section>
+      <section className="bg-gray-100">
         <div className="row">
           <div className="col-12 col-lg-6 p-lg-5">
-            <small className="text-white opacity-6">Amount due</small>
-            <h3 className="text-white">${subtotalCheckout.toFixed(2)}</h3>
+            <small className="opacity-6">Amount</small>
+            <h3 className="mb-5">${subtotalCheckout.toLocaleString()}</h3>
             {products.map((product, i) => 
                 <CheckoutSingleItemDark
                   thumb_src={product.thumb_src}
@@ -49,9 +49,9 @@ export default function CheckoutSummary({
             <OrderSummary subtotal={subtotalCheckout}/>
           </div>
           <div className="col-12 col-lg-6 p-3 p-md-5">
-            <button className="btn btn-dark btn-lg w-100">
+            <button className="btn btn-white w-100">
               <i className="fab fa-apple me-2"></i>
-              Pay
+              Apple Pay
             </button>
             <div className="mt-2 mb-4 position-relative text-center">
               <p className="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">or</p>
@@ -59,17 +59,17 @@ export default function CheckoutSummary({
             <h5 className="mb-4">Contact information</h5>
             <div className="form-group">
               <label>Email address</label>
-              <input type="email" className="form-control" placeholder="name@example.com" />
+              <input type="email" className="form-control" placeholder="Enter your email address" />
             </div>
             <div className="form-group">
               <label>Phone number</label>
-              <input type="text" className="form-control" placeholder="Your Phone number" />
+              <input type="text" className="form-control" placeholder="Enter your phone number" />
             </div>
             <div className="form-check">
               <input className="form-check-input" type="checkbox" value="" checked />
-              <label className="custom-control-label">I have read the terms and conditions and agree to the sale of my personal information to the highest bidder.</label>
+              <label className="custom-control-label">I agree the <a href="#">Terms and Conditions.</a></label>
             </div>
-            <button className="btn btn-lg btn-light w-100 mt-4" disabled>Continue</button>
+            <button className="btn btn-dark w-100 mt-4">Continue</button>
 
             <div className="accordion">
               <div className="accordion" id="accordionRental">
