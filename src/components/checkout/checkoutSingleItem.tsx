@@ -20,7 +20,7 @@ export default function CheckoutSingleItem({
   return (
     <>
       <div className="d-flex mb-4">
-        <img className="w-20 rounded-3 shadow-xs" src={thumb_src} alt={thumb_alt} />
+        <img className="w-20 rounded-3" src={thumb_src} alt={thumb_alt} />
         <div className="w-60 w-md-70 pt-2 ps-3 ps-md-4">
           <h6 className="text-lg text-white mb-1">{title}</h6>
           <p className="mb-0 text-white opacity-8">{color}</p>
@@ -28,7 +28,7 @@ export default function CheckoutSingleItem({
         </div>
 
         <div className="w-10 text-end">
-          <p className="text-white mb-0 ">${price.toFixed(2)}</p>
+          <p className="text-white mb-0 ">${price.toLocaleString()}</p>
         </div>
       </div>
     </>
