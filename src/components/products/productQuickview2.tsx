@@ -26,7 +26,7 @@ export default function ProductQuickview({
   return (
     <>
     <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-      Product Quickview2
+      Product Quickview 2
     </button>
     <div className="modal fade" id="exampleModal2" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -34,16 +34,16 @@ export default function ProductQuickview({
           <div className="card card-product">
             <div className="card-body d-block d-lg-flex p-4">
               <button type="button" className="btn-close text-dark position-absolute end-0 me-4" data-bs-dismiss="modal" aria-label="Close"></button>
-              <div className="w-70 w-md-60 w-lg-50 text-center">
+              <div className="w-100 w-lg-50 text-center">
                 {(thumb_src) && 
-                <img className="w-100 rounded-3 mb-4" src={thumb_src} />
+                <img className="w-100 rounded-3 mb-4 mt-5 mt-lg-0" src={thumb_src} />
                 }
                 <a className="text-body" href="#">View details</a>
               </div>
-              <div className="w-100 w-lg-50 ps-4 mt-5 mt-lg-0 text-center">
+              <div className="w-100 w-lg-50 ps-4 text-center">
                 <div className="d-flex justify-content-center">
                   {(title.length != 0) && 
-                    <h3 className="mt-5 mb-3 text-center">{title}</h3>
+                    <h3 className="mt-md-5 mb-3 text-center">{title}</h3>
                   }
                 </div>
                 {(price) && 
