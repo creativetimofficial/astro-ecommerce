@@ -30,7 +30,7 @@ export default function CheckoutSummary({
 
   return (
     <>
-      <section className="bg-gray-100">
+      <section className="bg-gray-100 px-2">
         <div className="row">
           <div className="col-12 col-lg-6 p-3 p-md-5">
             <button className="btn btn-white w-100">
