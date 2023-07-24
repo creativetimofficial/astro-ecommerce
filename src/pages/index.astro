@@ -101,6 +101,8 @@ data.orders.forEach((order) => {
         )}        
       </div>
 
+      <h3>Product Lists</h3>
+      <p>Cards with full details</p>
       <div class="row">
         {data.products.map(product => 
           <div class="col-md-6 col-lg-3">
@@ -169,6 +171,9 @@ data.orders.forEach((order) => {
 
 
       <div class="my-10">
+        <h3>Product Overview</h3>
+        <p class="mb-5">With image grid</p>
+
         <ProductOverviewGrid  
           colors={data.products[0].colors}
           images={data.products[0].images}
@@ -184,6 +189,9 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-5">
+        <h3>Product Overview</h3>
+        <p class="mb-5">Product Overviews with image gallery and expandable details</p>
+
         <ProductOverviewGallery 
           colors={data.products[1].colors} 
           images={data.products[1].images}
@@ -210,12 +218,17 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
+        <h3>Category filters</h3>
+        <p class="mb-5">With inline actions and expandable sidebar filters</p>
         <CategoryFilters 
-          title={data.products[0].title}
+          title="Our products"
         />
       </div>
 
       <div class="my-10">
+        <h3>Product Quickviewers</h3>
+        <p class="mb-5">With color selector, size selector, and details link</p>
+
         <ProductQuickview 
           colors={data.products[0].colors}
           thumb_src={data.products[0].thumb_src}
@@ -226,6 +239,9 @@ data.orders.forEach((order) => {
           sizes={data.products[0].sizes}
           images={data.products[0].images}
         />
+
+        <h3 class="mt-7">Product Quickviewers</h3>
+        <p class="mb-5">With large size selector</p>
         <ProductQuickview2 
           colors={data.products[1].colors}
           thumb_src="/images/mirror.png"
@@ -306,6 +322,8 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Promo Sections</h3>
+        <p class="text-body">Full-width with background image and large content</p>
         <TestimonialsFade 
           pageHeaderBgImg={"https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2729&q=80"} 
           pageHeaderMinVh="50vh"
@@ -313,6 +331,8 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Promo Sections</h3>
+        <p class="text-body">With fading background image and testimonials</p>
         <PromoSectionLarge 
           title={data.products[0].title}
           full_description="The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?"  
@@ -335,26 +355,38 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Product reviews</h3>
+        <p class="text-body">Simple with avatars</p>
         <ReviewSimple reviews = {data.reviews}/>
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Product reviews</h3>
+        <p class="text-body">With summary chart</p>
         <ReviewSummaryChart reviews = {productReviews}/>
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Checkout forms</h3>
+        <p class="text-body">With order summary sidebar</p>
         <OrderSummaries order={data.orders[0]} products={orderProducts} />
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Product reviews</h3>
+        <p class="text-body">Split with order summary</p>
         <OrderHistory orders = {data.orders} products={orderHistoryProducts} />
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Features</h3>
+        <p class="text-body">3-column with illustrations and header</p>
         <IncentiveLarge />
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Features</h3>
+        <p class="text-body">3-column with illustrations and header</p>
         <IncentiveCols />
       </div>
       
