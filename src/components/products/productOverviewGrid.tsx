@@ -38,9 +38,9 @@ export default function ProductOverview({
         {(images.length != 0) && 
           <ProductGallery images={images}/>
         }
-        <div className="col-12 col-md-6 ps-5">
+        <div className="col-12 col-lg-6 ps-lg-5">
           {(title.length != 0) && 
-            <h2>{title}</h2>
+            <h2 className="mt-4">{title}</h2>
           }
           {(full_description.length != 0) && 
             <p className="mb-5">{full_description}</p>
