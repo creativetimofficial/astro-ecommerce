@@ -48,7 +48,7 @@ export default function ShoppingCart({
               </>
             )}
           </div>
-          <div className="col-12 col-md-7 mx-auto mt-4">
+          <div className="col-12 col-lg-7 col-md-8 mx-auto mt-4">
             <div className="card shadow-xs border bg-gray-100">
               <div className="card-body p-lg-5">
                 <OrderSummary 
@@ -56,9 +56,9 @@ export default function ShoppingCart({
                 />
               </div>
             </div>
-            <div className="d-flex">
+            <div className="d-block d-md-flex">
               <button className="btn btn-white btn-lg w-100 mt-4 me-4">Countinue Shopping</button>
-              <button className="btn btn-dark btn-lg w-100 mt-4">Checkout</button>
+              <button className="btn btn-dark btn-lg w-100 mt-md-4">Checkout</button>
             </div>
           </div>
         </div>
