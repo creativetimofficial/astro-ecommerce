@@ -21,7 +21,7 @@ export default function OrderSummary({
         </div>
         <div className="col-4">
           <div className="form-group">
-            <label>State / Province</label>
+            <label>State</label>
             <input type="text" className="form-control" placeholder="Enter your country" />
           </div>
         </div>
