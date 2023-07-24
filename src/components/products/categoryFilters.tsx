@@ -158,7 +158,7 @@ export default function ProductOverview({
             <div className="d-flex h-100">
               <div className="row">
                 {data.products.slice(0, 3).map(product => 
-                  <div class="col-md-4">
+                  <div class="col-md-6 col-lg-4">
                     <CardProduct 
                       thumb_src = {product.thumb_src}
                       thumb_alt = {product.thumb_alt}
