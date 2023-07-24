@@ -24,16 +24,18 @@ export default function CheckoutSingleItem({
           <div className="col-4 col-md-2">
             <img className="w-100 max-height-100 rounded-3" src={thumb_src} alt={thumb_alt} />
           </div>
-          <div className="col-6 col-md-6">
+          <div className="col-5 col-md-6">
             <h5 className="text-base mb-1">{title}</h5>
             <h6 className="text-sm font-weight-bold mb-0">${price.toLocaleString()}</h6>
             <p className="text-sm mb-0 opacity-8">{color}</p>
             <p className="text-sm mb-0 opacity-8">{size}</p>
           </div>
           <div className="col-2">
-            <div className="d-flex align-items-center">
-              <button className="btn btn-dark btn-sm">Edit</button>
-              <button className="btn btn-link text-dark">Remove</button>
+            <div className="d-block d-md-flex align-items-center">
+              <button className="btn btn-link text-dark d-block d-md-none"><i className="fas fa-pen"></i></button>
+              <button className="btn btn-dark btn-sm d-none d-md-block">Edit</button>
+              <button className="btn btn-link text-dark d-block d-md-none"><i className="fas fa-trash"></i></button>
+              <button className="btn btn-link text-dark d-none d-md-block">Remove</button>
             </div>
           </div>
         </div>
