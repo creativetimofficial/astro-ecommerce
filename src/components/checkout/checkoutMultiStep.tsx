@@ -1,6 +1,5 @@
 import PaymentDetails from './paymentDetails';
 import ShippingInfo from './shippingInfo';
-import BillingInfo from './billingInfo';
 import OrderSummary from '../cart/orderSummary';
 import CheckoutSingleItemDark from '../checkout/checkoutSingleItemDark';
 import ReviewRating from '../reviews/reviewRating';
@@ -33,21 +32,6 @@ export default function CheckoutSummary({
     <>
       <section className="bg-gray-100">
         <div className="row">
-          <div className="col-12 col-lg-6 p-lg-5">
-            <small className="opacity-6">Amount</small>
-            <h3 className="mb-5">${subtotalCheckout.toLocaleString()}</h3>
-            {products.map((product, i) => 
-                <CheckoutSingleItemDark
-                  thumb_src={product.thumb_src}
-                  thumb_alt={product.thumb_alt}
-                  title={product.title}
-                  color={product.color}
-                  size={product.size}
-                  price={product.price}
-                />
-            )}
-            <OrderSummary subtotal={subtotalCheckout}/>
-          </div>
           <div className="col-12 col-lg-6 p-3 p-md-5">
             <button className="btn btn-white w-100">
               <i className="fab fa-apple me-2"></i>
@@ -65,72 +49,28 @@ export default function CheckoutSummary({
               <label>Phone number</label>
               <input type="text" className="form-control" placeholder="Enter your phone number" />
             </div>
-            <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="" checked />
-              <label className="custom-control-label">I agree the <a href="#">Terms and Conditions.</a></label>
-            </div>
-            <button className="btn btn-dark w-100 mt-4">Continue</button>
+            
+            <PaymentDetails />
 
-            <div className="accordion">
-              <div className="accordion" id="accordionRental">
-                <div className="accordion-item mb-3">
-                  <h5 className="accordion-header" id="headingOne">
-                    <button className="accordion-button border-bottom font-weight-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      Payment details
-                      <i className="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                      <i className="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                    </button>
-                  </h5>
-                  <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
-                    <div className="accordion-body text-sm opacity-8">
-                      <PaymentDetails />
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item mb-3">
-                  <h5 className="accordion-header" id="headingTwo">
-                    <button className="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Shipping Info
-                      <i className="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                      <i className="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                    </button>
-                  </h5>
-                  <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
-                    <div className="accordion-body text-sm opacity-8">
-                      <ShippingInfo />
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item mb-3">
-                  <h5 className="accordion-header" id="headingThree">
-                    <button className="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Billing address
-                      <i className="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                      <i className="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                    </button>
-                  </h5>
-                  <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionRental">
-                    <div className="accordion-body text-sm opacity-8">
-                      <BillingInfo />
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item mb-3">
-                  <h5 className="accordion-header" id="headingFour">
-                    <button className="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Review
-                      <i className="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                      <i className="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                    </button>
-                  </h5>
-                  <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRental">
-                    <div className="accordion-body text-sm opacity-8">
-                      <ReviewRating />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>            
+            <ShippingInfo />
+            
+
+            <button className="btn btn-dark w-100 mt-4">Continue</button>        
+          </div>
+          <div className="col-12 col-lg-6 p-lg-5">
+            <small className="opacity-6">Amount</small>
+            <h3 className="mb-5">${subtotalCheckout.toLocaleString()}</h3>
+            {products.map((product, i) => 
+                <CheckoutSingleItemDark
+                  thumb_src={product.thumb_src}
+                  thumb_alt={product.thumb_alt}
+                  title={product.title}
+                  color={product.color}
+                  size={product.size}
+                  price={product.price}
+                />
+            )}
+            <OrderSummary subtotal={subtotalCheckout}/>
           </div>
         </div>
       </section>
