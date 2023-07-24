@@ -3,7 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import data from '../../public/data.json';
 import '../../assets/scss/astro-ecommerce.scss';
 import Navbar from '../components/navbar';
+import ComplexNavbar from '../components/complexNavbar';
+import ComplexNavbarDark from '../components/complexNavbarDark';
 import Footer from '../components/footer';
+import ComplexFooter from '../components/complexFooter';
 import StoreNavbar from '../components/store/storeNavbar';
 import CardProduct from '../components/products/cardProduct';
 import CardCategory from '../components/products/cardCategory';
@@ -225,8 +228,8 @@ data.orders.forEach((order) => {
         />
         <ProductQuickview2 
           colors={data.products[1].colors}
-          thumb_src={data.products[1].thumb_src}
-          title={data.products[1].title}
+          thumb_src="/images/mirror.png"
+          title="Sofa"
           price={data.products[1].price}
           rating={data.products[1].rating}
           reviews={data.products[1].reviews}
@@ -252,7 +255,32 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
-        <StoreNavigation title={data.products[0].title}/>
+        <h3>Simple Navbar</h3>
+        <Navbar />
+
+
+        <h3 class="mt-5">Complex Navbar White</h3>
+        <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
+        <br/><br/>
+        <ComplexNavbar />
+        <div class="row mt-4">
+          {data.products.map(product => 
+            <div class="col-12 col-md-6 col-lg-3">
+              <CardProduct
+                thumb_src = {product.thumb_src}
+                thumb_alt = {product.thumb_alt}
+                title = {product.title}
+                price={product.price}
+              />
+            </div>
+          )}        
+        </div>
+      
+
+        <h3 class="mt-5">Complex Navbar Dark</h3>
+        <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
+        <br/><br/>
+        <ComplexNavbarDark />
         <div class="row mt-4">
           {data.products.map(product => 
             <div class="col-12 col-md-6 col-lg-3">
@@ -266,17 +294,15 @@ data.orders.forEach((order) => {
           )}        
         </div>
       </div>
-      <div class="my-10">
-        <nav class="navbar navbar-expand-md shadow-none flex-wrap top-0 px-0 py-0">
-          <StoreNavbar />
-          <hr class="horizontal w-100 my-0 dark" />
-        </nav>
-        <StoreDoubleColumn title={data.products[1].title}/>
-     
-      </div>
 
       <div class="my-10">
+        <h3>Simple Footer</h3>
+
         <Footer />
+
+        <h3 class="mt-8">Complex Footer</h3>
+
+        <ComplexFooter />
       </div>
 
       <div class="my-10">
@@ -332,7 +358,7 @@ data.orders.forEach((order) => {
         <IncentiveCols />
       </div>
       
+      <Footer />
     </div>
 	</main>
-  <Footer />
 </Layout>
