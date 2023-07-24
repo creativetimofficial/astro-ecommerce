@@ -44,7 +44,7 @@ export default function ProductQuickview({
               {(thumb_src) && 
                 <ProductGallery images={images}/>
               }
-              <div className="w-100 w-lg-70 ps-4 mt-md-5">
+              <div className="w-100 w-lg-70 ps-5 mt-md-5">
                 <div className="d-flex align-items-center justify-content-between">
                   {(title.length != 0) && 
                     <h3>{title}</h3>
