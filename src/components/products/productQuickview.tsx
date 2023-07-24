@@ -42,18 +42,18 @@ export default function ProductQuickview({
             <div className="card-body d-block d-lg-flex p-4">
               <button type="button" className="btn-close text-dark position-absolute me-4 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
               {(thumb_src) && 
-                <ProductGallery images={images}/>
+                <ProductGallery images={images} />
               }
-              <div className="w-100 w-lg-70 ps-5 mt-md-5">
-                <div className="d-flex align-items-center justify-content-between">
+              <div className="w-100 w-lg-70 ps-lg-5 mt-4 mt-md-5">
+                <div className="d-flex align-items-center">
                   {(title.length != 0) && 
-                    <h3>{title}</h3>
+                    <h3 className="me-4">{title}</h3>
                   }
                 {(price) && 
                   <>
                     <div className="d-flex">
                       <h4 className="mb-0">${price.toLocaleString()}</h4>
-                      <input className="opacity-0" defaultValue={price} />
+                      <input className="opacity-0 d-none" defaultValue={price} />
                     </div>
                   </>
                 }
