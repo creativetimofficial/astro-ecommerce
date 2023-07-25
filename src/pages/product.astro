@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import data from '../../public/data.json';
 import '../../assets/scss/astro-ecommerce.scss';
 import Navbar from '../components/navbar';
-import UpperNavbar from '../components/store/upperNavbar';
 import CardProduct from '../components/products/cardProduct';
 import ProductOverviewGrid from '../components/products/productOverviewGrid';
 import StoreDoubleColumn from '../components/store/storeDoubleColumn';
@@ -17,7 +16,6 @@ let productReviews = data.reviews.filter(x => x.productID == "01");
 
 <Layout title="Product Page">
 	<main>
-    <UpperNavbar />
     <Navbar />
     <div class="container mt-5">
       <ProductOverviewGrid  
