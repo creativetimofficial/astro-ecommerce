@@ -1,8 +1,3 @@
-import ProductBadge from './productBadge';
-import ProductRating from './productRating'
-import ProductGallery from './productGallery'
-import ProductSizes from './productSizes'
-
 interface Props {
   title: string;
   full_description: string;
