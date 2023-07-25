@@ -310,6 +310,9 @@
 }
 
 @include media-breakpoint-up(lg) {
+  .dropdown-xxl {
+    min-width: $dropdown-xxl-min-width;
+  }
   .dropdown-xl {
     min-width: $dropdown-xl-min-width;
   }
