@@ -36,7 +36,7 @@ export default function ProductQuickview({
               <button type="button" className="btn-close text-dark position-absolute end-0 me-4" data-bs-dismiss="modal" aria-label="Close"></button>
               <div className="w-100 w-lg-50 text-center">
                 {(thumb_src) && 
-                <img className="w-100 rounded-3 mb-4 mt-5 mt-lg-0" src={thumb_src} />
+                <img className="w-100 rounded-3 mb-4 mt-5 mt-lg-0" src={`${import.meta.env.BASE_URL}${thumb_src}`} />
                 }
                 <a className="text-body" href="#">View details</a>
               </div>
