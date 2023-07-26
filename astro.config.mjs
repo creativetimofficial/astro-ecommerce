@@ -7,6 +7,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [react()],
   site: 'https://creativetimofficial.github.io',
-  base: '/astro-ecommerce',
-  trailingSlash: 'always'
+  base: '/astro-ecommerce'
 });
