@@ -8,4 +8,5 @@ export default defineConfig({
   integrations: [react()],
   site: 'https://creativetimofficial.github.io',
   base: '/astro-ecommerce',
+  trailingSlash: 'always'
 });

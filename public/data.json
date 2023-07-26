@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "01",
-      "thumb_src": "../images/suit-3.jpg",
+      "thumb_src": "/images/suit-3.jpg",
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -69,7 +69,7 @@
     },
     {
       "id": "02",
-      "thumb_src": "../images/suit-1.jpg",
+      "thumb_src": "/images/suit-1.jpg",
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -129,7 +129,7 @@
     },
     {
       "id": "03",
-      "thumb_src": "../images/suit-2.jpg",
+      "thumb_src": "/images/suit-2.jpg",
       "thumb_alt": "iMac-image",
       "images": [
         {
@@ -172,7 +172,7 @@
     },
     {
       "id": "04",
-      "thumb_src": "../images/suit-5.jpg",
+      "thumb_src": "/images/suit-5.jpg",
       "thumb_alt": "iPhone_thumb",
       "color": "Blue",
       "title": "iPhone",
@@ -191,37 +191,37 @@
   ],
   "categories": [
     {
-      "thumb_src": "../images/category1.jpg",
+      "thumb_src": "/images/category1.jpg",
       "title": "Silk Dresses",
       "collection": "Pre-fall"
     },
     {
-      "thumb_src": "../images/category2.jpg",
+      "thumb_src": "/images/category2.jpg",
       "title": "Suits",
       "collection": "Designers"
     },
     {
-      "thumb_src": "../images/category3.jpg",
+      "thumb_src": "/images/category3.jpg",
       "title": "Festival",
       "collection": "Summer"
     },
     {
-      "thumb_src": "../images/category4.jpg",
+      "thumb_src": "/images/category4.jpg",
       "title": "Showroom",
       "collection": "Sale"
     },
     {
-      "thumb_src": "../images/product10.jpg",
+      "thumb_src": "/images/product10.jpg",
       "title": "Living Sofas",
       "collection": "Interior Design"
     },
     {
-      "thumb_src": "../images/category5.jpg",
+      "thumb_src": "/images/category5.jpg",
       "title": "Chairs by Designers",
       "collection": "Sale"
     },
     {
-      "thumb_src": "../images/product9.jpg",
+      "thumb_src": "/images/product9.jpg",
       "title": "Home care",
       "collection": "Products"
     }
