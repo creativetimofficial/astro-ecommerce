@@ -22,7 +22,7 @@ export default function OrderSummary({
     <>
       <tr>
         <td scope="row" className="d-flex align-items-center text-sm text-body py-3">
-          <img className="w-20 w-lg-10 rounded-3" src={product.thumb_src} alt={product.thumb_alt} />
+          <img className="w-20 w-lg-10 rounded-3" src={`${import.meta.env.BASE_URL}${product.thumb_src}`} alt={product.thumb_alt} />
           <p className="text-sm text-dark font-weight-bold mb-0 ms-3">{product.title}</p>
         </td>
         <td className="text-sm text-body align-middle pt-3 w-20">${product.price.toLocaleString()}</td>
