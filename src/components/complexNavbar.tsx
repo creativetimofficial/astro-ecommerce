@@ -57,7 +57,7 @@ const ComplexNavbar = () => {
                   <a className="dropdown-item border-radius-md" href="#">
                     <div className="py-1 d-flex">
                       <div className="my-auto">
-                        <img src="/images/team-2.jpg" className="avatar avatar-sm  me-3 " alt="user image" />
+                        <img src="./images/team-2.jpg" className="avatar avatar-sm  me-3 " alt="user image" />
                       </div>
                       <div className="d-flex flex-column justify-content-center">
                         <h6 className="mb-1 text-sm font-weight-normal">
@@ -127,7 +127,7 @@ const ComplexNavbar = () => {
             <li className="nav-item dropdown pe-2 d-flex align-items-center">
               <a href="#" className="px-0 nav-link font-weight-bold">
                 <div className="avatar avatar-sm position-relative">
-                  <img src="/images/team-1.jpg" alt="profile_image" className="w-100 border-radius-md" />
+                  <img src="./images/team-1.jpg" alt="profile_image" className="w-100 border-radius-md" />
                 </div>
               </a>
             </li>
