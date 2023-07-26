@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.1.0] 2023-07-25
+## [1.1.0] 2023-07-26
 ### Updates and Improvements
 - refactor the components design and structure
 - update the Sections
