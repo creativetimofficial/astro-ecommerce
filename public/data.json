@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "01",
-      "thumb_src": "https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/suit-3.jpg",
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -31,13 +31,12 @@
       "title": "Basic Starter Pack",
       "price": 399,
       "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
-      "full_description": "The Basic Starter Pack allows you to fully express your vibrant personality with four grayscale options. Feeling adventurous? Put on a heather gray shirt. Want to be a trendsetter? Try our exclusive colorway: `Orange`. Need to add an extra pop of color to your outfit? Our white shirt has you covered.",
-      "details": "The Stater pack includes 2 black, 2 white, and 2 heather gray Basic Shirts. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming `Charcoal Gray` limited release.",
+      "full_description": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
+      "details": "There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn.",
       "highlights": [
-        "Hand cut and sewn locally",
-        "Dryed with our proprietary colors",
-        "Pre-washed & pre-shrunk with caution",
-        "Ultra-soft 100% cotton"
+        "Oil is a primary source of energy for various sectors, including transportation, industries, and residential use.",
+        "Oil is highly versatile and used in the production of a wide range of products. It serves as a raw material for manufacturing plastics",
+        "Oil is a crucial source of petrochemicals, which are used in the production of plastics."
       ],
       "features": [
         "Multiple strap configuration",
@@ -49,14 +48,11 @@
       "reviews": 117,
       "size": "Small",
       "sizes": {
-        "XXS": 3,
         "XS": 3,
         "S": 0,
         "M": 1,
         "L": 1213,
-        "XL": 6,
-        "2XL": 2,
-        "3XL": 0
+        "XL": 6
       },
       "data": {
         "Features": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you.",
@@ -65,18 +61,15 @@
         "Returns": "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything."
       },
       "featuresDetails": {
-        "Origin": "Designed by Good Goods, Inc.",
-        "Material": "Solid walnut base with rare earth magnets and powder coated steel card cover",
-        "Dimensions": "6.25 x 3.55' x 1.15'",
-        "Finish": "Hand sanded and finished with natural oil",
-        "Includes": "Wood card tray and 3 refill packs",
-        "Considerations": "Made from natural materials. Grain and color vary with each item."
+        "Origin": "Oil is a primary source of energy for various sectors, including transportation, industries, and residential use.",
+        "Material": "Oil is highly versatile and used in the production of a wide range of products. It serves as a raw material for manufacturing plastics.",
+        "Dimensions": "Oil is a crucial source of petrochemicals, which are used in the production of plastics."
       },
       "stock": true
     },
     {
       "id": "02",
-      "thumb_src": "https://images.unsplash.com/photo-1548960254-5139d80bd5ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/suit-1.jpg",
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -97,9 +90,9 @@
         }
       ],
       "color": "Black",
-      "colors": ["black", "green"],
-      "title": "Apple Watch",
-      "price": 199,
+      "colors": ["black", "green", "white"],
+      "title": "Pink Blouse",
+      "price": 1490,
       "rating": 5,
       "reviews": 117,
       "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
@@ -112,14 +105,11 @@
       ],
       "size": "Medium",
       "sizes": {
-        "XXS": 1,
         "XS": 3,
         "S": 0,
         "M": 1,
         "L": 0,
-        "XL": 6,
-        "2XL": 2,
-        "3XL": 0
+        "XL": 6
       },
       "data": {
         "Features": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you.",
@@ -139,7 +129,7 @@
     },
     {
       "id": "03",
-      "thumb_src": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/suit-2.jpg",
       "thumb_alt": "iMac-image",
       "images": [
         {
@@ -161,19 +151,16 @@
       ],
       "color": "Yellow",
       "colors": ["SpaceGray"],
-      "title": "iMac",
-      "description": "There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented",
+      "title": "Premium Suit",
+      "description": "There’s nothing I really wanted to do in life that I wasn’t able to get good at.",
       "price": 1399,
       "size": "Large",
       "sizes": {
-        "XXS": 1,
         "XS": 3,
         "S": 0,
         "M": 1,
         "L": 0,
-        "XL": 6,
-        "2XL": 2,
-        "3XL": 0
+        "XL": 6
       },
       "data": {
         "Design": "If everything I did failed - which it doesn't, it actually succeeds - just the fact that I'm willing to fail is an inspiration. People are so scared to lose that they don't even try. Like, one thing people can't say is that I'm not trying, and I'm not trying my hardest, and I'm not trying to do the best way I know how.",
@@ -185,42 +172,58 @@
     },
     {
       "id": "04",
-      "thumb_src": "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "thumb_src": "/images/suit-5.jpg",
       "thumb_alt": "iPhone_thumb",
       "color": "Blue",
       "title": "iPhone",
       "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
-      "price": 1599.99,
+      "price": 1599,
       "size": "Small",
       "sizes": {
-        "XXS": 1,
         "XS": 3,
         "S": 0,
         "M": 1,
         "L": 0,
-        "XL": 6,
-        "2XL": 2,
-        "3XL": 0
+        "XL": 6
       },
       "stock": false
     }
   ],
   "categories": [
     {
-      "thumb_src": "https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      "title": "Electronics"
+      "thumb_src": "/images/category1.jpg",
+      "title": "Silk Dresses",
+      "collection": "Pre-fall"
     },
     {
-      "thumb_src": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      "title": "New Arivals"
+      "thumb_src": "/images/category2.jpg",
+      "title": "Suits",
+      "collection": "Designers"
     },
     {
-      "thumb_src": "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      "title": "Accessories"
+      "thumb_src": "/images/category3.jpg",
+      "title": "Festival",
+      "collection": "Summer"
     },
     {
-      "thumb_src": "https://images.unsplash.com/photo-1556217256-f4e659e15103?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-      "title": "Sale"
+      "thumb_src": "/images/category4.jpg",
+      "title": "Showroom",
+      "collection": "Sale"
+    },
+    {
+      "thumb_src": "/images/product10.jpg",
+      "title": "Living Sofas",
+      "collection": "Interior Design"
+    },
+    {
+      "thumb_src": "/images/category5.jpg",
+      "title": "Chairs by Designers",
+      "collection": "Sale"
+    },
+    {
+      "thumb_src": "/images/product9.jpg",
+      "title": "Home care",
+      "collection": "Products"
     }
   ],
   "reviews": [
@@ -292,12 +295,12 @@
       ],
       "payment": {
         "cardNumber": "0042",
-        "expiringDate": "01/27"
+        "expiringDate": "06/26"
       },
       "date": "March 23, 2023",
-      "address": "Mike Jenkins, 4717, Don Valley Village Toronto, ON N3Y 4H8",
-      "email": "g*****@mail.com",
-      "phoneNumber": "+1*****21"
+      "address": "362 Ridgewood, Alaska 99669, USA",
+      "email": "michael@email.com",
+      "phoneNumber": "(808) 791-6935"
     },
     {
       "orderNumber": "WB2341",
@@ -311,12 +314,12 @@
       ],
       "payment": {
         "cardNumber": "4119",
-        "expiringDate": "01/27"
+        "expiringDate": "06/26"
       },
       "date": "March 28, 2023",
-      "address": "Mike Jenkins, 4717, Don Valley Village Toronto, ON N3Y 4H8",
-      "email": "as*****@mail.com",
-      "phoneNumber": "+4*****23"
+      "address": "362 Ridgewood Dr, Soldotna, Alaska 99669, USA",
+      "email": "john@email.com",
+      "phoneNumber": "(307) 612-7721"
     },
     {
       "orderNumber": "010110",
@@ -345,9 +348,9 @@
         "expiringDate": "11/27"
       },
       "date": "Sep 07, 2023",
-      "address": "Mike Jenkins, 4717, Don Valley Village Toronto, ON N3Y 4H8",
-      "email": "ju*****@mail.com",
-      "phoneNumber": "+4*****52"
+      "address": "362 Ridgewood, Alaska 99669, USA",
+      "email": "doe@email.com",
+      "phoneNumber": "(307) 682-8835"
     }
   ],
   "shoppingCart": [

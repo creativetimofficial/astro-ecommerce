@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductBadge from './productBadge';
-import ProductRating from './productRating';
+import ProductRating from '../reviews/reviewRating';
 import ProductAccordion from './productAccordion';
 import ProductImages from './productImages';
 
@@ -43,15 +43,20 @@ export default function productOverviewGallery({
           {(price.length != 0) && 
             <>
               <div className="d-flex mb-3">
-                <h3 className="font-weight-normal">${price.toFixed(2)}</h3>
+                <h4 className="font-weight-normal">${price.toLocaleString()}</h4>
                 <input className="opacity-0" defaultValue={price} />
               </div>
             </>
           }
-          {(rating != 0) && 
-            <ProductRating rating={rating} reviews={reviews} />
-          }
           <p className="mt-4">{full_description}</p>
+
+          {(rating != 0) && 
+            <div className="d-flex align-items-center">
+              <ProductRating rating={rating} reviews={reviews} />
+              <span className="ms-2">100 reviews</span>
+            </div>
+          }
+          
           {(colors.length != 0) && 
             <>
               <h6 className="mt-4">Color:</h6>
@@ -62,7 +67,7 @@ export default function productOverviewGallery({
           }
           
           <div className="d-flex align-items-center mt-4">
-            <button className="btn btn-primary btn-lg mb-0 me-4">Add to Bag</button>
+            <button className="btn btn-dark btn-lg mb-0 me-4">Add to Cart</button>
             <a href="#favorite">
               <i id="heart1" className="far fa-heart text-2xl" ></i>
             </a>

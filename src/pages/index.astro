@@ -3,8 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import data from '../../public/data.json';
 import '../../assets/scss/astro-ecommerce.scss';
 import Navbar from '../components/navbar';
+import ComplexNavbar from '../components/complexNavbar';
+import ComplexNavbarDark from '../components/complexNavbarDark';
 import Footer from '../components/footer';
-import StoreNavbar from '../components/store/storeNavbar';
+import ComplexFooter from '../components/complexFooter';
 import CardProduct from '../components/products/cardProduct';
 import CardCategory from '../components/products/cardCategory';
 import ProductOverviewGrid from '../components/products/productOverviewGrid';
@@ -16,8 +18,6 @@ import ProductQuickview2 from '../components/products/productQuickview2';
 import ProductFeature from '../components/products/productFeature';
 import ProductFeature2 from '../components/products/productFeature2';
 import CategoryFilters from '../components/products/categoryFilters';
-import StoreNavigation from '../components/store/storeNavigation';
-import StoreDoubleColumn from '../components/store/storeDoubleColumn';
 import TestimonialsFade from '../components/promo/testimonialsFade';
 import PromoSectionLarge from '../components/promo/promoSectionLarge';
 import CheckoutOrderSummary from '../components/checkout/checkoutOrderSummary';
@@ -79,8 +79,9 @@ data.orders.forEach((order) => {
 	<main>
     <Navbar />
     <div class="container mt-5">
-
-      <div class="row">
+      <h3>Product Lists</h3>
+      <p>Components and blocks for Product Lists</p>
+      <div class="row mt-5">
         {data.products.map(product => 
           <div class="col-md-6 col-lg-3">
             <CardProduct 
@@ -97,6 +98,8 @@ data.orders.forEach((order) => {
         )}        
       </div>
 
+      <h3>Product Lists</h3>
+      <p>Cards with full details</p>
       <div class="row">
         {data.products.map(product => 
           <div class="col-md-6 col-lg-3">
@@ -114,24 +117,33 @@ data.orders.forEach((order) => {
         )}        
       </div>
 
-      <div class="row mb-5">
-        {data.categories.map(category => 
+      <div class="row mb-8">
+        <div class="d-block text-center mb-5">
+          <h3>Shop by category</h3>
+          <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
+        </div>
+        {data.categories.slice(0, 4).map(category => 
           <div class="col-md-6 col-lg-3">
             <CardCategory
               thumb_src = {category.thumb_src}
               title = {category.title}
+              collection = {category.collection}
             />
           </div>
         )}
       </div>
 
       <div class="row mb-5">
+        <div class="d-block text-center mb-5">
+          <h3>Shop by category</h3>
+          <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
+        </div>
         <div class="col-md-6">
           <CardCategory
             classList = "h-100"
             cta = ""
-            thumb_src = {data.categories[0].thumb_src}
-            title = {data.categories[0].title}
+            thumb_src = {data.categories[4].thumb_src}
+            title = {data.categories[4].title}
           />
         </div>
         <div class="col-md-6">
@@ -139,16 +151,16 @@ data.orders.forEach((order) => {
             <CardCategory
               classList = ""
               cta = ""
-              thumb_src = {data.categories[1].thumb_src}
-              title = {data.categories[1].title}
+              thumb_src = {data.categories[5].thumb_src}
+              title = {data.categories[5].title}
             />
           </div>
           <div class="">
             <CardCategory
               classList = ""
               cta = ""
-              thumb_src = {data.categories[2].thumb_src}
-              title = {data.categories[2].title}
+              thumb_src = {data.categories[6].thumb_src}
+              title = {data.categories[6].title}
             />
           </div>
         </div>
@@ -156,6 +168,9 @@ data.orders.forEach((order) => {
 
 
       <div class="my-10">
+        <h3>Product Overview</h3>
+        <p class="mb-5">With image grid</p>
+
         <ProductOverviewGrid  
           colors={data.products[0].colors}
           images={data.products[0].images}
@@ -171,6 +186,9 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-5">
+        <h3>Product Overview</h3>
+        <p class="mb-5">Product Overviews with image gallery and expandable details</p>
+
         <ProductOverviewGallery 
           colors={data.products[1].colors} 
           images={data.products[1].images}
@@ -197,12 +215,17 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
+        <h3>Category filters</h3>
+        <p class="mb-5">With inline actions and expandable sidebar filters</p>
         <CategoryFilters 
-          title={data.products[0].title}
+          title="Our products"
         />
       </div>
 
       <div class="my-10">
+        <h3>Product Quickviewers</h3>
+        <p class="mb-5">With color selector, size selector, and details link</p>
+
         <ProductQuickview 
           colors={data.products[0].colors}
           thumb_src={data.products[0].thumb_src}
@@ -211,15 +234,18 @@ data.orders.forEach((order) => {
           rating={data.products[0].rating}
           reviews={data.products[0].reviews}
           sizes={data.products[0].sizes}
+          images={data.products[0].images}
         />
+
+        <h3 class="mt-7">Product Quickviewers</h3>
+        <p class="mb-5">With large size selector</p>
         <ProductQuickview2 
           colors={data.products[1].colors}
-          thumb_src={data.products[1].thumb_src}
-          title={data.products[1].title}
+          thumb_src="/images/mirror.png"
+          title="Sofa"
           price={data.products[1].price}
           rating={data.products[1].rating}
           reviews={data.products[1].reviews}
-          stock={data.products[1].stock}
         />
       </div>
 
@@ -242,7 +268,27 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
-        <StoreNavigation title={data.products[0].title}/>
+        <h3 class="mt-5">Complex Navbar White</h3>
+        <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
+        <br/><br/>
+        <ComplexNavbar />
+        <div class="row mt-4">
+          {data.products.map(product => 
+            <div class="col-12 col-md-6 col-lg-3">
+              <CardProduct
+                thumb_src = {product.thumb_src}
+                thumb_alt = {product.thumb_alt}
+                title = {product.title}
+                price={product.price}
+              />
+            </div>
+          )}        
+        </div>
+
+        <h3 class="mt-5">Complex Navbar Dark</h3>
+        <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
+        <br/><br/>
+        <ComplexNavbarDark />
         <div class="row mt-4">
           {data.products.map(product => 
             <div class="col-12 col-md-6 col-lg-3">
@@ -256,20 +302,18 @@ data.orders.forEach((order) => {
           )}        
         </div>
       </div>
-      <div class="my-10">
-        <nav class="navbar navbar-expand-md shadow-none flex-wrap top-0 px-0 py-0">
-          <StoreNavbar />
-          <hr class="horizontal w-100 my-0 dark" />
-        </nav>
-        <StoreDoubleColumn title={data.products[1].title}/>
-     
-      </div>
 
       <div class="my-10">
+        <h3>Simple Footer</h3>
         <Footer />
+
+        <h3 class="mt-8">Complex Footer</h3>
+        <ComplexFooter />
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Promo Sections</h3>
+        <p class="text-body">Full-width with background image and large content</p>
         <TestimonialsFade 
           pageHeaderBgImg={"https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2729&q=80"} 
           pageHeaderMinVh="50vh"
@@ -277,9 +321,11 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Promo Sections</h3>
+        <p class="text-body">With fading background image and testimonials</p>
         <PromoSectionLarge 
           title={data.products[0].title}
-          full_description={data.products[0].full_description}  
+          full_description="The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?"  
           pageHeaderBgImg={"https://images.unsplash.com/photo-1525904097878-94fb15835963?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"} 
           pageHeaderMinVh="50vh"
           pageHeaderRadius="1rem"
@@ -287,26 +333,36 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
+        <h3>Checkout Forms</h3>
+        <p>Split with order summary</p>
         <CheckoutOrderSummary 
           products = {cartItems}
         />
       </div>
 
       <div class="my-10">
+        <h3>Checkout Forms</h3>
+        <p>SWith order summary sidebar</p>
         <CheckoutMultiStep
           products = {cartItems2}
         />
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Product reviews</h3>
+        <p class="text-body">Simple with avatars</p>
         <ReviewSimple reviews = {data.reviews}/>
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Product reviews</h3>
+        <p class="text-body">With summary chart</p>
         <ReviewSummaryChart reviews = {productReviews}/>
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Checkout forms</h3>
+        <p class="text-body">With order summary sidebar</p>
         <OrderSummaries order={data.orders[0]} products={orderProducts} />
       </div>
 
@@ -319,10 +375,12 @@ data.orders.forEach((order) => {
       </div>
 
       <div class="my-10">
+        <h3 class="mt-5">Features</h3>
+        <p class="text-body">3-column with illustrations and header</p>
         <IncentiveCols />
       </div>
       
+      <Footer />
     </div>
 	</main>
-  <Footer />
 </Layout>

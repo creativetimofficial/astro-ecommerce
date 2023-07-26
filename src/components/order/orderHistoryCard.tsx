@@ -56,24 +56,24 @@ export default function OrderHistoryCard({
   });
 
   return (
-    <>
-      <div className="bg-gray-100 rounded-3 mt-5 mb-4">
+    <div className="card shadow-xs border p-3 p-md-4 mb-4">
+      <div className="shadow-xs border rounded-3 mb-5">
         <div className="d-block d-md-flex justify-content-between align-items-center">
           <div className="d-block d-md-flex">
             <div className="d-flex d-md-block justify-content-between p-4 me-md-4">
-              <h6>Data placed</h6>
-              <p className="text-sm mb-0">{order.date}</p>
+              <p className="text-sm mb-0">Order Id</p>
+              <h6>{order.orderNumber}</h6>
             </div>
             <div className="d-flex d-md-block justify-content-between p-4 me-md-4">
-              <h6>Order number</h6>
-              <p className="text-sm mb-0">{order.orderNumber}</p>
+              <p className="text-sm mb-0">Date of placement</p>
+              <h6>{order.date}</h6>
             </div>
             <div className="d-flex d-md-block justify-content-between p-4">
-              <h6>Total amount</h6>
-              <p className="font-weight-bold text-sm mb-0">$299.00</p>
+              <p className="text-sm mb-0">Amount</p>
+              <h6>$2,570</h6>
             </div>
           </div>
-          <button className="btn btn-white mb-md-0 ms-4 md-md-0 me-4" data-bs-toggle="modal" data-bs-target="#invoiceModal1">View invoice</button>
+          <button className="btn btn-dark btn-sm mb-md-0 ms-4 md-md-0 me-4" data-bs-toggle="modal" data-bs-target="#invoiceModal1">View invoice</button>
           <div className="modal fade" id="invoiceModal1" role="dialog" aria-labelledby="invoiceModal1" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div className="modal-content">
@@ -175,15 +175,15 @@ export default function OrderHistoryCard({
           </div>
         </div>
       </div>
-
       <div className="table-responsive">
         <table className="table">
           <thead>
             <tr>
-              <th scope="col" className="text-secondary text-xs font-weight-semibold opacity-7 border-light ps-2">Product</th>
-              <th scope="col" className="text-secondary text-xs font-weight-semibold opacity-7 border-light ps-2">Price</th>
-              <th scope="col" className="text-secondary text-xs font-weight-semibold opacity-7 border-light ps-2">Status</th>
-              <th scope="col" className="text-secondary text-xs font-weight-semibold opacity-7 border-light ps-2 text-end">Info</th>
+              <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2">Product</th>
+              <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2">Price</th>
+              <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2">Status</th>
+              <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2">Date</th>
+              <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2 text-end">Details</th>
             </tr>
           </thead>
           <tbody>
@@ -191,7 +191,7 @@ export default function OrderHistoryCard({
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
 
