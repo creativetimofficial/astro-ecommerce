@@ -45,7 +45,7 @@ export default function OrderCardProduct({
       <div className="card shadow-xs border p-3 p-md-4 mb-4">
         <div className="row border-bottom pb-4">
           <div className="col-12 col-md-6 col-lg-2">
-            <img className="w-100 rounded-3 mb-3 mb-md-0" src={product.thumb_src} alt={product.thumb_alt} />
+            <img className="w-100 rounded-3 mb-3 mb-md-0" src={`${import.meta.env.BASE_URL}${product.thumb_src}`} alt={product.thumb_alt} />
           </div>
           <div className="col-12 col-md-6 col-lg-5">
             <h5 className="text-base">{product.title}</h5>
