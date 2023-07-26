@@ -29,7 +29,7 @@ export default function CardProduct({
       <div className="card card-product border mb-5 shadow-xs border-radius-lg">
         <a href="#">
           <div className="height-350">
-            <img className="w-100 h-100 p-4 rounded-top" src={thumb_src} alt={thumb_alt} />
+            <img className="w-100 h-100 p-4 rounded-top" src={`${import.meta.env.BASE_URL}${thumb_src}`} alt={thumb_alt} />
           </div>
           <div className={classList}>
             {(color) && 
