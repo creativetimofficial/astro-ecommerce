@@ -22,7 +22,7 @@ export default function CartItem({
   return (
     <>
       <div className="d-block d-md-flex mt-4">
-        <img className="w-50 w-md-20 w-lg-10 rounded-3 m-4" src={thumb_src} alt={thumb_alt} />
+        <img className="w-50 w-md-20 w-lg-10 rounded-3 m-4" src={`${import.meta.env.BASE_URL}${thumb_src}`} alt={thumb_alt} />
         <div className="w-100 w-md-50 pt-4 ps-md-4">
           <div className="d-flex align-items-center mb-2">
             <h6 className="text-lg mb-0">{title}</h6>
