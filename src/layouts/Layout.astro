@@ -1,4 +1,6 @@
 ---
+import { AstroFont } from 'astro-font';
+
 export interface Props {
 	title: string;
 }
@@ -12,9 +14,36 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto+Sans:300,400,500,600,700,800|PT+Mono:300,400,500,600,700"
-      rel="stylesheet"
+    <AstroFont
+      config={[
+        {
+          src: [],
+          preload: false,
+          display: "swap",
+          name: "Noto Sans",
+          fallback: "sans-serif",
+          cssVariable: "font-noto-sans",
+          googleFontsURL: 'https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,600,700,800',
+        },
+        {
+          src: [],
+          preload: false,
+          display: "swap",
+          name: "Open Sans",
+          fallback: "sans-serif",
+          cssVariable: "font-open-sans",
+          googleFontsURL: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700',
+        },
+        {
+          src: [],
+          preload: false,
+          display: "swap",
+          name: "PT Mono",
+          fallback: "sans-serif",
+          cssVariable: "font-pt-mono",
+          googleFontsURL: 'https://fonts.googleapis.com/css?family=PT+Mono:300,400,500,600,700',
+        },
+      ]}
     />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
