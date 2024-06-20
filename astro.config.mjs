@@ -9,4 +9,7 @@ export default defineConfig({
   site: "https://sonoraprecision.com",
   base: "/",
   outDir: "./docs",
+  build: {
+    assets: "app_assets",
+  },
 });
