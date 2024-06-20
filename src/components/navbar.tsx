@@ -1,9 +1,9 @@
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg blur border-radius-sm top-0 z-index-3 shadow position-sticky py-3 start-0 end-0">
+    <nav className="navbar navbar-expand-lg  border-radius-sm top-0 z-index-3 shadow position-sticky py-3 start-0 end-0">
       <div className="container px-1">
-        <a className="navbar-brand font-weight-bolder ms-lg-0 " href="https://www.creative-tim.com/astro">Astro Ecommerce</a>
-        <button className="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <a className="navbar-brand font-weight-bolder ms-lg-0 text-light fs-1" href="https://sonoraprecision.com">Sonora Precision</a>
+        {/* <button className="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon mt-2">
             <span className="navbar-toggler-bar bar1"></span>
             <span className="navbar-toggler-bar bar2"></span>
@@ -43,7 +43,7 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

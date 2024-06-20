@@ -24,15 +24,18 @@ export default function TestimonialsFade({
 
   return (
     <>
-      <section className="mb-8">
+      <section className="">
         <div className="page-header py-5 py-md-0" style={styles.pageHeader}>
           <span className="mask bg-black opacity-6"></span>
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 col-sm-9 text-center mx-auto">
-                <h1 className="text-white mb-4">{title}</h1>
+                <a className="navbar-brand font-weight-bolder ms-lg-0 text-light" style={{
+                  fontSize: '7rem',
+                }} href="https://sonoraprecision.com">Sonora Precision</a>
+                <h3 className="text-white mb-4">{title}</h3>
                 <p className="lead text-white mb-sm-6 mb-4">{full_description}</p>
-                <button className="btn btn-white btn-lg">Explore New Collection</button>
+                {/* <button className="btn btn-white btn-lg">Explore New Collection</button> */}
               </div>
             </div>
           </div>
