@@ -1,15 +1,14 @@
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
   site: "https://sonoraprecision.com",
   base: "/",
   outDir: "./docs",
   build: {
-    assets: "app_assets",
+    assets: "app_assets"
   },
+  integrations: [tailwind()]
 });
