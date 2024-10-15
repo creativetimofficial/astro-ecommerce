@@ -1,228 +1,1064 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout title="Sonora Precision">
-	<!--
+  <!--
 // v0 by Vercel.
 // https://v0.dev/t/l9KOIPyiwq1
 -->
 
-<div class="flex min-h-[100dvh] flex-col">
-	<header class="bg-background px-4 py-3 shadow-sm md:px-6 md:py-4">
-	  <div class="container mx-auto flex items-center justify-between">
-		<a class="flex items-center" href="#" data-bcup-haslogintext="no">
-		  <svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="h-6 w-6"
-		  >
-			<path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
-		  </svg>
-		  <span class="ml-2 text-lg font-semibold">Sonora Precision</span>
-		</a>
-		<nav class="hidden space-x-4 md:flex">
-		  <a class="text-sm font-medium hover:underline underline-offset-4" href="/" data-bcup-haslogintext="no">
-			Inicio
-		  </a>
-		</nav>
-	  </div>
-	</header>
-	
-	
+  <Nav />
+  
+  <Header />
 
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
+  <div class="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
+    <div class="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch"
+      >
+        <div class="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
+          <div
+            class="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto"
+          >
+            <img
+              class="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
+              alt=""
+            />
+          </div>
+        </div>
+        <div
+          class="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24"
+        >
+          <figure class="relative isolate pt-6 sm:pt-12">
+            <svg
+              viewBox="0 0 162 128"
+              fill="none"
+              aria-hidden="true"
+              class="absolute left-0 top-0 -z-10 h-32 stroke-white/20"
+            >
+              <path
+                id="b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb"
+                d="M65.5697 118.507L65.8918 118.89C68.9503 116.314 71.367 113.253 73.1386 109.71C74.9162 106.155 75.8027 102.28 75.8027 98.0919C75.8027 94.237 75.16 90.6155 73.8708 87.2314C72.5851 83.8565 70.8137 80.9533 68.553 78.5292C66.4529 76.1079 63.9476 74.2482 61.0407 72.9536C58.2795 71.4949 55.276 70.767 52.0386 70.767C48.9935 70.767 46.4686 71.1668 44.4872 71.9924L44.4799 71.9955L44.4726 71.9988C42.7101 72.7999 41.1035 73.6831 39.6544 74.6492C38.2407 75.5916 36.8279 76.455 35.4159 77.2394L35.4047 77.2457L35.3938 77.2525C34.2318 77.9787 32.6713 78.3634 30.6736 78.3634C29.0405 78.3634 27.5131 77.2868 26.1274 74.8257C24.7483 72.2185 24.0519 69.2166 24.0519 65.8071C24.0519 60.0311 25.3782 54.4081 28.0373 48.9335C30.703 43.4454 34.3114 38.345 38.8667 33.6325C43.5812 28.761 49.0045 24.5159 55.1389 20.8979C60.1667 18.0071 65.4966 15.6179 71.1291 13.7305C73.8626 12.8145 75.8027 10.2968 75.8027 7.38572C75.8027 3.6497 72.6341 0.62247 68.8814 1.1527C61.1635 2.2432 53.7398 4.41426 46.6119 7.66522C37.5369 11.6459 29.5729 17.0612 22.7236 23.9105C16.0322 30.6019 10.618 38.4859 6.47981 47.558L6.47976 47.558L6.47682 47.5647C2.4901 56.6544 0.5 66.6148 0.5 77.4391C0.5 84.2996 1.61702 90.7679 3.85425 96.8404L3.8558 96.8445C6.08991 102.749 9.12394 108.02 12.959 112.654L12.959 112.654L12.9646 112.661C16.8027 117.138 21.2829 120.739 26.4034 123.459L26.4033 123.459L26.4144 123.465C31.5505 126.033 37.0873 127.316 43.0178 127.316C47.5035 127.316 51.6783 126.595 55.5376 125.148L55.5376 125.148L55.5477 125.144C59.5516 123.542 63.0052 121.456 65.9019 118.881L65.5697 118.507Z"
+              ></path>
+              <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86"></use>
+            </svg>
+            <blockquote
+              class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9"
+            >
+              <p>
+                Gravida quam mi erat tortor neque molestie. Auctor aliquet at
+                porttitor a enim nunc suscipit tincidunt nunc. Et non lorem
+                tortor posuere. Nunc eu scelerisque interdum eget tellus non
+                nibh scelerisque bibendum.
+              </p>
+            </blockquote>
+            <figcaption class="mt-8 text-base">
+              <div class="font-semibold text-white">Judith Black</div>
+              <div class="mt-1 text-gray-400">CEO of Workcation</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative bg-white">
+    <div
+      class="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end"
+    >
+      <div
+        class="lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2"
+      >
+        <div class="relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0">
+          <img
+            class="absolute inset-0 h-full w-full bg-gray-50 object-cover"
+            src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="px-6 lg:contents">
+        <div
+          class="mx-auto max-w-2xl pb-24 pt-16 sm:pb-32 sm:pt-20 lg:ml-8 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2"
+        >
+          <p class="text-base font-semibold leading-7 text-indigo-600">
+            Deploy faster
+          </p>
+          <h1
+            class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            A better workflow
+          </h1>
+          <p class="mt-6 text-xl leading-8 text-gray-700">
+            Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At
+            arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae
+            feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget.
+            Eleifend egestas fringilla sapien.
+          </p>
+          <div
+            class="mt-10 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none"
+          >
+            <p>
+              Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
+              enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
+              praesent donec est. Odio penatibus risus viverra tellus varius sit
+              neque erat velit. Faucibus commodo massa rhoncus, volutpat.
+              Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
+              sed turpis id.
+            </p>
+            <ul role="list" class="mt-8 space-y-8 text-gray-600">
+              <li class="flex gap-x-3">
+                <svg
+                  class="mt-1 h-5 w-5 flex-none text-indigo-600"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span
+                  ><strong class="font-semibold text-gray-900"
+                    >Push to deploy.</strong
+                  > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+                  impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
+                  ratione.</span
+                >
+              </li>
+              <li class="flex gap-x-3">
+                <svg
+                  class="mt-1 h-5 w-5 flex-none text-indigo-600"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span
+                  ><strong class="font-semibold text-gray-900"
+                    >SSL certificates.</strong
+                  > Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+                  qui lorem cupidatat commodo.</span
+                >
+              </li>
+              <li class="flex gap-x-3">
+                <svg
+                  class="mt-1 h-5 w-5 flex-none text-indigo-600"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path
+                    d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span
+                  ><strong class="font-semibold text-gray-900"
+                    >Database backups.</strong
+                  > Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
+                  Et magna sit morbi lobortis.</span
+                >
+              </li>
+            </ul>
+            <p class="mt-8">
+              Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
+              odio id et. Id blandit molestie auctor fermentum dignissim. Lacus
+              diam tincidunt ac cursus in vel. Mauris varius vulputate et
+              ultrices hac adipiscing egestas. Iaculis convallis ac tempor et
+              ut. Ac lorem vel integer orci.
+            </p>
+            <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">
+              No server? No problem.
+            </h2>
+            <p class="mt-6">
+              Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam
+              consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod
+              vitae interdum mauris enim, consequat vulputate nibh. Maecenas
+              pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim
+              cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis
+              ipsum eu a sed convallis diam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
+      <p
+        class="mt-2 max-w-lg text-pretty text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl"
+      >
+        Everything you need to deploy your app.
+      </p>
+      <div
+        class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2"
+      >
+        <div class="relative lg:col-span-3">
+          <div
+            class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
+          >
+          </div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]"
+          >
+            <img
+              class="h-80 object-cover object-left"
+              src="https://tailwindui.com/plus/img/component-images/bento-01-performance.png"
+              alt=""
+            />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-indigo-600">
+                Performance
+              </h3>
+              <p
+                class="mt-2 text-lg/7 font-medium tracking-tight text-gray-950"
+              >
+                Lightning-fast builds
+              </p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                gravida justo et nulla efficitur, maximus egestas sem
+                pellentesque.
+              </p>
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"
+          >
+          </div>
+        </div>
+        <div class="relative lg:col-span-3">
+          <div
+            class="absolute inset-px rounded-lg bg-white lg:rounded-tr-[2rem]"
+          >
+          </div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]"
+          >
+            <img
+              class="h-80 object-cover object-left lg:object-right"
+              src="https://tailwindui.com/plus/img/component-images/bento-01-releases.png"
+              alt=""
+            />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-indigo-600">Releases</h3>
+              <p
+                class="mt-2 text-lg/7 font-medium tracking-tight text-gray-950"
+              >
+                Push to deploy
+              </p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                Curabitur auctor, ex quis auctor venenatis, eros arcu rhoncus
+                massa, laoreet dapibus ex elit vitae odio.
+              </p>
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-tr-[2rem]"
+          >
+          </div>
+        </div>
+        <div class="relative lg:col-span-2">
+          <div
+            class="absolute inset-px rounded-lg bg-white lg:rounded-bl-[2rem]"
+          >
+          </div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]"
+          >
+            <img
+              class="h-80 object-cover object-left"
+              src="https://tailwindui.com/plus/img/component-images/bento-01-speed.png"
+              alt=""
+            />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-indigo-600">Speed</h3>
+              <p
+                class="mt-2 text-lg/7 font-medium tracking-tight text-gray-950"
+              >
+                Built for power users
+              </p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                Sed congue eros non finibus molestie. Vestibulum euismod augue.
+              </p>
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-bl-[2rem]"
+          >
+          </div>
+        </div>
+        <div class="relative lg:col-span-2">
+          <div class="absolute inset-px rounded-lg bg-white"></div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
+          >
+            <img
+              class="h-80 object-cover object-center"
+              src="https://tailwindui.com/plus/img/component-images/bento-01-integrations.png"
+              alt=""
+            />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-indigo-600">
+                Integrations
+              </h3>
+              <p
+                class="mt-2 text-lg/7 font-medium tracking-tight text-gray-950"
+              >
+                Connect your favorite tools
+              </p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                Maecenas at augue sed elit dictum vulputate, in nisi aliquam
+                maximus arcu.
+              </p>
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"
+          >
+          </div>
+        </div>
+        <div class="relative lg:col-span-2">
+          <div
+            class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"
+          >
+          </div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]"
+          >
+            <img
+              class="h-80 object-cover object-center"
+              src="https://tailwindui.com/plus/img/component-images/bento-01-network.png"
+              alt=""
+            />
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-indigo-600">Network</h3>
+              <p
+                class="mt-2 text-lg/7 font-medium tracking-tight text-gray-950"
+              >
+                Globally distributed CDN
+              </p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+                Aenean vulputate justo commodo auctor vehicula in malesuada
+                semper.
+              </p>
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+
+  <div class="bg-white">
+    <div
+      class="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8"
+    >
+      <div
+        class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2"
+      >
+        <div>
+          <div class="border-b border-gray-200 pb-10">
+            <h2 class="font-medium text-gray-500">Machined Kettle</h2>
+            <p
+              class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              Elegant simplicity
+            </p>
+          </div>
+
+          <dl class="mt-10 space-y-10">
+            <div>
+              <dt class="text-sm font-medium text-gray-900">Sleek design</dt>
+              <dd class="mt-3 text-sm text-gray-500">
+                The machined kettle has a smooth black finish and contemporary
+                shape that stands apart from most plastic appliances.
+              </dd>
+            </div>
+            <div>
+              <dt class="text-sm font-medium text-gray-900">Comfort handle</dt>
+              <dd class="mt-3 text-sm text-gray-500">
+                Shaped for steady pours and insulated to prevent burns.
+              </dd>
+            </div>
+            <div>
+              <dt class="text-sm font-medium text-gray-900">
+                One-button control
+              </dt>
+              <dd class="mt-3 text-sm text-gray-500">
+                The one button control has a digital readout for setting
+                temperature and turning the kettle on and off.
+              </dd>
+            </div>
+            <div>
+              <dt class="text-sm font-medium text-gray-900">Long spout</dt>
+              <dd class="mt-3 text-sm text-gray-500">
+                Designed specifically for controlled pour-overs that don&#039;t
+                slash or sputter.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div>
+          <div
+            class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100"
+          >
+            <img
+              src="https://tailwindui.com/plus/img/ecommerce-images/product-feature-09-main-detail.jpg"
+              alt="Black kettle with long pour spot and angled body on marble counter next to coffee mug and pour-over system."
+              class="h-full w-full object-cover object-center"
+            />
+          </div>
+          <div
+            class="mt-4 grid grid-cols-2 gap-4 sm:mt-6 sm:gap-6 lg:mt-8 lg:gap-8"
+          >
+            <div
+              class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100"
+            >
+              <img
+                src="https://tailwindui.com/plus/img/ecommerce-images/product-feature-09-detail-01.jpg"
+                alt="Detail of temperature setting button on kettle bass with digital degree readout."
+                class="h-full w-full object-cover object-center"
+              />
+            </div>
+            <div
+              class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100"
+            >
+              <img
+                src="https://tailwindui.com/plus/img/ecommerce-images/product-feature-09-detail-02.jpg"
+                alt="Kettle spout pouring boiling water into coffee grounds in pour-over mug."
+                class="h-full w-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white py-24 sm:py-32">
+    <div
+      class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3"
+    >
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Meet our leadership
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae
+          elementum enim vitae ullamcorper suspendisse.
+        </p>
+      </div>
+      <ul
+        role="list"
+        class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+      >
+        <li>
+          <div class="flex items-center gap-x-6">
+            <img
+              class="h-16 w-16 rounded-full"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt=""
+            />
+            <div>
+              <h3
+                class="text-base font-semibold leading-7 tracking-tight text-gray-900"
+              >
+                Leslie Alexander
+              </h3>
+              <p class="text-sm font-semibold leading-6 text-indigo-600">
+                Co-Founder / CEO
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <!-- More people... -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="bg-gray-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <h2 class="text-base font-semibold leading-7 text-indigo-400">
+          Deploy faster
+        </h2>
+        <p
+          class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+        >
+          Everything you need to deploy your app
+        </p>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+          Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
+          Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
+          In mi viverra elit nunc.
+        </p>
+      </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+        <dl
+          class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3"
+        >
+          <div class="flex flex-col">
+            <dt
+              class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white"
+            >
+              <svg
+                class="h-5 w-5 flex-none text-indigo-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Push to deploy
+            </dt>
+            <dd
+              class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300"
+            >
+              <p class="flex-auto">
+                Commodo nec sagittis tortor mauris sed. Turpis tortor quis
+                scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus
+                volutpat eu. Phasellus praesent ligula sit faucibus.
+              </p>
+              <p class="mt-6">
+                <a
+                  href="#"
+                  class="text-sm font-semibold leading-6 text-indigo-400"
+                  >Learn more <span aria-hidden="true">→</span></a
+                >
+              </p>
+            </dd>
+          </div>
+          <div class="flex flex-col">
+            <dt
+              class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white"
+            >
+              <svg
+                class="h-5 w-5 flex-none text-indigo-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              SSL certificates
+            </dt>
+            <dd
+              class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300"
+            >
+              <p class="flex-auto">
+                Pellentesque enim a commodo malesuada turpis eleifend risus.
+                Facilisis donec placerat sapien consequat tempor fermentum nibh.
+              </p>
+              <p class="mt-6">
+                <a
+                  href="#"
+                  class="text-sm font-semibold leading-6 text-indigo-400"
+                  >Learn more <span aria-hidden="true">→</span></a
+                >
+              </p>
+            </dd>
+          </div>
+          <div class="flex flex-col">
+            <dt
+              class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white"
+            >
+              <svg
+                class="h-5 w-5 flex-none text-indigo-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Simple queues
+            </dt>
+            <dd
+              class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300"
+            >
+              <p class="flex-auto">
+                Pellentesque sit elit congue ante nec amet. Dolor aenean
+                curabitur viverra suspendisse iaculis eget. Nec mollis placerat
+                ultricies euismod ut condimentum.
+              </p>
+              <p class="mt-6">
+                <a
+                  href="#"
+                  class="text-sm font-semibold leading-6 text-indigo-400"
+                  >Learn more <span aria-hidden="true">→</span></a
+                >
+              </p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-white">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+      <nav
+        class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+        aria-label="Footer"
+      >
+        <div class="pb-6">
+          <a
+            href="#"
+            class="text-sm leading-6 text-gray-600 hover:text-gray-900">About</a
+          >
+        </div>
+        <div class="pb-6">
+          <a
+            href="#"
+            class="text-sm leading-6 text-gray-600 hover:text-gray-900">Blog</a
+          >
+        </div>
+        <div class="pb-6">
+          <a
+            href="#"
+            class="text-sm leading-6 text-gray-600 hover:text-gray-900">Jobs</a
+          >
+        </div>
+        <div class="pb-6">
+          <a
+            href="#"
+            class="text-sm leading-6 text-gray-600 hover:text-gray-900">Press</a
+          >
+        </div>
+        <div class="pb-6">
+          <a
+            href="#"
+            class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+            >Accessibility</a
+          >
+        </div>
+        <div class="pb-6">
+          <a
+            href="#"
+            class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+            >Partners</a
+          >
+        </div>
+      </nav>
+      <div class="mt-10 flex justify-center space-x-10">
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Facebook</span>
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Instagram</span>
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">X</span>
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">YouTube</span>
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+      <p class="mt-10 text-center text-xs leading-5 text-gray-500">
+        &copy; 2020 Your Company, Inc. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <div id="default-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-96 overflow-hidden rounded-lg md:h-dvh">
-         <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-			<div class="bg-no-repeat bg-cover h-dvh w-full" style="background-image: url('/assets/back.jpg')">
-				<div class="flex flex-col items-center justify-center h-full text-center text-white bg-black/50">
-					<h1 class="text-4xl font-bold">Welcome to Sonora Precision</h1>
-					<p class="mt-4 text-lg">Your one-stop destination for all things tech and design.</p>
-					<a href="#" class="mt-6 inline-block px-6 py-3 text-lg font-semibold bg-primary rounded-lg">Get Started</a>
-				</div>
-			</div>
-			
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div
+          class="bg-no-repeat bg-cover h-dvh w-full"
+          style="background-image: url('/assets/back.jpg')"
+        >
+          <div
+            class="flex flex-col items-center justify-center h-full text-center text-white bg-black/50"
+          >
+            <h1 class="text-4xl font-bold">Welcome to Sonora Precision</h1>
+            <p class="mt-4 text-lg">
+              Your one-stop destination for all things tech and design.
+            </p>
+            <a
+              href="#"
+              class="mt-6 inline-block px-6 py-3 text-lg font-semibold bg-primary rounded-lg"
+              >Get Started</a
+            >
+          </div>
         </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/assets/back.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-		<!-- Item 3 -->
-		<div class="hidden duration-700 ease-in-out" data-carousel-item>
-			<img src="/assets/back.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-		</div>
-		<!-- Item 4 -->
-		<div class="hidden duration-700 ease-in-out" data-carousel-item>
-			<img src="/assets/back.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-		</div>
-		<!-- Item 5 -->
-		<div class="hidden duration-700 ease-in-out" data-carousel-item>
-			<img src="/assets/back.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-		</div>
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src="/assets/back.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src="/assets/back.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src="/assets/back.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+      </div>
+      <!-- Item 5 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src="/assets/back.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+      </div>
     </div>
     <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+    <div
+      class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+    >
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="true"
+        aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 3"
+        data-carousel-slide-to="2"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 4"
+        data-carousel-slide-to="3"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 5"
+        data-carousel-slide-to="4"></button>
     </div>
     <!-- Slider controls -->
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
+    <button
+      type="button"
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 1 1 5l4 4"></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
     </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
+    <button
+      type="button"
+      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4"></path>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
     </button>
-</div>
-
-	<main class="flex-1">
-	  <section class="bg-muted py-12 md:py-16 lg:py-20">
-		<div class="container mx-auto grid gap-8 px-4 md:grid-cols-2 md:gap-12 lg:gap-16">
-		  <div>
-			<img
-			  src="/assets/back.jpg"
-			  width="600"
-			  height="400"
-			  alt="Featured Blog Post"
-			  class="aspect-[3/2] w-full overflow-hidden rounded-lg object-cover"
-			/>
-		  </div>
-		  <div class="space-y-4">
-			<div class="inline-block rounded-lg bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-			  Featured
-			</div>
-			<h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">
-			  The Ultimate Guide to Building a Successful Blog
-			</h2>
-			<p class="text-muted-foreground">
-			  Learn the proven strategies and best practices for creating a thriving blog that attracts readers and
-			  drives engagement.
-			</p>
-			<a
-			  class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-			  href="#"
-			  data-bcup-haslogintext="no"
-			>
-			  Read More
-			</a>
-		  </div>
-		</div>
-	  </section>
-	  <section class="py-12 md:py-16 lg:py-20">
-		<div class="container mx-auto px-4">
-		  <div class="mb-8 space-y-2">
-			<h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">Recent Blog Posts</h2>
-			<p class="text-muted-foreground">
-			  Check out our latest blog posts and stay up-to-date with the latest trends and insights.
-			</p>
-		  </div>
-		  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-			<div class="group">
-			  <a href="#" data-bcup-haslogintext="no">
-				<img
-				  src="/assets/back.jpg"
-				  width="600"
-				  height="400"
-				  alt="Blog Post 1"
-				  class="aspect-[3/2] w-full overflow-hidden rounded-lg object-cover transition-all group-hover:scale-105"
-				/>
-				<div class="mt-4 space-y-2">
-				  <div class="inline-block rounded-lg bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-					Design
-				  </div>
-				  <h3 class="text-xl font-bold">Designing for Accessibility: Best Practices and Techniques</h3>
-				  <p class="text-muted-foreground line-clamp-2">
-					Discover how to create inclusive and accessible designs that cater to users with diverse needs and
-					abilities.
-				  </p>
-				</div>
-			  </a>
-			</div>
-			<div class="group">
-			  <a href="#" data-bcup-haslogintext="no">
-				<img
-				  src="/assets/back.jpg"
-				  width="600"
-				  height="400"
-				  alt="Blog Post 2"
-				  class="aspect-[3/2] w-full overflow-hidden rounded-lg object-cover transition-all group-hover:scale-105"
-				/>
-				<div class="mt-4 space-y-2">
-				  <div class="inline-block rounded-lg bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-					Development
-				  </div>
-				  <h3 class="text-xl font-bold">Mastering React: A Comprehensive Guide for Beginners</h3>
-				  <p class="text-muted-foreground line-clamp-2">
-					Dive into the world of React and learn how to build powerful and scalable web applications.
-				  </p>
-				</div>
-			  </a>
-			</div>
-			<div class="group">
-			  <a href="#" data-bcup-haslogintext="no">
-				<img
-				  src="/assets/back.jpg"
-				  width="600"
-				  height="400"
-				  alt="Blog Post 3"
-				  class="aspect-[3/2] w-full overflow-hidden rounded-lg object-cover transition-all group-hover:scale-105"
-				/>
-				<div class="mt-4 space-y-2">
-				  <div class="inline-block rounded-lg bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-					Marketing
-				  </div>
-				  <h3 class="text-xl font-bold">Effective Content Marketing Strategies for Small Businesses</h3>
-				  <p class="text-muted-foreground line-clamp-2">
-					Learn how to create and distribute content that effectively attracts and engages your target
-					audience.
-				  </p>
-				</div>
-			  </a>
-			</div>
-		  </div>
-		</div>
-	  </section>
-	</main>
-	<footer class="bg-muted py-6 text-sm text-muted-foreground">
-	  <div class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 sm:flex-row">
-		<p>© 2024 Sonora Precision. All rights reserved.</p>
-		<div class="flex gap-4">
-		  <a class="hover:underline" href="#" data-bcup-haslogintext="no">
-			Twitter
-		  </a>
-		  <a class="hover:underline" href="#" data-bcup-haslogintext="no">
-			Facebook
-		  </a>
-		  <a class="hover:underline" href="#" data-bcup-haslogintext="no">
-			Instagram
-		  </a>
-		  <a class="hover:underline" href="#" data-bcup-haslogintext="no">
-			LinkedIn
-		  </a>
-		</div>
-	  </div>
-	</footer>
   </div>
-</Layout>
 
+  <main class="flex-1">
+    <section class="bg-muted py-12 md:py-16 lg:py-20">
+      <div
+        class="container mx-auto grid gap-8 px-4 md:grid-cols-2 md:gap-12 lg:gap-16"
+      >
+        <div>
+          <img
+            src="/assets/back.jpg"
+            width="600"
+            height="400"
+            alt="Featured Blog Post"
+            class="aspect-[3/2] w-full overflow-hidden rounded-lg object-cover"
+          />
+        </div>
+        <div class="space-y-4">
+          <div
+            class="inline-block rounded-lg bg-primary px-3 py-1 text-xs font-medium text-primary-foreground"
+          >
+            Featured
+          </div>
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">
+            The Ultimate Guide to Building a Successful Blog
+          </h2>
+          <p class="text-muted-foreground">
+            Learn the proven strategies and best practices for creating a
+            thriving blog that attracts readers and drives engagement.
+          </p>
+          <a
+            class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            href="#"
+            data-bcup-haslogintext="no"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="py-12 md:py-16 lg:py-20">
+      <div class="container mx-auto px-4">
+        <div class="mb-8 space-y-2">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">
+            Recent Blog Posts
+          </h2>
+          <p class="text-muted-foreground">
+            Check out our latest blog posts and stay up-to-date with the latest
+            trends and insights.
+          </p>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="group">
+            <a href="#" data-bcup-haslogintext="no">
+              <img
+                src="/assets/back.jpg"
+                width="600"
+                height="400"
+                alt="Blog Post 1"
+                class="aspect-[3/2] w-full overflow-hidden rounded-lg object-cover transition-all group-hover:scale-105"
+              />
+              <div class="mt-4 space-y-2">
+                <div
+                  class="inline-block rounded-lg bg-primary px-3 py-1 text-xs font-medium text-primary-foreground"
+                >
+                  Design
+                </div>
+                <h3 class="text-xl font-bold">
+                  Designing for Accessibility: Best Practices and Techniques
+                </h3>
+                <p class="text-muted-foreground line-clamp-2">
+                  Discover how to create inclusive and accessible designs that
+                  cater to users with diverse needs and abilities.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="group">
+            <a href="#" data-bcup-haslogintext="no">
+              <img
+                src="/assets/back.jpg"
+                width="600"
+                height="400"
+                alt="Blog Post 2"
+                class="aspect-[3/2] w-full overflow-hidden rounded-lg object-cover transition-all group-hover:scale-105"
+              />
+              <div class="mt-4 space-y-2">
+                <div
+                  class="inline-block rounded-lg bg-primary px-3 py-1 text-xs font-medium text-primary-foreground"
+                >
+                  Development
+                </div>
+                <h3 class="text-xl font-bold">
+                  Mastering React: A Comprehensive Guide for Beginners
+                </h3>
+                <p class="text-muted-foreground line-clamp-2">
+                  Dive into the world of React and learn how to build powerful
+                  and scalable web applications.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="group">
+            <a href="#" data-bcup-haslogintext="no">
+              <img
+                src="/assets/back.jpg"
+                width="600"
+                height="400"
+                alt="Blog Post 3"
+                class="aspect-[3/2] w-full overflow-hidden rounded-lg object-cover transition-all group-hover:scale-105"
+              />
+              <div class="mt-4 space-y-2">
+                <div
+                  class="inline-block rounded-lg bg-primary px-3 py-1 text-xs font-medium text-primary-foreground"
+                >
+                  Marketing
+                </div>
+                <h3 class="text-xl font-bold">
+                  Effective Content Marketing Strategies for Small Businesses
+                </h3>
+                <p class="text-muted-foreground line-clamp-2">
+                  Learn how to create and distribute content that effectively
+                  attracts and engages your target audience.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-muted py-6 text-sm text-muted-foreground">
+    <div
+      class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 sm:flex-row"
+    >
+      <p>© 2024 Sonora Precision. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a class="hover:underline" href="#" data-bcup-haslogintext="no">
+          Twitter
+        </a>
+        <a class="hover:underline" href="#" data-bcup-haslogintext="no">
+          Facebook
+        </a>
+        <a class="hover:underline" href="#" data-bcup-haslogintext="no">
+          Instagram
+        </a>
+        <a class="hover:underline" href="#" data-bcup-haslogintext="no">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+</Layout>
