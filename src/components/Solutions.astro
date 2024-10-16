@@ -1,0 +1,80 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<a name="solutions"></a>
+<div class="bg-white">
+  <!-- Image section -->
+  <div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
+    <img
+      src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+      alt=""
+      class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+    />
+  </div>
+
+  <!-- Values section -->
+  <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        {t("solution.title")}
+      </h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        {t("solution.body")}
+      </p>
+    </div>
+    <dl
+      class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div>
+        <dt class="font-semibold text-gray-900">{t("solution.cnc.title")}</dt>
+        <dd class="mt-1 text-gray-600">
+          {t("solution.cnc.body")}
+          <ul class="list-disc text-gray-500">
+            {t("solution.cnc.list").map((item: string) => <li>{item}</li>)}
+          </ul>
+        </dd>
+      </div>
+      <div>
+        <dt class="font-semibold text-gray-900">
+          {t("solution.design.title")}
+        </dt>
+        <dd class="mt-1 text-gray-600">
+          {t("solution.design.body")}
+          <ul class="list-disc text-gray-500">
+            {t("solution.design.list").map((item: string) => <li>{item}</li>)}
+          </ul>
+        </dd>
+      </div>
+      <div>
+        <dt class="font-semibold text-gray-900">
+          {t("solution.automation.title")}
+        </dt>
+        <dd class="mt-1 text-gray-600">
+          {t("solution.automation.body")}
+          <ul class="list-disc text-gray-500">
+            {
+              t("solution.automation.list").map((item: string) => (
+                <li>{item}</li>
+              ))
+            }
+          </ul>
+        </dd>
+      </div>
+      <div>
+        <dt class="font-semibold text-gray-900">
+          {t("solution.welding.title")}
+        </dt>
+        <dd class="mt-1 text-gray-600">
+          {t("solution.welding.body")}
+          <ul class="list-disc text-gray-500">
+            {t("solution.welding.list").map((item: string) => <li>{item}</li>)}
+          </ul>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>

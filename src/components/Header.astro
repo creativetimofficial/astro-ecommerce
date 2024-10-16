@@ -1,5 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
@@ -29,16 +32,14 @@
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
       <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-        Sonora Precision
+        {t("header.title")}
       </h2>
       <p class="mt-6 text-lg leading-8 text-gray-300">
         <p>
-          We turn your ideas into realities with the precision and quality you
-          deserve.
+          {t("header.subtitle1")}
         </p>
         <p>
-          Our team of experts works closely with you, ensuring every detail
-          reflects your unique vision.
+          {t("header.subtitle2")}
         </p>
       </p>
     </div>
@@ -61,10 +62,9 @@
             clip-rule="evenodd"></path>
         </svg>
         <div class="text-base leading-7">
-          <h3 class="font-semibold text-white">Tailored solutions</h3>
+          <h3 class="font-semibold text-white">{t("header.comp1.title")}</h3>
           <p class="mt-2 text-gray-300">
-            We adapt each project to your specific needs, delivering unique and
-            satisfying results.
+            {t("header.comp1.subtitle")}
           </p>
         </div>
       </div>
@@ -84,10 +84,9 @@
             clip-rule="evenodd"></path>
         </svg>
         <div class="text-base leading-7">
-          <h3 class="font-semibold text-white">Commitment to excellence</h3>
+          <h3 class="font-semibold text-white">{t("header.comp2.title")}</h3>
           <p class="mt-2 text-gray-300">
-            Our focus on quality ensures that every phase of the project meets
-            the highest standards.
+            {t("header.comp2.subtitle")}
           </p>
         </div>
       </div>
@@ -110,10 +109,9 @@
           ></path>
         </svg>
         <div class="text-base leading-7">
-          <h3 class="font-semibold text-white">Ongoing communication</h3>
+          <h3 class="font-semibold text-white">{t("header.comp3.title")}</h3>
           <p class="mt-2 text-gray-300">
-            We keep you informed throughout the entire process, ensuring you're
-            aware of every update and adjustment.
+            {t("header.comp3.subtitle")}
           </p>
         </div>
       </div>

@@ -1,0 +1,105 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<a name="about"></a>
+<div class="relative bg-white">
+  <div
+    class="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end"
+  >
+    <div
+      class="lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2"
+    >
+      <div class="relative h-80 lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0">
+        <img
+          class="absolute inset-0 h-full w-full bg-gray-50 object-cover"
+          src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="px-6 lg:contents">
+      <div
+        class="mx-auto max-w-2xl pb-24 pt-16 sm:pb-32 sm:pt-20 lg:ml-8 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none lg:pt-32 xl:w-1/2"
+      >
+        <a
+          class="text-base font-semibold leading-7 text-indigo-600"
+          href="#about"
+          name="about"
+        >
+          Sonora Presicion
+        </a>
+        <h1
+          class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          {t("about.title")}
+        </h1>
+        <p class="mt-6 text-xl leading-8 text-gray-700">
+          {t("about.body1")}
+        </p>
+        <div
+          class="mt-10 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none"
+        >
+          <p>
+            {t("about.body2")}
+          </p>
+          <ul role="list" class="mt-8 space-y-8 text-gray-600">
+            <li class="flex gap-x-3">
+              <svg
+                class="mt-1 h-5 w-5 flex-none text-indigo-600"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span
+                ><strong class="font-semibold text-gray-900"
+                  >{t("about.vision.title")}.</strong
+                >
+                {t("about.vision.body")}</span
+              >
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="mt-1 h-5 w-5 flex-none text-indigo-600"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span
+                ><strong class="font-semibold text-gray-900"
+                  >{t("about.mision.title")}</strong
+                >
+                {t("about.mision.body")}
+                <ul class="list-disc">
+                  {
+                    t("about.mision.list")?.map((item: string) => (
+                      <li>{item}</li>
+                    ))
+                  }
+                </ul>
+              </span>
+            </li>
+          </ul>
+          <p class="mt-8">
+            {t("about.footer")}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
