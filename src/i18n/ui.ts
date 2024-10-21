@@ -7,6 +7,7 @@ export const defaultLang = "es";
 
 export const ui = {
   en: {
+    "image.about.left": "/assets/cnc.jpg",
     "nav.home": "Home",
     "nav.about": "About",
     "nav.solutions": "solutions",
@@ -115,6 +116,14 @@ export const ui = {
     "footer.rights": "2024 Sonora Presicion, Inc. All rights reserved.",
   },
   es: {
+    "image.header": "/assets/piece.jpg",
+    "image.welding": "/assets/welding.jpg",
+    "image.machine": "/assets/machine.jpg",
+    "image.about.left": "/assets/piece.jpg",
+    "image.solutions": "/assets/machine.jpg",
+    "image.services.1": "/assets/cnc.jpg",
+    "image.services.2": "/assets/drill.jpg",
+    "image.services.3": "/assets/part.jpg",
     "nav.home": "Inicio",
     "nav.about": "Acerca de",
     "nav.solutions": "Soluciones",
