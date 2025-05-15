@@ -592,8 +592,8 @@ $aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Noto Sans', 'Open Sans' !default;
-$font-family-pt-mono:         'PT Mono' !default;
+$font-family-sans-serif:      var(--font-noto-sans), var(--font-open-sans) !default;
+$font-family-pt-mono:         var(--font-pt-mono) !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--bs-font-sans-serif) !default;
