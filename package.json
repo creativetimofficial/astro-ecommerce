@@ -19,9 +19,11 @@
     "json-server": "^0.17.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0" 
   },
   "devDependencies": {
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "@astrojs/image": "^0.18.0",
+    "sharp": "^0.33.0"
   }
 }
