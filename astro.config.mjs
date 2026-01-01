@@ -1,11 +1,14 @@
 import { defineConfig } from 'astro/config';
-
-// https://astro.build/config
 import react from "@astrojs/react";
+// Comenta o elimina estas líneas temporalmente:
+// import image from "@astrojs/image"; 
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
-  site: 'https://creativetimofficial.github.io',
-  base: '/astro-ecommerce'
+  integrations: [
+    react(),
+    // Comenta o elimina también la integración:
+    // image({ /* ... */ }), 
+  ],
+  site: 'https://darkrebel.rebelcrazy19.workers.dev', 
+  base: '/', 
 });
