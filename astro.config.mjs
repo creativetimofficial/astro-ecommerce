@@ -1,11 +1,10 @@
 import { defineConfig } from 'astro/config';
-
-// https://astro.build/config
 import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
-  site: 'https://creativetimofficial.github.io',
-  base: '/astro-ecommerce'
+  site: 'https://creativetimofficial.github.io', 
+  // ¡CAMBIA ESTA LÍNEA!
+  base: '/' // <-- Ahora Astro construirá las rutas de recursos desde la raíz.
 });
